@@ -311,6 +311,60 @@ export default function Vavada() {
                       </div>
                     </div>
 
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="DollarSign" className="text-primary" size={28} />
+                        Wypłaty w Vavada – opinie i doświadczenia graczy
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Zap" className="text-primary" size={22} />
+                            Szybkość i metody płatności
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              To jeden z najczęściej komentowanych tematów na forach. <strong className="text-primary">Wypłaty w Vavada</strong> według opinii graczy 
+                              realizowane są stosunkowo szybko – przelewy na portfele elektroniczne przychodzą zwykle w ciągu kilku godzin, 
+                              a na kartę bankową – do trzech dni roboczych.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Dostępne <strong className="text-primary">metody płatności</strong> obejmują karty Visa i Mastercard, przelewy bankowe oraz popularne portfele 
+                              elektroniczne. Minimalna kwota wypłaty nie jest wygórowana, co doceniają gracze stawiający mniejsze stawki.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="ShieldCheck" className="text-primary" size={22} />
+                            Weryfikacja i zaufanie graczy
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Warto wspomnieć, że pierwsza wypłata wymaga weryfikacji dokumentów. Proces KYC obejmuje przesłanie skanu 
+                              dowodu tożsamości i potwierdzenie metody płatności. Według opinii użytkowników weryfikacja trwa od kilku 
+                              godzin do jednego dnia roboczego. Po jej zakończeniu kolejne wypłaty przebiegają znacznie szybciej.
+                            </p>
+                            <div className="bg-gradient-to-r from-green-500/10 to-green-500/5 border-l-4 border-green-500 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="CheckCircle2" className="text-green-500 flex-shrink-0 mt-1" size={20} />
+                                <div>
+                                  <p className="text-sm font-semibold text-foreground mb-1">Plusy wypłat:</p>
+                                  <ul className="text-sm text-foreground/70 space-y-1">
+                                    <li>• Szybka realizacja przelewów elektronicznych (kilka godzin)</li>
+                                    <li>• Niska minimalna kwota wypłaty</li>
+                                    <li>• Sprawna weryfikacja dokumentów</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="bg-muted/50 rounded-lg p-4 mt-6">
                       <h4 className="font-semibold mb-2 flex items-center gap-2">
                         <Icon name="Info" className="text-primary" size={18} />
@@ -327,7 +381,11 @@ export default function Vavada() {
                         </li>
                         <li className="flex items-start gap-2">
                           <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
-                          <span>Czas wypłaty: 24-48 godzin</span>
+                          <span>Czas wypłaty portfele: kilka godzin</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                          <span>Czas wypłaty karty: do 3 dni roboczych</span>
                         </li>
                       </ul>
                     </div>
