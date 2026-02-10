@@ -16,52 +16,69 @@ interface Casino {
   license: string;
   features: string[];
   logo: string;
+  url: string;
 }
 
 const casinos: Casino[] = [
   {
     id: 1,
-    name: 'Royal Casino Palace',
+    name: 'Vavada',
     rating: 9.5,
     userRating: 4.8,
     bonus: 'Do 5000 PLN + 200 Darmowych Spinów',
     games: 3500,
-    license: 'Malta Gaming Authority',
+    license: 'Curacao eGaming',
     features: ['Szybkie wypłaty', 'Obsługa 24/7', 'Aplikacja mobilna', 'Live Casino'],
-    logo: '👑'
+    logo: '👑',
+    url: 'https://gate707.com/?promo=0e4cb864-e734-44ef-9820-29068cfbffac&target=register'
   },
   {
     id: 2,
-    name: 'Golden Bet Casino',
+    name: 'PlayFortuna',
     rating: 9.3,
     userRating: 4.7,
     bonus: 'Do 3000 PLN + 150 Darmowych Spinów',
     games: 2800,
     license: 'Curacao eGaming',
     features: ['Kryptowaluty', 'VIP Program', 'Turnieje', 'Cashback'],
-    logo: '🎰'
+    logo: '🎰',
+    url: 'https://fortuna-promo1.net/alt/pf_new_year_new_ru/?ab4caec10f6f2577c5ad134c05b3b019'
   },
   {
     id: 3,
-    name: 'Diamond Slots Premium',
+    name: 'Booi',
     rating: 9.0,
     userRating: 4.6,
     bonus: 'Do 4000 PLN + 100 Darmowych Spinów',
     games: 3200,
-    license: 'UK Gambling Commission',
+    license: 'Curacao eGaming',
     features: ['Bez depozytu bonus', 'Szybka weryfikacja', 'Polski support', 'Jackpoty'],
-    logo: '💎'
+    logo: '💎',
+    url: 'https://booipromo1.com/alt/booi_7sinsnew_ru/?2cd1c9052f79f17d0fd62080016b1093'
   },
   {
     id: 4,
-    name: 'Platinum Play Casino',
+    name: 'Jozz',
     rating: 8.8,
     userRating: 4.5,
     bonus: 'Do 2500 PLN + 75 Darmowych Spinów',
     games: 2500,
-    license: 'Malta Gaming Authority',
+    license: 'Curacao eGaming',
     features: ['Live Dealer', 'Sports Betting', 'Reload Bonusy', 'Weekly Cashback'],
-    logo: '🎲'
+    logo: '🎲',
+    url: 'https://jozz-promo1.com/alt/jozz11_ru/?6ccd9bf32f7680ee0e290d1be59a4de5'
+  },
+  {
+    id: 5,
+    name: 'Winity',
+    rating: 8.6,
+    userRating: 4.4,
+    bonus: 'Do 2000 PLN + 50 Darmowych Spinów',
+    games: 2200,
+    license: 'Curacao eGaming',
+    features: ['Szybka rejestracja', 'Bonusy reload', 'Mobile-first', 'Cashback tygodniowy'],
+    logo: '🌟',
+    url: 'https://winity.one/alt/win_girl_ru/?be6866f5f4da4c4e8f73ba3f9d913383'
   }
 ];
 
@@ -669,9 +686,14 @@ export default function Index() {
                   </CardContent>
 
                   <CardFooter className="flex flex-col sm:flex-row gap-3 bg-card/50">
-                    <Button className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
-                      <Icon name="ExternalLink" className="mr-2" size={18} />
-                      {t.playNow}
+                    <Button 
+                      asChild
+                      className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
+                    >
+                      <a href={casino.url} target="_blank" rel="nofollow noopener noreferrer">
+                        <Icon name="ExternalLink" className="mr-2" size={18} />
+                        {t.playNow}
+                      </a>
                     </Button>
                     <Button variant="outline" className="flex-1 border-primary/30 hover:bg-primary/10">
                       <Icon name="FileText" className="mr-2" size={18} />
