@@ -32,18 +32,18 @@ export default function AuthModal({ onClose, initialMode = 'login' }: AuthModalP
         await register(email, password, fullName);
       }
       onClose();
-    } catch (err: any) {
-      setError(err.message || 'Wystąpił błąd');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Wystąpił błąd');
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 backdrop-blur-lg p-4">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
       <div className="relative max-w-md w-full">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 rounded-2xl blur-2xl"></div>
-        <Card className="relative bg-card/90 backdrop-blur-sm border-2 border-primary/30 shadow-2xl">
+        <Card className="relative bg-card backdrop-blur-sm border-2 border-primary/30 shadow-2xl">
           <CardHeader className="relative">
             <button
               onClick={onClose}
