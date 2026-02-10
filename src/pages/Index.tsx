@@ -400,6 +400,7 @@ export default function Index() {
   const [activeTab, setActiveTab] = useState('ranking');
   const [showAgeModal, setShowAgeModal] = useState(false);
   const [language, setLanguage] = useState<Language>('pl');
+  const [copiedPromo, setCopiedPromo] = useState(false);
 
   useEffect(() => {
     const savedLang = localStorage.getItem('language') as Language;
@@ -423,6 +424,12 @@ export default function Index() {
   const handleLanguageChange = (lang: Language) => {
     setLanguage(lang);
     localStorage.setItem('language', lang);
+  };
+
+  const handleCopyPromo = () => {
+    navigator.clipboard.writeText('6DRYKHC1');
+    setCopiedPromo(true);
+    setTimeout(() => setCopiedPromo(false), 2000);
   };
 
   const t = translations[language];
@@ -562,6 +569,86 @@ export default function Index() {
                 <Icon name="Gift" className="mr-2" size={20} />
                 {t.currentBonuses}
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-y border-primary/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card/80 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-6 md:p-8 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl"></div>
+              
+              <div className="relative flex flex-col md:flex-row items-center gap-6">
+                <div className="flex-shrink-0">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/30 blur-xl rounded-full"></div>
+                    <div className="relative bg-gradient-to-br from-primary via-primary/90 to-secondary p-4 rounded-xl">
+                      <Icon name="Gift" className="text-primary-foreground" size={48} />
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex-1 text-center md:text-left">
+                  <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                    <Badge className="bg-primary/20 text-primary border-primary/40 text-xs">
+                      EKSKLUZYWNY BONUS
+                    </Badge>
+                    <img 
+                      src={casinos[0].logo}
+                      alt="Vavada"
+                      className="w-8 h-8 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                    🎰 Gates of Olympus 1000 - 20 Free Spins
+                  </h3>
+                  <p className="text-foreground/70 mb-4">
+                    Użyj kodu promocyjnego Vavada i odbierz 20 darmowych aktywacji na Gates of Olympus 1000
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-3 items-center justify-center md:justify-start">
+                    <div className="relative group">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-50 blur-lg group-hover:opacity-75 transition-opacity"></div>
+                      <div className="relative bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary/40 rounded-lg px-6 py-3 font-mono text-2xl font-bold text-primary tracking-wider">
+                        6DRYKHC1
+                      </div>
+                    </div>
+                    
+                    <Button
+                      onClick={handleCopyPromo}
+                      className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 font-semibold"
+                      size="lg"
+                    >
+                      {copiedPromo ? (
+                        <>
+                          <Icon name="Check" size={20} />
+                          Skopiowano!
+                        </>
+                      ) : (
+                        <>
+                          <Icon name="Copy" size={20} />
+                          Kopiuj Kod
+                        </>
+                      )}
+                    </Button>
+                    
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="border-primary/30 hover:bg-primary/10 gap-2 font-semibold"
+                      size="lg"
+                    >
+                      <a href={casinos[0].url} target="_blank" rel="nofollow noopener noreferrer">
+                        <Icon name="ExternalLink" size={20} />
+                        Odbierz Bonus
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
