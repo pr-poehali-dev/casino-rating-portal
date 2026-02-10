@@ -98,6 +98,16 @@ export default function AdminPanel() {
     }
   }, [isLoggedIn, activeTab, usersPage, usersSearch]);
 
+  useEffect(() => {
+    if (!isLoggedIn || activeTab !== 'users') return;
+    
+    const interval = setInterval(() => {
+      loadUsers();
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [isLoggedIn, activeTab]);
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoginError('');

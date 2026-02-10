@@ -76,7 +76,10 @@ def handler(event: dict, context) -> dict:
     url = event.get('url', '')
     query_params = event.get('queryStringParameters', {}) or {}
     action = query_params.get('action', '')
-    path = url if url else '/'
+    
+    request_context = event.get('requestContext', {})
+    path = request_context.get('httpPath', url if url else '/')
+    print(f"[DEBUG] method={method}, path={path}, action={action}")
     
     if method == 'OPTIONS':
         return {
@@ -261,7 +264,7 @@ def handler(event: dict, context) -> dict:
             }
         
         # Отправка уведомления конкретному пользователю
-        if method == 'POST' and '/notifications/send' in path:
+        if method == 'POST' and (action == 'send_notification' or '/notifications/send' in path):
             body = json.loads(event.get('body', '{}'))
             user_id = body.get('user_id')
             title = body.get('title', '').strip()
@@ -346,7 +349,7 @@ def handler(event: dict, context) -> dict:
             }
         
         # Массовая рассылка уведомлений
-        if method == 'POST' and '/notifications/broadcast' in path:
+        if method == 'POST' and (action == 'broadcast' or '/notifications/broadcast' in path):
             body = json.loads(event.get('body', '{}'))
             title = body.get('title', '').strip()
             message = body.get('message', '').strip()
@@ -385,7 +388,7 @@ def handler(event: dict, context) -> dict:
             }
         
         # Загрузка изображения промо-акции
-        if method == 'POST' and '/promotions/upload-image' in path:
+        if method == 'POST' and (action == 'upload_promo_image' or '/promotions/upload-image' in path):
             body = json.loads(event.get('body', '{}'))
             image_base64 = body.get('image')
             filename = body.get('filename', 'promo.jpg')
@@ -437,7 +440,7 @@ def handler(event: dict, context) -> dict:
                 }
         
         # Создание новой промо-акции
-        if method == 'POST' and path.endswith('/promotions'):
+        if method == 'POST' and (action == 'create_promo' or (path == '/promotions' and 'upload-image' not in path)):
             body = json.loads(event.get('body', '{}'))
             
             required_fields = ['casino_name', 'title', 'description', 'bonus_amount', 'bonus_type']
@@ -548,7 +551,7 @@ def handler(event: dict, context) -> dict:
             }
         
         # Получение статистики
-        if method == 'GET' and '/stats' in path:
+        if method == 'GET' and (action == 'stats' or '/stats' in path):
             # Общая статистика
             cur.execute("""
                 SELECT 

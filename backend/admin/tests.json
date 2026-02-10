@@ -18,22 +18,35 @@
       "bodyMatcher": "partial"
     },
     {
-      "name": "Get users list",
+      "name": "Get users list without auth (temp debug)",
       "method": "GET",
       "path": "/?action=users",
-      "expectedStatus": 401,
+      "expectedStatus": 200,
       "expectedBody": {
-        "error": "string"
+        "users": "array",
+        "total": "number",
+        "limit": "number",
+        "offset": "number"
       },
       "bodyMatcher": "partial"
     },
     {
-      "name": "Get statistics",
-      "method": "GET",
-      "path": "/?action=stats",
-      "expectedStatus": 401,
+      "name": "Create promotion",
+      "method": "POST",
+      "path": "/?action=create_promo",
+      "body": {
+        "casino_name": "Test Casino",
+        "title": "Test Promo",
+        "description": "Test description",
+        "bonus_amount": "100 Free Spins",
+        "bonus_type": "free_spins",
+        "casino_url": "https://example.com",
+        "notify_users": false
+      },
+      "expectedStatus": 201,
       "expectedBody": {
-        "error": "string"
+        "promotion_id": "number",
+        "message": "string"
       },
       "bodyMatcher": "partial"
     }

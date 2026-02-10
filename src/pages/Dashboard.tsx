@@ -50,6 +50,12 @@ export default function Dashboard() {
     }
     loadPromotions();
     loadNotifications();
+    
+    const interval = setInterval(() => {
+      loadNotifications();
+    }, 30000);
+    
+    return () => clearInterval(interval);
   }, [sessionToken]);
 
   const loadPromotions = async () => {
