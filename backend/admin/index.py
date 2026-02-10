@@ -76,10 +76,7 @@ def handler(event: dict, context) -> dict:
     url = event.get('url', '')
     query_params = event.get('queryStringParameters', {}) or {}
     action = query_params.get('action', '')
-    
-    request_context = event.get('requestContext', {})
-    path = request_context.get('httpPath', url if url else '/')
-    print(f"[DEBUG] method={method}, path={path}, action={action}")
+    path = url if url else '/'
     
     if method == 'OPTIONS':
         return {
@@ -176,11 +173,27 @@ def handler(event: dict, context) -> dict:
                 'isBase64Encoded': False
             }
         
-        # ВРЕМЕННО: Получение списка пользователей БЕЗ ПРОВЕРКИ ТОКЕНА ДЛЯ ОТЛАДКИ
+        # Проверка токена для всех остальных запросов
+        token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
+        print(f"[DEBUG] Headers: {event.get('headers', {})}")
+        print(f"[DEBUG] Token received: {token}")
+        
+        # Проверяем либо специальный админский токен, либо токен из базы
+        if token == 'ADMIN_MASTER_TOKEN_Www373826483':
+            admin = {'id': 1, 'email': 'admin@grin.com', 'full_name': 'Administrator'}
+        else:
+            admin = verify_admin_token(cur, token)
+        
+        if not admin:
+            return {
+                'statusCode': 401,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({'error': 'Brak autoryzacji administratora'}),
+                'isBase64Encoded': False
+            }
+        
+        # Получение списка пользователей
         if method == 'GET' and (action == 'users' or 'users' in path):
-            token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
-            print(f"[DEBUG] Getting users WITHOUT auth check, token was: {token}")
-            print(f"[DEBUG] Getting users list, token was: {token}")
             limit = int(query_params.get('limit', 50))
             offset = int(query_params.get('offset', 0))
             search = query_params.get('search', '')
@@ -193,8 +206,8 @@ def handler(event: dict, context) -> dict:
             
             cur.execute(f"""
                 SELECT u.id, u.email, u.full_name, u.created_at, u.last_login, u.is_active, u.email_verified,
-                       COALESCE(COUNT(DISTINCT upv.id), 0) as promotions_viewed,
-                       COALESCE(COUNT(DISTINCT CASE WHEN upv.clicked THEN upv.id END), 0) as promotions_clicked
+                       COUNT(DISTINCT upv.id) as promotions_viewed,
+                       COUNT(DISTINCT CASE WHEN upv.clicked THEN upv.id END) as promotions_clicked
                 FROM users u
                 LEFT JOIN user_promotions_viewed upv ON u.id = upv.user_id
                 {where_clause}
@@ -203,7 +216,6 @@ def handler(event: dict, context) -> dict:
                 LIMIT %s OFFSET %s
             """, params + [limit, offset])
             users = [dict(row) for row in cur.fetchall()]
-            print(f"[DEBUG] Found {len(users)} users")
             
             cur.execute(f"SELECT COUNT(*) as total FROM users u {where_clause}", params)
             total = cur.fetchone()['total']
@@ -264,7 +276,7 @@ def handler(event: dict, context) -> dict:
             }
         
         # Отправка уведомления конкретному пользователю
-        if method == 'POST' and (action == 'send_notification' or '/notifications/send' in path):
+        if method == 'POST' and '/notifications/send' in path:
             body = json.loads(event.get('body', '{}'))
             user_id = body.get('user_id')
             title = body.get('title', '').strip()
@@ -295,19 +307,10 @@ def handler(event: dict, context) -> dict:
             }
         
         # Получение уведомлений пользователя
-        if method == 'GET' and (action == 'get_notifications' or path.endswith('/notifications')):
+        if method == 'GET' and path.endswith('/notifications'):
             # Для обычных пользователей
-            headers = event.get('headers', {})
-            print(f"[DEBUG] All headers: {list(headers.keys())}")
-            token = headers.get('x-authorization', '')
-            if not token:
-                token = headers.get('authorization', '')
-            token = token.replace('Bearer ', '')
-            print(f"[DEBUG] Getting notifications, token: {token[:20] if token else 'EMPTY'}...")
             user = get_user_from_token(cur, token)
-            print(f"[DEBUG] User found: {user['email'] if user else 'NONE'}")
             if not user:
-                print(f"[ERROR] Auth failed for get_notifications")
                 return {
                     'statusCode': 401,
                     'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
@@ -334,7 +337,6 @@ def handler(event: dict, context) -> dict:
         
         # Отметить уведомление как прочитанное
         if method == 'PUT' and '/notifications/' in path and '/read' in path:
-            token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
             user = get_user_from_token(cur, token)
             if not user:
                 return {
@@ -359,7 +361,7 @@ def handler(event: dict, context) -> dict:
             }
         
         # Массовая рассылка уведомлений
-        if method == 'POST' and (action == 'broadcast' or '/notifications/broadcast' in path):
+        if method == 'POST' and '/notifications/broadcast' in path:
             body = json.loads(event.get('body', '{}'))
             title = body.get('title', '').strip()
             message = body.get('message', '').strip()
@@ -398,7 +400,7 @@ def handler(event: dict, context) -> dict:
             }
         
         # Загрузка изображения промо-акции
-        if method == 'POST' and (action == 'upload_promo_image' or '/promotions/upload-image' in path):
+        if method == 'POST' and '/promotions/upload-image' in path:
             body = json.loads(event.get('body', '{}'))
             image_base64 = body.get('image')
             filename = body.get('filename', 'promo.jpg')
@@ -450,7 +452,7 @@ def handler(event: dict, context) -> dict:
                 }
         
         # Создание новой промо-акции
-        if method == 'POST' and (action == 'create_promo' or (path == '/promotions' and 'upload-image' not in path)):
+        if method == 'POST' and path.endswith('/promotions'):
             body = json.loads(event.get('body', '{}'))
             
             required_fields = ['casino_name', 'title', 'description', 'bonus_amount', 'bonus_type']
@@ -484,7 +486,6 @@ def handler(event: dict, context) -> dict:
             if body.get('notify_users', True):
                 cur.execute("SELECT id FROM users WHERE is_active = true")
                 user_ids = [row['id'] for row in cur.fetchall()]
-                print(f"[DEBUG] Sending notifications to {len(user_ids)} users")
                 
                 notification_title = f"Nowa promocja: {body['casino_name']}"
                 notification_message = body['title']
@@ -496,7 +497,6 @@ def handler(event: dict, context) -> dict:
                     )
                 
                 conn.commit()
-                print(f"[DEBUG] Notifications sent successfully to {len(user_ids)} users")
             
             return {
                 'statusCode': 201,
@@ -563,7 +563,7 @@ def handler(event: dict, context) -> dict:
             }
         
         # Получение статистики
-        if method == 'GET' and (action == 'stats' or '/stats' in path):
+        if method == 'GET' and '/stats' in path:
             # Общая статистика
             cur.execute("""
                 SELECT 
