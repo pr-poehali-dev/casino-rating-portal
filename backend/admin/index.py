@@ -297,11 +297,17 @@ def handler(event: dict, context) -> dict:
         # Получение уведомлений пользователя
         if method == 'GET' and (action == 'get_notifications' or path.endswith('/notifications')):
             # Для обычных пользователей
-            token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
-            print(f"[DEBUG] Getting notifications, token: {token[:20] if token else 'empty'}...")
+            headers = event.get('headers', {})
+            print(f"[DEBUG] All headers: {list(headers.keys())}")
+            token = headers.get('x-authorization', '')
+            if not token:
+                token = headers.get('authorization', '')
+            token = token.replace('Bearer ', '')
+            print(f"[DEBUG] Getting notifications, token: {token[:20] if token else 'EMPTY'}...")
             user = get_user_from_token(cur, token)
-            print(f"[DEBUG] User found: {user['email'] if user else 'None'}")
+            print(f"[DEBUG] User found: {user['email'] if user else 'NONE'}")
             if not user:
+                print(f"[ERROR] Auth failed for get_notifications")
                 return {
                     'statusCode': 401,
                     'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},

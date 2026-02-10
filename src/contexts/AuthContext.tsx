@@ -38,23 +38,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [sessionToken, setSessionToken] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const initAuth = async () => {
-      const token = localStorage.getItem('session_token');
-      if (token) {
-        setSessionToken(token);
-        await checkAuth();
-      } else {
-        setIsLoading(false);
-      }
-    };
-    initAuth();
-  }, []);
-
   const checkAuth = async () => {
     const token = localStorage.getItem('session_token');
     if (!token) {
       setUser(null);
+      setSessionToken(null);
       setIsLoading(false);
       return;
     }
@@ -78,13 +66,16 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       }
     } catch (error) {
       console.error('Check auth error:', error);
-      localStorage.removeItem('session_token');
       setUser(null);
       setSessionToken(null);
     } finally {
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    checkAuth();
+  }, []);
 
   const register = async (email: string, password: string, fullName?: string) => {
     try {
