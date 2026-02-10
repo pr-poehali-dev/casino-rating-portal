@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -88,8 +88,89 @@ const StarRating = ({ rating, size = 20 }: { rating: number; size?: number }) =>
 
 export default function Index() {
   const [activeTab, setActiveTab] = useState('ranking');
+  const [showAgeModal, setShowAgeModal] = useState(false);
+
+  useEffect(() => {
+    const lastConfirmed = localStorage.getItem('ageConfirmed');
+    const now = new Date().getTime();
+    
+    if (!lastConfirmed || now - parseInt(lastConfirmed) > 24 * 60 * 60 * 1000) {
+      setShowAgeModal(true);
+    }
+  }, []);
+
+  const handleAgeConfirm = () => {
+    localStorage.setItem('ageConfirmed', new Date().getTime().toString());
+    setShowAgeModal(false);
+  };
 
   return (
+    <>
+      {showAgeModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 backdrop-blur-lg">
+          <div className="relative max-w-md mx-4">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 rounded-2xl blur-2xl"></div>
+            <Card className="relative bg-card/90 backdrop-blur-sm border-2 border-primary/30 shadow-2xl">
+              <CardHeader className="text-center space-y-4 pb-4">
+                <div className="flex justify-center">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/30 blur-xl rounded-full"></div>
+                    <div className="relative bg-gradient-to-br from-primary via-primary/90 to-secondary p-4 rounded-xl">
+                      <Icon name="ShieldAlert" className="text-primary-foreground" size={48} />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary via-primary/90 to-foreground bg-clip-text text-transparent">
+                    Potwierdzenie wieku
+                  </CardTitle>
+                  <div className="flex items-center justify-center gap-2 mt-2">
+                    <div className="h-px w-8 bg-gradient-to-r from-transparent to-primary"></div>
+                    <Badge className="bg-primary/20 text-primary border-primary/40 text-xs">18+</Badge>
+                    <div className="h-px w-8 bg-gradient-to-l from-transparent to-primary"></div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4 px-6">
+                <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <Icon name="Info" className="text-primary flex-shrink-0 mt-0.5" size={20} />
+                    <p className="text-sm leading-relaxed text-foreground/90">
+                      Ta strona ma charakter <strong className="text-primary">wyłącznie informacyjny</strong> i nie prowadzi gier hazardowych na pieniądze. Nie przyjmujemy zakładów ani wpłat.
+                    </p>
+                  </div>
+                </div>
+                <div className="bg-card/50 border border-primary/20 rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <Icon name="AlertCircle" className="text-primary flex-shrink-0 mt-0.5" size={20} />
+                    <p className="text-sm leading-relaxed text-foreground/80">
+                      Potwierdzam, że mam ukończone <strong className="text-primary">18 lat</strong> i akceptuję warunki korzystania z serwisu informacyjnego.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-2 pt-2">
+                  <Icon name="Scale" className="text-primary/60" size={16} />
+                  <p className="text-xs text-center text-foreground/60">
+                    Hazard może uzależniać. Graj odpowiedzialnie.
+                  </p>
+                </div>
+              </CardContent>
+              <CardFooter className="flex flex-col gap-3 pt-2 pb-6 px-6">
+                <Button 
+                  onClick={handleAgeConfirm}
+                  className="w-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:from-primary/90 hover:to-primary font-semibold py-6 text-base shadow-lg shadow-primary/20"
+                >
+                  <Icon name="CheckCircle2" className="mr-2" size={20} />
+                  Potwierdzam - mam 18 lat
+                </Button>
+                <p className="text-xs text-center text-foreground/50">
+                  To okno pojawi się ponownie za 24 godziny
+                </p>
+              </CardFooter>
+            </Card>
+          </div>
+        </div>
+      )}
     <div className="min-h-screen bg-background">
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -758,5 +839,6 @@ export default function Index() {
         </div>
       </footer>
     </div>
+    </>
   );
 }
