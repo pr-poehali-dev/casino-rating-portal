@@ -271,6 +271,46 @@ export default function Vavada() {
                       </div>
                     </div>
 
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Gamepad2" className="text-primary" size={28} />
+                        Gry hazardowe i turnieje w Vavada
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Dices" className="text-primary" size={22} />
+                            Automaty i live casino
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Katalog gier w Vavada obejmuje kilka tysięcy pozycji od dostawców takich jak <strong className="text-primary">Pragmatic Play</strong>, 
+                              <strong className="text-primary"> Play'n GO</strong>, <strong className="text-primary">Evolution Gaming</strong> czy <strong className="text-primary">NetEnt</strong>. 
+                              Dominują automaty – od klasycznych trójbębnowych po rozbudowane sloty z mechanikami megaways i bonus buy.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Sekcja <strong className="text-primary">live casino</strong> obejmuje ruletkę, blackjacka, baccarata i kilkadziesiąt wariantów game show. 
+                              Transmisje prowadzone są w czasie rzeczywistym, a jakość obrazu jest stabilna nawet na słabszym łączu.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Trophy" className="text-primary" size={22} />
+                            Turnieje i rankingi
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Osobny element to <strong className="text-primary">turnieje</strong>. Vavada organizuje je regularnie – zarówno dzienne, jak i tygodniowe. 
+                            Udział jest zazwyczaj automatyczny po spełnieniu minimalnych warunków. Pule nagród potrafią sięgać kilkudziesięciu 
+                            tysięcy euro, a opinie graczy o turniejach są przeważnie pozytywne – przede wszystkim ze względu na uczciwy 
+                            system punktacji i terminowe wypłaty nagród.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="bg-muted/50 rounded-lg p-4 mt-6">
                       <h4 className="font-semibold mb-2 flex items-center gap-2">
                         <Icon name="Info" className="text-primary" size={18} />
