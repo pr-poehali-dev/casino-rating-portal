@@ -96,9 +96,9 @@ export default function Index() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Icon name="Crown" className="text-primary" size={32} />
-              <h1 className="text-2xl md:text-3xl font-bold text-primary gold-glow">
+              <div className="text-2xl md:text-3xl font-bold text-primary gold-glow">
                 CasinoRanking.pl
-              </h1>
+              </div>
             </div>
             <nav className="hidden md:flex items-center gap-6">
               <button className="text-foreground/80 hover:text-primary transition-colors">Ranking</button>
