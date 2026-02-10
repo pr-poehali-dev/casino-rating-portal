@@ -91,10 +91,52 @@ def handler(event: dict, context) -> dict:
         conn = psycopg2.connect(os.environ['DATABASE_URL'])
         cur = conn.cursor(cursor_factory=RealDictCursor)
         
+        # Установка пароля администратора (без авторизации, только для первой настройки)
+        if method == 'POST' and '/setup-password' in path:
+            body = json.loads(event.get('body', '{}'))
+            email = body.get('email', '').strip()
+            new_password = body.get('password', '')
+            setup_key = body.get('setup_key', '')
+            
+            if setup_key != 'Www373826483_setup':
+                return {
+                    'statusCode': 403,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Nieprawidłowy klucz setup'})
+                }
+            
+            if not email or not new_password:
+                return {
+                    'statusCode': 400,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Email i hasło są wymagane'})
+                }
+            
+            password_hash = hash_password(new_password)
+            
+            cur.execute(
+                "UPDATE admin_users SET password_hash = %s WHERE email = %s",
+                (password_hash, email)
+            )
+            
+            if cur.rowcount == 0:
+                cur.execute(
+                    "INSERT INTO admin_users (email, password_hash, full_name) VALUES (%s, %s, %s)",
+                    (email, password_hash, 'Administrator')
+                )
+            
+            conn.commit()
+            
+            return {
+                'statusCode': 200,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({'message': 'Hasło ustawione pomyślnie'})
+            }
+        
         # Авторизация администратора
         if method == 'POST' and 'login' in path:
             body = json.loads(event.get('body', '{}'))
-            email = body.get('email', '').lower().strip()
+            email = body.get('email', '').strip()
             password = body.get('password', '')
             
             if not email or not password:

@@ -415,6 +415,16 @@ export default function AdminPanel() {
               <Button type="submit" className="w-full bg-gradient-to-r from-purple-500 to-pink-500">
                 Zaloguj się
               </Button>
+              
+              <div className="text-center">
+                <button
+                  type="button"
+                  onClick={() => navigate('/admin/setup')}
+                  className="text-sm text-gray-300 hover:text-white underline"
+                >
+                  Nie możesz się zalogować? Ustaw nowe hasło
+                </button>
+              </div>
             </form>
           </CardContent>
         </Card>
