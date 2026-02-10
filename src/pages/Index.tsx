@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -397,6 +398,7 @@ const translations = {
 };
 
 export default function Index() {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('ranking');
   const [showAgeModal, setShowAgeModal] = useState(false);
   const [showPromoModal, setShowPromoModal] = useState(false);
@@ -822,7 +824,15 @@ export default function Index() {
                         {t.playNow}
                       </a>
                     </Button>
-                    <Button variant="outline" className="flex-1 border-primary/30 hover:bg-primary/10">
+                    <Button 
+                      variant="outline" 
+                      className="flex-1 border-primary/30 hover:bg-primary/10"
+                      onClick={() => {
+                        if (casino.id === 1) {
+                          navigate('/vavada');
+                        }
+                      }}
+                    >
                       <Icon name="FileText" className="mr-2" size={18} />
                       {t.fullReview}
                     </Button>
