@@ -319,9 +319,6 @@ const translations = {
     subscribe: 'Подписаться',
     copyright: '© 2026 bkreiting.com. Все права защищены.',
     responsibleGaming: 'Ответственная Игра',
-    h1Title: 'Рейтинг букмекеров и онлайн казино в Польше – легальные операторы 2026',
-    introPara1: 'Ищете проверенное место для ставок на спорт или игры в любимые слоты? Вы попали по адресу. Наш сайт - это сравнение букмекеров и казино, где вы найдете только легальных операторов на польском рынке. Без обмана, без продвижения сомнительных платформ.',
-    introPara2: 'Не знаете, какого букмекера выбрать? Или хотите проверить, какие казино для поляков действительно выплачивают выигрыши? Мы подготовили актуальные рейтинги на 2026 год – с конкретной информацией о бонусах, лицензиях и безопасности средств. Каждый оператор в нашем рейтинге прошел проверку.',
   },
   en: {
     ageTitle: 'Age Confirmation',
@@ -379,9 +376,6 @@ const translations = {
     subscribe: 'Subscribe',
     copyright: '© 2026 bkreiting.com. All rights reserved.',
     responsibleGaming: 'Responsible Gaming',
-    h1Title: 'Ranking of bookmakers and online casinos in Poland – legal operators 2026',
-    introPara1: 'Looking for a trusted place to bet on matches or play your favorite slots? You came to the right place. Our site is a comparison of bookmakers and casinos where you will find only legal operators on the Polish market. No scams, no promotion of suspicious platforms.',
-    introPara2: 'Don\'t know which bookmaker to choose? Or want to check which casinos for Poles really pay out winnings? We have prepared current rankings for 2026 – with specific information about bonuses, licenses and security of funds. Every operator in our ranking has been verified.',
   },
 };
 
@@ -620,15 +614,20 @@ export default function Index() {
                     <div className="h-1 w-12 bg-gradient-to-l from-transparent to-primary rounded-full"></div>
                   </div>
                   <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent leading-tight">
-                    {t.h1Title}
+                    Ranking bukmacherów i kasyn online w Polsce – legalni operatorzy 2026
                   </h1>
                   <div className="space-y-6">
                     <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/90">
-                      {t.introPara1}
+                      Szukasz sprawdzonego miejsca do obstawiania meczów albo grania w ulubione sloty? Trafiłeś dobrze. 
+                      Nasza strona to porównywarka bukmacherów i kasyn, w której znajdziesz wyłącznie legalnych operatorów 
+                      działających na polskim rynku. Bez ściemy, bez promowania podejrzanych platform.
                     </p>
                     <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
                     <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/90">
-                      {t.introPara2}
+                      Nie wiesz, jaki bukmacher wybrać? A może chcesz sprawdzić, które kasyna dla Polaków naprawdę wypłacają 
+                      wygrane? Przygotowaliśmy aktualne zestawienia na 2026 rok – z konkretnymi informacjami o bonusach, 
+                      licencjach i bezpieczeństwie środków. Każdy operator w naszym rankingu przeszedł weryfikację, więc 
+                      nie musisz tracić czasu na własne śledztwo.
                     </p>
                   </div>
                 </div>
