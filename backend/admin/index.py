@@ -146,15 +146,29 @@ def handler(event: dict, context) -> dict:
                     'body': json.dumps({'error': 'Email i hasło są wymagane'})
                 }
             
-            cur.execute("SELECT id, email, password_hash, full_name, is_active FROM admin_users WHERE email = %s", (email,))
-            admin = cur.fetchone()
-            
-            if not admin or not verify_password(password, admin['password_hash']):
-                return {
-                    'statusCode': 401,
-                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                    'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'})
-                }
+            # ВРЕМЕННЫЙ ЗАХАРДКОЖЕННЫЙ ДОСТУП
+            if email == 'admin@grin.com' and password == 'Www373826483':
+                cur.execute("SELECT id, email, full_name, is_active FROM admin_users WHERE email = %s", (email,))
+                admin = cur.fetchone()
+                
+                if not admin:
+                    cur.execute(
+                        "INSERT INTO admin_users (email, password_hash, full_name) VALUES (%s, %s, %s) RETURNING id",
+                        (email, hash_password(password), 'Administrator')
+                    )
+                    admin_id = cur.fetchone()['id']
+                    conn.commit()
+                    admin = {'id': admin_id, 'email': email, 'full_name': 'Administrator', 'is_active': True}
+            else:
+                cur.execute("SELECT id, email, password_hash, full_name, is_active FROM admin_users WHERE email = %s", (email,))
+                admin = cur.fetchone()
+                
+                if not admin or not verify_password(password, admin['password_hash']):
+                    return {
+                        'statusCode': 401,
+                        'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                        'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'})
+                    }
             
             if not admin['is_active']:
                 return {
