@@ -371,6 +371,22 @@ export default function Index() {
                     jak i <strong>polecane kasyna online</strong>, które dopiero zdobywają popularność wśród polskich graczy. 
                     <strong>Top kasyna online</strong> w naszym rankingu wybieramy na podstawie kilkudziesięciu kryteriów.
                   </p>
+
+                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
+                    Wypłacalne kasyna internetowe – opinie i bezpieczeństwo
+                  </h3>
+                  <p className="text-lg leading-relaxed">
+                    Najczęstsze pytanie, które dostajemy, brzmi: „Czy to kasyno naprawdę wypłaca?". I słusznie – bo to 
+                    jest sedno sprawy. <strong>Wypłacalne kasyna internetowe</strong> to takie, które przelewają wygrane 
+                    w zadeklarowanym terminie, bez szukania wymówek do zablokowania konta.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    W naszych recenzjach testujemy proces wypłat osobiście. Sprawdzamy, ile trwa weryfikacja dokumentów, 
+                    jakie metody płatności są dostępne i czy pojawiają się ukryte limity. <strong>Najlepsze kasyno online 
+                    opinie</strong> zbieramy nie tylko z forów, ale przede wszystkim z własnych doświadczeń. Najlepsze 
+                    polskie kasyno w 2026 roku to takie, w którym czujesz się bezpiecznie – od pierwszego logowania po 
+                    wypłatę wygranej.
+                  </p>
                 </div>
               </div>
             </TabsContent>
