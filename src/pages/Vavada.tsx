@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const StarRating = ({ rating, size = 20 }: { rating: number; size?: number }) => {
   return (
@@ -28,6 +29,20 @@ const StarRating = ({ rating, size = 20 }: { rating: number; size?: number }) =>
 export default function Vavada() {
   const navigate = useNavigate();
   const casinoUrl = 'https://gate707.com/?promo=0e4cb864-e734-44ef-9820-29068cfbffac&target=register';
+
+  useEffect(() => {
+    document.title = 'Vavada kasyno online – opinie, bonusy i rejestracja';
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Vavada kasyno online w Polsce – opinie graczy, bonus bez depozytu, darmowe spiny, rejestracja i szybkie wypłaty. Sprawdź szczegóły.');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = 'Vavada kasyno online w Polsce – opinie graczy, bonus bez depozytu, darmowe spiny, rejestracja i szybkie wypłaty. Sprawdź szczegóły.';
+      document.head.appendChild(meta);
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
