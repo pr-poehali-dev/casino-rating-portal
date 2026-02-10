@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Icon from '@/components/ui/icon';
-import AuthModal from '@/components/AuthModal';
-import { useAuth } from '@/contexts/AuthContext';
 
 interface Casino {
   id: number;
@@ -400,12 +397,9 @@ const translations = {
 };
 
 export default function Index() {
-  const navigate = useNavigate();
-  const { user, isLoading } = useAuth();
   const [activeTab, setActiveTab] = useState('ranking');
   const [showAgeModal, setShowAgeModal] = useState(false);
   const [showPromoModal, setShowPromoModal] = useState(false);
-  const [showAuthModal, setShowAuthModal] = useState(false);
   const [language, setLanguage] = useState<Language>('pl');
   const [copiedPromo, setCopiedPromo] = useState(false);
 
@@ -552,19 +546,33 @@ export default function Index() {
                   !
                 </div>
               </Button>
-              {!isLoading && (
-                user ? (
-                  <Button onClick={() => navigate('/dashboard')} className="bg-primary text-primary-foreground hover:bg-primary/90">
-                    <Icon name="User" className="mr-2" size={18} />
-                    <span className="hidden md:inline">Moje Konto</span>
-                  </Button>
-                ) : (
-                  <Button onClick={() => setShowAuthModal(true)} variant="outline" className="border-primary/30 hover:bg-primary/10">
-                    <Icon name="LogIn" className="mr-2" size={18} />
-                    <span className="hidden md:inline">Zaloguj</span>
-                  </Button>
-                )
-              )}
+
+              <div className="flex items-center gap-2">
+                <Button
+                  variant={language === 'pl' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => handleLanguageChange('pl')}
+                  className={language === 'pl' ? 'bg-primary' : ''}
+                >
+                  🇵🇱
+                </Button>
+                <Button
+                  variant={language === 'ru' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => handleLanguageChange('ru')}
+                  className={language === 'ru' ? 'bg-primary' : ''}
+                >
+                  🇷🇺
+                </Button>
+                <Button
+                  variant={language === 'en' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => handleLanguageChange('en')}
+                  className={language === 'en' ? 'bg-primary' : ''}
+                >
+                  🇬🇧
+                </Button>
+              </div>
               <Button size="icon" variant="ghost" className="md:hidden">
                 <Icon name="Menu" size={24} />
               </Button>
@@ -1317,7 +1325,6 @@ export default function Index() {
           </div>
         </div>
       </footer>
-      {showAuthModal && <AuthModal onClose={() => setShowAuthModal(false)} />}
     </div>
     </>
   );
