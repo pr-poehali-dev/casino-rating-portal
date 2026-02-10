@@ -510,38 +510,6 @@ export default function Index() {
               <button className="text-foreground/80 hover:text-primary transition-colors">{t.navContact}</button>
             </nav>
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-1 bg-card/50 border border-border rounded-lg p-1">
-                <button
-                  onClick={() => handleLanguageChange('pl')}
-                  className={`px-2 py-1 rounded text-xs font-semibold transition-all ${
-                    language === 'pl'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-foreground/60 hover:text-foreground'
-                  }`}
-                >
-                  PL
-                </button>
-                <button
-                  onClick={() => handleLanguageChange('ru')}
-                  className={`px-2 py-1 rounded text-xs font-semibold transition-all ${
-                    language === 'ru'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-foreground/60 hover:text-foreground'
-                  }`}
-                >
-                  RU
-                </button>
-                <button
-                  onClick={() => handleLanguageChange('en')}
-                  className={`px-2 py-1 rounded text-xs font-semibold transition-all ${
-                    language === 'en'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'text-foreground/60 hover:text-foreground'
-                  }`}
-                >
-                  EN
-                </button>
-              </div>
               <Button className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
                 <Icon name="Sparkles" className="mr-2" size={18} />
                 {t.vipOffers}
