@@ -271,6 +271,30 @@ export default function Index() {
                   </CardFooter>
                 </Card>
               ))}
+
+              <div className="max-w-5xl mx-auto mt-16 pt-12 border-t border-border">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Najlepsi bukmacherzy w Polsce – ranking i porównanie
+                </h2>
+                <div className="prose prose-invert max-w-none text-foreground/80 space-y-4">
+                  <p className="text-lg leading-relaxed">
+                    Polski rynek zakładów sportowych rozwija się dynamicznie. Co roku pojawiają się nowe oferty, 
+                    zmieniają się kursy i warunki promocji. Dlatego utrzymujemy nasz ranking na bieżąco – żebyś 
+                    mógł porównać top bukmacherów w jednym miejscu.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Najlepsi bukmacherzy wyróżniają się nie jedną, a kilkoma cechami naraz: atrakcyjnymi kursami, 
+                    szybkimi wypłatami, wygodną aplikacją i przejrzystymi zasadami. W naszym zestawieniu uwzględniamy 
+                    to wszystko. Lista legalnych bukmacherów, którą publikujemy, opiera się na realnych testach – 
+                    zakładamy konta, wpłacamy pieniądze i sprawdzamy, jak wygląda codzienne korzystanie z serwisu.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Kto jest najlepszy bukmacher w Polsce w 2026 roku? Odpowiedź nie jest jednoznaczna, bo zależy 
+                    od tego, co jest dla Ciebie ważne – kursy na piłkę nożną, bogata oferta live czy może najwyższy 
+                    bonus powitalny. Poniżej rozbijamy to na czynniki pierwsze.
+                  </p>
+                </div>
+              </div>
             </TabsContent>
 
             <TabsContent value="bonusy" className="mt-8">
