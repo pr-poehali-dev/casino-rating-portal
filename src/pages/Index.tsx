@@ -94,10 +94,20 @@ export default function Index() {
       <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Icon name="Crown" className="text-primary" size={32} />
-              <div className="text-2xl md:text-3xl font-bold text-primary gold-glow">
-                CasinoRanking.pl
+            <div className="flex items-center gap-3 group cursor-pointer">
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full group-hover:bg-primary/30 transition-all duration-300"></div>
+                <div className="relative bg-gradient-to-br from-primary via-primary/90 to-secondary p-2.5 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                  <Icon name="Crown" className="text-primary-foreground" size={28} />
+                </div>
+              </div>
+              <div className="flex flex-col">
+                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-primary/90 to-foreground bg-clip-text text-transparent leading-tight">
+                  CasinoRanking
+                </div>
+                <div className="text-xs md:text-sm text-primary/70 font-semibold tracking-wider">
+                  POLSKA 2026
+                </div>
               </div>
             </div>
             <nav className="hidden md:flex items-center gap-6">
