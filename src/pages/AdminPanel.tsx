@@ -81,6 +81,10 @@ export default function AdminPanel() {
   const [promoExclusive, setPromoExclusive] = useState(false);
   const [promoNotify, setPromoNotify] = useState(true);
   const [promoSuccess, setPromoSuccess] = useState('');
+  const [promoImageFile, setPromoImageFile] = useState<File | null>(null);
+  const [promoImagePreview, setPromoImagePreview] = useState('');
+  const [promoImageUrl, setPromoImageUrl] = useState('');
+  const [uploadingImage, setUploadingImage] = useState(false);
   
   // Active tab
   const [activeTab, setActiveTab] = useState<'users' | 'stats' | 'notifications' | 'promotions'>('stats');
@@ -234,9 +238,85 @@ export default function AdminPanel() {
     }
   };
 
+  const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    
+    if (!file.type.startsWith('image/')) {
+      alert('Proszę wybrać plik obrazu');
+      return;
+    }
+    
+    if (file.size > 5 * 1024 * 1024) {
+      alert('Rozmiar pliku nie może przekraczać 5 MB');
+      return;
+    }
+    
+    setPromoImageFile(file);
+    
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setPromoImagePreview(reader.result as string);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const uploadImage = async () => {
+    if (!promoImageFile) return null;
+    
+    setUploadingImage(true);
+    try {
+      const reader = new FileReader();
+      const base64Promise = new Promise<string>((resolve) => {
+        reader.onloadend = () => {
+          const base64 = (reader.result as string).split(',')[1];
+          resolve(base64);
+        };
+        reader.readAsDataURL(promoImageFile);
+      });
+      
+      const base64 = await base64Promise;
+      
+      const response = await fetch(`${ADMIN_URL}/promotions/upload-image`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${adminToken}`,
+        },
+        body: JSON.stringify({
+          image: base64,
+          filename: promoImageFile.name,
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        return data.image_url;
+      } else {
+        alert(data.error || 'Błąd uploadu obrazu');
+        return null;
+      }
+    } catch (err) {
+      alert('Błąd połączenia podczas uploadu');
+      return null;
+    } finally {
+      setUploadingImage(false);
+    }
+  };
+
   const createPromotion = async (e: React.FormEvent) => {
     e.preventDefault();
     setPromoSuccess('');
+    
+    let imageUrl = promoImageUrl;
+    
+    if (promoImageFile && !imageUrl) {
+      imageUrl = await uploadImage() || '';
+      if (promoImageFile && !imageUrl) {
+        return;
+      }
+    }
     
     try {
       const response = await fetch(`${ADMIN_URL}/promotions`, {
@@ -256,6 +336,7 @@ export default function AdminPanel() {
           valid_until: promoValidUntil || null,
           is_exclusive: promoExclusive,
           notify_users: promoNotify,
+          image_url: imageUrl || null,
         }),
       });
       
@@ -263,7 +344,6 @@ export default function AdminPanel() {
       
       if (response.ok) {
         setPromoSuccess('Promocja utworzona i wysłana do użytkowników!');
-        // Clear form
         setPromoCasino('');
         setPromoTitle('');
         setPromoDescription('');
@@ -274,7 +354,9 @@ export default function AdminPanel() {
         setPromoValidUntil('');
         setPromoExclusive(false);
         setPromoNotify(true);
-        // Reload stats
+        setPromoImageFile(null);
+        setPromoImagePreview('');
+        setPromoImageUrl('');
         loadStats();
         setTimeout(() => setPromoSuccess(''), 5000);
       } else {
@@ -717,6 +799,29 @@ export default function AdminPanel() {
                     rows={4}
                     required
                   />
+                </div>
+
+                <div>
+                  <Label htmlFor="promoImage" className="text-white">Obraz promocji</Label>
+                  <div className="space-y-2">
+                    <Input
+                      id="promoImage"
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageSelect}
+                      className="bg-white/10 border-white/20 text-white"
+                    />
+                    {promoImagePreview && (
+                      <div className="mt-2">
+                        <img 
+                          src={promoImagePreview} 
+                          alt="Preview" 
+                          className="max-w-xs rounded-lg border border-white/20"
+                        />
+                      </div>
+                    )}
+                    <p className="text-xs text-gray-400">Maksymalny rozmiar: 5 MB. Formaty: JPG, PNG, WebP</p>
+                  </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">

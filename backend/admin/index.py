@@ -5,9 +5,11 @@ import json
 import os
 import hashlib
 import secrets
+import base64
 from datetime import datetime, timedelta
 import psycopg2
 from psycopg2.extras import RealDictCursor
+import boto3
 
 def hash_password(password: str) -> str:
     """Хеширование пароля с солью"""
@@ -357,6 +359,58 @@ def handler(event: dict, context) -> dict:
                     'message': f'Powiadomienia wysłane do {len(user_ids)} użytkowników'
                 })
             }
+        
+        # Загрузка изображения промо-акции
+        if method == 'POST' and '/promotions/upload-image' in path:
+            body = json.loads(event.get('body', '{}'))
+            image_base64 = body.get('image')
+            filename = body.get('filename', 'promo.jpg')
+            
+            if not image_base64:
+                return {
+                    'statusCode': 400,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Image jest wymagany'})
+                }
+            
+            try:
+                image_data = base64.b64decode(image_base64)
+                
+                s3 = boto3.client('s3',
+                    endpoint_url='https://bucket.poehali.dev',
+                    aws_access_key_id=os.environ['AWS_ACCESS_KEY_ID'],
+                    aws_secret_access_key=os.environ['AWS_SECRET_ACCESS_KEY'],
+                )
+                
+                file_ext = filename.split('.')[-1] if '.' in filename else 'jpg'
+                s3_key = f'promotions/{secrets.token_hex(16)}.{file_ext}'
+                
+                content_type = 'image/jpeg'
+                if file_ext.lower() == 'png':
+                    content_type = 'image/png'
+                elif file_ext.lower() == 'webp':
+                    content_type = 'image/webp'
+                
+                s3.put_object(
+                    Bucket='files',
+                    Key=s3_key,
+                    Body=image_data,
+                    ContentType=content_type
+                )
+                
+                cdn_url = f"https://cdn.poehali.dev/projects/{os.environ['AWS_ACCESS_KEY_ID']}/bucket/{s3_key}"
+                
+                return {
+                    'statusCode': 200,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'image_url': cdn_url})
+                }
+            except Exception as e:
+                return {
+                    'statusCode': 500,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': f'Błąd uploadu: {str(e)}'})
+                }
         
         # Создание новой промо-акции
         if method == 'POST' and path.endswith('/promotions'):

@@ -304,6 +304,16 @@ export default function Dashboard() {
                       promo.viewed ? 'opacity-75' : ''
                     }`}
                   >
+                    {promo.image_url && (
+                      <div className="relative w-full h-48 overflow-hidden rounded-t-lg">
+                        <img 
+                          src={promo.image_url} 
+                          alt={promo.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                      </div>
+                    )}
                     <CardHeader>
                       <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                         <div className="flex-1">
