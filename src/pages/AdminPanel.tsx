@@ -40,11 +40,9 @@ interface Stats {
 }
 
 export default function AdminPanel() {
-  console.log('[ADMIN] Component rendering...');
   const navigate = useNavigate();
   const [adminToken, setAdminToken] = useState<string | null>(localStorage.getItem('admin_token'));
   const [isLoggedIn, setIsLoggedIn] = useState(!!adminToken);
-  console.log('[ADMIN] Initial state - adminToken:', adminToken, 'isLoggedIn:', isLoggedIn);
   
   // Login state
   const [loginEmail, setLoginEmail] = useState('');
@@ -92,14 +90,13 @@ export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState<'users' | 'stats' | 'notifications' | 'promotions'>('stats');
 
   useEffect(() => {
-    console.log('[ADMIN] useEffect triggered, isLoggedIn:', isLoggedIn, 'adminToken:', adminToken, 'activeTab:', activeTab);
-    if (isLoggedIn && adminToken) {
+    if (isLoggedIn) {
       loadStats();
       if (activeTab === 'users') {
         loadUsers();
       }
     }
-  }, [isLoggedIn, adminToken, activeTab, usersPage, usersSearch]);
+  }, [isLoggedIn, activeTab, usersPage, usersSearch]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -120,7 +117,6 @@ export default function AdminPanel() {
       const data = await response.json();
 
       if (response.ok && data.session_token) {
-        console.log('[ADMIN] Login successful, token:', data.session_token);
         localStorage.setItem('admin_token', data.session_token);
         setAdminToken(data.session_token);
         setIsLoggedIn(true);
@@ -142,7 +138,6 @@ export default function AdminPanel() {
 
   const loadUsers = async () => {
     try {
-      console.log('[ADMIN] Loading users with token:', adminToken);
       const params = new URLSearchParams({
         action: 'users',
         limit: '50',
@@ -153,13 +148,8 @@ export default function AdminPanel() {
         params.append('search', usersSearch);
       }
       
-      const response = await fetch(`${ADMIN_URL}?${params}`, {
-        headers: { 'Authorization': `Bearer ${adminToken}` },
-      });
-      console.log('[ADMIN] Users response status:', response.status);
-      
+      const response = await fetch(`${ADMIN_URL}?${params}`);
       const data = await response.json();
-      console.log('[ADMIN] Users response data:', data);
       setUsers(data.users || []);
       setUsersTotal(data.total || 0);
     } catch (err) {
