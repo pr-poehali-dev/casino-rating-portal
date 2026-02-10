@@ -45,10 +45,12 @@ def handler(event: dict, context) -> dict:
             'headers': {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type, X-Authorization',
-                'Access-Control-Max-Age': '86400'
+                'Access-Control-Allow-Headers': 'Content-Type, X-Authorization, Authorization',
+                'Access-Control-Max-Age': '86400',
+                'Access-Control-Allow-Credentials': 'true'
             },
-            'body': ''
+            'body': '',
+            'isBase64Encoded': False
         }
     
     # Получаем путь
@@ -71,14 +73,16 @@ def handler(event: dict, context) -> dict:
                     return {
                         'statusCode': 400,
                         'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                        'body': json.dumps({'error': 'Email i hasło są wymagane'})
+                        'body': json.dumps({'error': 'Email i hasło są wymagane'}),
+                        'isBase64Encoded': False
                     }
                 
                 if len(password) < 6:
                     return {
                         'statusCode': 400,
                         'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                        'body': json.dumps({'error': 'Hasło musi mieć minimum 6 znaków'})
+                        'body': json.dumps({'error': 'Hasło musi mieć minimum 6 znaków'}),
+                        'isBase64Encoded': False
                     }
                 
                 # Проверка существования email
@@ -87,7 +91,8 @@ def handler(event: dict, context) -> dict:
                     return {
                         'statusCode': 400,
                         'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                        'body': json.dumps({'error': 'Ten email jest już zarejestrowany'})
+                        'body': json.dumps({'error': 'Ten email jest już zarejestrowany'}),
+                        'isBase64Encoded': False
                     }
                 
                 # Создание пользователя
@@ -122,6 +127,7 @@ def handler(event: dict, context) -> dict:
                     'headers': {
                         'Content-Type': 'application/json',
                         'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Credentials': 'true',
                         'X-Set-Cookie': f'session_token={session_token}; Path=/; Max-Age=2592000; SameSite=Lax; Secure'
                     },
                     'body': json.dumps({
@@ -132,7 +138,8 @@ def handler(event: dict, context) -> dict:
                             'created_at': user['created_at'].isoformat()
                         },
                         'session_token': session_token
-                    }, default=str)
+                    }, default=str),
+                    'isBase64Encoded': False
                 }
             
             # Авторизация
@@ -144,7 +151,8 @@ def handler(event: dict, context) -> dict:
                     return {
                         'statusCode': 400,
                         'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                        'body': json.dumps({'error': 'Email i hasło są wymagane'})
+                        'body': json.dumps({'error': 'Email i hasło są wymagane'}),
+                        'isBase64Encoded': False
                     }
                 
                 # Поиск пользователя
@@ -155,14 +163,16 @@ def handler(event: dict, context) -> dict:
                     return {
                         'statusCode': 401,
                         'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                        'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'})
+                        'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'}),
+                        'isBase64Encoded': False
                     }
                 
                 if not user['is_active']:
                     return {
                         'statusCode': 403,
                         'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                        'body': json.dumps({'error': 'Konto zostało zablokowane'})
+                        'body': json.dumps({'error': 'Konto zostało zablokowane'}),
+                        'isBase64Encoded': False
                     }
                 
                 # Создание сессии
@@ -189,12 +199,14 @@ def handler(event: dict, context) -> dict:
                     'headers': {
                         'Content-Type': 'application/json',
                         'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Credentials': 'true',
                         'X-Set-Cookie': f'session_token={session_token}; Path=/; Max-Age=2592000; SameSite=Lax; Secure'
                     },
                     'body': json.dumps({
                         'user': user_dict,
                         'session_token': session_token
-                    }, default=str)
+                    }, default=str),
+                    'isBase64Encoded': False
                 }
             
             # Выход
@@ -211,7 +223,8 @@ def handler(event: dict, context) -> dict:
                         'Access-Control-Allow-Origin': '*',
                         'X-Set-Cookie': 'session_token=; Path=/; Max-Age=0'
                     },
-                    'body': json.dumps({'message': 'Wylogowano pomyślnie'})
+                    'body': json.dumps({'message': 'Wylogowano pomyślnie'}),
+                    'isBase64Encoded': False
                 }
         
         # Получение информации о текущем пользователе
@@ -222,7 +235,8 @@ def handler(event: dict, context) -> dict:
                 return {
                     'statusCode': 401,
                     'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                    'body': json.dumps({'error': 'Brak tokenu autoryzacji'})
+                    'body': json.dumps({'error': 'Brak tokenu autoryzacji'}),
+                    'isBase64Encoded': False
                 }
             
             # Проверка токена
@@ -238,26 +252,30 @@ def handler(event: dict, context) -> dict:
                 return {
                     'statusCode': 401,
                     'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                    'body': json.dumps({'error': 'Nieprawidłowy lub wygasły token'})
+                    'body': json.dumps({'error': 'Nieprawidłowy lub wygasły token'}),
+                    'isBase64Encoded': False
                 }
             
             return {
                 'statusCode': 200,
                 'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                'body': json.dumps({'user': dict(user)}, default=str)
+                'body': json.dumps({'user': dict(user)}, default=str),
+                'isBase64Encoded': False
             }
         
         return {
             'statusCode': 404,
             'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-            'body': json.dumps({'error': 'Endpoint nie znaleziony'})
+            'body': json.dumps({'error': 'Endpoint nie znaleziony'}),
+            'isBase64Encoded': False
         }
         
     except Exception as e:
         return {
             'statusCode': 500,
             'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-            'body': json.dumps({'error': f'Błąd serwera: {str(e)}'})
+            'body': json.dumps({'error': f'Błąd serwera: {str(e)}'}),
+            'isBase64Encoded': False
         }
     finally:
         if 'cur' in locals():
