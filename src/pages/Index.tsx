@@ -170,7 +170,26 @@ export default function Index() {
             </TabsList>
 
             <TabsContent value="ranking" className="mt-8 space-y-6">
-              <div className="text-center mb-8">
+              <div className="max-w-5xl mx-auto mb-12">
+                <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+                  Ranking bukmacherów i kasyn online w Polsce – legalni operatorzy 2026
+                </h1>
+                <div className="prose prose-invert max-w-none text-foreground/80 space-y-4">
+                  <p className="text-lg leading-relaxed">
+                    Szukasz sprawdzonego miejsca do obstawiania meczów albo grania w ulubione sloty? Trafiłeś dobrze. 
+                    Nasza strona to porównywarka bukmacherów i kasyn, w której znajdziesz wyłącznie legalnych operatorów 
+                    działających na polskim rynku. Bez ściemy, bez promowania podejrzanych platform.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Nie wiesz, jaki bukmacher wybrać? A może chcesz sprawdzić, które kasyna dla Polaków naprawdę wypłacają 
+                    wygrane? Przygotowaliśmy aktualne zestawienia na 2026 rok – z konkretnymi informacjami o bonusach, 
+                    licencjach i bezpieczeństwie środków. Każdy operator w naszym rankingu przeszedł weryfikację, więc 
+                    nie musisz tracić czasu na własne śledztwo.
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center mb-8 border-t border-border pt-12">
                 <h3 className="text-3xl font-bold mb-2">Top Kasyna Online 2026</h3>
                 <p className="text-foreground/70">Sprawdzone i zweryfikowane przez ekspertów</p>
               </div>
