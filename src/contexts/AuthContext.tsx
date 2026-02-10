@@ -57,7 +57,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
 
     try {
-      const response = await fetch(`${AUTH_URL}/me`, {
+      const response = await fetch(`${AUTH_URL}?action=me`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -85,8 +85,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const register = async (email: string, password: string, fullName?: string) => {
     try {
-      console.log('Attempting registration to:', `${AUTH_URL}/register`);
-      const response = await fetch(`${AUTH_URL}/register`, {
+      console.log('Attempting registration to:', `${AUTH_URL}?action=register`);
+      const response = await fetch(`${AUTH_URL}?action=register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -123,8 +123,8 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   const login = async (email: string, password: string) => {
     try {
-      console.log('Attempting login to:', `${AUTH_URL}/login`);
-      const response = await fetch(`${AUTH_URL}/login`, {
+      console.log('Attempting login to:', `${AUTH_URL}?action=login`);
+      const response = await fetch(`${AUTH_URL}?action=login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -161,7 +161,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const token = localStorage.getItem('session_token');
     if (token) {
       try {
-        await fetch(`${AUTH_URL}/logout`, {
+        await fetch(`${AUTH_URL}?action=logout`, {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,

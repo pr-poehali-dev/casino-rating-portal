@@ -3,7 +3,7 @@
     {
       "name": "Регистрация нового пользователя",
       "method": "POST",
-      "path": "/register",
+      "path": "/?action=register",
       "body": {
         "email": "test@example.com",
         "password": "testpass123",
@@ -22,7 +22,7 @@
     {
       "name": "Авторизация существующего пользователя",
       "method": "POST",
-      "path": "/login",
+      "path": "/?action=login",
       "body": {
         "email": "test@example.com",
         "password": "testpass123"

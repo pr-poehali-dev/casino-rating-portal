@@ -53,8 +53,16 @@ def handler(event: dict, context) -> dict:
             'isBase64Encoded': False
         }
     
-    # Получаем путь
-    path = event.get('path', '/')
+    # Получаем путь из url или queryStringParameters
+    url = event.get('url', '')
+    query_params = event.get('queryStringParameters', {}) or {}
+    action = query_params.get('action', '')
+    
+    # Если в url есть путь, используем его
+    if '?' in url:
+        path = url.split('?')[0]
+    else:
+        path = url
     
     try:
         conn = psycopg2.connect(os.environ['DATABASE_URL'])
@@ -63,8 +71,8 @@ def handler(event: dict, context) -> dict:
         if method == 'POST':
             body = json.loads(event.get('body', '{}'))
             
-            # Регистрация
-            if 'register' in path:
+            # Регистрация (проверяем path или action)
+            if 'register' in path or action == 'register' or 'register' in url:
                 email = body.get('email', '').lower().strip()
                 password = body.get('password', '')
                 full_name = body.get('full_name', '').strip()
@@ -143,7 +151,7 @@ def handler(event: dict, context) -> dict:
                 }
             
             # Авторизация
-            elif 'login' in path:
+            elif 'login' in path or action == 'login' or 'login' in url:
                 email = body.get('email', '').lower().strip()
                 password = body.get('password', '')
                 
@@ -210,7 +218,7 @@ def handler(event: dict, context) -> dict:
                 }
             
             # Выход
-            elif 'logout' in path:
+            elif 'logout' in path or action == 'logout' or 'logout' in url:
                 token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
                 if token:
                     cur.execute("UPDATE user_sessions SET expires_at = CURRENT_TIMESTAMP WHERE session_token = %s", (token,))
@@ -228,7 +236,7 @@ def handler(event: dict, context) -> dict:
                 }
         
         # Получение информации о текущем пользователе
-        elif method == 'GET' and 'me' in path:
+        elif method == 'GET' and ('me' in path or action == 'me' or 'me' in url):
             token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
             
             if not token:
