@@ -40,9 +40,11 @@ interface Stats {
 }
 
 export default function AdminPanel() {
+  console.log('[ADMIN] Component rendering...');
   const navigate = useNavigate();
   const [adminToken, setAdminToken] = useState<string | null>(localStorage.getItem('admin_token'));
   const [isLoggedIn, setIsLoggedIn] = useState(!!adminToken);
+  console.log('[ADMIN] Initial state - adminToken:', adminToken, 'isLoggedIn:', isLoggedIn);
   
   // Login state
   const [loginEmail, setLoginEmail] = useState('');
