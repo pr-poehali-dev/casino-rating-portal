@@ -293,6 +293,21 @@ export default function Index() {
                     od tego, co jest dla Ciebie ważne – kursy na piłkę nożną, bogata oferta live czy może najwyższy 
                     bonus powitalny. Poniżej rozbijamy to na czynniki pierwsze.
                   </p>
+
+                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
+                    Legalni bukmacherzy – bukmacherzy z licencją
+                  </h3>
+                  <p className="text-lg leading-relaxed">
+                    W Polsce nie ma żartów z legalności zakładów. Ministerstwo Finansów prowadzi rejestr operatorów 
+                    z licencją, a granie poza tym rejestrem to ryzyko – nie tylko prawne, ale przede wszystkim finansowe. 
+                    Bukmacherzy z licencją podlegają kontrolom i muszą zapewniać ochronę środków graczy.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Dlatego w naszym rankingu umieszczamy wyłącznie licencjonowanych operatorów. Sprawdzamy aktualność 
+                    zezwoleń i monitorujemy ewentualne zmiany regulacyjne. Szukając opinii o legalnych bukmacherach, 
+                    zwracaj uwagę nie tylko na oceny użytkowników, ale też na numer licencji – każdy legalny bukmacher 
+                    publikuje go na swojej stronie. Opinie graczy to jedno, ale formalny status operatora to absolutna podstawa.
+                  </p>
                 </div>
               </div>
             </TabsContent>
