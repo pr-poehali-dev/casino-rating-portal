@@ -90,13 +90,14 @@ export default function AdminPanel() {
   const [activeTab, setActiveTab] = useState<'users' | 'stats' | 'notifications' | 'promotions'>('stats');
 
   useEffect(() => {
-    if (isLoggedIn) {
+    console.log('[ADMIN] useEffect triggered, isLoggedIn:', isLoggedIn, 'adminToken:', adminToken, 'activeTab:', activeTab);
+    if (isLoggedIn && adminToken) {
       loadStats();
       if (activeTab === 'users') {
         loadUsers();
       }
     }
-  }, [isLoggedIn, activeTab, usersPage, usersSearch]);
+  }, [isLoggedIn, adminToken, activeTab, usersPage, usersSearch]);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
