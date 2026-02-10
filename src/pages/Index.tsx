@@ -103,10 +103,11 @@ export default function Index() {
               </div>
               <div className="flex flex-col">
                 <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-primary/90 to-foreground bg-clip-text text-transparent leading-tight">
-                  CasinoRanking
+                  bkreiting.com
                 </div>
-                <div className="text-xs md:text-sm text-primary/70 font-semibold tracking-wider">
-                  POLSKA 2026
+                <div className="flex items-center gap-1.5 text-xs md:text-sm text-primary/70 font-semibold tracking-wider">
+                  <span>POLSKA 2026</span>
+                  <Icon name="Dices" className="text-primary/80" size={14} />
                 </div>
               </div>
             </div>
