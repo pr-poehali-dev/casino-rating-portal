@@ -1,0 +1,266 @@
+"""
+API для регистрации и авторизации пользователей
+"""
+import json
+import os
+import hashlib
+import secrets
+from datetime import datetime, timedelta
+import psycopg2
+from psycopg2.extras import RealDictCursor
+
+def hash_password(password: str) -> str:
+    """Хеширование пароля с солью"""
+    salt = secrets.token_hex(16)
+    pwd_hash = hashlib.pbkdf2_hmac('sha256', password.encode(), salt.encode(), 100000)
+    return f"{salt}${pwd_hash.hex()}"
+
+def verify_password(password: str, password_hash: str) -> bool:
+    """Проверка пароля"""
+    try:
+        salt, pwd_hash = password_hash.split('$')
+        check_hash = hashlib.pbkdf2_hmac('sha256', password.encode(), salt.encode(), 100000)
+        return check_hash.hex() == pwd_hash
+    except:
+        return False
+
+def generate_session_token() -> str:
+    """Генерация безопасного токена сессии"""
+    return secrets.token_urlsafe(32)
+
+def handler(event: dict, context) -> dict:
+    """
+    Обработчик запросов авторизации и регистрации
+    
+    POST /register - регистрация нового пользователя
+    POST /login - авторизация пользователя
+    POST /logout - выход из системы
+    GET /me - получение информации о текущем пользователе
+    """
+    method = event.get('httpMethod', 'POST')
+    
+    if method == 'OPTIONS':
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, X-Authorization',
+                'Access-Control-Max-Age': '86400'
+            },
+            'body': ''
+        }
+    
+    # Получаем путь
+    path = event.get('path', '/')
+    
+    try:
+        conn = psycopg2.connect(os.environ['DATABASE_URL'])
+        cur = conn.cursor(cursor_factory=RealDictCursor)
+        
+        if method == 'POST':
+            body = json.loads(event.get('body', '{}'))
+            
+            # Регистрация
+            if 'register' in path:
+                email = body.get('email', '').lower().strip()
+                password = body.get('password', '')
+                full_name = body.get('full_name', '').strip()
+                
+                if not email or not password:
+                    return {
+                        'statusCode': 400,
+                        'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                        'body': json.dumps({'error': 'Email i hasło są wymagane'})
+                    }
+                
+                if len(password) < 6:
+                    return {
+                        'statusCode': 400,
+                        'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                        'body': json.dumps({'error': 'Hasło musi mieć minimum 6 znaków'})
+                    }
+                
+                # Проверка существования email
+                cur.execute("SELECT id FROM users WHERE email = %s", (email,))
+                if cur.fetchone():
+                    return {
+                        'statusCode': 400,
+                        'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                        'body': json.dumps({'error': 'Ten email jest już zarejestrowany'})
+                    }
+                
+                # Создание пользователя
+                password_hash = hash_password(password)
+                cur.execute(
+                    "INSERT INTO users (email, password_hash, full_name) VALUES (%s, %s, %s) RETURNING id, email, full_name, created_at",
+                    (email, password_hash, full_name)
+                )
+                user = dict(cur.fetchone())
+                
+                # Создание сессии
+                session_token = generate_session_token()
+                expires_at = datetime.now() + timedelta(days=30)
+                ip_address = event.get('requestContext', {}).get('identity', {}).get('sourceIp', '')
+                user_agent = event.get('headers', {}).get('user-agent', '')
+                
+                cur.execute(
+                    "INSERT INTO user_sessions (user_id, session_token, expires_at, ip_address, user_agent) VALUES (%s, %s, %s, %s, %s)",
+                    (user['id'], session_token, expires_at, ip_address, user_agent)
+                )
+                
+                # Создание подписки по умолчанию (на все промо)
+                cur.execute(
+                    "INSERT INTO user_subscriptions (user_id, notify_all) VALUES (%s, true)",
+                    (user['id'],)
+                )
+                
+                conn.commit()
+                
+                return {
+                    'statusCode': 201,
+                    'headers': {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                        'X-Set-Cookie': f'session_token={session_token}; Path=/; Max-Age=2592000; SameSite=Lax; Secure'
+                    },
+                    'body': json.dumps({
+                        'user': {
+                            'id': user['id'],
+                            'email': user['email'],
+                            'full_name': user['full_name'],
+                            'created_at': user['created_at'].isoformat()
+                        },
+                        'session_token': session_token
+                    }, default=str)
+                }
+            
+            # Авторизация
+            elif 'login' in path:
+                email = body.get('email', '').lower().strip()
+                password = body.get('password', '')
+                
+                if not email or not password:
+                    return {
+                        'statusCode': 400,
+                        'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                        'body': json.dumps({'error': 'Email i hasło są wymagane'})
+                    }
+                
+                # Поиск пользователя
+                cur.execute("SELECT id, email, password_hash, full_name, is_active FROM users WHERE email = %s", (email,))
+                user = cur.fetchone()
+                
+                if not user or not verify_password(password, user['password_hash']):
+                    return {
+                        'statusCode': 401,
+                        'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                        'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'})
+                    }
+                
+                if not user['is_active']:
+                    return {
+                        'statusCode': 403,
+                        'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                        'body': json.dumps({'error': 'Konto zostało zablokowane'})
+                    }
+                
+                # Создание сессии
+                session_token = generate_session_token()
+                expires_at = datetime.now() + timedelta(days=30)
+                ip_address = event.get('requestContext', {}).get('identity', {}).get('sourceIp', '')
+                user_agent = event.get('headers', {}).get('user-agent', '')
+                
+                cur.execute(
+                    "INSERT INTO user_sessions (user_id, session_token, expires_at, ip_address, user_agent) VALUES (%s, %s, %s, %s, %s)",
+                    (user['id'], session_token, expires_at, ip_address, user_agent)
+                )
+                
+                # Обновление времени последнего входа
+                cur.execute("UPDATE users SET last_login = CURRENT_TIMESTAMP WHERE id = %s", (user['id'],))
+                
+                conn.commit()
+                
+                user_dict = dict(user)
+                user_dict.pop('password_hash')
+                
+                return {
+                    'statusCode': 200,
+                    'headers': {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                        'X-Set-Cookie': f'session_token={session_token}; Path=/; Max-Age=2592000; SameSite=Lax; Secure'
+                    },
+                    'body': json.dumps({
+                        'user': user_dict,
+                        'session_token': session_token
+                    }, default=str)
+                }
+            
+            # Выход
+            elif 'logout' in path:
+                token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
+                if token:
+                    cur.execute("UPDATE user_sessions SET expires_at = CURRENT_TIMESTAMP WHERE session_token = %s", (token,))
+                    conn.commit()
+                
+                return {
+                    'statusCode': 200,
+                    'headers': {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                        'X-Set-Cookie': 'session_token=; Path=/; Max-Age=0'
+                    },
+                    'body': json.dumps({'message': 'Wylogowano pomyślnie'})
+                }
+        
+        # Получение информации о текущем пользователе
+        elif method == 'GET' and 'me' in path:
+            token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
+            
+            if not token:
+                return {
+                    'statusCode': 401,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Brak tokenu autoryzacji'})
+                }
+            
+            # Проверка токена
+            cur.execute(
+                "SELECT u.id, u.email, u.full_name, u.created_at, u.last_login FROM users u "
+                "JOIN user_sessions s ON u.id = s.user_id "
+                "WHERE s.session_token = %s AND s.expires_at > CURRENT_TIMESTAMP AND u.is_active = true",
+                (token,)
+            )
+            user = cur.fetchone()
+            
+            if not user:
+                return {
+                    'statusCode': 401,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Nieprawidłowy lub wygasły token'})
+                }
+            
+            return {
+                'statusCode': 200,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({'user': dict(user)}, default=str)
+            }
+        
+        return {
+            'statusCode': 404,
+            'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+            'body': json.dumps({'error': 'Endpoint nie znaleziony'})
+        }
+        
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+            'body': json.dumps({'error': f'Błąd serwera: {str(e)}'})
+        }
+    finally:
+        if 'cur' in locals():
+            cur.close()
+        if 'conn' in locals():
+            conn.close()

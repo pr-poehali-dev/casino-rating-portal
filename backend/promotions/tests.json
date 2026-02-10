@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "name": "Получение всех активных промо",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "promotions": "array",
+        "total": "number"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Получение промо по казино",
+      "method": "GET",
+      "path": "/?casino=Vavada",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "promotions": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
