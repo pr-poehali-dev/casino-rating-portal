@@ -62,7 +62,7 @@ export default function Dashboard() {
 
   const loadPromotions = async () => {
     try {
-      const response = await fetch(`${PROMOTIONS_URL}/user`, {
+      const response = await fetch(PROMOTIONS_URL, {
         headers: {
           'Authorization': `Bearer ${sessionToken}`,
         },
