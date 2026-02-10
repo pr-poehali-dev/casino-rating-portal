@@ -387,6 +387,44 @@ export default function Index() {
                     polskie kasyno w 2026 roku to takie, w którym czujesz się bezpiecznie – od pierwszego logowania po 
                     wypłatę wygranej.
                   </p>
+
+                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
+                    Bonusy kasynowe bez depozytu i darmowe spiny
+                  </h3>
+                  <p className="text-lg leading-relaxed">
+                    To chyba najbardziej pożądana kategoria ofert. <strong>Kasyno bez depozytu</strong> pozwala zagrać 
+                    za pieniądze operatora – bez angażowania własnych środków. Brzmi za pięknie? Cóż, warunki obrotu 
+                    bywają wymagające, ale sama możliwość przetestowania platformy za darmo jest bezcenna.
+                  </p>
+                  <p className="text-lg leading-relaxed font-semibold">
+                    Oto najpopularniejsze rodzaje bonusów kasynowych:
+                  </p>
+                  <ul className="space-y-3 text-lg leading-relaxed list-none pl-0">
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Darmowe spiny za rejestrację</strong> – dostajesz określoną liczbę spinów od razu po założeniu konta. Nie musisz wpłacać ani złotówki.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Darmowe spiny bez depozytu (Polska)</strong> – jak wyżej, ale specjalnie dedykowane polskim graczom. Dostępność zmienia się w zależności od operatora.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Kasyno bonus na start</strong> – klasyczne dopasowanie pierwszego depozytu, czasem nawet 100% lub więcej.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Darmowa kasa za rejestrację w kasynie</strong> – zamiast spinów dostajesz konkretną kwotę do wykorzystania na dowolne gry.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Nowe kasyna bez depozytu</strong> – świeże platformy, które oferują bonusy bez wymaganej wpłaty, żeby przyciągnąć pierwszych użytkowników.</span>
+                    </li>
+                  </ul>
+                  <p className="text-lg leading-relaxed">
+                    Pamiętaj, żeby zawsze sprawdzić wymagania dotyczące obrotu bonusem. Darmowe spiny, które wymagają 
+                    60-krotnego obrotu, wyglądają znacznie mniej atrakcyjnie niż te z wymogiem 30-krotnym.
+                  </p>
                 </div>
               </div>
             </TabsContent>
