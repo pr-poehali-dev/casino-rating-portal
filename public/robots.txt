@@ -1,21 +1,21 @@
-# Robots.txt для bkreiting.com
-# Ranking bukmacherów i kasyn online w Polsce 2026
+# Robots.txt for bkreiting.com
+# Ranking bukmacherow i kasyn online w Polsce 2026
 
 User-agent: *
 Allow: /
 
-# Запрет индексации служебных файлов
+# Block indexing of service files
 Disallow: /assets/
 Disallow: /*.js$
 Disallow: /*.css$
 Disallow: /*.json$
 
-# Запрет индексации технических страниц
+# Block indexing of technical pages
 Disallow: /admin
 Disallow: /login
 Disallow: /api/
 
-# Разрешаем индексацию основных разделов
+# Allow indexing of main sections
 Allow: /#ranking
 Allow: /#bonusy
 Allow: /#gry
@@ -24,7 +24,7 @@ Allow: /#faq
 # Sitemap
 Sitemap: https://bkreiting.com/sitemap.xml
 
-# Настройки для основных поисковиков
+# Settings for main search engines
 
 # Yandex
 User-agent: Yandex
@@ -50,7 +50,7 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# Запрет для плохих ботов
+# Block bad bots
 User-agent: AhrefsBot
 Disallow: /
 
@@ -63,6 +63,6 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Правила кэширования (для Яндекса)
+# Caching rules (for Yandex)
 User-agent: *
 Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
