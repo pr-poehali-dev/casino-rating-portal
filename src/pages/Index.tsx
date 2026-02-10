@@ -308,6 +308,40 @@ export default function Index() {
                     zwracaj uwagę nie tylko na oceny użytkowników, ale też na numer licencji – każdy legalny bukmacher 
                     publikuje go na swojej stronie. Opinie graczy to jedno, ale formalny status operatora to absolutna podstawa.
                   </p>
+
+                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
+                    Bonusy bukmacherskie i oferty na start
+                  </h3>
+                  <p className="text-lg leading-relaxed">
+                    Bonusy bukmacherskie potrafią naprawdę ułatwić start. Większość legalnych operatorów oferuje bonus 
+                    na start – zwykle jest to dopasowanie pierwszego depozytu lub zakład bez ryzyka. Ale diabeł tkwi 
+                    w szczegółach, a dokładniej w warunkach obrotu.
+                  </p>
+                  <p className="text-lg leading-relaxed font-semibold">
+                    Na co warto zwracać uwagę:
+                  </p>
+                  <ul className="space-y-3 text-lg leading-relaxed list-none pl-0">
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Bonus na start bukmacher</strong> – sprawdź, czy dotyczy pierwszego zakładu, czy depozytu. To robi ogromną różnicę.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Freebet bez depozytu</strong> – rzadkość, ale się zdarza. Niektórzy bukmacherzy dają darmowy zakład za samą rejestrację.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Kod promocyjny bukmacher</strong> – czasem wystarczy wpisać odpowiedni kod przy rejestracji, żeby odblokować dodatkową premię.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Zakład bez ryzyka</strong> – jeśli przegrasz pierwszy kupon, dostajesz zwrot stawki. Warunki bywają różne, więc czytaj regulamin.</span>
+                    </li>
+                  </ul>
+                  <p className="text-lg leading-relaxed">
+                    Oferty typu <strong>bukmacher bez depozytu</strong> to świetna opcja dla tych, którzy chcą przetestować 
+                    platformę, zanim zaangażują własne pieniądze.
+                  </p>
                 </div>
               </div>
             </TabsContent>
