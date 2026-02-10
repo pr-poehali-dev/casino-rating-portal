@@ -69,8 +69,21 @@ export default function AdminPanel() {
   const [broadcastMessage, setBroadcastMessage] = useState('');
   const [broadcastSuccess, setBroadcastSuccess] = useState('');
   
+  // Promotion form state
+  const [promoCasino, setPromoCasino] = useState('');
+  const [promoTitle, setPromoTitle] = useState('');
+  const [promoDescription, setPromoDescription] = useState('');
+  const [promoCode, setPromoCode] = useState('');
+  const [promoAmount, setPromoAmount] = useState('');
+  const [promoType, setPromoType] = useState('free_spins');
+  const [promoUrl, setPromoUrl] = useState('');
+  const [promoValidUntil, setPromoValidUntil] = useState('');
+  const [promoExclusive, setPromoExclusive] = useState(false);
+  const [promoNotify, setPromoNotify] = useState(true);
+  const [promoSuccess, setPromoSuccess] = useState('');
+  
   // Active tab
-  const [activeTab, setActiveTab] = useState<'users' | 'stats' | 'notifications'>('stats');
+  const [activeTab, setActiveTab] = useState<'users' | 'stats' | 'notifications' | 'promotions'>('stats');
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -221,6 +234,57 @@ export default function AdminPanel() {
     }
   };
 
+  const createPromotion = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setPromoSuccess('');
+    
+    try {
+      const response = await fetch(`${ADMIN_URL}/promotions`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${adminToken}`,
+        },
+        body: JSON.stringify({
+          casino_name: promoCasino,
+          title: promoTitle,
+          description: promoDescription,
+          promo_code: promoCode || null,
+          bonus_amount: promoAmount,
+          bonus_type: promoType,
+          casino_url: promoUrl,
+          valid_until: promoValidUntil || null,
+          is_exclusive: promoExclusive,
+          notify_users: promoNotify,
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        setPromoSuccess('Promocja utworzona i wysłana do użytkowników!');
+        // Clear form
+        setPromoCasino('');
+        setPromoTitle('');
+        setPromoDescription('');
+        setPromoCode('');
+        setPromoAmount('');
+        setPromoType('free_spins');
+        setPromoUrl('');
+        setPromoValidUntil('');
+        setPromoExclusive(false);
+        setPromoNotify(true);
+        // Reload stats
+        loadStats();
+        setTimeout(() => setPromoSuccess(''), 5000);
+      } else {
+        alert(data.error || 'Błąd tworzenia promocji');
+      }
+    } catch (err) {
+      alert('Błąd połączenia');
+    }
+  };
+
   // Login screen
   if (!isLoggedIn) {
     return (
@@ -318,6 +382,14 @@ export default function AdminPanel() {
           >
             <Icon name="Bell" className="mr-2" size={18} />
             Powiadomienia
+          </Button>
+          <Button
+            onClick={() => setActiveTab('promotions')}
+            variant={activeTab === 'promotions' ? 'default' : 'outline'}
+            className={activeTab === 'promotions' ? 'bg-gradient-to-r from-purple-500 to-pink-500' : 'border-white/20 text-white'}
+          >
+            <Icon name="Gift" className="mr-2" size={18} />
+            Promocje
           </Button>
         </div>
 
@@ -579,6 +651,161 @@ export default function AdminPanel() {
               </CardContent>
             </Card>
           </div>
+        )}
+
+        {/* Promotions Tab */}
+        {activeTab === 'promotions' && (
+          <Card className="bg-white/10 backdrop-blur-md border-white/20">
+            <CardHeader>
+              <CardTitle className="text-white">Utwórz nową promocję</CardTitle>
+              <CardDescription className="text-gray-300">
+                Wypełnij formularz, aby dodać promocję i wysłać ją użytkownikom
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={createPromotion} className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="promoCasino" className="text-white">Kasyno *</Label>
+                    <Input
+                      id="promoCasino"
+                      value={promoCasino}
+                      onChange={(e) => setPromoCasino(e.target.value)}
+                      className="bg-white/10 border-white/20 text-white"
+                      placeholder="np. Vavada"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="promoType" className="text-white">Typ bonusu *</Label>
+                    <select
+                      id="promoType"
+                      value={promoType}
+                      onChange={(e) => setPromoType(e.target.value)}
+                      className="w-full h-10 px-3 rounded-md bg-white/10 border border-white/20 text-white"
+                      required
+                    >
+                      <option value="free_spins">Darmowe Spiny</option>
+                      <option value="deposit_match">Bonus Depozytowy</option>
+                      <option value="no_deposit">Bez Depozytu</option>
+                      <option value="cashback">Cashback</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="promoTitle" className="text-white">Tytuł promocji *</Label>
+                  <Input
+                    id="promoTitle"
+                    value={promoTitle}
+                    onChange={(e) => setPromoTitle(e.target.value)}
+                    className="bg-white/10 border-white/20 text-white"
+                    placeholder="np. Gates of Olympus 1000 - 20 Free Spins"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="promoDescription" className="text-white">Opis *</Label>
+                  <Textarea
+                    id="promoDescription"
+                    value={promoDescription}
+                    onChange={(e) => setPromoDescription(e.target.value)}
+                    className="bg-white/10 border-white/20 text-white"
+                    placeholder="Szczegółowy opis promocji..."
+                    rows={4}
+                    required
+                  />
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="promoAmount" className="text-white">Wartość bonusu *</Label>
+                    <Input
+                      id="promoAmount"
+                      value={promoAmount}
+                      onChange={(e) => setPromoAmount(e.target.value)}
+                      className="bg-white/10 border-white/20 text-white"
+                      placeholder="np. 20 Free Spins lub Do 5000 PLN"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="promoCode" className="text-white">Kod promocyjny</Label>
+                    <Input
+                      id="promoCode"
+                      value={promoCode}
+                      onChange={(e) => setPromoCode(e.target.value)}
+                      className="bg-white/10 border-white/20 text-white"
+                      placeholder="np. WELCOME5000"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="promoUrl" className="text-white">Link do kasyna *</Label>
+                    <Input
+                      id="promoUrl"
+                      value={promoUrl}
+                      onChange={(e) => setPromoUrl(e.target.value)}
+                      className="bg-white/10 border-white/20 text-white"
+                      placeholder="https://..."
+                      type="url"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="promoValidUntil" className="text-white">Ważne do</Label>
+                    <Input
+                      id="promoValidUntil"
+                      value={promoValidUntil}
+                      onChange={(e) => setPromoValidUntil(e.target.value)}
+                      className="bg-white/10 border-white/20 text-white"
+                      type="datetime-local"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-6">
+                  <label className="flex items-center gap-2 text-white cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={promoExclusive}
+                      onChange={(e) => setPromoExclusive(e.target.checked)}
+                      className="w-4 h-4"
+                    />
+                    <span>Oferta ekskluzywna</span>
+                  </label>
+                  
+                  <label className="flex items-center gap-2 text-white cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={promoNotify}
+                      onChange={(e) => setPromoNotify(e.target.checked)}
+                      className="w-4 h-4"
+                    />
+                    <span>Wyślij powiadomienia użytkownikom</span>
+                  </label>
+                </div>
+
+                {promoSuccess && (
+                  <div className="text-green-300 text-sm flex items-center gap-2 p-3 bg-green-500/10 rounded-lg">
+                    <Icon name="Check" size={16} />
+                    {promoSuccess}
+                  </div>
+                )}
+
+                <Button type="submit" className="w-full bg-gradient-to-r from-purple-500 to-pink-500">
+                  <Icon name="Plus" className="mr-2" size={18} />
+                  Utwórz promocję
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         )}
       </div>
     </div>
