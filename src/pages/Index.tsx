@@ -425,6 +425,27 @@ export default function Index() {
                     Pamiętaj, żeby zawsze sprawdzić wymagania dotyczące obrotu bonusem. Darmowe spiny, które wymagają 
                     60-krotnego obrotu, wyglądają znacznie mniej atrakcyjnie niż te z wymogiem 30-krotnym.
                   </p>
+
+                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
+                    Gry online w kasynie – automaty, ruletka i poker
+                  </h3>
+                  <p className="text-lg leading-relaxed">
+                    Oferta gier to jeden z kluczowych czynników wyboru. Większość kasyn stawia przede wszystkim na 
+                    <strong> automaty do gier online</strong> – to one generują największy ruch. Znajdziesz tu klasyczne 
+                    trójbębnowe maszyny, rozbudowane video sloty z liniami bonusowymi i progresywne jackpoty.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Wiele platform udostępnia też <strong>maszyny online za darmo</strong> w trybie demo. <strong>Gry 
+                    hazardowe za darmo</strong> to świetny sposób, żeby poznać mechanikę danego automatu, zanim postawisz 
+                    prawdziwe pieniądze. <strong>Gry online kasyno</strong> oferuje w setkach wariantów – od prostych 
+                    owocówek po kinowe produkcje z rozbudowaną fabułą.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Ale automaty to nie wszystko. <strong>Ruletka online</strong> wciąż przyciąga rzesze fanów – zarówno 
+                    w wersji RNG, jak i z prawdziwym krupierem na żywo. A jeśli wolisz strategię od szczęścia, 
+                    <strong> poker online w Polsce</strong> ma stabilną i rosnącą społeczność. Turnieje, cash game, 
+                    sit-and-go – wybór jest naprawdę spory.
+                  </p>
                 </div>
               </div>
             </TabsContent>
