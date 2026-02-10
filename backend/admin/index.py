@@ -170,7 +170,7 @@ def handler(event: dict, context) -> dict:
                         'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'})
                     }
             
-            if not admin['is_active']:
+            if not admin.get('is_active', True):
                 return {
                     'statusCode': 403,
                     'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
@@ -188,7 +188,7 @@ def handler(event: dict, context) -> dict:
             conn.commit()
             
             admin_dict = dict(admin)
-            admin_dict.pop('password_hash')
+            admin_dict.pop('password_hash', None)
             
             return {
                 'statusCode': 200,
