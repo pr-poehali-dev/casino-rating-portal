@@ -102,15 +102,31 @@ export default function AdminPanel() {
     e.preventDefault();
     setLoginError('');
     
-    if (loginEmail === 'Grin' && loginPassword === 'Www373826483') {
-      const fakeToken = 'admin_token_' + Date.now();
-      localStorage.setItem('admin_token', fakeToken);
-      setAdminToken(fakeToken);
-      setIsLoggedIn(true);
-      return;
+    try {
+      const response = await fetch(`${ADMIN_URL}?action=login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: loginEmail,
+          password: loginPassword,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.session_token) {
+        localStorage.setItem('admin_token', data.session_token);
+        setAdminToken(data.session_token);
+        setIsLoggedIn(true);
+      } else {
+        setLoginError(data.error || 'Nieprawidłowy email lub hasło');
+      }
+    } catch (err) {
+      console.error('Login error:', err);
+      setLoginError('Błąd połączenia z serwerem');
     }
-    
-    setLoginError('Неверный логин или пароль');
   };
 
   const handleLogout = () => {
