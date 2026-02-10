@@ -399,6 +399,7 @@ const translations = {
 export default function Index() {
   const [activeTab, setActiveTab] = useState('ranking');
   const [showAgeModal, setShowAgeModal] = useState(false);
+  const [showPromoModal, setShowPromoModal] = useState(false);
   const [language, setLanguage] = useState<Language>('pl');
   const [copiedPromo, setCopiedPromo] = useState(false);
 
@@ -534,9 +535,16 @@ export default function Index() {
               <button className="text-foreground/80 hover:text-primary transition-colors">{t.navContact}</button>
             </nav>
             <div className="flex items-center gap-3">
-              <Button className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
-                <Icon name="Sparkles" className="mr-2" size={18} />
-                {t.vipOffers}
+              <Button 
+                onClick={() => setShowPromoModal(true)}
+                className="relative bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:from-primary/90 hover:to-secondary/90 animate-pulse"
+              >
+                <Icon name="Gift" className="mr-2" size={18} />
+                <span className="hidden md:inline">Odbierz Bonus</span>
+                <span className="md:hidden">Bonus</span>
+                <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                  !
+                </div>
               </Button>
               <Button size="icon" variant="ghost" className="md:hidden">
                 <Icon name="Menu" size={24} />
@@ -574,85 +582,113 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-8 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-y border-primary/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-card/80 backdrop-blur-sm border-2 border-primary/30 rounded-2xl p-6 md:p-8 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-secondary/10 rounded-full blur-3xl"></div>
-              
-              <div className="relative flex flex-col md:flex-row items-center gap-6">
-                <div className="flex-shrink-0">
+      {showPromoModal && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-background/95 backdrop-blur-lg p-4">
+          <div className="relative max-w-2xl w-full">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 rounded-2xl blur-2xl"></div>
+            <Card className="relative bg-card/90 backdrop-blur-sm border-2 border-primary/30 shadow-2xl">
+              <CardHeader className="relative">
+                <button
+                  onClick={() => setShowPromoModal(false)}
+                  className="absolute top-4 right-4 text-foreground/60 hover:text-foreground transition-colors"
+                >
+                  <Icon name="X" size={24} />
+                </button>
+                <div className="flex items-center gap-4">
                   <div className="relative">
                     <div className="absolute inset-0 bg-primary/30 blur-xl rounded-full"></div>
                     <div className="relative bg-gradient-to-br from-primary via-primary/90 to-secondary p-4 rounded-xl">
                       <Icon name="Gift" className="text-primary-foreground" size={48} />
                     </div>
                   </div>
-                </div>
-                
-                <div className="flex-1 text-center md:text-left">
-                  <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                    <Badge className="bg-primary/20 text-primary border-primary/40 text-xs">
-                      EKSKLUZYWNY BONUS
-                    </Badge>
-                    <img 
-                      src={casinos[0].logo}
-                      alt="Vavada"
-                      className="w-8 h-8 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-                    🎰 Gates of Olympus 1000 - 20 Free Spins
-                  </h3>
-                  <p className="text-foreground/70 mb-4">
-                    Użyj kodu promocyjnego Vavada i odbierz 20 darmowych aktywacji na Gates of Olympus 1000
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-3 items-center justify-center md:justify-start">
-                    <div className="relative group">
-                      <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-50 blur-lg group-hover:opacity-75 transition-opacity"></div>
-                      <div className="relative bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary/40 rounded-lg px-6 py-3 font-mono text-2xl font-bold text-primary tracking-wider">
-                        6DRYKHC1
-                      </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Badge className="bg-primary/20 text-primary border-primary/40 text-xs">
+                        EKSKLUZYWNY BONUS
+                      </Badge>
+                      <img 
+                        src={casinos[0].logo}
+                        alt="Vavada"
+                        className="w-6 h-6 object-contain"
+                      />
                     </div>
-                    
-                    <Button
-                      onClick={handleCopyPromo}
-                      className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2 font-semibold"
-                      size="lg"
-                    >
-                      {copiedPromo ? (
-                        <>
-                          <Icon name="Check" size={20} />
-                          Skopiowano!
-                        </>
-                      ) : (
-                        <>
-                          <Icon name="Copy" size={20} />
-                          Kopiuj Kod
-                        </>
-                      )}
-                    </Button>
-                    
-                    <Button
-                      asChild
-                      variant="outline"
-                      className="border-primary/30 hover:bg-primary/10 gap-2 font-semibold"
-                      size="lg"
-                    >
-                      <a href={casinos[0].url} target="_blank" rel="nofollow noopener noreferrer">
-                        <Icon name="ExternalLink" size={20} />
-                        Odbierz Bonus
-                      </a>
-                    </Button>
+                    <CardTitle className="text-2xl md:text-3xl bg-gradient-to-r from-primary via-primary/90 to-foreground bg-clip-text text-transparent">
+                      🎰 Gates of Olympus 1000
+                    </CardTitle>
+                    <CardDescription className="text-base mt-1">
+                      20 darmowych aktywacji na slot
+                    </CardDescription>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                  <div className="flex items-start gap-3">
+                    <Icon name="Sparkles" className="text-primary flex-shrink-0 mt-0.5" size={20} />
+                    <div>
+                      <p className="text-sm leading-relaxed text-foreground/90 mb-2">
+                        <strong className="text-primary">Jak odebrać bonus:</strong>
+                      </p>
+                      <ol className="text-sm space-y-1 text-foreground/80 list-decimal list-inside">
+                        <li>Skopiuj kod promocyjny poniżej</li>
+                        <li>Kliknij "Odbierz Bonus" i zarejestruj się w Vavada</li>
+                        <li>Wklej kod podczas rejestracji lub w profilu</li>
+                        <li>Odbierz 20 free spins na Gates of Olympus 1000!</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <p className="text-sm text-foreground/60 mb-3">Twój kod promocyjny:</p>
+                  <div className="relative inline-block group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-50 blur-xl group-hover:opacity-75 transition-opacity"></div>
+                    <div className="relative bg-gradient-to-r from-primary/20 to-secondary/20 border-2 border-primary/40 rounded-xl px-8 py-4 font-mono text-3xl font-bold text-primary tracking-wider">
+                      6DRYKHC1
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+              <CardFooter className="flex flex-col gap-3">
+                <div className="flex flex-col sm:flex-row gap-3 w-full">
+                  <Button
+                    onClick={handleCopyPromo}
+                    variant="outline"
+                    className="flex-1 border-primary/30 hover:bg-primary/10 gap-2 font-semibold"
+                    size="lg"
+                  >
+                    {copiedPromo ? (
+                      <>
+                        <Icon name="Check" size={20} />
+                        Skopiowano!
+                      </>
+                    ) : (
+                      <>
+                        <Icon name="Copy" size={20} />
+                        Kopiuj Kod
+                      </>
+                    )}
+                  </Button>
+                  
+                  <Button
+                    asChild
+                    className="flex-1 bg-gradient-to-r from-primary to-secondary text-primary-foreground hover:from-primary/90 hover:to-secondary/90 gap-2 font-semibold shadow-lg shadow-primary/20"
+                    size="lg"
+                  >
+                    <a href={casinos[0].url} target="_blank" rel="nofollow noopener noreferrer">
+                      <Icon name="ExternalLink" size={20} />
+                      Odbierz Bonus w Vavada
+                    </a>
+                  </Button>
+                </div>
+                <p className="text-xs text-center text-foreground/50">
+                  Warunki bonusu dostępne na stronie kasyna. Graj odpowiedzialnie 18+
+                </p>
+              </CardFooter>
+            </Card>
           </div>
         </div>
-      </section>
+      )}
 
       <section className="py-16 bg-card/30">
         <div className="container mx-auto px-4">
