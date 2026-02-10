@@ -107,6 +107,44 @@ const translations = {
     heroDesc: 'Profesjonalne rankingi, szczegółowe recenzje i najlepsze bonusy powitalne. Wybierz swoje idealne kasyno z naszego premium rankingu.',
     viewTop10: 'Zobacz Top 10 Kasyn',
     currentBonuses: 'Aktualne Bonusy',
+    tabRanking: 'Ranking',
+    tabBonuses: 'Bonusy',
+    tabGames: 'Gry',
+    tabFaq: 'FAQ',
+    topCasinos: 'Top Kasyna Online 2026',
+    verifiedByExperts: 'Sprawdzone i zweryfikowane przez ekspertów',
+    welcomeBonus: 'Bonus Powitalny:',
+    gamesCount: 'Liczba gier',
+    playNow: 'Graj Teraz',
+    fullReview: 'Pełna Recenzja',
+    bonusSection: 'Sekcja Bonusów',
+    bestBonusOffers: 'Tutaj będą najlepsze oferty bonusowe',
+    gamesSection: 'Katalog Gier',
+    thousandsOfGames: 'Tysiące slotów i gier w jednym miejscu',
+    faqSection: 'Najczęściej Zadawane Pytania',
+    everythingYouNeed: 'Wszystko czego potrzebujesz wiedzieć',
+    whyOurRanking: 'Dlaczego Nasz Ranking?',
+    expertReview: 'Ekspercka Ocena',
+    expertReviewDesc: 'Każde kasyno jest dokładnie testowane przez zespół ekspertów z wieloletnim doświadczeniem',
+    licenseVerification: 'Weryfikacja Licencji',
+    licenseVerificationDesc: 'Sprawdzamy ważność licencji i bezpieczeństwo każdego polecalnego kasyna online',
+    currentInfo: 'Aktualne Informacje',
+    currentInfoDesc: 'Regularnie aktualizujemy rankingi, bonusy i recenzje aby dostarczyć najświeższe dane',
+    usefulLinks: 'Przydatne Linki',
+    aboutUs: 'O nas',
+    contact: 'Kontakt',
+    privacyPolicy: 'Polityka prywatności',
+    terms: 'Regulamin',
+    categories: 'Kategorie',
+    topCasinosLink: 'Top Kasyna',
+    bestBonuses: 'Najlepsze Bonusy',
+    newCasinos: 'Nowe Kasyna',
+    liveCasino: 'Live Casino',
+    newsletter: 'Newsletter',
+    newsletterDesc: 'Zapisz się i otrzymuj najlepsze oferty bonusowe',
+    subscribe: 'Zapisz się',
+    copyright: '© 2026 bkreiting.com. Wszystkie prawa zastrzeżone.',
+    responsibleGaming: 'Odpowiedzialna Gra',
   },
   ru: {
     ageTitle: 'Подтверждение возраста',
@@ -126,6 +164,44 @@ const translations = {
     heroDesc: 'Профессиональные рейтинги, подробные обзоры и лучшие приветственные бонусы. Выберите идеальное казино из нашего премиум рейтинга.',
     viewTop10: 'Смотреть Топ 10 Казино',
     currentBonuses: 'Актуальные Бонусы',
+    tabRanking: 'Рейтинг',
+    tabBonuses: 'Бонусы',
+    tabGames: 'Игры',
+    tabFaq: 'FAQ',
+    topCasinos: 'Топ Онлайн Казино 2026',
+    verifiedByExperts: 'Проверено и верифицировано экспертами',
+    welcomeBonus: 'Приветственный Бонус:',
+    gamesCount: 'Количество игр',
+    playNow: 'Играть Сейчас',
+    fullReview: 'Полный Обзор',
+    bonusSection: 'Раздел Бонусов',
+    bestBonusOffers: 'Здесь будут лучшие бонусные предложения',
+    gamesSection: 'Каталог Игр',
+    thousandsOfGames: 'Тысячи слотов и игр в одном месте',
+    faqSection: 'Часто Задаваемые Вопросы',
+    everythingYouNeed: 'Всё что вам нужно знать',
+    whyOurRanking: 'Почему Наш Рейтинг?',
+    expertReview: 'Экспертная Оценка',
+    expertReviewDesc: 'Каждое казино тщательно тестируется командой экспертов с многолетним опытом',
+    licenseVerification: 'Проверка Лицензии',
+    licenseVerificationDesc: 'Мы проверяем актуальность лицензии и безопасность каждого рекомендуемого онлайн казино',
+    currentInfo: 'Актуальная Информация',
+    currentInfoDesc: 'Регулярно обновляем рейтинги, бонусы и обзоры для предоставления самых свежих данных',
+    usefulLinks: 'Полезные Ссылки',
+    aboutUs: 'О нас',
+    contact: 'Контакты',
+    privacyPolicy: 'Политика конфиденциальности',
+    terms: 'Условия использования',
+    categories: 'Категории',
+    topCasinosLink: 'Топ Казино',
+    bestBonuses: 'Лучшие Бонусы',
+    newCasinos: 'Новые Казино',
+    liveCasino: 'Живое Казино',
+    newsletter: 'Рассылка',
+    newsletterDesc: 'Подпишитесь и получайте лучшие бонусные предложения',
+    subscribe: 'Подписаться',
+    copyright: '© 2026 bkreiting.com. Все права защищены.',
+    responsibleGaming: 'Ответственная Игра',
   },
   en: {
     ageTitle: 'Age Confirmation',
@@ -145,6 +221,44 @@ const translations = {
     heroDesc: 'Professional rankings, detailed reviews and best welcome bonuses. Choose your ideal casino from our premium ranking.',
     viewTop10: 'View Top 10 Casinos',
     currentBonuses: 'Current Bonuses',
+    tabRanking: 'Ranking',
+    tabBonuses: 'Bonuses',
+    tabGames: 'Games',
+    tabFaq: 'FAQ',
+    topCasinos: 'Top Online Casinos 2026',
+    verifiedByExperts: 'Verified and checked by experts',
+    welcomeBonus: 'Welcome Bonus:',
+    gamesCount: 'Number of games',
+    playNow: 'Play Now',
+    fullReview: 'Full Review',
+    bonusSection: 'Bonuses Section',
+    bestBonusOffers: 'Best bonus offers will be here',
+    gamesSection: 'Games Catalog',
+    thousandsOfGames: 'Thousands of slots and games in one place',
+    faqSection: 'Frequently Asked Questions',
+    everythingYouNeed: 'Everything you need to know',
+    whyOurRanking: 'Why Our Ranking?',
+    expertReview: 'Expert Review',
+    expertReviewDesc: 'Each casino is thoroughly tested by a team of experts with years of experience',
+    licenseVerification: 'License Verification',
+    licenseVerificationDesc: 'We verify the validity of licenses and security of every recommended online casino',
+    currentInfo: 'Current Information',
+    currentInfoDesc: 'We regularly update rankings, bonuses and reviews to provide the freshest data',
+    usefulLinks: 'Useful Links',
+    aboutUs: 'About Us',
+    contact: 'Contact',
+    privacyPolicy: 'Privacy Policy',
+    terms: 'Terms & Conditions',
+    categories: 'Categories',
+    topCasinosLink: 'Top Casinos',
+    bestBonuses: 'Best Bonuses',
+    newCasinos: 'New Casinos',
+    liveCasino: 'Live Casino',
+    newsletter: 'Newsletter',
+    newsletterDesc: 'Subscribe and receive the best bonus offers',
+    subscribe: 'Subscribe',
+    copyright: '© 2026 bkreiting.com. All rights reserved.',
+    responsibleGaming: 'Responsible Gaming',
   },
 };
 
@@ -357,19 +471,19 @@ export default function Index() {
             <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-4 bg-card border border-border">
               <TabsTrigger value="ranking" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 <Icon name="Award" className="mr-2" size={18} />
-                <span className="hidden sm:inline">Ranking</span>
+                <span className="hidden sm:inline">{t.tabRanking}</span>
               </TabsTrigger>
               <TabsTrigger value="bonusy" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 <Icon name="Gift" className="mr-2" size={18} />
-                <span className="hidden sm:inline">Bonusy</span>
+                <span className="hidden sm:inline">{t.tabBonuses}</span>
               </TabsTrigger>
               <TabsTrigger value="gry" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 <Icon name="Gamepad2" className="mr-2" size={18} />
-                <span className="hidden sm:inline">Gry</span>
+                <span className="hidden sm:inline">{t.tabGames}</span>
               </TabsTrigger>
               <TabsTrigger value="faq" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 <Icon name="HelpCircle" className="mr-2" size={18} />
-                <span className="hidden sm:inline">FAQ</span>
+                <span className="hidden sm:inline">{t.tabFaq}</span>
               </TabsTrigger>
             </TabsList>
 
@@ -403,8 +517,8 @@ export default function Index() {
               </div>
 
               <div className="text-center mb-8 border-t border-border pt-12">
-                <h3 className="text-3xl font-bold mb-2">Top Kasyna Online 2026</h3>
-                <p className="text-foreground/70">Sprawdzone i zweryfikowane przez ekspertów</p>
+                <h3 className="text-3xl font-bold mb-2">{t.topCasinos}</h3>
+                <p className="text-foreground/70">{t.verifiedByExperts}</p>
               </div>
 
               {casinos.map((casino, index) => (
@@ -446,7 +560,7 @@ export default function Index() {
                     <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-lg p-4">
                       <div className="flex items-center gap-2 mb-2">
                         <Icon name="Gift" className="text-primary" size={20} />
-                        <span className="font-semibold text-foreground">Bonus Powitalny:</span>
+                        <span className="font-semibold text-foreground">{t.welcomeBonus}</span>
                       </div>
                       <p className="text-xl font-bold text-primary">{casino.bonus}</p>
                     </div>
@@ -455,7 +569,7 @@ export default function Index() {
                       <div className="flex items-center gap-3 p-3 bg-card/50 rounded-lg border border-border">
                         <Icon name="Gamepad2" className="text-primary" size={24} />
                         <div>
-                          <p className="text-sm text-foreground/60">Liczba gier</p>
+                          <p className="text-sm text-foreground/60">{t.gamesCount}</p>
                           <p className="font-semibold">{casino.games}+</p>
                         </div>
                       </div>
@@ -472,11 +586,11 @@ export default function Index() {
                   <CardFooter className="flex flex-col sm:flex-row gap-3 bg-card/50">
                     <Button className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90">
                       <Icon name="ExternalLink" className="mr-2" size={18} />
-                      Graj Teraz
+                      {t.playNow}
                     </Button>
                     <Button variant="outline" className="flex-1 border-primary/30 hover:bg-primary/10">
                       <Icon name="FileText" className="mr-2" size={18} />
-                      Pełna Recenzja
+                      {t.fullReview}
                     </Button>
                     <Button variant="ghost" size="icon" className="hover:bg-primary/10">
                       <Icon name="Heart" size={20} />
@@ -752,23 +866,23 @@ export default function Index() {
             <TabsContent value="bonusy" className="mt-8">
               <div className="text-center py-20">
                 <Icon name="Gift" className="mx-auto text-primary mb-4" size={64} />
-                <h3 className="text-2xl font-bold mb-2">Sekcja Bonusów</h3>
-                <p className="text-foreground/70">Tutaj będą najlepsze oferty bonusowe</p>
+                <h3 className="text-2xl font-bold mb-2">{t.bonusSection}</h3>
+                <p className="text-foreground/70">{t.bestBonusOffers}</p>
               </div>
             </TabsContent>
 
             <TabsContent value="gry" className="mt-8">
               <div className="text-center py-20">
                 <Icon name="Gamepad2" className="mx-auto text-primary mb-4" size={64} />
-                <h3 className="text-2xl font-bold mb-2">Katalog Gier</h3>
-                <p className="text-foreground/70">Tysiące slotów i gier w jednym miejscu</p>
+                <h3 className="text-2xl font-bold mb-2">{t.gamesSection}</h3>
+                <p className="text-foreground/70">{t.thousandsOfGames}</p>
               </div>
             </TabsContent>
 
             <TabsContent value="faq" className="mt-8 max-w-4xl mx-auto">
               <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold mb-2">Najczęściej Zadawane Pytania</h3>
-                <p className="text-foreground/70">Wszystko czego potrzebujesz wiedzieć</p>
+                <h3 className="text-3xl font-bold mb-2">{t.faqSection}</h3>
+                <p className="text-foreground/70">{t.everythingYouNeed}</p>
               </div>
 
               <Accordion type="single" collapsible className="space-y-4">
@@ -832,20 +946,20 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge className="bg-primary/20 text-primary border-primary/30 px-4 py-2">
               <Icon name="Shield" className="mr-2" size={16} />
-              Bezpieczne i Sprawdzone
+              {language === 'pl' ? 'Bezpieczne i Sprawdzone' : language === 'ru' ? 'Безопасно и Проверено' : 'Safe and Verified'}
             </Badge>
             <h3 className="text-3xl md:text-4xl font-bold">
-              Dlaczego <span className="text-primary">Nasz Ranking?</span>
+              {language === 'pl' ? 'Dlaczego' : language === 'ru' ? 'Почему' : 'Why'} <span className="text-primary">{language === 'pl' ? 'Nasz Ranking?' : language === 'ru' ? 'Наш Рейтинг?' : 'Our Ranking?'}</span>
             </h3>
             <div className="grid md:grid-cols-3 gap-6 pt-8">
               <Card className="bg-card/50 border-border">
                 <CardHeader>
                   <Icon name="Users" className="text-primary mb-2" size={40} />
-                  <CardTitle className="text-xl">Ekspercka Ocena</CardTitle>
+                  <CardTitle className="text-xl">{t.expertReview}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-foreground/70">
-                    Każde kasyno jest dokładnie testowane przez zespół ekspertów z wieloletnim doświadczeniem
+                    {t.expertReviewDesc}
                   </p>
                 </CardContent>
               </Card>
@@ -853,11 +967,11 @@ export default function Index() {
               <Card className="bg-card/50 border-border">
                 <CardHeader>
                   <Icon name="ShieldCheck" className="text-primary mb-2" size={40} />
-                  <CardTitle className="text-xl">Weryfikacja Licencji</CardTitle>
+                  <CardTitle className="text-xl">{t.licenseVerification}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-foreground/70">
-                    Sprawdzamy ważność licencji i bezpieczeństwo każdego polecalnego kasyna online
+                    {t.licenseVerificationDesc}
                   </p>
                 </CardContent>
               </Card>
@@ -903,40 +1017,40 @@ export default function Index() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Przydatne Linki</h4>
+              <h4 className="font-semibold mb-4">{t.usefulLinks}</h4>
               <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#" className="hover:text-primary transition-colors">O nas</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Kontakt</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Polityka prywatności</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Regulamin</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t.aboutUs}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t.contact}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t.privacyPolicy}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t.terms}</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Kategorie</h4>
+              <h4 className="font-semibold mb-4">{t.categories}</h4>
               <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#" className="hover:text-primary transition-colors">Top Kasyna</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Najlepsze Bonusy</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Nowe Kasyna</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Live Casino</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t.topCasinosLink}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t.bestBonuses}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t.newCasinos}</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">{t.liveCasino}</a></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Newsletter</h4>
+              <h4 className="font-semibold mb-4">{t.newsletter}</h4>
               <p className="text-sm text-foreground/60 mb-3">
-                Zapisz się i otrzymuj najlepsze oferty bonusowe
+                {t.newsletterDesc}
               </p>
               <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                 <Icon name="Mail" className="mr-2" size={18} />
-                Zapisz się
+                {t.subscribe}
               </Button>
             </div>
           </div>
 
           <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-foreground/60">
-              © 2026 bkreiting.com. Wszystkie prawa zastrzeżone.
+              {t.copyright}
             </p>
             <div className="flex items-center gap-4">
               <Badge variant="outline" className="border-primary/30">
@@ -944,7 +1058,7 @@ export default function Index() {
                 18+
               </Badge>
               <Badge variant="outline" className="border-primary/30">
-                Odpowiedzialna Gra
+                {t.responsibleGaming}
               </Badge>
             </div>
           </div>
