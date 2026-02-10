@@ -29,7 +29,7 @@ const casinos: Casino[] = [
     games: 3500,
     license: 'Curacao eGaming',
     features: ['Szybkie wypłaty', 'Obsługa 24/7', 'Aplikacja mobilna', 'Live Casino'],
-    logo: '👑',
+    logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/239958bf-e24d-4c54-9062-b0ce46b32b07.png',
     url: 'https://gate707.com/?promo=0e4cb864-e734-44ef-9820-29068cfbffac&target=register'
   },
   {
@@ -41,7 +41,7 @@ const casinos: Casino[] = [
     games: 2800,
     license: 'Curacao eGaming',
     features: ['Kryptowaluty', 'VIP Program', 'Turnieje', 'Cashback'],
-    logo: '🎰',
+    logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/528dcd24-53e0-4e1d-92f5-6276cda9a5b2.png',
     url: 'https://fortuna-promo1.net/alt/pf_new_year_new_ru/?ab4caec10f6f2577c5ad134c05b3b019'
   },
   {
@@ -53,7 +53,7 @@ const casinos: Casino[] = [
     games: 3200,
     license: 'Curacao eGaming',
     features: ['Bez depozytu bonus', 'Szybka weryfikacja', 'Polski support', 'Jackpoty'],
-    logo: '💎',
+    logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/24ca2f82-0a85-4ae2-a2ef-623a8a58d022.png',
     url: 'https://booipromo1.com/alt/booi_7sinsnew_ru/?2cd1c9052f79f17d0fd62080016b1093'
   },
   {
@@ -65,7 +65,7 @@ const casinos: Casino[] = [
     games: 2500,
     license: 'Curacao eGaming',
     features: ['Live Dealer', 'Sports Betting', 'Reload Bonusy', 'Weekly Cashback'],
-    logo: '🎲',
+    logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/bb6b019c-68dc-4044-9dc7-c4d60036d317.jpg',
     url: 'https://jozz-promo1.com/alt/jozz11_ru/?6ccd9bf32f7680ee0e290d1be59a4de5'
   },
   {
@@ -77,7 +77,7 @@ const casinos: Casino[] = [
     games: 2200,
     license: 'Curacao eGaming',
     features: ['Szybka rejestracja', 'Bonusy reload', 'Mobile-first', 'Cashback tygodniowy'],
-    logo: '🌟',
+    logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/8da4a15a-ccc7-4f8d-9df7-c1472090be1f.jpg',
     url: 'https://winity.one/alt/win_girl_ru/?be6866f5f4da4c4e8f73ba3f9d913383'
   }
 ];
@@ -628,8 +628,12 @@ export default function Index() {
                   <CardHeader className="relative">
                     <div className="flex flex-col md:flex-row md:items-start gap-4">
                       <div className="flex items-center gap-4">
-                        <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg text-4xl">
-                          {casino.logo}
+                        <div className="flex items-center justify-center w-16 h-16 bg-card/80 border border-border rounded-lg overflow-hidden">
+                          <img 
+                            src={casino.logo} 
+                            alt={`${casino.name} logo`}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <div>
                           <div className="flex items-center gap-2 mb-1">
