@@ -156,6 +156,7 @@ export default function AdminPanel() {
       console.log('[ADMIN] Users response status:', response.status);
       
       const data = await response.json();
+      console.log('[ADMIN] Users response data:', data);
       setUsers(data.users || []);
       setUsersTotal(data.total || 0);
     } catch (err) {
