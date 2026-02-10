@@ -690,8 +690,19 @@ export default function Index() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Icon name="Crown" className="text-primary" size={28} />
-                <span className="text-xl font-bold text-primary">CasinoRanking.pl</span>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full"></div>
+                  <div className="relative bg-gradient-to-br from-primary via-primary/90 to-secondary p-2 rounded-lg">
+                    <Icon name="Crown" className="text-primary-foreground" size={24} />
+                  </div>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-lg font-bold bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent">bkreiting.com</span>
+                  <div className="flex items-center gap-1 text-xs text-primary/60">
+                    <span>POLSKA 2026</span>
+                    <Icon name="Dices" className="text-primary/70" size={12} />
+                  </div>
+                </div>
               </div>
               <p className="text-sm text-foreground/60">
                 Najlepszy ranking kasyn online w Polsce. Profesjonalne recenzje i bonusy.
@@ -732,7 +743,7 @@ export default function Index() {
 
           <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-foreground/60">
-              © 2026 CasinoRanking.pl. Wszystkie prawa zastrzeżone.
+              © 2026 bkreiting.com. Wszystkie prawa zastrzeżone.
             </p>
             <div className="flex items-center gap-4">
               <Badge variant="outline" className="border-primary/30">
