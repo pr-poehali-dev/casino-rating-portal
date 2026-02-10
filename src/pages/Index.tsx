@@ -342,6 +342,20 @@ export default function Index() {
                     Oferty typu <strong>bukmacher bez depozytu</strong> to świetna opcja dla tych, którzy chcą przetestować 
                     platformę, zanim zaangażują własne pieniądze.
                   </p>
+
+                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
+                    Nowi bukmacherzy 2026 – co oferują?
+                  </h3>
+                  <p className="text-lg leading-relaxed">
+                    Rynek się zmienia i <strong>nowi bukmacherzy 2026</strong> wchodzą z naprawdę agresywnymi ofertami. 
+                    Żeby przyciągnąć graczy, proponują wyższe bonusy, lepsze kursy na wybrane dyscypliny i nowoczesne 
+                    aplikacje mobilne.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Czy warto im zaufać? Jeśli mają licencję – jak najbardziej. Nowi operatorzy często starają się 
+                    bardziej niż ci zasiedziali, bo muszą zbudować bazę klientów. To dobry moment, żeby skorzystać 
+                    z ich ofert powitalnych, dopóki są hojne.
+                  </p>
                 </div>
               </div>
             </TabsContent>
