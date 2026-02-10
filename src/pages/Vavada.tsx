@@ -42,6 +42,56 @@ export default function Vavada() {
       meta.content = 'Vavada kasyno online w Polsce – opinie graczy, bonus bez depozytu, darmowe spiny, rejestracja i szybkie wypłaty. Sprawdź szczegóły.';
       document.head.appendChild(meta);
     }
+
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Vavada Casino",
+      "description": "Vavada to międzynarodowe kasyno online z licencją Curaçao, oferujące ponad 3500 gier, szybkie wypłaty i atrakcyjne bonusy dla graczy w Polsce.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Vavada"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "2847"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "50",
+        "priceCurrency": "PLN",
+        "availability": "https://schema.org/InStock",
+        "description": "Minimalny depozyt: 50 PLN. Bonus powitalny do 5000 PLN + 200 darmowych spinów."
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.8",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "bkreiting.com"
+        },
+        "reviewBody": "Vavada kasyno online w Polsce oferuje szybkie wypłaty, szeroki wybór gier od renomowanych dostawców i atrakcyjne bonusy. Platforma działa na licencji Curaçao i zapewnia obsługę klienta 24/7."
+      },
+      "image": "https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/239958bf-e24d-4c54-9062-b0ce46b32b07.png",
+      "url": window.location.href
+    };
+
+    const scriptTag = document.querySelector('script[type="application/ld+json"]');
+    if (scriptTag) {
+      scriptTag.textContent = JSON.stringify(structuredData);
+    } else {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
   }, []);
 
   return (
