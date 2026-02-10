@@ -123,6 +123,7 @@ export default function AdminPanel() {
   const loadUsers = async () => {
     try {
       const params = new URLSearchParams({
+        action: 'users',
         limit: '50',
         offset: (usersPage * 50).toString(),
       });
@@ -131,7 +132,7 @@ export default function AdminPanel() {
         params.append('search', usersSearch);
       }
       
-      const response = await fetch(`${ADMIN_URL}/users?${params}`, {
+      const response = await fetch(`${ADMIN_URL}?${params}`, {
         headers: { 'Authorization': `Bearer ${adminToken}` },
       });
       
@@ -145,7 +146,7 @@ export default function AdminPanel() {
 
   const loadStats = async () => {
     try {
-      const response = await fetch(`${ADMIN_URL}/stats`, {
+      const response = await fetch(`${ADMIN_URL}?action=stats`, {
         headers: { 'Authorization': `Bearer ${adminToken}` },
       });
       
@@ -161,7 +162,7 @@ export default function AdminPanel() {
     setNotifSuccess('');
     
     try {
-      const response = await fetch(`${ADMIN_URL}/notifications/send`, {
+      const response = await fetch(`${ADMIN_URL}?action=send_notification`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -199,7 +200,7 @@ export default function AdminPanel() {
     }
     
     try {
-      const response = await fetch(`${ADMIN_URL}/notifications/broadcast`, {
+      const response = await fetch(`${ADMIN_URL}?action=broadcast`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -266,7 +267,7 @@ export default function AdminPanel() {
       
       const base64 = await base64Promise;
       
-      const response = await fetch(`${ADMIN_URL}/promotions/upload-image`, {
+      const response = await fetch(`${ADMIN_URL}?action=upload_promo_image`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -308,7 +309,7 @@ export default function AdminPanel() {
     }
     
     try {
-      const response = await fetch(`${ADMIN_URL}/promotions`, {
+      const response = await fetch(`${ADMIN_URL}?action=create_promo`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

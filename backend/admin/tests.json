@@ -3,10 +3,10 @@
     {
       "name": "Admin login test",
       "method": "POST",
-      "path": "/login",
+      "path": "/?action=login",
       "body": {
-        "email": "admin@bkreiting.com",
-        "password": "admin123"
+        "email": "admin@grin.com",
+        "password": "Www373826483"
       },
       "expectedStatus": 200,
       "expectedBody": {
@@ -20,7 +20,7 @@
     {
       "name": "Get users list",
       "method": "GET",
-      "path": "/users",
+      "path": "/?action=users",
       "expectedStatus": 401,
       "expectedBody": {
         "error": "string"
@@ -30,7 +30,7 @@
     {
       "name": "Get statistics",
       "method": "GET",
-      "path": "/stats",
+      "path": "/?action=stats",
       "expectedStatus": 401,
       "expectedBody": {
         "error": "string"

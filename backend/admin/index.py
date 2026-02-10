@@ -73,7 +73,10 @@ def handler(event: dict, context) -> dict:
     GET /stats - статистика по пользователям и промо
     """
     method = event.get('httpMethod', 'GET')
-    path = event.get('path', '/')
+    url = event.get('url', '')
+    query_params = event.get('queryStringParameters', {}) or {}
+    action = query_params.get('action', '')
+    path = url if url else '/'
     
     if method == 'OPTIONS':
         return {
@@ -84,7 +87,8 @@ def handler(event: dict, context) -> dict:
                 'Access-Control-Allow-Headers': 'Content-Type, X-Authorization',
                 'Access-Control-Max-Age': '86400'
             },
-            'body': ''
+            'body': '',
+            'isBase64Encoded': False
         }
     
     try:
@@ -102,14 +106,16 @@ def handler(event: dict, context) -> dict:
                 return {
                     'statusCode': 403,
                     'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                    'body': json.dumps({'error': 'Nieprawidłowy klucz setup'})
+                    'body': json.dumps({'error': 'Nieprawidłowy klucz setup'}),
+                    'isBase64Encoded': False
                 }
             
             if not email or not new_password:
                 return {
                     'statusCode': 400,
                     'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                    'body': json.dumps({'error': 'Email i hasło są wymagane'})
+                    'body': json.dumps({'error': 'Email i hasło są wymagane'}),
+                    'isBase64Encoded': False
                 }
             
             password_hash = hash_password(new_password)
@@ -130,11 +136,12 @@ def handler(event: dict, context) -> dict:
             return {
                 'statusCode': 200,
                 'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                'body': json.dumps({'message': 'Hasło ustawione pomyślnie'})
+                'body': json.dumps({'message': 'Hasło ustawione pomyślnie'}),
+                'isBase64Encoded': False
             }
         
         # Авторизация администратора
-        if method == 'POST' and 'login' in path:
+        if method == 'POST' and (action == 'login' or 'login' in path or 'login' in url):
             body = json.loads(event.get('body', '{}'))
             email = body.get('email', '').strip().lower()
             password = body.get('password', '')
@@ -154,13 +161,15 @@ def handler(event: dict, context) -> dict:
                             'is_active': True
                         },
                         'session_token': session_token
-                    })
+                    }),
+                    'isBase64Encoded': False
                 }
             
             return {
                 'statusCode': 401,
                 'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'})
+                'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'}),
+                'isBase64Encoded': False
             }
         
         # Проверка токена для всех остальных запросов
@@ -171,14 +180,15 @@ def handler(event: dict, context) -> dict:
             return {
                 'statusCode': 401,
                 'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                'body': json.dumps({'error': 'Brak autoryzacji administratora'})
+                'body': json.dumps({'error': 'Brak autoryzacji administratora'}),
+                'isBase64Encoded': False
             }
         
         # Получение списка пользователей
-        if method == 'GET' and path.endswith('/users'):
-            limit = int(event.get('queryStringParameters', {}).get('limit', 50))
-            offset = int(event.get('queryStringParameters', {}).get('offset', 0))
-            search = event.get('queryStringParameters', {}).get('search', '')
+        if method == 'GET' and (action == 'users' or 'users' in path):
+            limit = int(query_params.get('limit', 50))
+            offset = int(query_params.get('offset', 0))
+            search = query_params.get('search', '')
             
             where_clause = ""
             params = []
@@ -210,7 +220,8 @@ def handler(event: dict, context) -> dict:
                     'total': total,
                     'limit': limit,
                     'offset': offset
-                }, default=str)
+                }, default=str),
+                'isBase64Encoded': False
             }
         
         # Получение информации о конкретном пользователе
