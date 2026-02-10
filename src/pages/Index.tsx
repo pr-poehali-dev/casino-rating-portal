@@ -446,6 +446,50 @@ export default function Index() {
                     <strong> poker online w Polsce</strong> ma stabilną i rosnącą społeczność. Turnieje, cash game, 
                     sit-and-go – wybór jest naprawdę spory.
                   </p>
+
+                  <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-6 pt-12 border-t border-border">
+                    Jaki bukmacher lub kasyno online wybrać?
+                  </h2>
+                  <p className="text-lg leading-relaxed">
+                    To pytanie, które zadaje sobie każdy początkujący gracz. <strong>Jaki bukmacher wybrać?</strong> Które 
+                    kasyno będzie najlepsze akurat dla Ciebie? Nie ma jednej uniwersalnej odpowiedzi, ale jest kilka rzeczy, 
+                    które warto sprawdzić przed rejestracją. Traktuj poniższą listę jako mini <strong>porównywarkę bukmacherów 
+                    i kasyn</strong>.
+                  </p>
+                  <p className="text-lg leading-relaxed font-semibold">
+                    Na co zwrócić uwagę:
+                  </p>
+                  <ul className="space-y-3 text-lg leading-relaxed list-none pl-0">
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Licencja</strong> – to absolutna podstawa. Bez ważnego zezwolenia na prowadzenie działalności w Polsce – nie ryzykuj.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Bonusy</strong> – porównaj oferty powitalne, ale patrz na warunki, nie tylko na kwoty. Wysoki bonus z nierealnymi wymaganiami obrotu jest bezwartościowy.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Wypłaty</strong> – sprawdź dostępne metody, limity i czas realizacji. Szybka wypłata to znak dobrze zarządzanej platformy.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Oferta gier lub zakładów</strong> – czy znajdziesz tu swoje ulubione dyscypliny sportowe albo typy gier kasynowych? Dla jednych liczy się piłka nożna, dla innych automaty z jackpotem.</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1">•</span>
+                      <span><strong>Opinie graczy</strong> – przeczytaj recenzje, ale filtruj je zdrowym rozsądkiem. Jedna zła opinia nie oznacza złego operatora, ale kilkadziesiąt podobnych skarg – to już sygnał ostrzegawczy.</span>
+                    </li>
+                  </ul>
+                  <p className="text-lg leading-relaxed">
+                    Nie musisz ograniczać się do jednej platformy. Wielu doświadczonych graczy korzysta z dwóch–trzech 
+                    operatorów jednocześnie, żeby mieć dostęp do najlepszych kursów i najciekawszych promocji. Ważne, 
+                    żeby każdy z nich był legalny i sprawdzony.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Nasz ranking aktualizujemy regularnie, więc wracaj tu, kiedy będziesz szukać nowych ofert albo zechcesz 
+                    sprawdzić, co zmieniło się na rynku w 2026 roku.
+                  </p>
                 </div>
               </div>
             </TabsContent>
