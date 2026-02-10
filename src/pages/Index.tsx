@@ -170,22 +170,31 @@ export default function Index() {
             </TabsList>
 
             <TabsContent value="ranking" className="mt-8 space-y-6">
-              <div className="max-w-5xl mx-auto mb-12">
-                <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-                  Ranking bukmacherów i kasyn online w Polsce – legalni operatorzy 2026
-                </h1>
-                <div className="prose prose-invert max-w-none text-foreground/80 space-y-4">
-                  <p className="text-lg leading-relaxed">
-                    Szukasz sprawdzonego miejsca do obstawiania meczów albo grania w ulubione sloty? Trafiłeś dobrze. 
-                    Nasza strona to porównywarka bukmacherów i kasyn, w której znajdziesz wyłącznie legalnych operatorów 
-                    działających na polskim rynku. Bez ściemy, bez promowania podejrzanych platform.
-                  </p>
-                  <p className="text-lg leading-relaxed">
-                    Nie wiesz, jaki bukmacher wybrać? A może chcesz sprawdzić, które kasyna dla Polaków naprawdę wypłacają 
-                    wygrane? Przygotowaliśmy aktualne zestawienia na 2026 rok – z konkretnymi informacjami o bonusach, 
-                    licencjach i bezpieczeństwie środków. Każdy operator w naszym rankingu przeszedł weryfikację, więc 
-                    nie musisz tracić czasu na własne śledztwo.
-                  </p>
+              <div className="relative max-w-5xl mx-auto mb-12">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl blur-3xl -z-10"></div>
+                <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-2xl p-8 md:p-12">
+                  <div className="flex items-center justify-center gap-3 mb-6">
+                    <div className="h-1 w-12 bg-gradient-to-r from-transparent to-primary rounded-full"></div>
+                    <Icon name="Star" className="text-primary" size={24} />
+                    <div className="h-1 w-12 bg-gradient-to-l from-transparent to-primary rounded-full"></div>
+                  </div>
+                  <h1 className="text-3xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent leading-tight">
+                    Ranking bukmacherów i kasyn online w Polsce – legalni operatorzy 2026
+                  </h1>
+                  <div className="space-y-6">
+                    <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/90">
+                      Szukasz sprawdzonego miejsca do obstawiania meczów albo grania w ulubione sloty? Trafiłeś dobrze. 
+                      Nasza strona to <span className="text-primary font-semibold">porównywarka bukmacherów i kasyn</span>, w której znajdziesz wyłącznie legalnych operatorów 
+                      działających na polskim rynku. Bez ściemy, bez promowania podejrzanych platform.
+                    </p>
+                    <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+                    <p className="text-lg md:text-xl leading-relaxed text-center text-foreground/90">
+                      Nie wiesz, jaki bukmacher wybrać? A może chcesz sprawdzić, które kasyna dla Polaków naprawdę wypłacają 
+                      wygrane? Przygotowaliśmy <span className="text-primary font-semibold">aktualne zestawienia na 2026 rok</span> – z konkretnymi informacjami o bonusach, 
+                      licencjach i bezpieczeństwie środków. Każdy operator w naszym rankingu przeszedł weryfikację, więc 
+                      nie musisz tracić czasu na własne śledztwo.
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -272,11 +281,17 @@ export default function Index() {
                 </Card>
               ))}
 
-              <div className="max-w-5xl mx-auto mt-16 pt-12 border-t border-border">
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                  Najlepsi bukmacherzy w Polsce – ranking i porównanie
-                </h2>
-                <div className="prose prose-invert max-w-none text-foreground/80 space-y-4">
+              <div className="relative max-w-5xl mx-auto mt-16">
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/5 rounded-2xl blur-2xl -z-10"></div>
+                <div className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-10">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="h-1 w-8 bg-primary rounded-full"></div>
+                    <Icon name="TrendingUp" className="text-primary" size={20} />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-8 text-foreground">
+                    Najlepsi bukmacherzy w Polsce – ranking i porównanie
+                  </h2>
+                  <div className="space-y-6 text-foreground/90">
                   <p className="text-lg leading-relaxed">
                     Polski rynek zakładów sportowych rozwija się dynamicznie. Co roku pojawiają się nowe oferty, 
                     zmieniają się kursy i warunki promocji. Dlatego utrzymujemy nasz ranking na bieżąco – żebyś 
@@ -294,9 +309,12 @@ export default function Index() {
                     bonus powitalny. Poniżej rozbijamy to na czynniki pierwsze.
                   </p>
 
-                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
-                    Legalni bukmacherzy – bukmacherzy z licencją
-                  </h3>
+                  <div className="flex items-center gap-3 mt-12 mb-6">
+                    <Icon name="ShieldCheck" className="text-primary" size={24} />
+                    <h3 className="text-2xl md:text-3xl font-bold">
+                      Legalni bukmacherzy – bukmacherzy z licencją
+                    </h3>
+                  </div>
                   <p className="text-lg leading-relaxed">
                     W Polsce nie ma żartów z legalności zakładów. Ministerstwo Finansów prowadzi rejestr operatorów 
                     z licencją, a granie poza tym rejestrem to ryzyko – nie tylko prawne, ale przede wszystkim finansowe. 
@@ -309,9 +327,12 @@ export default function Index() {
                     publikuje go na swojej stronie. Opinie graczy to jedno, ale formalny status operatora to absolutna podstawa.
                   </p>
 
-                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
-                    Bonusy bukmacherskie i oferty na start
-                  </h3>
+                  <div className="flex items-center gap-3 mt-12 mb-6">
+                    <Icon name="Gift" className="text-primary" size={24} />
+                    <h3 className="text-2xl md:text-3xl font-bold">
+                      Bonusy bukmacherskie i oferty na start
+                    </h3>
+                  </div>
                   <p className="text-lg leading-relaxed">
                     Bonusy bukmacherskie potrafią naprawdę ułatwić start. Większość legalnych operatorów oferuje bonus 
                     na start – zwykle jest to dopasowanie pierwszego depozytu lub zakład bez ryzyka. Ale diabeł tkwi 
@@ -320,22 +341,22 @@ export default function Index() {
                   <p className="text-lg leading-relaxed font-semibold">
                     Na co warto zwracać uwagę:
                   </p>
-                  <ul className="space-y-3 text-lg leading-relaxed list-none pl-0">
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Bonus na start bukmacher</strong> – sprawdź, czy dotyczy pierwszego zakładu, czy depozytu. To robi ogromną różnicę.</span>
+                  <ul className="space-y-4 text-lg leading-relaxed list-none pl-0">
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Bonus na start bukmacher</strong> – sprawdź, czy dotyczy pierwszego zakładu, czy depozytu. To robi ogromną różnicę.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Freebet bez depozytu</strong> – rzadkość, ale się zdarza. Niektórzy bukmacherzy dają darmowy zakład za samą rejestrację.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Freebet bez depozytu</strong> – rzadkość, ale się zdarza. Niektórzy bukmacherzy dają darmowy zakład za samą rejestrację.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Kod promocyjny bukmacher</strong> – czasem wystarczy wpisać odpowiedni kod przy rejestracji, żeby odblokować dodatkową premię.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Kod promocyjny bukmacher</strong> – czasem wystarczy wpisać odpowiedni kod przy rejestracji, żeby odblokować dodatkową premię.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Zakład bez ryzyka</strong> – jeśli przegrasz pierwszy kupon, dostajesz zwrot stawki. Warunki bywają różne, więc czytaj regulamin.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Zakład bez ryzyka</strong> – jeśli przegrasz pierwszy kupon, dostajesz zwrot stawki. Warunki bywają różne, więc czytaj regulamin.</span>
                     </li>
                   </ul>
                   <p className="text-lg leading-relaxed">
@@ -343,9 +364,12 @@ export default function Index() {
                     platformę, zanim zaangażują własne pieniądze.
                   </p>
 
-                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
-                    Nowi bukmacherzy 2026 – co oferują?
-                  </h3>
+                  <div className="flex items-center gap-3 mt-12 mb-6">
+                    <Icon name="Sparkles" className="text-primary" size={24} />
+                    <h3 className="text-2xl md:text-3xl font-bold">
+                      Nowi bukmacherzy 2026 – co oferują?
+                    </h3>
+                  </div>
                   <p className="text-lg leading-relaxed">
                     Rynek się zmienia i <strong>nowi bukmacherzy 2026</strong> wchodzą z naprawdę agresywnymi ofertami. 
                     Żeby przyciągnąć graczy, proponują wyższe bonusy, lepsze kursy na wybrane dyscypliny i nowoczesne 
@@ -357,9 +381,15 @@ export default function Index() {
                     z ich ofert powitalnych, dopóki są hojne.
                   </p>
 
-                  <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-6 pt-12 border-t border-border">
-                    Najlepsze kasyna online – ranking i opinie graczy
-                  </h2>
+                  <div className="mt-16 pt-12 border-t border-primary/20">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="h-1 w-8 bg-primary rounded-full"></div>
+                      <Icon name="Star" className="text-primary" size={24} />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                      Najlepsze kasyna online – ranking i opinie graczy
+                    </h2>
+                  </div>
                   <p className="text-lg leading-relaxed">
                     Jeśli interesują Cię automaty, ruletka albo poker, ten dział jest dla Ciebie. Nasz <strong>kasyna 
                     online ranking</strong> obejmuje wyłącznie sprawdzone i legalne platformy. Sprawdzamy je pod kątem 
@@ -372,9 +402,12 @@ export default function Index() {
                     <strong>Top kasyna online</strong> w naszym rankingu wybieramy na podstawie kilkudziesięciu kryteriów.
                   </p>
 
-                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
-                    Wypłacalne kasyna internetowe – opinie i bezpieczeństwo
-                  </h3>
+                  <div className="flex items-center gap-3 mt-12 mb-6">
+                    <Icon name="DollarSign" className="text-primary" size={24} />
+                    <h3 className="text-2xl md:text-3xl font-bold">
+                      Wypłacalne kasyna internetowe – opinie i bezpieczeństwo
+                    </h3>
+                  </div>
                   <p className="text-lg leading-relaxed">
                     Najczęstsze pytanie, które dostajemy, brzmi: „Czy to kasyno naprawdę wypłaca?". I słusznie – bo to 
                     jest sedno sprawy. <strong>Wypłacalne kasyna internetowe</strong> to takie, które przelewają wygrane 
@@ -388,9 +421,12 @@ export default function Index() {
                     wypłatę wygranej.
                   </p>
 
-                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
-                    Bonusy kasynowe bez depozytu i darmowe spiny
-                  </h3>
+                  <div className="flex items-center gap-3 mt-12 mb-6">
+                    <Icon name="Zap" className="text-primary" size={24} />
+                    <h3 className="text-2xl md:text-3xl font-bold">
+                      Bonusy kasynowe bez depozytu i darmowe spiny
+                    </h3>
+                  </div>
                   <p className="text-lg leading-relaxed">
                     To chyba najbardziej pożądana kategoria ofert. <strong>Kasyno bez depozytu</strong> pozwala zagrać 
                     za pieniądze operatora – bez angażowania własnych środków. Brzmi za pięknie? Cóż, warunki obrotu 
@@ -399,36 +435,44 @@ export default function Index() {
                   <p className="text-lg leading-relaxed font-semibold">
                     Oto najpopularniejsze rodzaje bonusów kasynowych:
                   </p>
-                  <ul className="space-y-3 text-lg leading-relaxed list-none pl-0">
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Darmowe spiny za rejestrację</strong> – dostajesz określoną liczbę spinów od razu po założeniu konta. Nie musisz wpłacać ani złotówki.</span>
+                  <ul className="space-y-4 text-lg leading-relaxed list-none pl-0">
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Darmowe spiny za rejestrację</strong> – dostajesz określoną liczbę spinów od razu po założeniu konta. Nie musisz wpłacać ani złotówki.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Darmowe spiny bez depozytu (Polska)</strong> – jak wyżej, ale specjalnie dedykowane polskim graczom. Dostępność zmienia się w zależności od operatora.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Darmowe spiny bez depozytu (Polska)</strong> – jak wyżej, ale specjalnie dedykowane polskim graczom. Dostępność zmienia się w zależności od operatora.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Kasyno bonus na start</strong> – klasyczne dopasowanie pierwszego depozytu, czasem nawet 100% lub więcej.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Kasyno bonus na start</strong> – klasyczne dopasowanie pierwszego depozytu, czasem nawet 100% lub więcej.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Darmowa kasa za rejestrację w kasynie</strong> – zamiast spinów dostajesz konkretną kwotę do wykorzystania na dowolne gry.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Darmowa kasa za rejestrację w kasynie</strong> – zamiast spinów dostajesz konkretną kwotę do wykorzystania na dowolne gry.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Nowe kasyna bez depozytu</strong> – świeże platformy, które oferują bonusy bez wymaganej wpłaty, żeby przyciągnąć pierwszych użytkowników.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Nowe kasyna bez depozytu</strong> – świeże platformy, które oferują bonusy bez wymaganej wpłaty, żeby przyciągnąć pierwszych użytkowników.</span>
                     </li>
                   </ul>
-                  <p className="text-lg leading-relaxed">
-                    Pamiętaj, żeby zawsze sprawdzić wymagania dotyczące obrotu bonusem. Darmowe spiny, które wymagają 
-                    60-krotnego obrotu, wyglądają znacznie mniej atrakcyjnie niż te z wymogiem 30-krotnym.
-                  </p>
+                  <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-6 mt-6">
+                    <div className="flex items-start gap-3">
+                      <Icon name="AlertCircle" className="text-primary flex-shrink-0 mt-1" size={24} />
+                      <p className="text-lg leading-relaxed">
+                        <strong className="text-primary">Ważne:</strong> Pamiętaj, żeby zawsze sprawdzić wymagania dotyczące obrotu bonusem. Darmowe spiny, które wymagają 
+                        60-krotnego obrotu, wyglądają znacznie mniej atrakcyjnie niż te z wymogiem 30-krotnym.
+                      </p>
+                    </div>
+                  </div>
 
-                  <h3 className="text-2xl md:text-3xl font-bold mt-12 mb-6">
-                    Gry online w kasynie – automaty, ruletka i poker
-                  </h3>
+                  <div className="flex items-center gap-3 mt-12 mb-6">
+                    <Icon name="Gamepad2" className="text-primary" size={24} />
+                    <h3 className="text-2xl md:text-3xl font-bold">
+                      Gry online w kasynie – automaty, ruletka i poker
+                    </h3>
+                  </div>
                   <p className="text-lg leading-relaxed">
                     Oferta gier to jeden z kluczowych czynników wyboru. Większość kasyn stawia przede wszystkim na 
                     <strong> automaty do gier online</strong> – to one generują największy ruch. Znajdziesz tu klasyczne 
@@ -447,9 +491,15 @@ export default function Index() {
                     sit-and-go – wybór jest naprawdę spory.
                   </p>
 
-                  <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-6 pt-12 border-t border-border">
-                    Jaki bukmacher lub kasyno online wybrać?
-                  </h2>
+                  <div className="mt-16 pt-12 border-t border-primary/20">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="h-1 w-8 bg-primary rounded-full"></div>
+                      <Icon name="HelpCircle" className="text-primary" size={24} />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                      Jaki bukmacher lub kasyno online wybrać?
+                    </h2>
+                  </div>
                   <p className="text-lg leading-relaxed">
                     To pytanie, które zadaje sobie każdy początkujący gracz. <strong>Jaki bukmacher wybrać?</strong> Które 
                     kasyno będzie najlepsze akurat dla Ciebie? Nie ma jednej uniwersalnej odpowiedzi, ale jest kilka rzeczy, 
@@ -459,26 +509,26 @@ export default function Index() {
                   <p className="text-lg leading-relaxed font-semibold">
                     Na co zwrócić uwagę:
                   </p>
-                  <ul className="space-y-3 text-lg leading-relaxed list-none pl-0">
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Licencja</strong> – to absolutna podstawa. Bez ważnego zezwolenia na prowadzenie działalności w Polsce – nie ryzykuj.</span>
+                  <ul className="space-y-4 text-lg leading-relaxed list-none pl-0">
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Licencja</strong> – to absolutna podstawa. Bez ważnego zezwolenia na prowadzenie działalności w Polsce – nie ryzykuj.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Bonusy</strong> – porównaj oferty powitalne, ale patrz na warunki, nie tylko na kwoty. Wysoki bonus z nierealnymi wymaganiami obrotu jest bezwartościowy.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Bonusy</strong> – porównaj oferty powitalne, ale patrz na warunki, nie tylko na kwoty. Wysoki bonus z nierealnymi wymaganiami obrotu jest bezwartościowy.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Wypłaty</strong> – sprawdź dostępne metody, limity i czas realizacji. Szybka wypłata to znak dobrze zarządzanej platformy.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Wypłaty</strong> – sprawdź dostępne metody, limity i czas realizacji. Szybka wypłata to znak dobrze zarządzanej platformy.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Oferta gier lub zakładów</strong> – czy znajdziesz tu swoje ulubione dyscypliny sportowe albo typy gier kasynowych? Dla jednych liczy się piłka nożna, dla innych automaty z jackpotem.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Oferta gier lub zakładów</strong> – czy znajdziesz tu swoje ulubione dyscypliny sportowe albo typy gier kasynowych? Dla jednych liczy się piłka nożna, dla innych automaty z jackpotem.</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-primary mt-1">•</span>
-                      <span><strong>Opinie graczy</strong> – przeczytaj recenzje, ale filtruj je zdrowym rozsądkiem. Jedna zła opinia nie oznacza złego operatora, ale kilkadziesiąt podobnych skarg – to już sygnał ostrzegawczy.</span>
+                    <li className="flex items-start gap-3 p-4 bg-card/30 rounded-lg border border-primary/10 hover:border-primary/30 transition-colors">
+                      <Icon name="CheckCircle2" className="text-primary mt-1 flex-shrink-0" size={20} />
+                      <span><strong className="text-primary">Opinie graczy</strong> – przeczytaj recenzje, ale filtruj je zdrowym rozsądkiem. Jedna zła opinia nie oznacza złego operatora, ale kilkadziesiąt podobnych skarg – to już sygnał ostrzegawczy.</span>
                     </li>
                   </ul>
                   <p className="text-lg leading-relaxed">
@@ -490,6 +540,7 @@ export default function Index() {
                     Nasz ranking aktualizujemy regularnie, więc wracaj tu, kiedy będziesz szukać nowych ofert albo zechcesz 
                     sprawdzić, co zmieniło się na rynku w 2026 roku.
                   </p>
+                  </div>
                 </div>
               </div>
             </TabsContent>
