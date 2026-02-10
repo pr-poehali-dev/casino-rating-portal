@@ -39,13 +39,16 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem('session_token');
-    if (token) {
-      setSessionToken(token);
-      checkAuth();
-    } else {
-      setIsLoading(false);
-    }
+    const initAuth = async () => {
+      const token = localStorage.getItem('session_token');
+      if (token) {
+        setSessionToken(token);
+        await checkAuth();
+      } else {
+        setIsLoading(false);
+      }
+    };
+    initAuth();
   }, []);
 
   const checkAuth = async () => {

@@ -79,7 +79,7 @@ export default function Dashboard() {
 
   const loadNotifications = async () => {
     try {
-      const response = await fetch(`${ADMIN_URL}/notifications`, {
+      const response = await fetch(`${ADMIN_URL}?action=get_notifications`, {
         headers: {
           'Authorization': `Bearer ${sessionToken}`,
         },

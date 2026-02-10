@@ -295,9 +295,12 @@ def handler(event: dict, context) -> dict:
             }
         
         # Получение уведомлений пользователя
-        if method == 'GET' and path.endswith('/notifications'):
+        if method == 'GET' and (action == 'get_notifications' or path.endswith('/notifications')):
             # Для обычных пользователей
+            token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
+            print(f"[DEBUG] Getting notifications, token: {token[:20] if token else 'empty'}...")
             user = get_user_from_token(cur, token)
+            print(f"[DEBUG] User found: {user['email'] if user else 'None'}")
             if not user:
                 return {
                     'statusCode': 401,
@@ -325,6 +328,7 @@ def handler(event: dict, context) -> dict:
         
         # Отметить уведомление как прочитанное
         if method == 'PUT' and '/notifications/' in path and '/read' in path:
+            token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
             user = get_user_from_token(cur, token)
             if not user:
                 return {
@@ -474,6 +478,7 @@ def handler(event: dict, context) -> dict:
             if body.get('notify_users', True):
                 cur.execute("SELECT id FROM users WHERE is_active = true")
                 user_ids = [row['id'] for row in cur.fetchall()]
+                print(f"[DEBUG] Sending notifications to {len(user_ids)} users")
                 
                 notification_title = f"Nowa promocja: {body['casino_name']}"
                 notification_message = body['title']
@@ -485,6 +490,7 @@ def handler(event: dict, context) -> dict:
                     )
                 
                 conn.commit()
+                print(f"[DEBUG] Notifications sent successfully to {len(user_ids)} users")
             
             return {
                 'statusCode': 201,
