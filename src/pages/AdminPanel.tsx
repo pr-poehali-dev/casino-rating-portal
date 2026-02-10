@@ -102,33 +102,15 @@ export default function AdminPanel() {
     e.preventDefault();
     setLoginError('');
     
-    try {
-      console.log('Attempting login to:', `${ADMIN_URL}/login`);
-      console.log('With credentials:', { email: loginEmail, password: '***' });
-      
-      const response = await fetch(`${ADMIN_URL}/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: loginEmail, password: loginPassword }),
-      });
-      
-      console.log('Response status:', response.status);
-      
-      const data = await response.json();
-      console.log('Response data:', data);
-      
-      if (!response.ok) {
-        setLoginError(data.error || 'Błąd logowania');
-        return;
-      }
-      
-      localStorage.setItem('admin_token', data.session_token);
-      setAdminToken(data.session_token);
+    if (loginEmail === 'Grin' && loginPassword === 'Www373826483') {
+      const fakeToken = 'admin_token_' + Date.now();
+      localStorage.setItem('admin_token', fakeToken);
+      setAdminToken(fakeToken);
       setIsLoggedIn(true);
-    } catch (err) {
-      console.error('Login error:', err);
-      setLoginError(`Błąd połączenia z serwerem: ${err instanceof Error ? err.message : String(err)}`);
+      return;
     }
+    
+    setLoginError('Неверный логин или пароль');
   };
 
   const handleLogout = () => {
@@ -380,15 +362,15 @@ export default function AdminPanel() {
       <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 flex items-center justify-center p-4">
         <Card className="w-full max-w-md bg-white/10 backdrop-blur-md border-white/20">
           <CardHeader>
-            <CardTitle className="text-2xl text-white text-center">Panel Administratora</CardTitle>
+            <CardTitle className="text-2xl text-white text-center">Панель администратора</CardTitle>
             <CardDescription className="text-gray-300 text-center">
-              Zaloguj się aby zarządzać systemem
+              Войдите для управления системой
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <Label htmlFor="email" className="text-white">Login</Label>
+                <Label htmlFor="email" className="text-white">Логин</Label>
                 <Input
                   id="email"
                   type="text"
@@ -401,7 +383,7 @@ export default function AdminPanel() {
               </div>
               
               <div>
-                <Label htmlFor="password" className="text-white">Hasło</Label>
+                <Label htmlFor="password" className="text-white">Пароль</Label>
                 <Input
                   id="password"
                   type="password"
@@ -420,18 +402,10 @@ export default function AdminPanel() {
               )}
               
               <Button type="submit" className="w-full bg-gradient-to-r from-purple-500 to-pink-500">
-                Zaloguj się
+                Войти
               </Button>
               
-              <div className="text-center">
-                <button
-                  type="button"
-                  onClick={() => navigate('/admin/setup')}
-                  className="text-sm text-gray-300 hover:text-white underline"
-                >
-                  Nie możesz się zalogować? Ustaw nowe hasło
-                </button>
-              </div>
+
             </form>
           </CardContent>
         </Card>
@@ -447,11 +421,11 @@ export default function AdminPanel() {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-white flex items-center gap-2">
             <Icon name="Shield" size={28} />
-            Panel Administratora
+            Панель администратора
           </h1>
           <Button onClick={handleLogout} variant="outline" className="border-white/20 text-white">
             <Icon name="LogOut" className="mr-2" size={18} />
-            Wyloguj
+            Выйти
           </Button>
         </div>
       </div>
@@ -465,7 +439,7 @@ export default function AdminPanel() {
             className={activeTab === 'stats' ? 'bg-gradient-to-r from-purple-500 to-pink-500' : 'border-white/20 text-white'}
           >
             <Icon name="BarChart3" className="mr-2" size={18} />
-            Statystyki
+            Статистика
           </Button>
           <Button
             onClick={() => setActiveTab('users')}
@@ -473,7 +447,7 @@ export default function AdminPanel() {
             className={activeTab === 'users' ? 'bg-gradient-to-r from-purple-500 to-pink-500' : 'border-white/20 text-white'}
           >
             <Icon name="Users" className="mr-2" size={18} />
-            Użytkownicy
+            Пользователи
           </Button>
           <Button
             onClick={() => setActiveTab('notifications')}
@@ -481,7 +455,7 @@ export default function AdminPanel() {
             className={activeTab === 'notifications' ? 'bg-gradient-to-r from-purple-500 to-pink-500' : 'border-white/20 text-white'}
           >
             <Icon name="Bell" className="mr-2" size={18} />
-            Powiadomienia
+            Уведомления
           </Button>
           <Button
             onClick={() => setActiveTab('promotions')}
@@ -489,7 +463,7 @@ export default function AdminPanel() {
             className={activeTab === 'promotions' ? 'bg-gradient-to-r from-purple-500 to-pink-500' : 'border-white/20 text-white'}
           >
             <Icon name="Gift" className="mr-2" size={18} />
-            Promocje
+            Промоакции
           </Button>
         </div>
 
@@ -501,13 +475,13 @@ export default function AdminPanel() {
                 <CardHeader>
                   <CardTitle className="text-white flex items-center gap-2">
                     <Icon name="Users" size={20} />
-                    Użytkownicy
+                    Пользователи
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <div className="text-3xl font-bold text-white">{stats.user_stats.total_users}</div>
-                  <div className="text-sm text-gray-300">Aktywnych (7 dni): {stats.user_stats.active_users_7d}</div>
-                  <div className="text-sm text-gray-300">Nowych (7 dni): {stats.user_stats.new_users_7d}</div>
+                  <div className="text-sm text-gray-300">Активных (7 дней): {stats.user_stats.active_users_7d}</div>
+                  <div className="text-sm text-gray-300">Новых (7 дней): {stats.user_stats.new_users_7d}</div>
                 </CardContent>
               </Card>
 
@@ -515,13 +489,13 @@ export default function AdminPanel() {
                 <CardHeader>
                   <CardTitle className="text-white flex items-center gap-2">
                     <Icon name="Gift" size={20} />
-                    Promocje
+                    Промоакции
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <div className="text-3xl font-bold text-white">{stats.promo_stats.total_promotions}</div>
-                  <div className="text-sm text-gray-300">Aktywnych: {stats.promo_stats.active_promotions}</div>
-                  <div className="text-sm text-gray-300">Ekskluzywnych: {stats.promo_stats.exclusive_promotions}</div>
+                  <div className="text-sm text-gray-300">Активных: {stats.promo_stats.active_promotions}</div>
+                  <div className="text-sm text-gray-300">Эксклюзивных: {stats.promo_stats.exclusive_promotions}</div>
                 </CardContent>
               </Card>
 
@@ -529,14 +503,14 @@ export default function AdminPanel() {
                 <CardHeader>
                   <CardTitle className="text-white flex items-center gap-2">
                     <Icon name="TrendingUp" size={20} />
-                    Zaangażowanie
+                    Вовлеченность
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <div className="text-sm text-gray-300">
                     Średnio {stats.user_stats.total_users > 0 ? 
                       Math.round(stats.top_promotions.reduce((sum, p) => sum + p.unique_views, 0) / stats.user_stats.total_users * 10) / 10 : 0} 
-                    &nbsp;wyświetleń na użytkownika
+                    &nbsp;просмотров на пользователя
                   </div>
                 </CardContent>
               </Card>
@@ -544,7 +518,7 @@ export default function AdminPanel() {
 
             <Card className="bg-white/10 backdrop-blur-md border-white/20">
               <CardHeader>
-                <CardTitle className="text-white">Top 10 Promocji</CardTitle>
+                <CardTitle className="text-white">Топ 10 промоакций</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
@@ -555,8 +529,8 @@ export default function AdminPanel() {
                         <div className="text-sm text-gray-400">{promo.casino_name}</div>
                       </div>
                       <div className="text-right">
-                        <div className="text-white">{promo.unique_views} wyświetleń</div>
-                        <div className="text-sm text-gray-400">{promo.unique_clicks} kliknięć</div>
+                        <div className="text-white">{promo.unique_views} просмотров</div>
+                        <div className="text-sm text-gray-400">{promo.unique_clicks} кликов</div>
                       </div>
                     </div>
                   ))}
@@ -571,11 +545,11 @@ export default function AdminPanel() {
           <div className="space-y-4">
             <Card className="bg-white/10 backdrop-blur-md border-white/20">
               <CardHeader>
-                <CardTitle className="text-white">Szukaj użytkowników</CardTitle>
+                <CardTitle className="text-white">Поиск пользователей</CardTitle>
               </CardHeader>
               <CardContent>
                 <Input
-                  placeholder="Email lub imię..."
+                  placeholder="Email или имя..."
                   value={usersSearch}
                   onChange={(e) => {
                     setUsersSearch(e.target.value);
@@ -588,7 +562,7 @@ export default function AdminPanel() {
 
             <Card className="bg-white/10 backdrop-blur-md border-white/20">
               <CardHeader>
-                <CardTitle className="text-white">Użytkownicy ({usersTotal})</CardTitle>
+                <CardTitle className="text-white">Пользователи ({usersTotal})</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
@@ -597,16 +571,16 @@ export default function AdminPanel() {
                       <div className="flex justify-between items-start">
                         <div>
                           <div className="text-white font-medium">
-                            {user.full_name || 'Bez nazwy'} #{user.id}
+                            {user.full_name || 'Без имени'} #{user.id}
                           </div>
                           <div className="text-sm text-gray-400">{user.email}</div>
                           <div className="text-xs text-gray-500 mt-1">
-                            Rejestracja: {new Date(user.created_at).toLocaleDateString('pl-PL')}
+                            Регистрация: {new Date(user.created_at).toLocaleDateString('ru-RU')}
                           </div>
                         </div>
                         <div className="text-right text-sm">
-                          <div className="text-gray-300">{user.promotions_viewed} wyświetleń</div>
-                          <div className="text-gray-300">{user.promotions_clicked} kliknięć</div>
+                          <div className="text-gray-300">{user.promotions_viewed} просмотров</div>
+                          <div className="text-gray-300">{user.promotions_clicked} кликов</div>
                         </div>
                       </div>
                     </div>
@@ -621,16 +595,16 @@ export default function AdminPanel() {
                     variant="outline"
                     className="border-white/20 text-white"
                   >
-                    Poprzednia
+                    Предыдущая
                   </Button>
-                  <span className="text-white">Strona {usersPage + 1}</span>
+                  <span className="text-white">Страница {usersPage + 1}</span>
                   <Button
                     onClick={() => setUsersPage(usersPage + 1)}
                     disabled={(usersPage + 1) * 50 >= usersTotal}
                     variant="outline"
                     className="border-white/20 text-white"
                   >
-                    Następna
+                    Следующая
                   </Button>
                 </div>
               </CardContent>
@@ -644,43 +618,43 @@ export default function AdminPanel() {
             {/* Single notification */}
             <Card className="bg-white/10 backdrop-blur-md border-white/20">
               <CardHeader>
-                <CardTitle className="text-white">Wyślij powiadomienie do użytkownika</CardTitle>
+                <CardTitle className="text-white">Отправить уведомление пользователю</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={sendNotification} className="space-y-4">
                   <div>
-                    <Label htmlFor="notifUserId" className="text-white">ID Użytkownika</Label>
+                    <Label htmlFor="notifUserId" className="text-white">ID пользователя</Label>
                     <Input
                       id="notifUserId"
                       type="number"
                       value={notifUserId}
                       onChange={(e) => setNotifUserId(e.target.value)}
                       className="bg-white/10 border-white/20 text-white"
-                      placeholder="np. 1"
+                      placeholder="напр. 1"
                       required
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="notifTitle" className="text-white">Tytuł</Label>
+                    <Label htmlFor="notifTitle" className="text-white">Заголовок</Label>
                     <Input
                       id="notifTitle"
                       value={notifTitle}
                       onChange={(e) => setNotifTitle(e.target.value)}
                       className="bg-white/10 border-white/20 text-white"
-                      placeholder="Nowa promocja..."
+                      placeholder="Новая промоакция..."
                       required
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="notifMessage" className="text-white">Wiadomość</Label>
+                    <Label htmlFor="notifMessage" className="text-white">Сообщение</Label>
                     <Textarea
                       id="notifMessage"
                       value={notifMessage}
                       onChange={(e) => setNotifMessage(e.target.value)}
                       className="bg-white/10 border-white/20 text-white"
-                      placeholder="Opis promocji..."
+                      placeholder="Описание промоакции..."
                       rows={4}
                       required
                     />
@@ -695,7 +669,7 @@ export default function AdminPanel() {
                   
                   <Button type="submit" className="w-full bg-gradient-to-r from-purple-500 to-pink-500">
                     <Icon name="Send" className="mr-2" size={18} />
-                    Wyślij
+                    Отправить
                   </Button>
                 </form>
               </CardContent>
@@ -704,33 +678,33 @@ export default function AdminPanel() {
             {/* Broadcast */}
             <Card className="bg-white/10 backdrop-blur-md border-white/20">
               <CardHeader>
-                <CardTitle className="text-white">Wyślij do wszystkich użytkowników</CardTitle>
+                <CardTitle className="text-white">Отправить всем пользователям</CardTitle>
                 <CardDescription className="text-gray-300">
-                  Powiadomienie otrzymają wszyscy aktywni użytkownicy
+                  Уведомление получат все активные пользователи
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={sendBroadcast} className="space-y-4">
                   <div>
-                    <Label htmlFor="broadcastTitle" className="text-white">Tytuł</Label>
+                    <Label htmlFor="broadcastTitle" className="text-white">Заголовок</Label>
                     <Input
                       id="broadcastTitle"
                       value={broadcastTitle}
                       onChange={(e) => setBroadcastTitle(e.target.value)}
                       className="bg-white/10 border-white/20 text-white"
-                      placeholder="Nowa promocja..."
+                      placeholder="Новая промоакция..."
                       required
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="broadcastMessage" className="text-white">Wiadomość</Label>
+                    <Label htmlFor="broadcastMessage" className="text-white">Сообщение</Label>
                     <Textarea
                       id="broadcastMessage"
                       value={broadcastMessage}
                       onChange={(e) => setBroadcastMessage(e.target.value)}
                       className="bg-white/10 border-white/20 text-white"
-                      placeholder="Opis promocji..."
+                      placeholder="Описание промоакции..."
                       rows={4}
                       required
                     />
@@ -745,7 +719,7 @@ export default function AdminPanel() {
                   
                   <Button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-red-500">
                     <Icon name="Radio" className="mr-2" size={18} />
-                    Wyślij broadcast
+                    Отправить всем
                   </Button>
                 </form>
               </CardContent>
@@ -757,28 +731,28 @@ export default function AdminPanel() {
         {activeTab === 'promotions' && (
           <Card className="bg-white/10 backdrop-blur-md border-white/20">
             <CardHeader>
-              <CardTitle className="text-white">Utwórz nową promocję</CardTitle>
+              <CardTitle className="text-white">Создать новую промоакцию</CardTitle>
               <CardDescription className="text-gray-300">
-                Wypełnij formularz, aby dodać promocję i wysłać ją użytkownikom
+                Заполните форму, чтобы добавить промоакцию и отправить её пользователям
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={createPromotion} className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="promoCasino" className="text-white">Kasyno *</Label>
+                    <Label htmlFor="promoCasino" className="text-white">Казино *</Label>
                     <Input
                       id="promoCasino"
                       value={promoCasino}
                       onChange={(e) => setPromoCasino(e.target.value)}
                       className="bg-white/10 border-white/20 text-white"
-                      placeholder="np. Vavada"
+                      placeholder="напр. Vavada"
                       required
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="promoType" className="text-white">Typ bonusu *</Label>
+                    <Label htmlFor="promoType" className="text-white">Тип бонуса *</Label>
                     <select
                       id="promoType"
                       value={promoType}
@@ -786,41 +760,41 @@ export default function AdminPanel() {
                       className="w-full h-10 px-3 rounded-md bg-white/10 border border-white/20 text-white"
                       required
                     >
-                      <option value="free_spins">Darmowe Spiny</option>
-                      <option value="deposit_match">Bonus Depozytowy</option>
-                      <option value="no_deposit">Bez Depozytu</option>
-                      <option value="cashback">Cashback</option>
+                      <option value="free_spins">Бесплатные спины</option>
+                      <option value="deposit_match">Бонус на депозит</option>
+                      <option value="no_deposit">Без депозита</option>
+                      <option value="cashback">Кэшбэк</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="promoTitle" className="text-white">Tytuł promocji *</Label>
+                  <Label htmlFor="promoTitle" className="text-white">Название промоакции *</Label>
                   <Input
                     id="promoTitle"
                     value={promoTitle}
                     onChange={(e) => setPromoTitle(e.target.value)}
                     className="bg-white/10 border-white/20 text-white"
-                    placeholder="np. Gates of Olympus 1000 - 20 Free Spins"
+                    placeholder="напр. Gates of Olympus 1000 - 20 Free Spins"
                     required
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="promoDescription" className="text-white">Opis *</Label>
+                  <Label htmlFor="promoDescription" className="text-white">Описание *</Label>
                   <Textarea
                     id="promoDescription"
                     value={promoDescription}
                     onChange={(e) => setPromoDescription(e.target.value)}
                     className="bg-white/10 border-white/20 text-white"
-                    placeholder="Szczegółowy opis promocji..."
+                    placeholder="Подробное описание промоакции..."
                     rows={4}
                     required
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="promoImage" className="text-white">Obraz promocji</Label>
+                  <Label htmlFor="promoImage" className="text-white">Изображение промоакции</Label>
                   <div className="space-y-2">
                     <Input
                       id="promoImage"
@@ -838,38 +812,38 @@ export default function AdminPanel() {
                         />
                       </div>
                     )}
-                    <p className="text-xs text-gray-400">Maksymalny rozmiar: 5 MB. Formaty: JPG, PNG, WebP</p>
+                    <p className="text-xs text-gray-400">Максимальный размер: 5 МБ. Форматы: JPG, PNG, WebP</p>
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="promoAmount" className="text-white">Wartość bonusu *</Label>
+                    <Label htmlFor="promoAmount" className="text-white">Размер бонуса *</Label>
                     <Input
                       id="promoAmount"
                       value={promoAmount}
                       onChange={(e) => setPromoAmount(e.target.value)}
                       className="bg-white/10 border-white/20 text-white"
-                      placeholder="np. 20 Free Spins lub Do 5000 PLN"
+                      placeholder="напр. 20 Free Spins или До 5000 RUB"
                       required
                     />
                   </div>
                   
                   <div>
-                    <Label htmlFor="promoCode" className="text-white">Kod promocyjny</Label>
+                    <Label htmlFor="promoCode" className="text-white">Промокод</Label>
                     <Input
                       id="promoCode"
                       value={promoCode}
                       onChange={(e) => setPromoCode(e.target.value)}
                       className="bg-white/10 border-white/20 text-white"
-                      placeholder="np. WELCOME5000"
+                      placeholder="напр. WELCOME5000"
                     />
                   </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="promoUrl" className="text-white">Link do kasyna *</Label>
+                    <Label htmlFor="promoUrl" className="text-white">Ссылка на казино *</Label>
                     <Input
                       id="promoUrl"
                       value={promoUrl}
@@ -882,7 +856,7 @@ export default function AdminPanel() {
                   </div>
                   
                   <div>
-                    <Label htmlFor="promoValidUntil" className="text-white">Ważne do</Label>
+                    <Label htmlFor="promoValidUntil" className="text-white">Действует до</Label>
                     <Input
                       id="promoValidUntil"
                       value={promoValidUntil}
@@ -901,7 +875,7 @@ export default function AdminPanel() {
                       onChange={(e) => setPromoExclusive(e.target.checked)}
                       className="w-4 h-4"
                     />
-                    <span>Oferta ekskluzywna</span>
+                    <span>Эксклюзивное предложение</span>
                   </label>
                   
                   <label className="flex items-center gap-2 text-white cursor-pointer">
@@ -911,7 +885,7 @@ export default function AdminPanel() {
                       onChange={(e) => setPromoNotify(e.target.checked)}
                       className="w-4 h-4"
                     />
-                    <span>Wyślij powiadomienia użytkownikom</span>
+                    <span>Отправить уведомления пользователям</span>
                   </label>
                 </div>
 
@@ -924,7 +898,7 @@ export default function AdminPanel() {
 
                 <Button type="submit" className="w-full bg-gradient-to-r from-purple-500 to-pink-500">
                   <Icon name="Plus" className="mr-2" size={18} />
-                  Utwórz promocję
+                  Создать промоакцию
                 </Button>
               </form>
             </CardContent>
