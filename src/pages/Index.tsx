@@ -546,33 +546,6 @@ export default function Index() {
                   !
                 </div>
               </Button>
-
-              <div className="flex items-center gap-2">
-                <Button
-                  variant={language === 'pl' ? 'default' : 'ghost'}
-                  size="sm"
-                  onClick={() => handleLanguageChange('pl')}
-                  className={language === 'pl' ? 'bg-primary' : ''}
-                >
-                  🇵🇱
-                </Button>
-                <Button
-                  variant={language === 'ru' ? 'default' : 'ghost'}
-                  size="sm"
-                  onClick={() => handleLanguageChange('ru')}
-                  className={language === 'ru' ? 'bg-primary' : ''}
-                >
-                  🇷🇺
-                </Button>
-                <Button
-                  variant={language === 'en' ? 'default' : 'ghost'}
-                  size="sm"
-                  onClick={() => handleLanguageChange('en')}
-                  className={language === 'en' ? 'bg-primary' : ''}
-                >
-                  🇬🇧
-                </Button>
-              </div>
               <Button size="icon" variant="ghost" className="md:hidden">
                 <Icon name="Menu" size={24} />
               </Button>
