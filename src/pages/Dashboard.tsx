@@ -34,7 +34,7 @@ interface Notification {
 }
 
 export default function Dashboard() {
-  const { user, sessionToken, logout } = useAuth();
+  const { user, sessionToken, logout, isLoading: authLoading } = useAuth();
   const navigate = useNavigate();
   const [promotions, setPromotions] = useState<Promotion[]>([]);
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -44,6 +44,8 @@ export default function Dashboard() {
   const [copiedPromo, setCopiedPromo] = useState<number | null>(null);
 
   useEffect(() => {
+    if (authLoading) return;
+    
     if (!sessionToken) {
       navigate('/');
       return;
@@ -56,7 +58,7 @@ export default function Dashboard() {
     }, 30000);
     
     return () => clearInterval(interval);
-  }, [sessionToken]);
+  }, [sessionToken, authLoading, navigate]);
 
   const loadPromotions = async () => {
     try {
@@ -169,7 +171,7 @@ export default function Dashboard() {
     return colors[type] || 'bg-secondary/20 text-secondary border-secondary/30';
   };
 
-  if (isLoading) {
+  if (authLoading || isLoading) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
