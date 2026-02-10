@@ -86,11 +86,79 @@ const StarRating = ({ rating, size = 20 }: { rating: number; size?: number }) =>
   );
 };
 
+type Language = 'pl' | 'ru' | 'en';
+
+const translations = {
+  pl: {
+    ageTitle: 'Potwierdzenie wieku',
+    ageDisclaimer: 'Ta strona ma charakter wyłącznie informacyjny i nie prowadzi gier hazardowych na pieniądze. Nie przyjmujemy zakładów ani wpłat.',
+    ageConfirmText: 'Potwierdzam, że mam ukończone 18 lat i akceptuję warunki korzystania z serwisu informacyjnego.',
+    ageWarning: 'Hazard może uzależniać. Graj odpowiedzialnie.',
+    ageButton: 'Potwierdzam - mam 18 lat',
+    ageNote: 'To okno pojawi się ponownie za 24 godziny',
+    navRanking: 'Ranking',
+    navBonuses: 'Bonusy',
+    navGames: 'Gry',
+    navNews: 'Nowości',
+    navContact: 'Kontakt',
+    vipOffers: 'VIP Oferty',
+    bestCasinos: 'Najlepsze Kasyna w Polsce 2026',
+    heroTitle: 'Ekskluzywne Kasyna Online',
+    heroDesc: 'Profesjonalne rankingi, szczegółowe recenzje i najlepsze bonusy powitalne. Wybierz swoje idealne kasyno z naszego premium rankingu.',
+    viewTop10: 'Zobacz Top 10 Kasyn',
+    currentBonuses: 'Aktualne Bonusy',
+  },
+  ru: {
+    ageTitle: 'Подтверждение возраста',
+    ageDisclaimer: 'Этот сайт носит исключительно информационный характер и не проводит азартные игры на деньги. Мы не принимаем ставки и депозиты.',
+    ageConfirmText: 'Подтверждаю, что мне исполнилось 18 лет и я принимаю условия использования информационного сервиса.',
+    ageWarning: 'Азартные игры могут вызывать зависимость. Играйте ответственно.',
+    ageButton: 'Подтверждаю - мне есть 18 лет',
+    ageNote: 'Это окно появится снова через 24 часа',
+    navRanking: 'Рейтинг',
+    navBonuses: 'Бонусы',
+    navGames: 'Игры',
+    navNews: 'Новости',
+    navContact: 'Контакты',
+    vipOffers: 'VIP Предложения',
+    bestCasinos: 'Лучшие Казино в Польше 2026',
+    heroTitle: 'Эксклюзивные Онлайн Казино',
+    heroDesc: 'Профессиональные рейтинги, подробные обзоры и лучшие приветственные бонусы. Выберите идеальное казино из нашего премиум рейтинга.',
+    viewTop10: 'Смотреть Топ 10 Казино',
+    currentBonuses: 'Актуальные Бонусы',
+  },
+  en: {
+    ageTitle: 'Age Confirmation',
+    ageDisclaimer: 'This website is for informational purposes only and does not conduct real money gambling. We do not accept bets or deposits.',
+    ageConfirmText: 'I confirm that I am 18 years old and accept the terms of use of the information service.',
+    ageWarning: 'Gambling can be addictive. Play responsibly.',
+    ageButton: 'I Confirm - I am 18+',
+    ageNote: 'This window will appear again in 24 hours',
+    navRanking: 'Ranking',
+    navBonuses: 'Bonuses',
+    navGames: 'Games',
+    navNews: 'News',
+    navContact: 'Contact',
+    vipOffers: 'VIP Offers',
+    bestCasinos: 'Best Casinos in Poland 2026',
+    heroTitle: 'Exclusive Online Casinos',
+    heroDesc: 'Professional rankings, detailed reviews and best welcome bonuses. Choose your ideal casino from our premium ranking.',
+    viewTop10: 'View Top 10 Casinos',
+    currentBonuses: 'Current Bonuses',
+  },
+};
+
 export default function Index() {
   const [activeTab, setActiveTab] = useState('ranking');
   const [showAgeModal, setShowAgeModal] = useState(false);
+  const [language, setLanguage] = useState<Language>('pl');
 
   useEffect(() => {
+    const savedLang = localStorage.getItem('language') as Language;
+    if (savedLang && (savedLang === 'pl' || savedLang === 'ru' || savedLang === 'en')) {
+      setLanguage(savedLang);
+    }
+
     const lastConfirmed = localStorage.getItem('ageConfirmed');
     const now = new Date().getTime();
     
@@ -103,6 +171,13 @@ export default function Index() {
     localStorage.setItem('ageConfirmed', new Date().getTime().toString());
     setShowAgeModal(false);
   };
+
+  const handleLanguageChange = (lang: Language) => {
+    setLanguage(lang);
+    localStorage.setItem('language', lang);
+  };
+
+  const t = translations[language];
 
   return (
     <>
@@ -122,7 +197,7 @@ export default function Index() {
                 </div>
                 <div>
                   <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary via-primary/90 to-foreground bg-clip-text text-transparent">
-                    Potwierdzenie wieku
+                    {t.ageTitle}
                   </CardTitle>
                   <div className="flex items-center justify-center gap-2 mt-2">
                     <div className="h-px w-8 bg-gradient-to-r from-transparent to-primary"></div>
@@ -136,7 +211,9 @@ export default function Index() {
                   <div className="flex items-start gap-3">
                     <Icon name="Info" className="text-primary flex-shrink-0 mt-0.5" size={20} />
                     <p className="text-sm leading-relaxed text-foreground/90">
-                      Ta strona ma charakter <strong className="text-primary">wyłącznie informacyjny</strong> i nie prowadzi gier hazardowych na pieniądze. Nie przyjmujemy zakładów ani wpłat.
+                      {t.ageDisclaimer.split('wyłącznie informacyjny')[0]}
+                      <strong className="text-primary">{language === 'pl' ? 'wyłącznie informacyjny' : language === 'ru' ? 'исключительно информационный характер' : 'informational purposes only'}</strong>
+                      {language === 'pl' ? ' i nie prowadzi gier hazardowych na pieniądze. Nie przyjmujemy zakładów ani wpłat.' : language === 'ru' ? ' и не проводит азартные игры на деньги. Мы не принимаем ставки и депозиты.' : ' and does not conduct real money gambling. We do not accept bets or deposits.'}
                     </p>
                   </div>
                 </div>
@@ -144,14 +221,16 @@ export default function Index() {
                   <div className="flex items-start gap-3">
                     <Icon name="AlertCircle" className="text-primary flex-shrink-0 mt-0.5" size={20} />
                     <p className="text-sm leading-relaxed text-foreground/80">
-                      Potwierdzam, że mam ukończone <strong className="text-primary">18 lat</strong> i akceptuję warunki korzystania z serwisu informacyjnego.
+                      {language === 'pl' ? 'Potwierdzam, że mam ukończone ' : language === 'ru' ? 'Подтверждаю, что мне исполнилось ' : 'I confirm that I am '}
+                      <strong className="text-primary">18 {language === 'pl' ? 'lat' : language === 'ru' ? 'лет' : 'years old'}</strong>
+                      {language === 'pl' ? ' i akceptuję warunki korzystania z serwisu informacyjnego.' : language === 'ru' ? ' и я принимаю условия использования информационного сервиса.' : ' and accept the terms of use of the information service.'}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center gap-2 pt-2">
                   <Icon name="Scale" className="text-primary/60" size={16} />
                   <p className="text-xs text-center text-foreground/60">
-                    Hazard może uzależniać. Graj odpowiedzialnie.
+                    {t.ageWarning}
                   </p>
                 </div>
               </CardContent>
@@ -161,10 +240,10 @@ export default function Index() {
                   className="w-full bg-gradient-to-r from-primary to-primary/90 text-primary-foreground hover:from-primary/90 hover:to-primary font-semibold py-6 text-base shadow-lg shadow-primary/20"
                 >
                   <Icon name="CheckCircle2" className="mr-2" size={20} />
-                  Potwierdzam - mam 18 lat
+                  {t.ageButton}
                 </Button>
                 <p className="text-xs text-center text-foreground/50">
-                  To okno pojawi się ponownie za 24 godziny
+                  {t.ageNote}
                 </p>
               </CardFooter>
             </Card>
@@ -193,19 +272,53 @@ export default function Index() {
               </div>
             </div>
             <nav className="hidden md:flex items-center gap-6">
-              <button className="text-foreground/80 hover:text-primary transition-colors">Ranking</button>
-              <button className="text-foreground/80 hover:text-primary transition-colors">Bonusy</button>
-              <button className="text-foreground/80 hover:text-primary transition-colors">Gry</button>
-              <button className="text-foreground/80 hover:text-primary transition-colors">Nowości</button>
-              <button className="text-foreground/80 hover:text-primary transition-colors">Kontakt</button>
+              <button className="text-foreground/80 hover:text-primary transition-colors">{t.navRanking}</button>
+              <button className="text-foreground/80 hover:text-primary transition-colors">{t.navBonuses}</button>
+              <button className="text-foreground/80 hover:text-primary transition-colors">{t.navGames}</button>
+              <button className="text-foreground/80 hover:text-primary transition-colors">{t.navNews}</button>
+              <button className="text-foreground/80 hover:text-primary transition-colors">{t.navContact}</button>
             </nav>
-            <Button className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
-              <Icon name="Sparkles" className="mr-2" size={18} />
-              VIP Oferty
-            </Button>
-            <Button size="icon" variant="ghost" className="md:hidden">
-              <Icon name="Menu" size={24} />
-            </Button>
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-1 bg-card/50 border border-border rounded-lg p-1">
+                <button
+                  onClick={() => handleLanguageChange('pl')}
+                  className={`px-2 py-1 rounded text-xs font-semibold transition-all ${
+                    language === 'pl'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-foreground/60 hover:text-foreground'
+                  }`}
+                >
+                  PL
+                </button>
+                <button
+                  onClick={() => handleLanguageChange('ru')}
+                  className={`px-2 py-1 rounded text-xs font-semibold transition-all ${
+                    language === 'ru'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-foreground/60 hover:text-foreground'
+                  }`}
+                >
+                  RU
+                </button>
+                <button
+                  onClick={() => handleLanguageChange('en')}
+                  className={`px-2 py-1 rounded text-xs font-semibold transition-all ${
+                    language === 'en'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-foreground/60 hover:text-foreground'
+                  }`}
+                >
+                  EN
+                </button>
+              </div>
+              <Button className="hidden md:flex bg-primary text-primary-foreground hover:bg-primary/90">
+                <Icon name="Sparkles" className="mr-2" size={18} />
+                {t.vipOffers}
+              </Button>
+              <Button size="icon" variant="ghost" className="md:hidden">
+                <Icon name="Menu" size={24} />
+              </Button>
+            </div>
           </div>
         </div>
       </header>
@@ -216,23 +329,22 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge className="bg-primary/20 text-primary border-primary/30 px-4 py-2 text-sm">
               <Icon name="TrendingUp" className="mr-2" size={16} />
-              Najlepsze Kasyna w Polsce 2026
+              {t.bestCasinos}
             </Badge>
             <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-              Ekskluzywne <span className="text-primary gold-glow">Kasyna Online</span>
+              {language === 'pl' ? 'Ekskluzywne' : language === 'ru' ? 'Эксклюзивные' : 'Exclusive'} <span className="text-primary gold-glow">{language === 'pl' ? 'Kasyna Online' : language === 'ru' ? 'Онлайн Казино' : 'Online Casinos'}</span>
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-              Profesjonalne rankingi, szczegółowe recenzje i najlepsze bonusy powitalne.
-              Wybierz swoje idealne kasyno z naszego premium rankingu.
+              {t.heroDesc}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8">
                 <Icon name="Trophy" className="mr-2" size={20} />
-                Zobacz Top 10 Kasyn
+                {t.viewTop10}
               </Button>
               <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10">
                 <Icon name="Gift" className="mr-2" size={20} />
-                Aktualne Bonusy
+                {t.currentBonuses}
               </Button>
             </div>
           </div>
