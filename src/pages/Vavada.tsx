@@ -159,16 +159,25 @@ export default function Vavada() {
 
                 <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-transparent">
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <Icon name="Info" className="text-primary" size={24} />
-                      O Kasynie Vavada
+                    <CardTitle className="text-3xl">
+                      Vavada kasyno online – opinie graczy i bonusy w Polsce
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-foreground/80 leading-relaxed">
-                      Tutaj będzie szczegółowy opis kasyna Vavada. Wszystkie informacje o bonusach, 
-                      grach, metodach płatności i innych ważnych szczegółach.
-                    </p>
+                  <CardContent className="space-y-6">
+                    <div className="space-y-4 text-foreground/80 leading-relaxed">
+                      <p className="text-lg">
+                        Vavada to międzynarodowe kasyno online, które od kilku lat przyciąga graczy z różnych krajów – w tym z Polski. 
+                        Platforma działa na licencji Curaçao i oferuje szeroki katalog gier od uznanych dostawców. <strong className="text-primary">Vavada online</strong> jest 
+                        dostępne bez konieczności instalowania dodatkowego oprogramowania – wystarczy przeglądarka i połączenie z internetem.
+                      </p>
+                      <p className="text-lg">
+                        <strong className="text-primary">Vavada casino w Polsce</strong> cieszy się rosnącym zainteresowaniem przede wszystkim wśród osób, które szukają prostej 
+                        rejestracji, uczciwych warunków bonusowych i szybkich wypłat. Serwis jest w pełni przetłumaczony na język polski, co ułatwia 
+                        nawigację i kontakt z obsługą. Platforma sprawdzi się zarówno dla początkujących, jak i dla bardziej doświadczonych graczy, 
+                        którzy cenią sobie przejrzystość zasad.
+                      </p>
+                    </div>
+
                     <div className="bg-muted/50 rounded-lg p-4">
                       <h4 className="font-semibold mb-2 flex items-center gap-2">
                         <Icon name="AlertCircle" className="text-primary" size={18} />
