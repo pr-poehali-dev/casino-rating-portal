@@ -365,6 +365,51 @@ export default function Vavada() {
                       </div>
                     </div>
 
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Smartphone" className="text-primary" size={28} />
+                        Aplikacja Vavada – wersja mobilna i app download
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Download" className="text-primary" size={22} />
+                            Pobieranie aplikacji
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Vavada nie posiada natywnej aplikacji w Google Play ani App Store – wynika to z polityki obu sklepów wobec 
+                            gier hazardowych. Dostępna jest jednak <strong className="text-primary">aplikacja w formacie APK</strong> do pobrania bezpośrednio ze strony kasyna. 
+                            Instalacja wymaga zezwolenia na instalację z nieznanych źródeł w ustawieniach telefonu.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Globe" className="text-primary" size={22} />
+                            Mobilna wersja w przeglądarce
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Alternatywą jest <strong className="text-primary">mobilna wersja strony</strong>, która działa w przeglądarce smartfona bez konieczności 
+                              pobierania czegokolwiek. Interfejs jest responsywny, gry ładują się płynnie, a wszystkie funkcje – od rejestracji 
+                              po wypłaty – są dostępne tak samo jak na komputerze.
+                            </p>
+                            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="Lightbulb" className="text-primary flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-primary">Praktyczna wskazówka:</strong> Z praktycznego punktu widzenia wersja przeglądarkowa w 
+                                  zupełności wystarcza. Można ją dodać jako skrót na ekranie głównym telefonu, co daje efekt zbliżony do 
+                                  natywnej aplikacji.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="bg-muted/50 rounded-lg p-4 mt-6">
                       <h4 className="font-semibold mb-2 flex items-center gap-2">
                         <Icon name="Info" className="text-primary" size={18} />
