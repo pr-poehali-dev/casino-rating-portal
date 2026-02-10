@@ -410,6 +410,89 @@ export default function Vavada() {
                       </div>
                     </div>
 
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Link" className="text-primary" size={28} />
+                        Oficjalna strona Vavada i działający link w Polsce
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Eye" className="text-primary" size={22} />
+                            Jak uzyskać dostęp
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Dostęp do <strong className="text-primary">oficjalnej strony Vavada</strong> bywa ograniczany przez polskich dostawców internetu. 
+                            To dość częsta sytuacja, która nie oznacza, że platforma przestała działać – po prostu główny adres może być 
+                            zablokowany na poziomie DNS.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Shield" className="text-primary" size={22} />
+                            Mirrory i bezpieczeństwo
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              W takim przypadku pomocne są tzw. <strong className="text-primary">mirrory</strong>, czyli alternatywne adresy prowadzące do tej samej 
+                              platformy. <strong className="text-primary">Działający link do Vavada w Polsce</strong> najłatwiej znaleźć na oficjalnych kanałach kasyna 
+                              w mediach społecznościowych lub w newsletterze. Ważne, aby unikać linków z nieznanych źródeł – ryzyko 
+                              trafienia na fałszywą stronę jest realne.
+                            </p>
+                            <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-amber-600">Ważne:</strong> Przed zalogowaniem warto sprawdzić, czy adres w pasku przeglądarki 
+                                  zawiera certyfikat SSL (kłódka obok adresu). To najprostszy sposób weryfikacji, czy strona jest autentyczna.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="MessageCircle" className="text-primary" size={28} />
+                        Kontakt z Vavada i obsługa klienta
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="MessagesSquare" className="text-primary" size={22} />
+                            Czat na żywo i e-mail
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            <strong className="text-primary">Kontakt z Vavada</strong> jest możliwy przez czat na żywo, który działa całą dobę, oraz przez e-mail. 
+                            Czat to zdecydowanie najszybsza opcja – odpowiedź pojawia się zazwyczaj w ciągu kilku minut. Konsultanci komunikują 
+                            się po angielsku i rosyjsku; obsługa w języku polskim bywa dostępna, choć nie zawsze.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Star" className="text-primary" size={22} />
+                            Jakość obsługi
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              E-mail sprawdza się lepiej w przypadku bardziej złożonych spraw, takich jak problemy z weryfikacją czy reklamacje 
+                              dotyczące bonusów. Czas odpowiedzi wynosi zwykle do 24 godzin.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Ogólna jakość obsługi jest oceniana przez graczy jako przyzwoita. Większość standardowych kwestii – zmiana danych, 
+                              pytania o bonusy, status wypłaty – rozwiązywana jest podczas jednej rozmowy na czacie.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="bg-muted/50 rounded-lg p-4 mt-6">
                       <h4 className="font-semibold mb-2 flex items-center gap-2">
                         <Icon name="Info" className="text-primary" size={18} />
@@ -431,6 +514,10 @@ export default function Vavada() {
                         <li className="flex items-start gap-2">
                           <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
                           <span>Czas wypłaty karty: do 3 dni roboczych</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                          <span>Obsługa klienta: 24/7 czat na żywo</span>
                         </li>
                       </ul>
                     </div>
