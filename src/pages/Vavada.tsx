@@ -172,22 +172,13 @@ export default function Vavada() {
               </CardHeader>
 
               <CardContent className="space-y-6">
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
-                    onClick={() => window.open(casinoUrl, '_blank')}
-                    className="flex-1 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-lg py-6"
-                  >
-                    <Icon name="ExternalLink" className="mr-2" size={20} />
-                    Graj Teraz w Vavada
-                  </Button>
-                  <Button 
-                    variant="outline"
-                    className="border-primary/30 hover:bg-primary/10 text-lg py-6"
-                  >
-                    <Icon name="FileText" className="mr-2" size={20} />
-                    Pełna Recenzja
-                  </Button>
-                </div>
+                <Button 
+                  onClick={() => window.open(casinoUrl, '_blank')}
+                  className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-lg py-6"
+                >
+                  <Icon name="ExternalLink" className="mr-2" size={20} />
+                  Graj Teraz w Vavada
+                </Button>
 
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="bg-muted/50 rounded-lg p-4 text-center">
