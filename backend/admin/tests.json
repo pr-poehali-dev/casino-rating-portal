@@ -1,0 +1,41 @@
+{
+  "tests": [
+    {
+      "name": "Admin login test",
+      "method": "POST",
+      "path": "/login",
+      "body": {
+        "email": "admin@bkreiting.com",
+        "password": "admin123"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "admin": {
+          "email": "string"
+        },
+        "session_token": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get users list",
+      "method": "GET",
+      "path": "/users",
+      "expectedStatus": 401,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get statistics",
+      "method": "GET",
+      "path": "/stats",
+      "expectedStatus": 401,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 const PROMOTIONS_URL = 'https://functions.poehali.dev/22be5a26-b121-459b-bf52-706cdb683d86';
+const ADMIN_URL = 'https://functions.poehali.dev/0a610d71-a24c-41d0-ac7f-8844f6c54dfa';
 
 interface Promotion {
   id: number;
@@ -23,10 +24,22 @@ interface Promotion {
   clicked?: boolean;
 }
 
+interface Notification {
+  id: number;
+  title: string;
+  message: string;
+  promotion_id?: number;
+  is_read: boolean;
+  created_at: string;
+}
+
 export default function Dashboard() {
   const { user, sessionToken, logout } = useAuth();
   const navigate = useNavigate();
   const [promotions, setPromotions] = useState<Promotion[]>([]);
+  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [unreadCount, setUnreadCount] = useState(0);
+  const [showNotifications, setShowNotifications] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [copiedPromo, setCopiedPromo] = useState<number | null>(null);
 
@@ -36,6 +49,7 @@ export default function Dashboard() {
       return;
     }
     loadPromotions();
+    loadNotifications();
   }, [sessionToken]);
 
   const loadPromotions = async () => {
@@ -54,6 +68,42 @@ export default function Dashboard() {
       console.error('Load promotions error:', error);
     } finally {
       setIsLoading(false);
+    }
+  };
+
+  const loadNotifications = async () => {
+    try {
+      const response = await fetch(`${ADMIN_URL}/notifications`, {
+        headers: {
+          'Authorization': `Bearer ${sessionToken}`,
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setNotifications(data.notifications || []);
+        setUnreadCount(data.notifications?.filter((n: Notification) => !n.is_read).length || 0);
+      }
+    } catch (error) {
+      console.error('Load notifications error:', error);
+    }
+  };
+
+  const markNotificationRead = async (notificationId: number) => {
+    try {
+      await fetch(`${ADMIN_URL}/notifications/${notificationId}/read`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${sessionToken}`,
+        },
+      });
+
+      setNotifications(prev =>
+        prev.map(n => (n.id === notificationId ? { ...n, is_read: true } : n))
+      );
+      setUnreadCount(prev => Math.max(0, prev - 1));
+    } catch (error) {
+      console.error('Mark read error:', error);
     }
   };
 
@@ -145,6 +195,68 @@ export default function Dashboard() {
             </div>
 
             <div className="flex items-center gap-4">
+              <div className="relative">
+                <Button
+                  variant="outline"
+                  onClick={() => setShowNotifications(!showNotifications)}
+                  className="border-primary/30 hover:bg-primary/10 relative"
+                >
+                  <Icon name="Bell" size={18} />
+                  {unreadCount > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                      {unreadCount}
+                    </span>
+                  )}
+                </Button>
+
+                {showNotifications && (
+                  <div className="absolute right-0 top-12 w-80 bg-card border border-border rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
+                    <div className="p-3 border-b border-border flex justify-between items-center">
+                      <span className="font-semibold">Powiadomienia</span>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => setShowNotifications(false)}
+                      >
+                        <Icon name="X" size={16} />
+                      </Button>
+                    </div>
+                    {notifications.length === 0 ? (
+                      <div className="p-6 text-center text-foreground/60">
+                        Brak powiadomień
+                      </div>
+                    ) : (
+                      <div className="divide-y divide-border">
+                        {notifications.map((notif) => (
+                          <div
+                            key={notif.id}
+                            className={`p-3 hover:bg-muted/50 cursor-pointer ${
+                              !notif.is_read ? 'bg-primary/5' : ''
+                            }`}
+                            onClick={() => markNotificationRead(notif.id)}
+                          >
+                            <div className="flex items-start gap-2">
+                              <Icon
+                                name={notif.is_read ? 'Mail' : 'MailOpen'}
+                                size={16}
+                                className={notif.is_read ? 'text-foreground/40' : 'text-primary'}
+                              />
+                              <div className="flex-1">
+                                <div className="font-medium text-sm">{notif.title}</div>
+                                <div className="text-xs text-foreground/70 mt-1">{notif.message}</div>
+                                <div className="text-xs text-foreground/50 mt-1">
+                                  {new Date(notif.created_at).toLocaleString('pl-PL')}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+
               <div className="hidden md:flex flex-col items-end">
                 <span className="text-sm font-semibold">{user?.full_name || user?.email}</span>
                 <span className="text-xs text-foreground/60">{user?.email}</span>

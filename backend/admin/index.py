@@ -1,0 +1,535 @@
+"""
+API для административной панели управления пользователями и промо-акциями
+"""
+import json
+import os
+import hashlib
+import secrets
+from datetime import datetime, timedelta
+import psycopg2
+from psycopg2.extras import RealDictCursor
+
+def hash_password(password: str) -> str:
+    """Хеширование пароля с солью"""
+    salt = secrets.token_hex(16)
+    pwd_hash = hashlib.pbkdf2_hmac('sha256', password.encode(), salt.encode(), 100000)
+    return f"{salt}${pwd_hash.hex()}"
+
+def verify_password(password: str, password_hash: str) -> bool:
+    """Проверка пароля"""
+    try:
+        salt, pwd_hash = password_hash.split('$')
+        check_hash = hashlib.pbkdf2_hmac('sha256', password.encode(), salt.encode(), 100000)
+        return check_hash.hex() == pwd_hash
+    except:
+        return False
+
+def generate_session_token() -> str:
+    """Генерация безопасного токена сессии"""
+    return secrets.token_urlsafe(32)
+
+def verify_admin_token(cur, token: str):
+    """Проверка токена администратора"""
+    if not token:
+        return None
+    
+    cur.execute(
+        "SELECT a.id, a.email, a.full_name FROM admin_users a "
+        "JOIN user_sessions s ON a.id = s.user_id "
+        "WHERE s.session_token = %s AND s.expires_at > CURRENT_TIMESTAMP AND a.is_active = true",
+        (token,)
+    )
+    return cur.fetchone()
+
+def get_user_from_token(cur, token: str):
+    """Получение пользователя по токену сессии (для обычных пользователей)"""
+    if not token:
+        return None
+    
+    cur.execute(
+        "SELECT u.id, u.email, u.full_name FROM users u "
+        "JOIN user_sessions s ON u.id = s.user_id "
+        "WHERE s.session_token = %s AND s.expires_at > CURRENT_TIMESTAMP AND u.is_active = true",
+        (token,)
+    )
+    return cur.fetchone()
+
+def handler(event: dict, context) -> dict:
+    """
+    Обработчик административных запросов
+    
+    POST /login - авторизация администратора
+    GET /users - список всех пользователей
+    GET /users/{id} - информация о пользователе
+    POST /notifications/send - отправка уведомления пользователю
+    POST /notifications/broadcast - массовая рассылка
+    GET /notifications - получить уведомления пользователя
+    PUT /notifications/{id}/read - отметить уведомление как прочитанное
+    POST /promotions - создание новой промо-акции
+    PUT /promotions/{id} - редактирование промо-акции
+    DELETE /promotions/{id} - удаление промо-акции
+    GET /stats - статистика по пользователям и промо
+    """
+    method = event.get('httpMethod', 'GET')
+    path = event.get('path', '/')
+    
+    if method == 'OPTIONS':
+        return {
+            'statusCode': 200,
+            'headers': {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type, X-Authorization',
+                'Access-Control-Max-Age': '86400'
+            },
+            'body': ''
+        }
+    
+    try:
+        conn = psycopg2.connect(os.environ['DATABASE_URL'])
+        cur = conn.cursor(cursor_factory=RealDictCursor)
+        
+        # Авторизация администратора
+        if method == 'POST' and 'login' in path:
+            body = json.loads(event.get('body', '{}'))
+            email = body.get('email', '').lower().strip()
+            password = body.get('password', '')
+            
+            if not email or not password:
+                return {
+                    'statusCode': 400,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Email i hasło są wymagane'})
+                }
+            
+            cur.execute("SELECT id, email, password_hash, full_name, is_active FROM admin_users WHERE email = %s", (email,))
+            admin = cur.fetchone()
+            
+            if not admin or not verify_password(password, admin['password_hash']):
+                return {
+                    'statusCode': 401,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'})
+                }
+            
+            if not admin['is_active']:
+                return {
+                    'statusCode': 403,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Konto administratora zostało zablokowane'})
+                }
+            
+            session_token = generate_session_token()
+            expires_at = datetime.now() + timedelta(days=7)
+            
+            cur.execute(
+                "INSERT INTO user_sessions (user_id, session_token, expires_at) VALUES (%s, %s, %s)",
+                (admin['id'], session_token, expires_at)
+            )
+            cur.execute("UPDATE admin_users SET last_login = CURRENT_TIMESTAMP WHERE id = %s", (admin['id'],))
+            conn.commit()
+            
+            admin_dict = dict(admin)
+            admin_dict.pop('password_hash')
+            
+            return {
+                'statusCode': 200,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({
+                    'admin': admin_dict,
+                    'session_token': session_token
+                }, default=str)
+            }
+        
+        # Проверка токена для всех остальных запросов
+        token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
+        admin = verify_admin_token(cur, token)
+        
+        if not admin:
+            return {
+                'statusCode': 401,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({'error': 'Brak autoryzacji administratora'})
+            }
+        
+        # Получение списка пользователей
+        if method == 'GET' and path.endswith('/users'):
+            limit = int(event.get('queryStringParameters', {}).get('limit', 50))
+            offset = int(event.get('queryStringParameters', {}).get('offset', 0))
+            search = event.get('queryStringParameters', {}).get('search', '')
+            
+            where_clause = ""
+            params = []
+            if search:
+                where_clause = "WHERE email ILIKE %s OR full_name ILIKE %s"
+                params = [f'%{search}%', f'%{search}%']
+            
+            cur.execute(f"""
+                SELECT u.id, u.email, u.full_name, u.created_at, u.last_login, u.is_active, u.email_verified,
+                       COUNT(DISTINCT upv.id) as promotions_viewed,
+                       COUNT(DISTINCT CASE WHEN upv.clicked THEN upv.id END) as promotions_clicked
+                FROM users u
+                LEFT JOIN user_promotions_viewed upv ON u.id = upv.user_id
+                {where_clause}
+                GROUP BY u.id
+                ORDER BY u.created_at DESC
+                LIMIT %s OFFSET %s
+            """, params + [limit, offset])
+            users = [dict(row) for row in cur.fetchall()]
+            
+            cur.execute(f"SELECT COUNT(*) as total FROM users u {where_clause}", params)
+            total = cur.fetchone()['total']
+            
+            return {
+                'statusCode': 200,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({
+                    'users': users,
+                    'total': total,
+                    'limit': limit,
+                    'offset': offset
+                }, default=str)
+            }
+        
+        # Получение информации о конкретном пользователе
+        if method == 'GET' and '/users/' in path:
+            user_id = path.split('/users/')[-1]
+            
+            cur.execute("""
+                SELECT u.*, 
+                       COUNT(DISTINCT upv.id) as total_viewed,
+                       COUNT(DISTINCT CASE WHEN upv.clicked THEN upv.id END) as total_clicked
+                FROM users u
+                LEFT JOIN user_promotions_viewed upv ON u.id = upv.user_id
+                WHERE u.id = %s
+                GROUP BY u.id
+            """, (user_id,))
+            user = cur.fetchone()
+            
+            if not user:
+                return {
+                    'statusCode': 404,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Użytkownik nie znaleziony'})
+                }
+            
+            # Получаем последние активности
+            cur.execute("""
+                SELECT p.title, p.casino_name, upv.viewed_at, upv.clicked
+                FROM user_promotions_viewed upv
+                JOIN promotions p ON upv.promotion_id = p.id
+                WHERE upv.user_id = %s
+                ORDER BY upv.viewed_at DESC
+                LIMIT 10
+            """, (user_id,))
+            activities = [dict(row) for row in cur.fetchall()]
+            
+            user_dict = dict(user)
+            user_dict.pop('password_hash', None)
+            user_dict['activities'] = activities
+            
+            return {
+                'statusCode': 200,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({'user': user_dict}, default=str)
+            }
+        
+        # Отправка уведомления конкретному пользователю
+        if method == 'POST' and '/notifications/send' in path:
+            body = json.loads(event.get('body', '{}'))
+            user_id = body.get('user_id')
+            title = body.get('title', '').strip()
+            message = body.get('message', '').strip()
+            promotion_id = body.get('promotion_id')
+            
+            if not user_id or not title or not message:
+                return {
+                    'statusCode': 400,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'user_id, title i message są wymagane'})
+                }
+            
+            cur.execute(
+                "INSERT INTO user_notifications (user_id, title, message, promotion_id) VALUES (%s, %s, %s, %s) RETURNING id",
+                (user_id, title, message, promotion_id)
+            )
+            notification_id = cur.fetchone()['id']
+            conn.commit()
+            
+            return {
+                'statusCode': 201,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({
+                    'notification_id': notification_id,
+                    'message': 'Powiadomienie wysłane pomyślnie'
+                })
+            }
+        
+        # Получение уведомлений пользователя
+        if method == 'GET' and path.endswith('/notifications'):
+            # Для обычных пользователей
+            user = get_user_from_token(cur, token)
+            if not user:
+                return {
+                    'statusCode': 401,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Brak autoryzacji'})
+                }
+            
+            limit = int(event.get('queryStringParameters', {}).get('limit', 50))
+            
+            cur.execute("""
+                SELECT id, title, message, promotion_id, is_read, created_at
+                FROM user_notifications
+                WHERE user_id = %s
+                ORDER BY created_at DESC
+                LIMIT %s
+            """, (user['id'], limit))
+            
+            notifications = [dict(row) for row in cur.fetchall()]
+            
+            return {
+                'statusCode': 200,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({'notifications': notifications}, default=str)
+            }
+        
+        # Отметить уведомление как прочитанное
+        if method == 'PUT' and '/notifications/' in path and '/read' in path:
+            user = get_user_from_token(cur, token)
+            if not user:
+                return {
+                    'statusCode': 401,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Brak autoryzacji'})
+                }
+            
+            notif_id = path.split('/notifications/')[-1].split('/')[0]
+            
+            cur.execute(
+                "UPDATE user_notifications SET is_read = true, read_at = CURRENT_TIMESTAMP "
+                "WHERE id = %s AND user_id = %s",
+                (notif_id, user['id'])
+            )
+            conn.commit()
+            
+            return {
+                'statusCode': 200,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({'message': 'Oznaczono jako przeczytane'})
+            }
+        
+        # Массовая рассылка уведомлений
+        if method == 'POST' and '/notifications/broadcast' in path:
+            body = json.loads(event.get('body', '{}'))
+            title = body.get('title', '').strip()
+            message = body.get('message', '').strip()
+            promotion_id = body.get('promotion_id')
+            user_filter = body.get('user_filter', 'all')  # all, active, verified
+            
+            if not title or not message:
+                return {
+                    'statusCode': 400,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'title i message są wymagane'})
+                }
+            
+            where_clause = "WHERE is_active = true"
+            if user_filter == 'verified':
+                where_clause += " AND email_verified = true"
+            
+            cur.execute(f"SELECT id FROM users {where_clause}")
+            user_ids = [row['id'] for row in cur.fetchall()]
+            
+            for user_id in user_ids:
+                cur.execute(
+                    "INSERT INTO user_notifications (user_id, title, message, promotion_id) VALUES (%s, %s, %s, %s)",
+                    (user_id, title, message, promotion_id)
+                )
+            
+            conn.commit()
+            
+            return {
+                'statusCode': 201,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({
+                    'sent_count': len(user_ids),
+                    'message': f'Powiadomienia wysłane do {len(user_ids)} użytkowników'
+                })
+            }
+        
+        # Создание новой промо-акции
+        if method == 'POST' and path.endswith('/promotions'):
+            body = json.loads(event.get('body', '{}'))
+            
+            required_fields = ['casino_name', 'title', 'description', 'bonus_amount', 'bonus_type']
+            for field in required_fields:
+                if not body.get(field):
+                    return {
+                        'statusCode': 400,
+                        'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                        'body': json.dumps({'error': f'{field} jest wymagany'})
+                    }
+            
+            cur.execute("""
+                INSERT INTO promotions (
+                    casino_name, title, description, promo_code, bonus_amount, bonus_type,
+                    valid_from, valid_until, terms_and_conditions, is_active, is_exclusive,
+                    image_url, casino_url
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                RETURNING id
+            """, (
+                body['casino_name'], body['title'], body['description'],
+                body.get('promo_code'), body['bonus_amount'], body['bonus_type'],
+                body.get('valid_from'), body.get('valid_until'),
+                body.get('terms_and_conditions'), body.get('is_active', True),
+                body.get('is_exclusive', False), body.get('image_url'), body.get('casino_url')
+            ))
+            
+            promo_id = cur.fetchone()['id']
+            conn.commit()
+            
+            # Отправка уведомлений всем пользователям
+            if body.get('notify_users', True):
+                cur.execute("SELECT id FROM users WHERE is_active = true")
+                user_ids = [row['id'] for row in cur.fetchall()]
+                
+                notification_title = f"Nowa promocja: {body['casino_name']}"
+                notification_message = body['title']
+                
+                for user_id in user_ids:
+                    cur.execute(
+                        "INSERT INTO user_notifications (user_id, title, message, promotion_id) VALUES (%s, %s, %s, %s)",
+                        (user_id, notification_title, notification_message, promo_id)
+                    )
+                
+                conn.commit()
+            
+            return {
+                'statusCode': 201,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({
+                    'promotion_id': promo_id,
+                    'message': 'Promocja utworzona pomyślnie'
+                })
+            }
+        
+        # Редактирование промо-акции
+        if method == 'PUT' and '/promotions/' in path:
+            promo_id = path.split('/promotions/')[-1]
+            body = json.loads(event.get('body', '{}'))
+            
+            # Формируем UPDATE запрос динамически
+            update_fields = []
+            params = []
+            
+            allowed_fields = ['casino_name', 'title', 'description', 'promo_code', 'bonus_amount', 
+                            'bonus_type', 'valid_from', 'valid_until', 'terms_and_conditions', 
+                            'is_active', 'is_exclusive', 'image_url', 'casino_url']
+            
+            for field in allowed_fields:
+                if field in body:
+                    update_fields.append(f"{field} = %s")
+                    params.append(body[field])
+            
+            if not update_fields:
+                return {
+                    'statusCode': 400,
+                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                    'body': json.dumps({'error': 'Brak pól do aktualizacji'})
+                }
+            
+            update_fields.append("updated_at = CURRENT_TIMESTAMP")
+            params.append(promo_id)
+            
+            cur.execute(f"""
+                UPDATE promotions 
+                SET {', '.join(update_fields)}
+                WHERE id = %s
+            """, params)
+            
+            conn.commit()
+            
+            return {
+                'statusCode': 200,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({'message': 'Promocja zaktualizowana pomyślnie'})
+            }
+        
+        # Удаление промо-акции (мягкое удаление)
+        if method == 'DELETE' and '/promotions/' in path:
+            promo_id = path.split('/promotions/')[-1]
+            
+            cur.execute("UPDATE promotions SET is_active = false WHERE id = %s", (promo_id,))
+            conn.commit()
+            
+            return {
+                'statusCode': 200,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({'message': 'Promocja dezaktywowana pomyślnie'})
+            }
+        
+        # Получение статистики
+        if method == 'GET' and '/stats' in path:
+            # Общая статистика
+            cur.execute("""
+                SELECT 
+                    COUNT(DISTINCT u.id) as total_users,
+                    COUNT(DISTINCT CASE WHEN u.last_login > CURRENT_TIMESTAMP - INTERVAL '7 days' THEN u.id END) as active_users_7d,
+                    COUNT(DISTINCT CASE WHEN u.created_at > CURRENT_TIMESTAMP - INTERVAL '7 days' THEN u.id END) as new_users_7d
+                FROM users u
+                WHERE u.is_active = true
+            """)
+            user_stats = dict(cur.fetchone())
+            
+            cur.execute("""
+                SELECT 
+                    COUNT(*) as total_promotions,
+                    COUNT(CASE WHEN is_active = true THEN 1 END) as active_promotions,
+                    COUNT(CASE WHEN is_exclusive = true THEN 1 END) as exclusive_promotions
+                FROM promotions
+            """)
+            promo_stats = dict(cur.fetchone())
+            
+            cur.execute("""
+                SELECT 
+                    p.title,
+                    p.casino_name,
+                    COUNT(DISTINCT upv.user_id) as unique_views,
+                    COUNT(DISTINCT CASE WHEN upv.clicked THEN upv.user_id END) as unique_clicks
+                FROM promotions p
+                LEFT JOIN user_promotions_viewed upv ON p.id = upv.promotion_id
+                WHERE p.is_active = true
+                GROUP BY p.id, p.title, p.casino_name
+                ORDER BY unique_views DESC
+                LIMIT 10
+            """)
+            top_promotions = [dict(row) for row in cur.fetchall()]
+            
+            return {
+                'statusCode': 200,
+                'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+                'body': json.dumps({
+                    'user_stats': user_stats,
+                    'promo_stats': promo_stats,
+                    'top_promotions': top_promotions
+                }, default=str)
+            }
+        
+        return {
+            'statusCode': 404,
+            'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+            'body': json.dumps({'error': 'Endpoint nie znaleziony'})
+        }
+        
+    except Exception as e:
+        return {
+            'statusCode': 500,
+            'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+            'body': json.dumps({'error': f'Błąd serwera: {str(e)}'})
+        }
+    finally:
+        if 'cur' in locals():
+            cur.close()
+        if 'conn' in locals():
+            conn.close()
