@@ -221,6 +221,56 @@ export default function Vavada() {
                       </div>
                     </div>
 
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Gift" className="text-primary" size={28} />
+                        Bonusy w Vavada – kody promocyjne i darmowe spiny
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Sparkles" className="text-primary" size={22} />
+                            Bonus powitalny i warunki obrotu
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            System bonusowy w Vavada jest dość rozbudowany i regularnie aktualizowany. Nowi gracze mogą liczyć na 
+                            <strong className="text-primary"> bonus na start</strong>, który obejmuje dodatkowe środki na grę oraz pakiet darmowych spinów. Warunki obrotu są 
+                            jasno opisane w regulaminie – najczęściej wynoszą x30 lub x35, co w tej branży mieści się w normie.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Ticket" className="text-primary" size={22} />
+                            Kody promocyjne i bonus bez depozytu
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Warto sprawdzać dostępność <strong className="text-primary">kodów promocyjnych</strong> – Vavada publikuje je na swoich kanałach społecznościowych 
+                              i w newsletterze. Aktywny <strong className="text-primary">kod bonusowy</strong> można wpisać podczas rejestracji lub w ustawieniach profilu. 
+                              Kody bonusowe dają dostęp do dodatkowych spinów lub zwiększają wartość depozytu.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Na szczególną uwagę zasługuje <strong className="text-primary">bonus bez depozytu</strong> – nie każde kasyno go oferuje. W Vavada pojawia się 
+                              on okresowo i pozwala przetestować platformę bez angażowania własnych środków. <strong className="text-primary">Darmowe spiny</strong> z kolei 
+                              są przypisane do konkretnych automatów, co warto sprawdzić przed aktywacją.
+                            </p>
+                            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="Lightbulb" className="text-primary flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-primary">Praktyczna rada:</strong> przed aktywacją jakiegokolwiek bonusu warto przeczytać warunki 
+                                  obrotu do końca. Nie każdy bonus opłaca się aktywować – czasem lepiej wpłacić środki bez promocji i grać bez 
+                                  ograniczeń dotyczących wypłat.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="bg-muted/50 rounded-lg p-4 mt-6">
                       <h4 className="font-semibold mb-2 flex items-center gap-2">
                         <Icon name="Info" className="text-primary" size={18} />
