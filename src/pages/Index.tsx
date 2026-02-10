@@ -356,6 +356,21 @@ export default function Index() {
                     bardziej niż ci zasiedziali, bo muszą zbudować bazę klientów. To dobry moment, żeby skorzystać 
                     z ich ofert powitalnych, dopóki są hojne.
                   </p>
+
+                  <h2 className="text-3xl md:text-4xl font-bold mt-16 mb-6 pt-12 border-t border-border">
+                    Najlepsze kasyna online – ranking i opinie graczy
+                  </h2>
+                  <p className="text-lg leading-relaxed">
+                    Jeśli interesują Cię automaty, ruletka albo poker, ten dział jest dla Ciebie. Nasz <strong>kasyna 
+                    online ranking</strong> obejmuje wyłącznie sprawdzone i legalne platformy. Sprawdzamy je pod kątem 
+                    gier, bonusów, metod płatności i – co najważniejsze – terminowości wypłat.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Najlepsze kasyno internetowe to nie to, które ma najładniejszą stronę, ale to, które wypłaca wygrane 
+                    w rozsądnym czasie i oferuje uczciwe warunki gry. W zestawieniu uwzględniamy zarówno duże, znane marki, 
+                    jak i <strong>polecane kasyna online</strong>, które dopiero zdobywają popularność wśród polskich graczy. 
+                    <strong>Top kasyna online</strong> w naszym rankingu wybieramy na podstawie kilkudziesięciu kryteriów.
+                  </p>
                 </div>
               </div>
             </TabsContent>
