@@ -381,13 +381,14 @@ export default function AdminPanel() {
           <CardContent>
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
-                <Label htmlFor="email" className="text-white">Email</Label>
+                <Label htmlFor="email" className="text-white">Login</Label>
                 <Input
                   id="email"
-                  type="email"
+                  type="text"
                   value={loginEmail}
                   onChange={(e) => setLoginEmail(e.target.value)}
                   className="bg-white/10 border-white/20 text-white"
+                  placeholder="Grin"
                   required
                 />
               </div>
