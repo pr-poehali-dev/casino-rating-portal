@@ -178,10 +178,53 @@ export default function Vavada() {
                       </p>
                     </div>
 
-                    <div className="bg-muted/50 rounded-lg p-4">
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="UserPlus" className="text-primary" size={28} />
+                        Rejestracja i logowanie w Vavada
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Edit" className="text-primary" size={22} />
+                            Jak założyć konto
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Założenie konta w Vavada zajmuje dosłownie minutę. Rejestracja wymaga podania adresu e-mail i utworzenia 
+                            hasła – nie trzeba od razu przesyłać dokumentów. Weryfikacja tożsamości następuje dopiero przy pierwszej 
+                            wypłacie, co jest standardową praktyką w branży.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Lock" className="text-primary" size={22} />
+                            Logowanie i bezpieczeństwo
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed mb-3">
+                            Po rejestracji <strong className="text-primary">logowanie w Vavada</strong> odbywa się za pomocą tych samych danych. Warto od razu włączyć 
+                            uwierzytelnianie dwuskładnikowe – platforma daje taką możliwość i jest to najskuteczniejszy sposób na 
+                            zabezpieczenie konta. W przypadku zapomnienia hasła procedura odzyskiwania działa sprawnie przez e-mail.
+                          </p>
+                          <div className="bg-muted/50 rounded-lg p-4">
+                            <div className="flex items-start gap-3">
+                              <Icon name="AlertCircle" className="text-primary flex-shrink-0 mt-1" size={20} />
+                              <p className="text-sm text-foreground/70">
+                                Kilka osób na forach wspominało o sporadycznych problemach z logowaniem, które najczęściej wynikały 
+                                z blokad dostawców internetowych, a nie z samej platformy. W takiej sytuacji warto skorzystać z 
+                                aktualnego linku do strony – o tym więcej w dalszej części tekstu.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-muted/50 rounded-lg p-4 mt-6">
                       <h4 className="font-semibold mb-2 flex items-center gap-2">
-                        <Icon name="AlertCircle" className="text-primary" size={18} />
-                        Ważne informacje
+                        <Icon name="Info" className="text-primary" size={18} />
+                        Kluczowe informacje
                       </h4>
                       <ul className="space-y-2 text-sm text-foreground/70">
                         <li className="flex items-start gap-2">
