@@ -103,13 +103,19 @@ export default function AdminPanel() {
     setLoginError('');
     
     try {
+      console.log('Attempting login to:', `${ADMIN_URL}/login`);
+      console.log('With credentials:', { email: loginEmail, password: '***' });
+      
       const response = await fetch(`${ADMIN_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: loginEmail, password: loginPassword }),
       });
       
+      console.log('Response status:', response.status);
+      
       const data = await response.json();
+      console.log('Response data:', data);
       
       if (!response.ok) {
         setLoginError(data.error || 'Błąd logowania');
@@ -120,7 +126,8 @@ export default function AdminPanel() {
       setAdminToken(data.session_token);
       setIsLoggedIn(true);
     } catch (err) {
-      setLoginError('Błąd połączenia z serwerem');
+      console.error('Login error:', err);
+      setLoginError(`Błąd połączenia z serwerem: ${err instanceof Error ? err.message : String(err)}`);
     }
   };
 

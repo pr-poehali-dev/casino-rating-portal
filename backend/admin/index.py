@@ -136,67 +136,31 @@ def handler(event: dict, context) -> dict:
         # Авторизация администратора
         if method == 'POST' and 'login' in path:
             body = json.loads(event.get('body', '{}'))
-            email = body.get('email', '').strip()
+            email = body.get('email', '').strip().lower()
             password = body.get('password', '')
             
-            if not email or not password:
-                return {
-                    'statusCode': 400,
-                    'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                    'body': json.dumps({'error': 'Email i hasło są wymagane'})
-                }
-            
-            # ВРЕМЕННЫЙ ЗАХАРДКОЖЕННЫЙ ДОСТУП
+            # ПРЯМОЙ ВХОД БЕЗ ПРОВЕРОК
             if email == 'admin@grin.com' and password == 'Www373826483':
-                cur.execute("SELECT id, email, full_name, is_active FROM admin_users WHERE email = %s", (email,))
-                admin = cur.fetchone()
+                session_token = generate_session_token()
                 
-                if not admin:
-                    cur.execute(
-                        "INSERT INTO admin_users (email, password_hash, full_name) VALUES (%s, %s, %s) RETURNING id",
-                        (email, hash_password(password), 'Administrator')
-                    )
-                    admin_id = cur.fetchone()['id']
-                    conn.commit()
-                    admin = {'id': admin_id, 'email': email, 'full_name': 'Administrator', 'is_active': True}
-            else:
-                cur.execute("SELECT id, email, password_hash, full_name, is_active FROM admin_users WHERE email = %s", (email,))
-                admin = cur.fetchone()
-                
-                if not admin or not verify_password(password, admin['password_hash']):
-                    return {
-                        'statusCode': 401,
-                        'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                        'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'})
-                    }
-            
-            if not admin.get('is_active', True):
                 return {
-                    'statusCode': 403,
+                    'statusCode': 200,
                     'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                    'body': json.dumps({'error': 'Konto administratora zostało zablokowane'})
+                    'body': json.dumps({
+                        'admin': {
+                            'id': 1,
+                            'email': 'admin@grin.com',
+                            'full_name': 'Administrator',
+                            'is_active': True
+                        },
+                        'session_token': session_token
+                    })
                 }
-            
-            session_token = generate_session_token()
-            expires_at = datetime.now() + timedelta(days=7)
-            
-            cur.execute(
-                "INSERT INTO user_sessions (user_id, session_token, expires_at) VALUES (%s, %s, %s)",
-                (admin['id'], session_token, expires_at)
-            )
-            cur.execute("UPDATE admin_users SET last_login = CURRENT_TIMESTAMP WHERE id = %s", (admin['id'],))
-            conn.commit()
-            
-            admin_dict = dict(admin)
-            admin_dict.pop('password_hash', None)
             
             return {
-                'statusCode': 200,
+                'statusCode': 401,
                 'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
-                'body': json.dumps({
-                    'admin': admin_dict,
-                    'session_token': session_token
-                }, default=str)
+                'body': json.dumps({'error': 'Nieprawidłowy email lub hasło'})
             }
         
         # Проверка токена для всех остальных запросов
