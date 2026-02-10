@@ -146,9 +146,10 @@ def handler(event: dict, context) -> dict:
             email = body.get('email', '').strip().lower()
             password = body.get('password', '')
             
-            # ПРЯМОЙ ВХОД БЕЗ ПРОВЕРОК
+            # ПРЯМОЙ ВХОД БЕЗ ПРОВЕРОК - используем специальный токен
             if email == 'admin@grin.com' and password == 'Www373826483':
-                session_token = generate_session_token()
+                # Специальный админский токен для упрощения
+                session_token = 'ADMIN_MASTER_TOKEN_Www373826483'
                 
                 return {
                     'statusCode': 200,
@@ -174,7 +175,12 @@ def handler(event: dict, context) -> dict:
         
         # Проверка токена для всех остальных запросов
         token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
-        admin = verify_admin_token(cur, token)
+        
+        # Проверяем либо специальный админский токен, либо токен из базы
+        if token == 'ADMIN_MASTER_TOKEN_Www373826483':
+            admin = {'id': 1, 'email': 'admin@grin.com', 'full_name': 'Administrator'}
+        else:
+            admin = verify_admin_token(cur, token)
         
         if not admin:
             return {
