@@ -175,6 +175,8 @@ def handler(event: dict, context) -> dict:
         
         # Проверка токена для всех остальных запросов
         token = event.get('headers', {}).get('x-authorization', '').replace('Bearer ', '')
+        print(f"[DEBUG] Headers: {event.get('headers', {})}")
+        print(f"[DEBUG] Token received: {token}")
         
         # Проверяем либо специальный админский токен, либо токен из базы
         if token == 'ADMIN_MASTER_TOKEN_Www373826483':
