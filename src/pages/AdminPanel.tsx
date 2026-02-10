@@ -117,6 +117,7 @@ export default function AdminPanel() {
       const data = await response.json();
 
       if (response.ok && data.session_token) {
+        console.log('[ADMIN] Login successful, token:', data.session_token);
         localStorage.setItem('admin_token', data.session_token);
         setAdminToken(data.session_token);
         setIsLoggedIn(true);
@@ -138,6 +139,7 @@ export default function AdminPanel() {
 
   const loadUsers = async () => {
     try {
+      console.log('[ADMIN] Loading users with token:', adminToken);
       const params = new URLSearchParams({
         action: 'users',
         limit: '50',
@@ -151,6 +153,7 @@ export default function AdminPanel() {
       const response = await fetch(`${ADMIN_URL}?${params}`, {
         headers: { 'Authorization': `Bearer ${adminToken}` },
       });
+      console.log('[ADMIN] Users response status:', response.status);
       
       const data = await response.json();
       setUsers(data.users || []);
