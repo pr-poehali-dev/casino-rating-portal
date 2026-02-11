@@ -172,15 +172,202 @@ export default function BlogNoDeposit() {
                   Ważne jest też to, że nie wszystkie gry liczą się do obrotu w równym stopniu. Automaty zazwyczaj zaliczają 100%, ale ruletka czy blackjack mogą liczyć się w zaledwie 10–20% — albo wcale.
                 </p>
 
-                <div className="bg-primary/10 border-l-4 border-primary rounded-lg p-6 my-8">
-                  <p className="text-lg font-semibold text-primary mb-2 flex items-center gap-2">
-                    <Icon name="Info" size={20} />
-                    Więcej treści w drodze
-                  </p>
-                  <p className="text-foreground/80">
-                    Pracujemy nad kolejnymi sekcjami tego artykułu. Wkrótce dodamy więcej informacji o bonusach bez depozytu.
-                  </p>
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Zalety bonusu bez depozytu</h2>
+                
+                <p className="text-lg mb-6">
+                  Mimo licznych ograniczeń ten rodzaj promocji ma realne atuty, o ile podchodzisz do niego z odpowiednimi oczekiwaniami.
+                </p>
+
+                <div className="space-y-5">
+                  <div className="bg-card border border-primary/20 rounded-lg p-5">
+                    <p className="text-lg"><strong className="text-primary">Brak ryzyka własnych środków.</strong> To najoczywistsza korzyść. Nie wpłacasz pieniędzy, więc w najgorszym wypadku tracisz tylko czas. Dla osób, które chcą sprawdzić, jak działają gry kasynowe, to wygodny punkt wejścia — bez presji finansowej.</p>
+                  </div>
+                  
+                  <div className="bg-card border border-primary/20 rounded-lg p-5">
+                    <p className="text-lg"><strong className="text-primary">Możliwość przetestowania platformy.</strong> Bonus bez depozytu pozwala ocenić jakość kasyna od środka: jak działa interfejs, jak szybko ładują się gry, jak wygląda obsługa klienta. To szczególnie przydatne, zanim zdecydujesz się na wpłatę własnych pieniędzy.</p>
+                  </div>
+                  
+                  <div className="bg-card border border-primary/20 rounded-lg p-5">
+                    <p className="text-lg"><strong className="text-primary">Szansa na realną wygraną.</strong> Choć statystycznie nie jest to częste, niektórzy gracze rzeczywiście wypłacają wygrane z takich bonusów. Zdarza się to rzadko, ale nie jest niemożliwe — zwłaszcza przy niższym wageringu i odrobinie szczęścia.</p>
+                  </div>
+                  
+                  <div className="bg-card border border-primary/20 rounded-lg p-5">
+                    <p className="text-lg"><strong className="text-primary">Nauka zarządzania budżetem.</strong> Granie z ograniczoną kwotą bonusową uczy podejmowania decyzji — jakie stawki wybrać, kiedy przerwać, jak rozłożyć obrót w czasie.</p>
+                  </div>
                 </div>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Wady i ograniczenia</h2>
+                
+                <p className="text-lg mb-6">
+                  To najważniejsza część tego artykułu, ponieważ właśnie ograniczenia decydują o tym, czy bonus bez depozytu naprawdę się opłaca.
+                </p>
+
+                <div className="space-y-5">
+                  <div className="bg-card border border-destructive/20 rounded-lg p-5">
+                    <p className="text-lg"><strong className="text-destructive">Wysoki wymagany obrót.</strong> Wagering x40 lub wyżej oznacza, że musisz obrócić bonusem dziesiątki razy. Przy niewielkich kwotach (np. 10–20 zł) to wciąż sporo — a szanse, że saldo przetrwa tyle obrotów, nie są wysokie.</p>
+                  </div>
+                  
+                  <div className="bg-card border border-destructive/20 rounded-lg p-5">
+                    <p className="text-lg"><strong className="text-destructive">Maksymalna wygrana.</strong> Większość regulaminów ogranicza kwotę, jaką możesz wypłacić z bonusu. Typowy limit to 100–400 zł. Nawet jeśli na koncie pojawi się 2 000 zł, kasyno pozwoli ci wypłacić tylko ustalony maksimum.</p>
+                  </div>
+                  
+                  <div className="bg-card border border-destructive/20 rounded-lg p-5">
+                    <p className="text-lg"><strong className="text-destructive">Limity czasowe.</strong> Na spełnienie warunków obrotu masz zwykle od 3 do 14 dni. Po tym czasie niewykorzystany bonus i wygrane z niego przepadają. To tworzy presję czasową, która może prowadzić do pochopnych decyzji.</p>
+                  </div>
+                  
+                  <div className="bg-card border border-destructive/20 rounded-lg p-5">
+                    <p className="text-lg"><strong className="text-destructive">Ograniczenia stawek.</strong> W trakcie gry z aktywnym bonusem obowiązuje zazwyczaj maksymalna stawka — najczęściej 5–10 zł za spin. Przekroczenie jej może skutkować anulowaniem bonusu i wszystkich wygranych.</p>
+                  </div>
+                  
+                  <div className="bg-card border border-destructive/20 rounded-lg p-5">
+                    <p className="text-lg"><strong className="text-destructive">Wykluczone gry.</strong> Nie we wszystkie gry da się grać z bonusu. Kasyna często wyłączają progresywne jackpoty, niektóre gry stołowe i konkretne automaty. Trzeba dokładnie sprawdzić, które tytuły się kwalifikują.</p>
+                  </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Kiedy bonus bez depozytu ma sens?</h2>
+                
+                <p className="text-lg mb-6">
+                  Są sytuacje, w których aktywacja takiego bonusu jest rozsądna i może przynieść realne korzyści.
+                </p>
+
+                <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-6 my-6 space-y-4">
+                  <p className="text-lg"><strong className="text-primary">Dla nowych graczy.</strong> Jeśli dopiero zaczynasz grać online i nie wiesz, czego się spodziewać, bonus bez depozytu to bezpieczny sposób na pierwsze kroki. Poznajesz mechanikę gier, testujesz platformę i nie ryzykujesz portfela.</p>
+                  
+                  <p className="text-lg"><strong className="text-primary">Do testowania nowego kasyna.</strong> Planujesz zacząć grać na nowej stronie, ale nie masz pewności co do jej jakości? Bonus bez depozytu pozwala ocenić ją od środka — bez zobowiązań. Jeśli coś ci nie odpowiada, po prostu odchodzisz.</p>
+                  
+                  <p className="text-lg"><strong className="text-primary">Przy rozsądnym podejściu.</strong> Gdy traktujesz bonus jako rozrywkę, a nie sposób na zarobek, nie będziesz rozczarowany. To kluczowa zmiana perspektywy. Gracz, który aktywuje bonus z myślą „sprawdzę, jak to działa", jest w lepszej pozycji niż ten, który liczy na szybki zysk.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Kiedy lepiej z niego zrezygnować?</h2>
+                
+                <p className="text-lg mb-6">
+                  Nie każdy bonus bez depozytu warto aktywować. W niektórych przypadkach lepiej po prostu przejść dalej.
+                </p>
+
+                <div className="bg-destructive/5 border-l-4 border-destructive rounded-lg p-6 my-6 space-y-4">
+                  <p className="text-lg"><strong className="text-destructive">Gdy wagering przekracza x45.</strong> Przy tak wysokim mnożniku szanse na spełnienie warunków są statystycznie niskie. Grasz długo, ryzykujesz frustrację, a efekt końcowy i tak zależy głównie od losowości.</p>
+                  
+                  <p className="text-lg"><strong className="text-destructive">Gdy limit wygranej jest bardzo niski.</strong> Jeśli maksymalna wypłata wynosi np. 50 zł, a obrót wymaga postawienia 1 500 zł w zakładach, proporcje są niekorzystne. Wysiłek nie stoi w żadnej relacji do potencjalnego rezultatu.</p>
+                  
+                  <p className="text-lg"><strong className="text-destructive">Gdy regulamin jest niejasny lub restrykcyjny.</strong> Brak przejrzystych informacji o warunkach obrotu, wykluczonych grach czy limitach stawek to sygnał ostrzegawczy. Warto wybierać kasyna, które komunikują zasady jasno i bez ukrytych podpunktów.</p>
+                  
+                  <p className="text-lg"><strong className="text-destructive">Gdy aktywacja wymaga podania danych płatniczych.</strong> Bonus bez depozytu z definicji nie powinien wymagać wpłaty. Jeśli strona prosi o dane karty „na wszelki wypadek", warto zachować ostrożność.</p>
+                </div>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Na co uważać przed aktywacją?</h2>
+                
+                <p className="text-lg mb-4">
+                  Zanim klikniesz „aktywuj", poświęć kilka minut na sprawdzenie warunków. Oto praktyczny zestaw punktów do weryfikacji:
+                </p>
+
+                <div className="bg-card border border-primary/20 rounded-lg p-6 my-6 space-y-3">
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg">Przeczytaj regulamin promocji. Nie ogólny regulamin kasyna, a dokument dotyczący konkretnego bonusu. Tam znajdziesz wszystkie kluczowe warunki.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg">Sprawdź wymagany obrót. Policz, jaką łączną kwotę musisz postawić. Porównaj to z kwotą bonusu i oceń realność zadania.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg">Zwróć uwagę na maksymalną wygraną. Czy limit wypłaty jest akceptowalny? Jeśli wynosi mniej niż 100 zł, efektywność bonusu jest niska.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg">Zweryfikuj czas na obrót. 3 dni to mało. 7–14 dni daje więcej komfortu i możliwość spokojnej gry.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg">Sprawdź listę gier objętych promocją. Upewnij się, że Twoje ulubione automaty lub gry się kwalifikują i w jakim procencie wliczają się do obrotu.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg">Potwierdź, że spełniasz warunki uczestnictwa. Niektóre bonusy są dostępne wyłącznie dla graczy z określonych krajów, nowych kont lub po pełnej weryfikacji tożsamości.</p>
+                  </div>
+                </div>
+
+                <p className="text-lg">
+                  Ten krótki audyt może zaoszczędzić rozczarowania i zmarnowanego czasu.
+                </p>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Opinie graczy i rzeczywistość</h2>
+                
+                <p className="text-lg">
+                  Na forach dyskusyjnych i w mediach społecznościowych opinie o bonusach bez depozytu są skrajnie różne. Jedni chwalą je za możliwość gry za darmo i dzielą się historiami udanych wypłat. Inni wprost nazywają je „pułapką marketingową".
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Dlaczego jedni są zadowoleni?</h3>
+                
+                <p className="text-lg">
+                  Gracze, którzy podchodzą do tematu z realistycznymi oczekiwaniami, najczęściej oceniają bonus pozytywnie. Traktują go jako formę darmowej rozrywki i dodatkową szansę, nie zaś jako gwarantowany zarobek. Ci, którym udało się spełnić warunki obrotu i wypłacić wygraną — nawet niewielką — mówią o tym z entuzjazmem.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Dlaczego inni uważają, że to haczyk?</h3>
+                
+                <p className="text-lg">
+                  Rozczarowanie pojawia się najczęściej wtedy, gdy gracz nie przeczytał regulaminu przed aktywacją. Odkrywa wagering x50 dopiero po utracie bonusu albo dowiaduje się o limicie wygranej w momencie próby wypłaty. To nie tyle wina samego bonusu, co braku informacji na starcie — i niekiedy niejasnej komunikacji ze strony kasyna.
+                </p>
+
+                <p className="text-lg">
+                  Rzeczywistość jest taka, że bonus bez depozytu to narzędzie marketingowe. Kasyno oferuje go, żeby przyciągnąć nowych graczy — i ma w tym swój interes. Nie zmienia to faktu, że przy odpowiednich warunkach gracz też może z niego skorzystać.
+                </p>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Podsumowanie</h2>
+                
+                <p className="text-lg mb-6">
+                  Czy bonus bez depozytu się opłaca? Odpowiedź nie jest jednoznaczna i zależy od kontekstu.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6 my-8">
+                  <div className="bg-primary/5 border-l-4 border-primary rounded-lg p-6">
+                    <p className="text-xl font-bold text-primary mb-4">Opłaca się, gdy:</p>
+                    <ul className="space-y-3 text-lg">
+                      <li className="flex gap-2">
+                        <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                        <span>dopiero zaczynasz grać online i chcesz przetestować kasyno bez ryzyka,</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                        <span>wagering jest na rozsądnym poziomie (do x35),</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                        <span>traktujesz bonus jako rozrywkę, a nie źródło dochodu,</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <Icon name="Check" className="text-primary flex-shrink-0 mt-1" size={20} />
+                        <span>przeczytałeś regulamin i akceptujesz jego warunki.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-destructive/5 border-l-4 border-destructive rounded-lg p-6">
+                    <p className="text-xl font-bold text-destructive mb-4">Nie opłaca się, gdy:</p>
+                    <ul className="space-y-3 text-lg">
+                      <li className="flex gap-2">
+                        <Icon name="X" className="text-destructive flex-shrink-0 mt-1" size={20} />
+                        <span>oczekujesz łatwej i szybkiej wypłaty dużych kwot,</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <Icon name="X" className="text-destructive flex-shrink-0 mt-1" size={20} />
+                        <span>wagering przekracza x45, a limit wygranej jest niski,</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <Icon name="X" className="text-destructive flex-shrink-0 mt-1" size={20} />
+                        <span>nie masz czasu ani ochoty na spełnienie warunków obrotu,</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <Icon name="X" className="text-destructive flex-shrink-0 mt-1" size={20} />
+                        <span>regulamin jest nieprzejrzysty lub budzi wątpliwości.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p className="text-lg mt-6">
+                  Bonus bez depozytu to nie prezent — to propozycja na określonych zasadach. Jeśli te zasady ci odpowiadają, warto spróbować. Jeśli nie — nic nie tracisz, rezygnując. Najważniejsze to podjąć świadomą decyzję, zanim klikniesz „aktywuj".
+                </p>
               </div>
             </div>
 
