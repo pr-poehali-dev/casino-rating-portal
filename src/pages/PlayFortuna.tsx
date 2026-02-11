@@ -160,6 +160,16 @@ export default function PlayFortuna() {
                       <p className="leading-relaxed">
                         Warto od razu zaznaczyć – ten tekst powstał na podstawie analizy samej platformy, opinii z forów graczy i porównania z konkurencyjnymi serwisami. Nie jest to materiał sponsorowany.
                       </p>
+                      
+                      <h2 className="text-2xl font-bold mt-8 mb-4">Rejestracja i logowanie w PlayFortuna</h2>
+                      
+                      <p className="leading-relaxed">
+                        Proces zakładania konta w tym kasynie nie odbiega od standardów branżowych. PlayFortuna rejestracja wymaga podania adresu e-mail, hasła, waluty konta i kraju zamieszkania. Całość zajmuje dosłownie dwie-trzy minuty. Nie trzeba od razu przechodzić pełnej weryfikacji – ta wymagana jest dopiero przy pierwszej wypłacie, co jest normalną praktyką.
+                      </p>
+                      
+                      <p className="leading-relaxed">
+                        PlayFortuna logowanie odbywa się przez standardowy formularz na stronie głównej. Kasyno oferuje również opcję zapamiętania sesji na zaufanym urządzeniu. Pod względem bezpieczeństwa strona korzysta z szyfrowania SSL, a samo konto można dodatkowo zabezpieczyć silnym hasłem. Brakuje natomiast uwierzytelniania dwuskładnikowego (2FA), co w 2026 roku jest już pewnym minusem – wiele konkurencyjnych platform oferuje tę funkcję standardowo.
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
