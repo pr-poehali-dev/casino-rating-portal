@@ -195,6 +195,78 @@ export default function Booi() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Gift" className="text-primary" size={28} />
+                        Bonusy w Booi – kod promocyjny i oferta na start
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Sparkles" className="text-primary" size={22} />
+                            Bonus powitalny i darmowe spiny
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            System promocji w Booi jest rozbudowany, choć wymaga uważnego czytania regulaminu. <strong className="text-primary">Booi bonus na start</strong> obejmuje zazwyczaj dopasowanie pierwszego depozytu – w 2026 roku jest to 100% do określonej kwoty plus paczka darmowych spinów przypisanych do wybranych slotów.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            Czy istnieje <strong className="text-primary">booi bonus bez depozytu</strong>? Na ten moment kasyno nie oferuje klasycznego no deposit bonus w formie gotówki. Pojawiają się natomiast okresowe promocje z <strong className="text-primary">booi darmowe spiny</strong> za samą rejestrację – warto śledzić aktualne oferty na stronie, bo zmieniają się co kilka tygodni.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Tag" className="text-primary" size={22} />
+                            Kody promocyjne i warunki obrotu
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Jeśli chodzi o <strong className="text-primary">booi kod promocyjny</strong>, kasyno udostępnia je w ramach kampanii partnerskich. <strong className="text-primary">Booi kasyno kod bonusowy</strong> można znaleźć na stronach afiliacyjnych lub w newsletterze po rejestracji. Wpisuje się go w odpowiednim polu podczas wpłaty. <strong className="text-primary">Booi kody bonusowe</strong> nie sumują się – w jednym momencie aktywna może być tylko jedna oferta promocyjna.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Warunki obrotu bonusem to najczęściej x35 kwoty bonusu. To wynik zbliżony do średniej rynkowej. Ważne: nie wszystkie gry liczą się jednakowo do obrotu. Automaty zaliczają 100%, ale gry stołowe i live casino – zazwyczaj tylko 10-15%. Czas na spełnienie warunków to z reguły 7 dni.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Gamepad2" className="text-primary" size={28} />
+                        Gry hazardowe w Booi
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Dices" className="text-primary" size={22} />
+                            Automaty i dostawcy gier
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Katalog gier to zdecydowanie mocna strona tej platformy. <strong className="text-primary">Booi gry hazardowe</strong> obejmują kilka tysięcy tytułów od kilkudziesięciu dostawców. Wśród producentów znajdziesz zarówno uznane studia – Pragmatic Play, Play'n GO, Push Gaming, Hacksaw Gaming – jak i mniejsze, niszowe firmy, które dostarczają świeże tytuły.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            Automaty stanowią największą część oferty. Są podzielone na kategorie: popularne, nowe, megaways, bonus buy, jackpoty. Filtrowanie działa sprawnie, można też wyszukiwać po nazwie lub dostawcy.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Video" className="text-primary" size={22} />
+                            Live casino
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Sekcja live casino opiera się głównie na produkcjach Evolution i Pragmatic Play Live. Do dyspozycji są klasyczne stoły z blackjackiem, ruletką, baccaratem, a także game show – typu Crazy Time, Monopoly Live czy Sweet Bonanza Candyland. Jakość transmisji jest stabilna, choć w godzinach szczytu zdarzają się krótkie opóźnienia.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            Brakuje natomiast rozbudowanej sekcji z zakładami sportowymi – Booi skupia się przede wszystkim na grach kasynowych.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
