@@ -7,77 +7,90 @@
   <!-- Главная страница -->
   <url>
     <loc>https://bkreiting.com/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Страница рейтинга казино -->
+  <!-- Блог -->
   <url>
-    <loc>https://bkreiting.com/#ranking</loc>
-    <lastmod>2026-02-10</lastmod>
+    <loc>https://bkreiting.com/blog</loc>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Страница бонусов -->
+  <!-- Статьи блога -->
   <url>
-    <loc>https://bkreiting.com/#bonusy</loc>
-    <lastmod>2026-02-10</lastmod>
+    <loc>https://bkreiting.com/blog/jak-dziala-bonus-powitalny</loc>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Страница игр -->
   <url>
-    <loc>https://bkreiting.com/#gry</loc>
-    <lastmod>2026-02-10</lastmod>
+    <loc>https://bkreiting.com/blog/czym-jest-wagering</loc>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Страница FAQ -->
   <url>
-    <loc>https://bkreiting.com/#faq</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://bkreiting.com/blog/czy-bonus-bez-depozytu-sie-oplaca</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Отдельные страницы казино -->
   <url>
-    <loc>https://bkreiting.com/casino/vavada</loc>
-    <lastmod>2026-02-10</lastmod>
+    <loc>https://bkreiting.com/vavada</loc>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bkreiting.com/casino/playfortuna</loc>
-    <lastmod>2026-02-10</lastmod>
+    <loc>https://bkreiting.com/play-fortuna</loc>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bkreiting.com/casino/booi</loc>
-    <lastmod>2026-02-10</lastmod>
+    <loc>https://bkreiting.com/booi</loc>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bkreiting.com/casino/jozz</loc>
-    <lastmod>2026-02-10</lastmod>
+    <loc>https://bkreiting.com/jozz</loc>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://bkreiting.com/casino/winity</loc>
-    <lastmod>2026-02-10</lastmod>
+    <loc>https://bkreiting.com/winity</loc>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Информационные страницы -->
+  <url>
+    <loc>https://bkreiting.com/o-nas</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://bkreiting.com/polityka-prywatnosci</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
