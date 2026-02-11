@@ -402,6 +402,7 @@ export default function Index() {
   const [activeTab, setActiveTab] = useState('ranking');
   const [showAgeModal, setShowAgeModal] = useState(false);
   const [showPromoModal, setShowPromoModal] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [language, setLanguage] = useState<Language>('pl');
   const [copiedPromo, setCopiedPromo] = useState(false);
 
@@ -552,11 +553,46 @@ export default function Index() {
                   !
                 </div>
               </Button>
-              <Button size="icon" variant="ghost" className="md:hidden">
-                <Icon name="Menu" size={24} />
+              <Button onClick={() => setShowMobileMenu(!showMobileMenu)} size="icon" variant="ghost" className="md:hidden">
+                <Icon name={showMobileMenu ? "X" : "Menu"} size={24} />
               </Button>
             </div>
           </div>
+          
+          {showMobileMenu && (
+            <div className="md:hidden absolute top-full left-0 right-0 bg-card/95 backdrop-blur-lg border-b border-border shadow-xl z-50">
+              <nav className="flex flex-col p-4 space-y-2">
+                <button 
+                  onClick={() => { setActiveTab('ranking'); setShowMobileMenu(false); }}
+                  className="text-left px-4 py-3 text-foreground/80 hover:text-primary hover:bg-primary/10 rounded-lg transition-colors"
+                >
+                  <Icon name="Award" className="inline mr-3" size={18} />
+                  Ranking
+                </button>
+                <button 
+                  onClick={() => { setActiveTab('bonusy'); setShowMobileMenu(false); }}
+                  className="text-left px-4 py-3 text-foreground/80 hover:text-primary hover:bg-primary/10 rounded-lg transition-colors"
+                >
+                  <Icon name="Gift" className="inline mr-3" size={18} />
+                  Bonusy
+                </button>
+                <button 
+                  onClick={() => { setActiveTab('gry'); setShowMobileMenu(false); }}
+                  className="text-left px-4 py-3 text-foreground/80 hover:text-primary hover:bg-primary/10 rounded-lg transition-colors"
+                >
+                  <Icon name="Gamepad2" className="inline mr-3" size={18} />
+                  Gry
+                </button>
+                <button 
+                  onClick={() => { navigate('/blog'); setShowMobileMenu(false); }}
+                  className="text-left px-4 py-3 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-lg font-semibold shadow-lg"
+                >
+                  <Icon name="BookOpen" className="inline mr-3" size={18} />
+                  Blog
+                </button>
+              </nav>
+            </div>
+          )}
         </div>
       </header>
 
