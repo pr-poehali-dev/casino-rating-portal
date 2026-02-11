@@ -151,14 +151,49 @@ export default function Booi() {
                 <Card className="border-primary/20">
                   <CardHeader>
                     <CardTitle className="text-3xl font-bold">
-                      Booi Casino – opinie, bonusy i gry
+                      Booi kasyno online – opinie, bonusy i rejestracja w Polsce
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="space-y-4">
                       <p className="text-foreground/80 leading-relaxed">
-                        Treść będzie dodana wkrótce.
+                        Booi to kasyno online, które od kilku lat buduje swoją pozycję wśród graczy z Europy Środkowo-Wschodniej. W Polsce platforma zyskała rozpoznawalność głównie dzięki rozbudowanemu systemowi bonusów i szerokiej ofercie automatów. Ale czy <strong className="text-primary">booi casino opinie</strong> w sieci pokrywają się z rzeczywistością?
                       </p>
+                      <p className="text-foreground/80 leading-relaxed">
+                        W tym przeglądzie sprawdzam, jak działa <strong className="text-primary">booi online</strong> na co dzień – od rejestracji, przez wpłaty i wypłaty, po jakość obsługi klienta. Jeśli zastanawiasz się, czy <strong className="text-primary">booi casino polska</strong> to opcja warta uwagi w 2026 roku, tutaj znajdziesz konkretne informacje, a nie marketingowe hasła.
+                      </p>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="UserPlus" className="text-primary" size={28} />
+                        Rejestracja i logowanie w Booi
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Edit" className="text-primary" size={22} />
+                            Jak założyć konto w Booi?
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Proces zakładania konta jest prosty i zajmuje dosłownie kilka minut. Booi rejestracja wymaga podania adresu e-mail, hasła, waluty konta oraz kraju zamieszkania. Po wypełnieniu formularza na skrzynkę przychodzi link aktywacyjny – dopiero po jego kliknięciu konto staje się w pełni funkcjonalne.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            Warto od razu przejść weryfikację tożsamości (KYC). Choć nie jest wymagana natychmiast, jej brak może opóźnić pierwszą wypłatę. Wystarczy skan dowodu osobistego lub paszportu oraz potwierdzenie adresu zamieszkania.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Lock" className="text-primary" size={22} />
+                            Logowanie i problemy z dostępem
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Booi logowanie odbywa się standardowo – przez e-mail i hasło. W przypadku problemów z dostępem platforma oferuje szybkie resetowanie hasła. Kilku użytkowników na forach wspomina o sporadycznych trudnościach z logowaniem po zmianie adresu IP, co może być związane z systemem bezpieczeństwa blokującym podejrzane lokalizacje. W takiej sytuacji wystarczy kontakt z supportem.
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
