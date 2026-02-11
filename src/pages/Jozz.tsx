@@ -151,16 +151,16 @@ export default function Jozz() {
                 <Card className="border-primary/20">
                   <CardHeader>
                     <CardTitle className="text-3xl font-bold">
-                      Jozz kasyno online – opinie, bonusy i zakłady sportowe
+                      Jozz kasyno online – opinie, bonusy i rejestracja w Polsce
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="space-y-4">
                       <p className="text-foreground/80 leading-relaxed">
-                        Jozz to stosunkowo młoda platforma, która łączy w sobie funkcje kasyna online oraz bukmachera. To jeden z nielicznych operatorów na rynku, który próbuje zbudować ofertę hybrydową – automaty, live casino i jednocześnie zakłady sportowe pod jednym dachem. Czy <strong className="text-primary">jozz casino opinie</strong> są pozytywne? Tego dowiesz się w tej recenzji.
+                        Jozz to platforma hazardowa, która w ostatnich miesiącach zyskała spore zainteresowanie wśród polskich graczy. Kasyno działa w pełni jako <strong className="text-primary">Jozz online</strong> – bez konieczności pobierania dodatkowego oprogramowania, bezpośrednio z poziomu przeglądarki. Serwis oferuje szeroki katalog gier, system bonusów i całodobową obsługę klienta.
                       </p>
                       <p className="text-foreground/80 leading-relaxed">
-                        <strong className="text-primary">Jozz online</strong> kieruje swoją ofertę do graczy, którzy nie chcą przełączać się między różnymi platformami. Zamiast osobnego konta w kasynie i u bukmachera, tutaj masz wszystko w jednym miejscu. Dla części użytkowników to ogromna wygoda, dla innych – po prostu dodatkowa opcja. W tym artykule sprawdzam, jak to wygląda w praktyce i czy <strong className="text-primary">jozz kasyno</strong> faktycznie wypełnia obietnice.
+                        Wielu użytkowników szuka informacji o tym, czy <strong className="text-primary">Jozz casino polska</strong> to wiarygodne miejsce do gry. W tym niezależnym przeglądzie sprawdzamy, jak wygląda rejestracja, jakie bonusy są dostępne, jak działają wypłaty i co na temat tego kasyna mówią sami gracze. Wszystkie informacje dotyczą aktualnej oferty na rok 2026.
                       </p>
                     </div>
 
@@ -177,17 +177,20 @@ export default function Jozz() {
                             Jak założyć konto?
                           </h3>
                           <p className="text-foreground/80 leading-relaxed">
-                            Proces rejestracji w Jozz przebiega standardowo. Formularz wymaga podania podstawowych danych: e-mail, hasło, imię, nazwisko, data urodzenia i adres zamieszkania. <strong className="text-primary">Jozz rejestracja</strong> zajmuje około trzech minut, pod warunkiem że masz pod ręką wszystkie informacje. Po wypełnieniu formularza na skrzynkę mailową przychodzi link aktywacyjny – bez jego kliknięcia konto pozostaje nieaktywne.
+                            Proces rejestracji w Jozz jest prosty i zajmuje dosłownie kilka minut. Na stronie głównej wystarczy kliknąć przycisk rejestracji, a następnie podać adres e-mail, wybrać walutę konta i ustawić hasło. Platforma wymaga również potwierdzenia, że użytkownik ma ukończone 18 lat.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            <strong className="text-primary">Jozz rejestracja</strong> nie wymaga na starcie weryfikacji dokumentów – ta następuje zazwyczaj przy pierwszej wypłacie środków. To standardowa praktyka w branży, która przyspiesza sam moment zakładania konta.
                           </p>
                         </div>
 
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                             <Icon name="Lock" className="text-primary" size={22} />
-                            Logowanie i weryfikacja konta
+                            Logowanie i bezpieczeństwo
                           </h3>
                           <p className="text-foreground/80 leading-relaxed">
-                            <strong className="text-primary">Jozz logowanie</strong> działa przez standardowy panel na stronie głównej. Po pierwszym wpłacie platforma może poprosić o weryfikację tożsamości (KYC) – to kwestia skan dowodu osobistego lub paszportu oraz potwierdzenie adresu. Weryfikacja nie jest wymagana od razu, ale jej brak spowoduje blokadę pierwszej wypłaty. Im szybciej wyślesz dokumenty, tym mniej stresu później.
+                            <strong className="text-primary">Jozz logowanie</strong> odbywa się za pomocą adresu e-mail i hasła. Platforma korzysta z szyfrowania SSL, co oznacza, że dane użytkowników są chronione podczas przesyłania. Warto ustawić silne hasło i nie udostępniać danych logowania osobom trzecim. W razie problemów z dostępem do konta można skorzystać z opcji odzyskiwania hasła.
                           </p>
                         </div>
                       </div>
