@@ -88,9 +88,11 @@ export default function BlogNoDeposit() {
             </div>
 
             <div className="relative overflow-hidden rounded-2xl mb-12 h-64 md:h-96">
-              <div className="w-full h-full bg-gradient-to-br from-secondary/20 via-primary/10 to-primary/20 flex items-center justify-center">
-                <Icon name="Gift" className="text-primary opacity-30" size={120} />
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/dd60a2d0-1760-4c47-9950-f0c271536e91.jpg"
+                alt="Czy bonus bez depozytu się opłaca"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div className="prose prose-lg max-w-none">
