@@ -157,11 +157,37 @@ export default function Winity() {
                   <CardContent className="space-y-6">
                     <div className="space-y-4">
                       <p className="text-foreground/80 leading-relaxed">
-                        Winity to stosunkowo młoda platforma hazardowa, która od niedawna jest obecna na polskim rynku. Kasyno działa w pełni jako <strong className="text-primary">Winity online</strong> – bez potrzeby instalowania dodatkowego oprogramowania, bezpośrednio z przeglądarki. Serwis oferuje solidny katalog gier, proste bonusy i całodobową obsługę klienta.
+                        Winity to platforma hazardowa, która w ostatnich miesiącach zyskuje coraz większe zainteresowanie wśród polskich graczy. Kasyno działa w pełni online, co oznacza, że dostęp do gier jest możliwy z dowolnego miejsca – wystarczy przeglądarka i połączenie z internetem. W tym niezależnym przeglądzie sprawdzamy, jak faktycznie wygląda oferta <strong className="text-primary">Winity casino polska</strong>, co mówią o nim użytkownicy i czy warto zakładać tam konto.
                       </p>
                       <p className="text-foreground/80 leading-relaxed">
-                        Wielu użytkowników szuka informacji o tym, czy <strong className="text-primary">Winity casino polska</strong> to wiarygodne miejsce do gry. W tym niezależnym przeglądzie sprawdzamy, jak wygląda rejestracja, jakie bonusy są dostępne, jak działają wypłaty i co na temat tego kasyna mówią sami gracze. Wszystkie informacje dotyczą aktualnej oferty na rok 2026.
+                        Platforma <strong className="text-primary">Winity online</strong> oferuje automaty, gry stołowe oraz sekcję z krupierami na żywo. Zanim jednak przejdziemy do szczegółów, warto odpowiedzieć na najważniejsze pytanie – kwestię legalności.
                       </p>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="ShieldCheck" className="text-primary" size={28} />
+                        Winity – legalne czy nie w Polsce?
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <p className="text-foreground/80 leading-relaxed">
+                          To pytanie pojawia się najczęściej i słusznie. Polskie prawo hazardowe jest restrykcyjne, a jedynym legalnym operatorem online pozostaje państwowy monopolista. Serwisy zagraniczne – nawet te posiadające licencje międzynarodowe – formalnie nie mają zezwolenia Ministerstwa Finansów na działalność w Polsce.
+                        </p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Winity działa na podstawie licencji wydanej przez zagranicznego regulatora, co oznacza, że kasyno podlega kontroli, ale nie polskiej. Dla użytkowników kluczowe jest to, że platforma stosuje szyfrowanie SSL, a dane osobowe są chronione zgodnie z międzynarodowymi standardami. Pytanie <strong className="text-primary">winity legalne czy nie</strong> nie ma jednoznacznej odpowiedzi – formalnie nie posiada polskiej koncesji, ale spełnia wymogi bezpieczeństwa narzucone przez swojego licencjodawcę.
+                        </p>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Lock" className="text-primary" size={22} />
+                            Bezpieczeństwo danych i transakcji
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Serwis wykorzystuje protokół szyfrowania 256-bit SSL. Oznacza to, że zarówno dane rejestracyjne, jak i informacje finansowe są chronione na poziomie porównywalnym z bankowością elektroniczną. Generatory liczb losowych (RNG) w grach są certyfikowane przez niezależne laboratoria.
+                          </p>
+                        </div>
+                      </div>
                     </div>
 
                     <div className="border-t border-primary/20 pt-6 mt-6">
@@ -171,26 +197,30 @@ export default function Winity() {
                       </h2>
                       
                       <div className="space-y-6">
+                        <p className="text-foreground/80 leading-relaxed">
+                          Proces zakładania konta jest prosty i zajmuje dosłownie kilka minut. Po wejściu na stronę wystarczy kliknąć przycisk rejestracji i uzupełnić formularz.
+                        </p>
+
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                             <Icon name="Edit" className="text-primary" size={22} />
-                            Jak założyć konto?
+                            Jakie dane są wymagane?
                           </h3>
                           <p className="text-foreground/80 leading-relaxed">
-                            Proces rejestracji w Winity jest uproszczony i zajmuje zaledwie kilka minut. <strong className="text-primary">Winity rejestracja</strong> wymaga podania podstawowych danych: adresu e-mail, hasła oraz waluty konta. Platforma stawia na szybkość – nie musisz od razu przechodzić pełnej weryfikacji tożsamości, choć będzie ona wymagana przy pierwszej wypłacie środków.
-                          </p>
-                          <p className="text-foreground/80 leading-relaxed mt-4">
-                            Cały formularz rejestracyjny jest intuicyjny i przystosowany do urządzeń mobilnych. Po zakończeniu rejestracji możesz od razu wpłacić środki i rozpocząć grę.
+                            Podczas rejestracji Winity prosi o podanie adresu e-mail, hasła, waluty konta oraz podstawowych danych osobowych – imienia, nazwiska i daty urodzenia. W niektórych przypadkach konieczna jest weryfikacja tożsamości przed pierwszą wypłatą, co wymaga przesłania skanu dokumentu.
                           </p>
                         </div>
 
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                             <Icon name="Lock" className="text-primary" size={22} />
-                            Logowanie i bezpieczeństwo
+                            Logowanie do konta
                           </h3>
                           <p className="text-foreground/80 leading-relaxed">
-                            <strong className="text-primary">Winity logowanie</strong> odbywa się za pomocą adresu e-mail i hasła. Platforma korzysta z szyfrowania SSL, co oznacza, że dane użytkowników są chronione podczas transmisji. Zaleca się ustawienie silnego hasła i nieudostępnianie danych logowania osobom trzecim. W przypadku problemów z dostępem do konta można skorzystać z opcji odzyskiwania hasła.
+                            <strong className="text-primary">Winity logowanie</strong> odbywa się standardowo – za pomocą adresu e-mail i hasła. Platforma umożliwia także odzyskanie hasła przez link wysyłany na skrzynkę pocztową. Warto ustawić silne hasło i nie udostępniać danych logowania osobom trzecim.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            Cała procedura <strong className="text-primary">winity rejestracja</strong> jest intuicyjna i nie wymaga instalowania dodatkowego oprogramowania.
                           </p>
                         </div>
                       </div>
