@@ -1137,11 +1137,116 @@ export default function Index() {
               </div>
             </TabsContent>
 
-            <TabsContent value="bonusy" className="mt-8">
-              <div className="text-center py-20">
-                <Icon name="Gift" className="mx-auto text-primary mb-4" size={64} />
-                <h3 className="text-2xl font-bold mb-2">{t.bonusSection}</h3>
-                <p className="text-foreground/70">{t.bestBonusOffers}</p>
+            <TabsContent value="bonusy" className="mt-8 space-y-8">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-2">Najlepsze Bonusy Kasynowe 2026</h3>
+                <p className="text-foreground/70">Aktualne oferty powitalne i darmowe spiny od top kasyn</p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                {casinos.slice(0, 4).map((casino) => (
+                  <Card key={casino.id} className="bg-card border-border overflow-hidden hover:border-primary/50 transition-colors">
+                    <CardHeader className="bg-gradient-to-r from-primary/5 to-secondary/5">
+                      <div className="flex items-center gap-4">
+                        <img 
+                          src={casino.logo}
+                          alt={casino.name}
+                          className="w-16 h-16 object-contain bg-card rounded-lg p-2"
+                        />
+                        <div className="flex-1">
+                          <CardTitle className="text-xl mb-1">{casino.name}</CardTitle>
+                          <div className="flex items-center gap-2">
+                            <StarRating rating={casino.userRating} size={14} />
+                            <span className="text-sm text-foreground/60">({casino.userRating})</span>
+                          </div>
+                        </div>
+                        <Badge className="bg-primary/20 text-primary border-primary/30">
+                          TOP {casino.id}
+                        </Badge>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="pt-6 space-y-4">
+                      <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10 border-l-4 border-primary rounded-lg p-4">
+                        <div className="flex items-start gap-3">
+                          <Icon name="Gift" className="text-primary mt-1 flex-shrink-0" size={28} />
+                          <div>
+                            <p className="text-xs text-foreground/60 mb-1">BONUS POWITALNY</p>
+                            <p className="text-lg font-bold text-primary leading-tight">{casino.bonus}</p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex flex-wrap gap-2">
+                        {casino.features.slice(0, 3).map((feature, idx) => (
+                          <Badge key={idx} variant="outline" className="border-primary/30 text-xs">
+                            <Icon name="Check" className="mr-1" size={12} />
+                            {feature}
+                          </Badge>
+                        ))}
+                      </div>
+
+                      <div className="flex gap-2 pt-2">
+                        <Button 
+                          asChild
+                          className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
+                        >
+                          <a href={casino.url} target="_blank" rel="nofollow noopener noreferrer">
+                            <Icon name="ExternalLink" className="mr-2" size={16} />
+                            Odbierz Bonus
+                          </a>
+                        </Button>
+                        <Button 
+                          variant="outline"
+                          size="icon"
+                          className="border-primary/30 hover:bg-primary/10"
+                          onClick={() => {
+                            const routes: { [key: number]: string } = {
+                              1: '/vavada',
+                              2: '/play-fortuna',
+                              3: '/booi',
+                              4: '/jozz',
+                              5: '/winity'
+                            };
+                            if (routes[casino.id]) navigate(routes[casino.id]);
+                          }}
+                        >
+                          <Icon name="Info" size={18} />
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-8 max-w-4xl mx-auto mt-12">
+                <div className="flex items-start gap-4">
+                  <Icon name="Info" className="text-primary mt-1 flex-shrink-0" size={32} />
+                  <div className="space-y-3">
+                    <h4 className="text-xl font-bold">Jak odebrać bonus w kasynie?</h4>
+                    <ol className="space-y-2 text-foreground/80">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-bold">1.</span>
+                        <span>Kliknij "Odbierz Bonus" przy wybranym kasynie</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-bold">2.</span>
+                        <span>Zarejestruj nowe konto w kasynie</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-bold">3.</span>
+                        <span>Dokonaj pierwszego depozytu (jeśli wymagany)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary font-bold">4.</span>
+                        <span>Bonus zostanie automatycznie naliczony na konto</span>
+                      </li>
+                    </ol>
+                    <p className="text-sm text-foreground/60 pt-2 border-t border-primary/20">
+                      <Icon name="AlertCircle" className="inline mr-1" size={14} />
+                      Pamiętaj sprawdzić warunki obrotu bonusem przed skorzystaniem z oferty
+                    </p>
+                  </div>
+                </div>
               </div>
             </TabsContent>
 
