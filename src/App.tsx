@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -24,33 +25,42 @@ import AgeConfirmationModal from "./components/AgeConfirmationModal";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <AgeConfirmationModal />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/admin" element={<AdminPanel />} />
-        <Route path="/admin/setup" element={<AdminSetup />} />
-        <Route path="/vavada" element={<Vavada />} />
-        <Route path="/play-fortuna" element={<PlayFortuna />} />
-        <Route path="/booi" element={<Booi />} />
-        <Route path="/jozz" element={<Jozz />} />
-        <Route path="/winity" element={<Winity />} />
-        <Route path="/polityka-prywatnosci" element={<Privacy />} />
-        <Route path="/o-nas" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/jak-dziala-bonus-powitalny" element={<BlogBonusPowitalny />} />
-        <Route path="/blog/czym-jest-wagering" element={<BlogWagering />} />
-        <Route path="/blog/czy-bonus-bez-depozytu-sie-oplaca" element={<BlogNoDeposit />} />
-        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  useEffect(() => {
+    const meta = document.createElement('meta');
+    meta.name = 'google-site-verification';
+    meta.content = 'FHY1vAJNhfzw9HgtS4XdiRp46Np1Tv1p8iTHmHT4hHc';
+    document.head.appendChild(meta);
+  }, []);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <AgeConfirmationModal />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/admin/setup" element={<AdminSetup />} />
+          <Route path="/vavada" element={<Vavada />} />
+          <Route path="/play-fortuna" element={<PlayFortuna />} />
+          <Route path="/booi" element={<Booi />} />
+          <Route path="/jozz" element={<Jozz />} />
+          <Route path="/winity" element={<Winity />} />
+          <Route path="/polityka-prywatnosci" element={<Privacy />} />
+          <Route path="/o-nas" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/jak-dziala-bonus-powitalny" element={<BlogBonusPowitalny />} />
+          <Route path="/blog/czym-jest-wagering" element={<BlogWagering />} />
+          <Route path="/blog/czy-bonus-bez-depozytu-sie-oplaca" element={<BlogNoDeposit />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
