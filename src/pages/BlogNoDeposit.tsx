@@ -7,15 +7,15 @@ export default function BlogNoDeposit() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'Czy bonus bez depozytu się opłaca? - bkreiting.com';
+    document.title = 'Czy bonus bez depozytu się opłaca w 2026 roku?';
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Bonus bez depozytu pozwala grać bez wpłaty. Sprawdź, czy jest korzystny, jakie ma wady i zalety oraz kiedy warto z niego skorzystać.');
+      metaDescription.setAttribute('content', 'Sprawdź, czy bonus bez depozytu naprawdę się opłaca, jakie ma warunki obrotu i na co uważać przed jego aktywacją. Analiza zalet, wad i ryzyk.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Bonus bez depozytu pozwala grać bez wpłaty. Sprawdź, czy jest korzystny, jakie ma wady i zalety oraz kiedy warto z niego skorzystać.';
+      meta.content = 'Sprawdź, czy bonus bez depozytu naprawdę się opłaca, jakie ma warunki obrotu i na co uważać przed jego aktywacją. Analiza zalet, wad i ryzyk.';
       document.head.appendChild(meta);
     }
 
