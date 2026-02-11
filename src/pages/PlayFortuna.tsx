@@ -85,9 +85,11 @@ export default function PlayFortuna() {
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
                   <div className="relative w-32 h-32 flex-shrink-0">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl blur-xl"></div>
-                    <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                      <Icon name="Star" className="text-primary" size={64} />
-                    </div>
+                    <img 
+                      src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/528dcd24-53e0-4e1d-92f5-6276cda9a5b2.png"
+                      alt="PlayFortuna Casino"
+                      className="relative w-full h-full object-contain rounded-2xl bg-card p-4"
+                    />
                   </div>
                   
                   <div className="flex-1 space-y-3">
