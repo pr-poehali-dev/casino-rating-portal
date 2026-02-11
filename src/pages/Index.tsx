@@ -535,7 +535,7 @@ export default function Index() {
               <button onClick={() => setActiveTab('ranking')} className="text-foreground/80 hover:text-primary transition-colors">Ranking</button>
               <button onClick={() => setActiveTab('bonusy')} className="text-foreground/80 hover:text-primary transition-colors">Bonusy</button>
               <button onClick={() => setActiveTab('gry')} className="text-foreground/80 hover:text-primary transition-colors">Gry</button>
-              <button className="relative px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-lg hover:from-primary/90 hover:to-secondary/90 transition-all font-semibold shadow-lg shadow-primary/20">
+              <button onClick={() => navigate('/blog')} className="relative px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-foreground rounded-lg hover:from-primary/90 hover:to-secondary/90 transition-all font-semibold shadow-lg shadow-primary/20">
                 <Icon name="BookOpen" className="inline mr-2" size={18} />
                 Blog
               </button>

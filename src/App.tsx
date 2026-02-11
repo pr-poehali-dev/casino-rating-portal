@@ -15,6 +15,7 @@ import Jozz from "./pages/Jozz";
 import Winity from "./pages/Winity";
 import Privacy from "./pages/Privacy";
 import About from "./pages/About";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import AgeConfirmationModal from "./components/AgeConfirmationModal";
 
@@ -38,6 +39,7 @@ const App = () => (
         <Route path="/winity" element={<Winity />} />
         <Route path="/polityka-prywatnosci" element={<Privacy />} />
         <Route path="/o-nas" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
