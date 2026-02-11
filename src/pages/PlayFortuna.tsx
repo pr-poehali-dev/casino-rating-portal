@@ -28,7 +28,7 @@ const StarRating = ({ rating, size = 20 }: { rating: number; size?: number }) =>
 
 export default function PlayFortuna() {
   const navigate = useNavigate();
-  const casinoUrl = '#';
+  const casinoUrl = 'https://fortuna-promo1.net/alt/pf_new_year_new_ru/?ab4caec10f6f2577c5ad134c05b3b019';
 
   useEffect(() => {
     document.title = 'Play Fortuna kasyno online – opinie, bonusy i rejestracja';
