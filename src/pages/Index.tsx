@@ -830,6 +830,8 @@ export default function Index() {
                       onClick={() => {
                         if (casino.id === 1) {
                           navigate('/vavada');
+                        } else if (casino.id === 2) {
+                          navigate('/play-fortuna');
                         }
                       }}
                     >
