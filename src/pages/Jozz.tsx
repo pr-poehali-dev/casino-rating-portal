@@ -195,6 +195,78 @@ export default function Jozz() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Gift" className="text-primary" size={28} />
+                        Bonusy w Jozz – kod promocyjny i oferta na start
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Sparkles" className="text-primary" size={22} />
+                            Bonus powitalny i warunki
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Nowi gracze mogą liczyć na <strong className="text-primary">Jozz bonus na start</strong>, który obejmuje doładowanie pierwszego depozytu oraz pulę darmowych spinów. Szczegóły oferty powitalnej mogą się zmieniać w zależności od aktualnej promocji, dlatego warto sprawdzać warunki bezpośrednio na stronie kasyna.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            Każdy bonus podlega wymogowi obrotu – najczęściej jest to wielokrotność kwoty bonusu, którą trzeba rozegrać, zanim możliwa będzie wypłata wygranych. Warunki obrotu w Jozz są na poziomie zbliżonym do średniej rynkowej, choć zawsze warto przeczytać regulamin konkretnej promocji.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Tag" className="text-primary" size={22} />
+                            Kody promocyjne i bonusy bez depozytu
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Gracze często pytają o <strong className="text-primary">Jozz kod promocyjny</strong> i możliwość aktywowania dodatkowych nagród. Kody bonusowe pojawiają się okresowo – mogą być dystrybuowane przez partnerów kasyna, w newsletterach lub w ramach specjalnych akcji sezonowych. Aktualne <strong className="text-primary">Jozz kody promocyjne 2026</strong> najlepiej śledzić na oficjalnych kanałach platformy.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Jeśli chodzi o <strong className="text-primary">Jozz bonus bez depozytu</strong> – tego typu oferta nie jest dostępna na stałe, ale pojawia się w ramach wybranych kampanii. Podobnie <strong className="text-primary">Jozz darmowe spiny</strong> są przyznawane zarówno jako część pakietu powitalnego, jak i w cotygodniowych promocjach dla aktywnych użytkowników.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Warto pamiętać, że <strong className="text-primary">Jozz kasyno kod bonusowy</strong> należy wpisać w odpowiednim polu podczas rejestracji lub wpłaty – w przeciwnym razie bonus może nie zostać naliczony. Aktualne <strong className="text-primary">Jozz kody bonusowe</strong> są z reguły podawane wraz z instrukcją aktywacji.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Gamepad2" className="text-primary" size={28} />
+                        Gry hazardowe w Jozz
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Dices" className="text-primary" size={22} />
+                            Automaty i dostawcy gier
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Katalog <strong className="text-primary">Jozz gry hazardowe</strong> obejmuje kilka tysięcy tytułów od znanych dostawców oprogramowania. Wśród producentów znajdziemy takie marki jak Pragmatic Play, Play'n GO, Evolution, NetEnt czy Endorphina. Dzięki temu wybór slotów jest naprawdę szeroki – od klasycznych automatów po nowoczesne sloty z mechanikami Megaways i jackpotami.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Video" className="text-primary" size={22} />
+                            Kasyno na żywo
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Sekcja live casino w Jozz pozwala grać z prawdziwymi krupierami w blackjacka, ruletkę, baccarata i różne odmiany pokera. Transmisje realizowane są w jakości HD, a gry pochodzą głównie od Evolution i Pragmatic Play Live. To dobra opcja dla tych, którzy szukają wrażeń zbliżonych do prawdziwego kasyna stacjonarnego.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            Platforma umożliwia filtrowanie gier według kategorii, dostawcy i popularności, co ułatwia odnalezienie konkretnego tytułu.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
