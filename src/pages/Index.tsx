@@ -809,6 +809,7 @@ export default function Index() {
                               src={casino.logo} 
                               alt={`${casino.name} logo`}
                               className="w-full h-full object-cover"
+                              loading="lazy"
                             />
                           </div>
                         </div>
@@ -1193,6 +1194,7 @@ export default function Index() {
                           src={casino.logo}
                           alt={casino.name}
                           className="w-16 h-16 object-contain bg-card rounded-lg p-2"
+                          loading="lazy"
                         />
                         <div className="flex-1">
                           <CardTitle className="text-xl mb-1">{casino.name}</CardTitle>

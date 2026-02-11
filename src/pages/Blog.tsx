@@ -195,6 +195,7 @@ export default function Blog() {
                         src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/dd60a2d0-1760-4c47-9950-f0c271536e91.jpg"
                         alt={post.title}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     )}
                     {post.image === 'wagering' && (
@@ -202,6 +203,7 @@ export default function Blog() {
                         src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/b9bf7684-0c17-4bc2-949a-c531dfe9e221.jpg"
                         alt={post.title}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     )}
                     {post.image === 'bonus' && (
@@ -209,6 +211,7 @@ export default function Blog() {
                         src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/26909adb-1e22-47a8-ab0e-7cfc23d1a006.jpg"
                         alt={post.title}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                     )}
                     <div className="absolute top-3 left-3">
