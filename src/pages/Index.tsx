@@ -824,20 +824,31 @@ export default function Index() {
                         {t.playNow}
                       </a>
                     </Button>
-                    <Button 
-                      variant="outline" 
-                      className="flex-1 border-primary/30 hover:bg-primary/10"
-                      onClick={() => {
-                        if (casino.id === 1) {
-                          navigate('/vavada');
-                        } else if (casino.id === 2) {
-                          navigate('/play-fortuna');
-                        }
-                      }}
-                    >
-                      <Icon name="FileText" className="mr-2" size={18} />
-                      {t.fullReview}
-                    </Button>
+                    {(casino.id === 1 || casino.id === 2) ? (
+                      <Button 
+                        variant="outline" 
+                        className="flex-1 border-primary/30 hover:bg-primary/10"
+                        onClick={() => {
+                          if (casino.id === 1) {
+                            navigate('/vavada');
+                          } else if (casino.id === 2) {
+                            navigate('/play-fortuna');
+                          }
+                        }}
+                      >
+                        <Icon name="FileText" className="mr-2" size={18} />
+                        {t.fullReview}
+                      </Button>
+                    ) : (
+                      <Button 
+                        variant="outline" 
+                        className="flex-1 border-primary/30 hover:bg-primary/10"
+                        disabled
+                      >
+                        <Icon name="FileText" className="mr-2" size={18} />
+                        {t.fullReview}
+                      </Button>
+                    )}
                     <Button variant="ghost" size="icon" className="hover:bg-primary/10">
                       <Icon name="Heart" size={20} />
                     </Button>
