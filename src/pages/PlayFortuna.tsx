@@ -385,6 +385,45 @@ export default function PlayFortuna() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Headphones" className="text-primary" size={28} />
+                        Kontakt z PlayFortuna
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="MessageCircle" className="text-primary" size={22} />
+                            Czat na żywo i e-mail
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            PlayFortuna kontakt z obsługą klienta odbywa się przede wszystkim przez czat na żywo dostępny 24/7. To najszybsza forma komunikacji – odpowiedź zazwyczaj pojawia się w ciągu kilku minut. Konsultanci obsługują głównie w językach angielskim i rosyjskim, choć zdarzają się operatorzy posługujący się innymi językami.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Languages" className="text-primary" size={22} />
+                            Wsparcie w języku polskim
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Alternatywnie można skorzystać z formularza kontaktowego lub wysłać wiadomość e-mail na adres podany w stopce strony. Czas odpowiedzi mailowej to zwykle do 24 godzin. Brakuje niestety dedykowanej polskojęzycznej linii wsparcia, co może być pewną barierą dla graczy, którzy nie czują się komfortowo w komunikacji po angielsku. Pod tym względem kasyno ma jeszcze pole do poprawy na rynku polskim.
+                            </p>
+                            <div className="bg-muted/50 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="Info" className="text-primary flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/70">
+                                  Jeśli nie mówisz biegle po angielsku, możesz skorzystać z narzędzi do tłumaczenia online – konsultanci są cierpliwi i pomagają rozwiązać problemy nawet w przypadku barier językowych.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
