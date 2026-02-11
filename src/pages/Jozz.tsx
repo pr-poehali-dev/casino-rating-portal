@@ -267,6 +267,121 @@ export default function Jozz() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Wallet" className="text-primary" size={28} />
+                        Wypłaty w Jozz – opinie użytkowników
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="CreditCard" className="text-primary" size={22} />
+                            Metody płatności i czas realizacji
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Kasyno udostępnia kilka metod wpłat i wypłat, w tym karty bankowe, portfele elektroniczne oraz kryptowaluty. Minimalny depozyt jest stosunkowo niski, co obniża barierę wejścia dla nowych graczy.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            Czas realizacji wypłat zależy od wybranej metody. Portfele elektroniczne i kryptowaluty to zazwyczaj najszybsza opcja – środki pojawiają się w ciągu kilku godzin do jednego dnia roboczego. Przelewy bankowe i karty mogą wymagać od dwóch do pięciu dni roboczych.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="MessageSquare" className="text-primary" size={22} />
+                            Co mówią gracze?
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            <strong className="text-primary">Jozz wypłaty opinie</strong> są mieszane, ale przeważają pozytywne komentarze. Gracze chwalą szybkość przelewów na portfele elektroniczne oraz przejrzystość warunków bonusowych. Wśród zastrzeżeń pojawiają się uwagi dotyczące procesu weryfikacji – niektórzy użytkownicy wspominają, że przy pierwszej wypłacie konieczne jest przesłanie dokumentów, co wydłuża oczekiwanie.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            Ogólnie <strong className="text-primary">Jozz casino opinie</strong> wskazują, że platforma działa stabilnie, a większość problemów rozwiązywana jest przez obsługę klienta w rozsądnym czasie. Jak w przypadku każdego kasyna online, warto zachować ostrożność i grać odpowiedzialnie.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Smartphone" className="text-primary" size={28} />
+                        Aplikacja Jozz i wersja mobilna
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Download" className="text-primary" size={22} />
+                            Czy jest dedykowana aplikacja?
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Wielu graczy pyta o to, czy istnieje <strong className="text-primary">Jozz aplikacja</strong> do pobrania na telefon. Na ten moment kasyno nie oferuje natywnej aplikacji w Google Play ani App Store. Jednak <strong className="text-primary">Jozz app download</strong> jest możliwy w formie pliku APK bezpośrednio ze strony kasyna – dotyczy to urządzeń z Androidem.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Globe" className="text-primary" size={22} />
+                            Wersja mobilna w przeglądarce
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Alternatywą jest mobilna wersja strony, która działa w pełni responsywnie na smartfonach i tabletach. Interfejs dostosowuje się do rozmiaru ekranu, a wszystkie funkcje – od rejestracji po wypłaty – są dostępne bez ograniczeń. W praktyce gra przez przeglądarkę mobilną jest wygodna i nie wymaga instalowania niczego dodatkowego.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Globe" className="text-primary" size={28} />
+                        Oficjalna strona Jozz i działający link
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Search" className="text-primary" size={22} />
+                            Jak znaleźć aktualny adres?
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            <strong className="text-primary">Jozz oficjalna strona</strong> może zmieniać adres URL ze względu na ograniczenia regionalne. Dlatego gracze czasem szukają hasła <strong className="text-primary">Jozz działający link</strong>, aby dotrzeć do aktualnej wersji serwisu. Najlepszym sposobem jest korzystanie z zakładek w przeglądarce po znalezieniu zweryfikowanego adresu lub subskrypcja newslettera kasyna.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Link" className="text-primary" size={22} />
+                            Czym jest mirror?
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            <strong className="text-primary">Jozz mirror polska</strong> to tak zwane lustrzane kopie strony, które zawierają identyczną zawartość i funkcjonalność co oryginał, ale działają pod innym adresem. Mirrory służą zapewnieniu ciągłego dostępu do platformy. Korzystając z nich, warto upewnić się, że link pochodzi z oficjalnego źródła – unikniemy w ten sposób stron phishingowych.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Headphones" className="text-primary" size={28} />
+                        Kontakt z Jozz
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="MessageCircle" className="text-primary" size={22} />
+                            Formy kontaktu i jakość obsługi
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            <strong className="text-primary">Jozz kontakt</strong> jest dostępny przede wszystkim poprzez czat na żywo, który działa całodobowo. To najszybszy sposób na uzyskanie pomocy – odpowiedzi pojawiają się zwykle w ciągu kilku minut. Dodatkowo można wysłać wiadomość na adres e-mail podany na stronie kasyna.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            Obsługa klienta komunikuje się w kilku językach. Jakość wsparcia oceniana jest przez graczy jako przyzwoita – konsultanci potrafią rozwiązać większość typowych problemów związanych z kontem, bonusami czy wypłatami. W przypadku bardziej złożonych spraw czas oczekiwania na odpowiedź mailową wynosi do 24 godzin.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
