@@ -267,6 +267,85 @@ export default function Booi() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Wallet" className="text-primary" size={28} />
+                        Wypłaty w Booi – opinie użytkowników
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="CreditCard" className="text-primary" size={22} />
+                            Dostępne metody płatności
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed mb-4">
+                            Temat finansów to zawsze kluczowa kwestia. <strong className="text-primary">Booi wypłaty opinie</strong> w sieci są mieszane, ale przeważają pozytywne głosy. Kasyno obsługuje kilka metod płatności popularnych w Polsce:
+                          </p>
+                          <ul className="space-y-2 text-foreground/80">
+                            <li className="flex items-start gap-2">
+                              <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={16} />
+                              <span>Karty Visa i Mastercard</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={16} />
+                              <span>Portfele elektroniczne (Skrill, Neteller, ecoPayz)</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={16} />
+                              <span>Kryptowaluty (Bitcoin, Ethereum, Litecoin, USDT)</span>
+                            </li>
+                            <li className="flex items-start gap-2">
+                              <Icon name="Check" className="text-primary mt-1 flex-shrink-0" size={16} />
+                              <span>Przelewy bankowe</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="MessageSquare" className="text-primary" size={22} />
+                            Czas realizacji i doświadczenia graczy
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Minimalna kwota wypłaty zależy od metody – dla portfeli elektronicznych to zazwyczaj około 20 EUR, dla kryptowalut bywa niższa. Czas realizacji wypłat wynosi od kilku godzin do 3 dni roboczych. Kryptowaluty przetwarzane są najszybciej – często w ciągu godziny po zatwierdzeniu.
+                          </p>
+                          <p className="text-foreground/80 leading-relaxed mt-4">
+                            <strong className="text-primary">Booi casino opinie</strong> dotyczące wypłat wskazują, że pierwsza transakcja trwa dłużej ze względu na weryfikację dokumentów. Kolejne przechodzą sprawniej. Sporadycznie pojawiają się skargi na opóźnienia przy większych kwotach, ale nie odbiegają one od standardów branży.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Smartphone" className="text-primary" size={28} />
+                        Booi casino mobile – aplikacja i wersja mobilna
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Globe" className="text-primary" size={22} />
+                            Wersja przeglądarkowa na telefonie
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Coraz więcej graczy korzysta z kasyna na telefonie, dlatego wersja mobilna ma duże znaczenie. <strong className="text-primary">Booi casino mobile</strong> działa przez przeglądarkę – strona jest w pełni responsywna i dostosowuje się do ekranów smartfonów i tabletów. Ładowanie gier na urządzeniach mobilnych przebiega płynnie, choć starsze modele telefonów mogą odczuwać lekkie spowolnienia przy bardziej rozbudowanych slotach.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Download" className="text-primary" size={22} />
+                            Aplikacja na Androida i iOS
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Czy istnieje dedykowana <strong className="text-primary">booi aplikacja</strong>? Kasyno udostępnia plik APK do pobrania na urządzenia z Androidem. <strong className="text-primary">Booi app download</strong> jest dostępny bezpośrednio ze strony kasyna – nie znajdziesz go w Google Play ze względu na politykę sklepu wobec aplikacji hazardowych. Na iOS brak natywnej aplikacji, ale wersja przeglądarkowa na Safari działa bez zastrzeżeń. Można ją dodać do ekranu głównego jako skrót, co w praktyce daje wrażenie korzystania z osobnej apki.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
