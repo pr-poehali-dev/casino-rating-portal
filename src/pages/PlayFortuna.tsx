@@ -346,6 +346,45 @@ export default function PlayFortuna() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Globe" className="text-primary" size={28} />
+                        Oficjalna strona PlayFortuna i działający link
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Search" className="text-primary" size={22} />
+                            Jak znaleźć aktualny adres?
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            PlayFortuna oficjalna strona zmienia adres stosunkowo rzadko, ale warto wiedzieć, jak znaleźć aktualny działający link. Najlepszym źródłem jest newsletter kasyna lub zaufane strony z recenzjami, które aktualizują adresy na bieżąco.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Link" className="text-primary" size={22} />
+                            Mirror – czym jest i czy jest bezpieczny?
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              PlayFortuna mirror Polska to termin opisujący tak zwane lustra – alternatywne adresy URL prowadzące do tego samego serwisu. Korzystanie z nich jest bezpieczne, o ile link pochodzi z wiarygodnego źródła. Należy unikać adresów z nieznanych forów czy podejrzanych reklam, ponieważ mogą prowadzić do stron phishingowych. PlayFortuna działający link zawsze powinien mieć aktywny certyfikat SSL – zielona kłódka w przeglądarce to minimum, które warto sprawdzić.
+                            </p>
+                            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="ShieldCheck" className="text-primary flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-primary">Bezpieczeństwo przede wszystkim:</strong> zawsze sprawdzaj, czy strona ma aktywne szyfrowanie HTTPS (zielona kłódka w pasku adresu). Unikaj linków z niezaufanych źródeł – lepiej poczekać na oficjalny newsletter niż ryzykować.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
