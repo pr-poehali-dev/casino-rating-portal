@@ -31,15 +31,15 @@ export default function PlayFortuna() {
   const casinoUrl = 'https://fortuna-promo1.net/alt/pf_new_year_new_ru/?ab4caec10f6f2577c5ad134c05b3b019';
 
   useEffect(() => {
-    document.title = 'Play Fortuna kasyno online – opinie, bonusy i rejestracja';
+    document.title = 'PlayFortuna kasyno online – opinie i bonus na start';
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Play Fortuna kasyno online w Polsce – opinie graczy, bonusy, rejestracja i wypłaty.');
+      metaDescription.setAttribute('content', 'PlayFortuna kasyno online w Polsce – sprawdź opinie, bonus bez depozytu, darmowe spiny, rejestrację i szybkie wypłaty.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Play Fortuna kasyno online w Polsce – opinie graczy, bonusy, rejestracja i wypłaty.';
+      meta.content = 'PlayFortuna kasyno online w Polsce – sprawdź opinie, bonus bez depozytu, darmowe spiny, rejestrację i szybkie wypłaty.';
       document.head.appendChild(meta);
     }
   }, []);
