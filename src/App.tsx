@@ -18,6 +18,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogBonusPowitalny from "./pages/BlogBonusPowitalny";
 import BlogWagering from "./pages/BlogWagering";
+import BlogNoDeposit from "./pages/BlogNoDeposit";
 import NotFound from "./pages/NotFound";
 import AgeConfirmationModal from "./components/AgeConfirmationModal";
 
@@ -44,6 +45,7 @@ const App = () => (
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/jak-dziala-bonus-powitalny" element={<BlogBonusPowitalny />} />
         <Route path="/blog/czym-jest-wagering" element={<BlogWagering />} />
+        <Route path="/blog/czy-bonus-bez-depozytu-sie-oplaca" element={<BlogNoDeposit />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

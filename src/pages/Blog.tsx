@@ -19,6 +19,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 5,
+    title: 'Czy bonus bez depozytu się opłaca?',
+    excerpt: 'Bonus bez depozytu to promocja, która pozwala grać bez wpłaty. Sprawdź, czy rzeczywiście jest tak korzystny, jak obiecują kasyna i kiedy warto z niego skorzystać.',
+    category: 'Bonusy',
+    date: '11 lutego 2026',
+    readTime: '8 min',
+    image: 'nodeposit',
+    author: 'Redakcja bkreiting.com',
+    slug: 'czy-bonus-bez-depozytu-sie-oplaca'
+  },
+  {
     id: 4,
     title: 'Czym jest wagering i jak go obliczyć?',
     excerpt: 'Bonusy w kasynach online wyglądają kusząco, ale niemal każda promocja wiąże się z wageringiem. Dowiedz się, czym jest wymagany obrót bonusem i jak go prawidłowo obliczyć.',
@@ -176,6 +187,11 @@ export default function Blog() {
                   className="bg-card border-border hover:border-primary/50 transition-all hover:scale-105 cursor-pointer overflow-hidden group"
                 >
                   <div className="relative overflow-hidden h-48">
+                    {post.image === 'nodeposit' && (
+                      <div className="w-full h-full bg-gradient-to-br from-secondary/20 via-primary/10 to-primary/20 flex items-center justify-center">
+                        <Icon name="Gift" className="text-primary opacity-30" size={80} />
+                      </div>
+                    )}
                     {post.image === 'wagering' && (
                       <img 
                         src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/b9bf7684-0c17-4bc2-949a-c531dfe9e221.jpg"
