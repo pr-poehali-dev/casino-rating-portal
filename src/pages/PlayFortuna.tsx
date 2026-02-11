@@ -317,6 +317,35 @@ export default function PlayFortuna() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Smartphone" className="text-primary" size={28} />
+                        Aplikacja PlayFortuna i wersja mobilna
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Download" className="text-primary" size={22} />
+                            Pobieranie aplikacji na Android
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            PlayFortuna aplikacja mobilna to temat, który budzi sporo pytań. Na chwilę obecną kasyno nie oferuje natywnej aplikacji dostępnej w Google Play ani App Store – co wynika z restrykcyjnej polityki tych sklepów wobec aplikacji hazardowych. PlayFortuna app download jest możliwy wyłącznie poprzez plik APK pobierany bezpośrednio ze strony kasyna, co dotyczy urządzeń z systemem Android.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Apple" className="text-primary" size={22} />
+                            Wersja mobilna na iOS
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Użytkownicy iOS korzystają z wersji przeglądarkowej, która jest responsywna i w praktyce działa jak aplikacja webowa. Można ją dodać do ekranu głównego telefonu dla szybkiego dostępu. Interfejs mobilny zachowuje pełną funkcjonalność – od rejestracji i wpłat po grę na automatach i kontakt z obsługą. Jakość działania zależy głównie od stabilności połączenia internetowego, samo kasyno ładuje się sprawnie nawet na starszych smartfonach.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
