@@ -335,6 +335,37 @@ export default function BlogWagering() {
               url={typeof window !== 'undefined' ? window.location.href : ''}
             />
 
+            <div className="my-12 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-8">
+              <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+                <div className="flex-shrink-0">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/30 blur-xl rounded-full"></div>
+                    <div className="relative bg-gradient-to-br from-primary via-primary/90 to-secondary p-5 rounded-2xl">
+                      <Icon name="Send" className="text-primary-foreground" size={40} />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-2">
+                    Podobał Ci się artykuł?
+                  </h3>
+                  <p className="text-foreground/70 mb-4">
+                    Dołącz do naszego kanału Telegram i otrzymuj więcej porad, ekskluzywnych bonusów i aktualności!
+                  </p>
+                  <Button 
+                    asChild
+                    size="lg"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  >
+                    <a href="https://t.me/bkreitingcom" target="_blank" rel="noopener noreferrer">
+                      <Icon name="Send" className="mr-2" size={20} />
+                      Dołącz do Kanału Telegram
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+
             <BlogCasinoRecommendations />
 
             <BlogRelatedPosts currentPostId={4} category="Bonusy" />

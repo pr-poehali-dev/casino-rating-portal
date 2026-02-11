@@ -264,30 +264,29 @@ export default function Blog() {
                   <div className="relative">
                     <div className="absolute inset-0 bg-primary/30 blur-xl rounded-full"></div>
                     <div className="relative bg-gradient-to-br from-primary via-primary/90 to-secondary p-6 rounded-2xl">
-                      <Icon name="Mail" className="text-primary-foreground" size={48} />
+                      <Icon name="Send" className="text-primary-foreground" size={48} />
                     </div>
                   </div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                    Zapisz się do newslettera
+                    Dołącz do Kanału Telegram
                   </h3>
                   <p className="text-foreground/70 mb-4">
-                    Otrzymuj najnowsze artykuły, ekskluzywne bonusy i poradniki ekspertów prosto na swoją skrzynkę
+                    Otrzymuj najnowsze artykuły, ekskluzywne bonusy i porady ekspertów bezpośrednio na Telegram
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto md:mx-0">
-                    <input 
-                      type="email" 
-                      placeholder="Twój adres e-mail"
-                      className="flex-1 px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:border-primary"
-                    />
-                    <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-6">
-                      <Icon name="Send" className="mr-2" size={18} />
-                      Zapisz się
-                    </Button>
-                  </div>
+                  <Button 
+                    asChild
+                    size="lg"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  >
+                    <a href="https://t.me/bkreitingcom" target="_blank" rel="noopener noreferrer">
+                      <Icon name="Send" className="mr-2" size={20} />
+                      Dołącz do Kanału
+                    </a>
+                  </Button>
                   <p className="text-xs text-foreground/50 mt-3">
-                    Gwarantujemy prywatność. Bez spamu.
+                    Aktualne bonusy i porady w jednym miejscu
                   </p>
                 </div>
               </div>
