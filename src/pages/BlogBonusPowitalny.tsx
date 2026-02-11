@@ -107,13 +107,112 @@ export default function BlogBonusPowitalny() {
                   Czy każdy gracz może otrzymać taki bonus? Teoretycznie tak — wystarczy być nowym użytkownikiem danej platformy. W praktyce jednak istnieje szereg wymagań, które trzeba spełnić. Przyjrzyjmy się temu bliżej.
                 </p>
 
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                  <Icon name="Package" className="text-primary" size={32} />
+                  Rodzaje bonusów kasynowych dla nowych graczy
+                </h2>
+
+                <p className="text-lg">
+                  Nie każdy bonus powitalny wygląda tak samo. Kasyna internetowe stosują różne formuły, dopasowując oferty do preferencji różnych grup graczy. Poniżej opisuję najczęściej spotykane rodzaje bonusów kasynowych, z którymi możesz się zetknąć w 2026 roku.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="DollarSign" className="text-primary" size={24} />
+                  Bonus od depozytu
+                </h3>
+
+                <p className="text-lg">
+                  To najpopularniejsza forma. Kasyno dopłaca określony procent do Twojej pierwszej wpłaty — najczęściej 100%, ale zdarzają się oferty na 150% czy nawet 200%. Jeśli wpłacisz 200 zł przy bonusie 100%, otrzymasz dodatkowe 200 zł do gry. Brzmi świetnie, ale pamiętaj — te środki bonusowe nie trafiają od razu do wypłaty. Bonus od depozytu zawsze wiąże się z warunkami obrotu, o których napiszę w dalszej części artykułu.
+                </p>
+
+                <p className="text-lg">
+                  Niektóre kasyna dzielą bonus na kilka pierwszych depozytów — np. pakiet powitalny obejmujący trzy czy cztery wpłaty z różnymi procentami i limitami. To sposób na dłuższe utrzymanie gracza na platformie.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="Gift" className="text-primary" size={24} />
+                  Bonus bez depozytu na start
+                </h3>
+
+                <p className="text-lg">
+                  To oferta, która nie wymaga żadnej wpłaty. Bonus bez depozytu na start przyznawany jest za samą rejestrację konta. Kwoty są zwykle niewielkie — od 10 do 50 zł — ale pozwalają przetestować kasyno bez angażowania własnych pieniędzy. Warto jednak wiedzieć, że takie bonusy mają z reguły wyższe wymagania dotyczące obrotu oraz niskie limity wypłat.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="Sparkles" className="text-primary" size={24} />
+                  Darmowe spiny za rejestrację
+                </h3>
+
+                <p className="text-lg">
+                  Zamiast gotówki bonusowej kasyno może przyznać darmowe spiny za rejestrację — najczęściej na konkretny automat lub grupę slotów. Ilość spinów waha się od 20 do nawet 200. Wygrane z darmowych obrotów również podlegają warunkom wagera, więc nie traktuj ich jako czystego zysku. To raczej okazja do zapoznania się z grami bez ryzyka finansowego.
+                </p>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                  <Icon name="CheckCircle2" className="text-primary" size={32} />
+                  Jak odebrać i aktywować bonus powitalny?
+                </h2>
+
+                <p className="text-lg">
+                  Proces odbioru bonusu wygląda dość podobnie w większości kasyn internetowych. Warto jednak znać poszczególne kroki, żeby nie popełnić błędu, który pozbawi Cię oferty. Oto jak odebrać bonus na start — krok po kroku.
+                </p>
+
+                <div className="bg-card/50 border border-primary/20 rounded-xl p-6 my-8 space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">1</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-2">Rejestracja</h4>
+                      <p className="text-foreground/80">
+                        Zakładasz konto, podając prawdziwe dane. Kasyna weryfikują tożsamość, więc fałszywe informacje mogą skutkować blokadą konta i utratą bonusu.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">2</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-2">Minimalny depozyt</h4>
+                      <p className="text-foreground/80">
+                        Większość bonusów od depozytu wymaga wpłaty minimalnej kwoty. Minimalny depozyt do bonusu to zwykle 40–80 zł, choć zdarza się mniej lub więcej. Sprawdź regulamin przed wpłatą — zbyt niska kwota może oznaczać, że bonus się nie aktywuje.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">3</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-2">Kod promocyjny</h4>
+                      <p className="text-foreground/80">
+                        Niektóre kasyna wymagają wpisania specjalnego kodu przy rejestracji lub wpłacie. Jeśli oferta wspomina o kodzie promocyjnym, upewnij się, że go wpisałeś poprawnie. W 2026 roku coraz więcej kasyn rezygnuje z kodów na rzecz automatycznej aktywacji, ale nadal warto to sprawdzić.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">4</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-2">Aktywacja</h4>
+                      <p className="text-foreground/80">
+                        Bonus pojawia się na koncie automatycznie lub po ręcznej aktywacji w panelu gracza. Jak aktywować bonus powitalny? Najczęściej wystarczy kliknąć odpowiedni przycisk w zakładce „Promocje" lub „Bonusy" albo napisać do obsługi klienta. Czas aktywacji bywa ograniczony — np. 24–72 godziny od rejestracji.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-6 my-8">
                   <div className="flex items-start gap-3">
                     <Icon name="AlertCircle" className="text-primary flex-shrink-0 mt-1" size={24} />
                     <div>
                       <p className="font-semibold text-primary mb-2">Ważna informacja</p>
                       <p className="text-foreground/80">
-                        Artykuł w trakcie tworzenia. Wkrótce pojawi się pełna treść z dodatkowymi sekcjami i praktycznymi przykładami.
+                        Artykuł w trakcie tworzenia. Wkrótce pojawi się więcej treści z dodatkowymi sekcjami o warunkach obrotu i praktycznymi przykładami.
                       </p>
                     </div>
                   </div>
