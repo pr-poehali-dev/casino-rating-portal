@@ -10,6 +10,7 @@ import AdminPanel from "./pages/AdminPanel";
 import AdminSetup from "./pages/AdminSetup";
 import Vavada from "./pages/Vavada";
 import PlayFortuna from "./pages/PlayFortuna";
+import Booi from "./pages/Booi";
 import NotFound from "./pages/NotFound";
 import AgeConfirmationModal from "./components/AgeConfirmationModal";
 
@@ -28,6 +29,7 @@ const App = () => (
         <Route path="/admin/setup" element={<AdminSetup />} />
         <Route path="/vavada" element={<Vavada />} />
         <Route path="/play-fortuna" element={<PlayFortuna />} />
+        <Route path="/booi" element={<Booi />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
