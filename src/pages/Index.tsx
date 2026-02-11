@@ -1250,11 +1250,181 @@ export default function Index() {
               </div>
             </TabsContent>
 
-            <TabsContent value="gry" className="mt-8">
-              <div className="text-center py-20">
-                <Icon name="Gamepad2" className="mx-auto text-primary mb-4" size={64} />
-                <h3 className="text-2xl font-bold mb-2">{t.gamesSection}</h3>
-                <p className="text-foreground/70">{t.thousandsOfGames}</p>
+            <TabsContent value="gry" className="mt-8 space-y-8">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold mb-2">Katalog Gier Kasynowych</h3>
+                <p className="text-foreground/70">Tysiące slotów, gier stołowych i live casino w jednym miejscu</p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20 hover:border-primary/40 transition-all hover:scale-105 cursor-pointer">
+                  <CardHeader>
+                    <div className="flex items-center justify-center w-16 h-16 mx-auto bg-primary/20 rounded-2xl mb-4">
+                      <Icon name="Dices" className="text-primary" size={32} />
+                    </div>
+                    <CardTitle className="text-center text-2xl">Automaty do Gier</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-center text-foreground/70">
+                      Ponad 3000+ slotów od najlepszych producentów
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Book of Dead</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Gates of Olympus</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Sweet Bonanza</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Starburst</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Gonzo's Quest</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gradient-to-br from-secondary/10 to-secondary/5 border-secondary/20 hover:border-secondary/40 transition-all hover:scale-105 cursor-pointer">
+                  <CardHeader>
+                    <div className="flex items-center justify-center w-16 h-16 mx-auto bg-secondary/20 rounded-2xl mb-4">
+                      <Icon name="Video" className="text-primary" size={32} />
+                    </div>
+                    <CardTitle className="text-center text-2xl">Live Casino</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-center text-foreground/70">
+                      Prawdziwi krupierzy w czasie rzeczywistym
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Live Ruletka</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Live Blackjack</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Live Baccarat</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Mega Ball</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Monopoly Live</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20 hover:border-primary/40 transition-all hover:scale-105 cursor-pointer">
+                  <CardHeader>
+                    <div className="flex items-center justify-center w-16 h-16 mx-auto bg-primary/20 rounded-2xl mb-4">
+                      <Icon name="Spade" className="text-primary" size={32} />
+                    </div>
+                    <CardTitle className="text-center text-2xl">Gry Stołowe</CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-center text-foreground/70">
+                      Klasyczne gry karciane i stołowe
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Poker (Texas Hold'em)</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Ruletka Europejska</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Blackjack Classic</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Baccarat</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Sic Bo</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="max-w-6xl mx-auto">
+                <Card className="border-primary/20">
+                  <CardHeader>
+                    <CardTitle className="text-2xl flex items-center gap-2">
+                      <Icon name="Trophy" className="text-primary" size={28} />
+                      Top Producenci Gier
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                      {[
+                        { name: 'Pragmatic Play', games: '500+' },
+                        { name: 'NetEnt', games: '300+' },
+                        { name: "Play'n GO", games: '400+' },
+                        { name: 'Evolution Gaming', games: '200+' },
+                        { name: 'Microgaming', games: '600+' },
+                        { name: 'Yggdrasil', games: '250+' },
+                        { name: 'Red Tiger', games: '300+' },
+                        { name: 'Quickspin', games: '150+' }
+                      ].map((provider, idx) => (
+                        <div key={idx} className="bg-muted/30 rounded-lg p-4 text-center hover:bg-primary/10 transition-colors cursor-pointer">
+                          <p className="font-semibold">{provider.name}</p>
+                          <p className="text-sm text-primary">{provider.games} gier</p>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-8 max-w-4xl mx-auto">
+                <div className="flex items-start gap-4">
+                  <Icon name="Lightbulb" className="text-primary mt-1 flex-shrink-0" size={32} />
+                  <div className="space-y-3">
+                    <h4 className="text-xl font-bold">Jak wybrać najlepszą grę kasynową?</h4>
+                    <ul className="space-y-2 text-foreground/80">
+                      <li className="flex items-start gap-2">
+                        <Icon name="ChevronRight" className="text-primary mt-1 flex-shrink-0" size={16} />
+                        <span><strong>RTP (Return to Player)</strong> – wybieraj gry z RTP powyżej 96%</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="ChevronRight" className="text-primary mt-1 flex-shrink-0" size={16} />
+                        <span><strong>Zmienność</strong> – niska zmienność = częste małe wygrane, wysoka = rzadkie duże</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="ChevronRight" className="text-primary mt-1 flex-shrink-0" size={16} />
+                        <span><strong>Darmowe spiny</strong> – testuj gry w wersji demo przed grą na prawdziwe</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <Icon name="ChevronRight" className="text-primary mt-1 flex-shrink-0" size={16} />
+                        <span><strong>Producent</strong> – sprawdzeni dostawcy = uczciwe generatory liczb losowych</span>
+                      </li>
+                    </ul>
+                    <p className="text-sm text-foreground/60 pt-2 border-t border-primary/20">
+                      <Icon name="AlertCircle" className="inline mr-1" size={14} />
+                      Wszystkie gry w polecanych przez nas kasynach są certyfikowane i uczciwe
+                    </p>
+                  </div>
+                </div>
               </div>
             </TabsContent>
 
