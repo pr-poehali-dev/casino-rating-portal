@@ -182,6 +182,50 @@ export default function BlogWagering() {
                   W przypadku free spinów wagering odnosi się zazwyczaj do kwoty wygranej, a nie do liczby spinów. To częsty punkt nieporozumień.
                 </p>
 
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Jak działa mnożnik?</h3>
+                
+                <p className="text-lg">
+                  Mnożnik to po prostu liczba, która określa, ile razy trzeba postawić daną kwotę. Im wyższy mnożnik, tym więcej trzeba zagrać. Wagering x20 jest uznawany za stosunkowo niski i korzystny. Wartość x30–x35 to standard rynkowy. Mnożnik x40 i wyżej oznacza już poważne wymagania, które trudniej spełnić.
+                </p>
+
+                <p className="text-lg">
+                  Warto pamiętać, że obrót to łączna suma zakładów, nie strat. Jeśli postawisz 50 zł i wygrasz 60 zł, a potem postawisz te 60 zł — Twój obrót wynosi 110 zł. Środki „krążą" w grze, co oznacza, że nie musisz dysponować pełną kwotą obrotu jednocześnie.
+                </p>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Jakie gry liczą się do wageringu?</h2>
+                
+                <p className="text-lg">
+                  Nie każda gra w kasynie przyczynia się w równym stopniu do realizacji wymaganego obrotu. Kasyna określają tzw. procentowy wkład poszczególnych kategorii gier — i to kolejny element, który warto znać przed rozpoczęciem gry z bonusem.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Automaty online — zazwyczaj 100%</h3>
+                
+                <p className="text-lg">
+                  W zdecydowanej większości przypadków gry na automatach (sloty) liczą się do wageringu w 100%. Oznacza to, że każda postawiona złotówka w pełni zalicza się do wymaganego obrotu. To dlatego automaty są najczęściej wybierane przez graczy realizujących warunki bonusu.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Gry stołowe — częściowy wkład</h3>
+                
+                <p className="text-lg mb-3">
+                  Ruletka, blackjack, bakarat i poker w wersji kasynowej najczęściej mają obniżony wkład do wageringu. Typowe wartości to:
+                </p>
+
+                <div className="bg-card border border-primary/20 rounded-lg p-5 my-4 space-y-2">
+                  <p className="text-lg"><strong className="text-primary">Ruletka</strong> — 10–20% wkładu</p>
+                  <p className="text-lg"><strong className="text-primary">Blackjack</strong> — 5–10% wkładu</p>
+                  <p className="text-lg"><strong className="text-primary">Bakarat</strong> — 5–15% wkładu</p>
+                </div>
+
+                <p className="text-lg">
+                  W praktyce oznacza to, że postawienie 100 zł w blackjacku przy wkładzie 10% zalicza jedynie 10 zł do wymaganego obrotu. Spełnienie wageringu grając wyłącznie w gry stołowe jest więc znacznie trudniejsze i bardziej czasochłonne.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Gry wykluczone</h3>
+                
+                <p className="text-lg">
+                  Niektóre tytuły lub kategorie gier mogą być całkowicie wyłączone z realizacji wageringu. Często dotyczy to wybranych automatów o wysokim RTP, gier z jackpotem progresywnym lub określonych wariantów ruletki. Gra w wykluczone tytuły nie tylko nie zalicza obrotu, ale w wielu przypadkach może prowadzić do utraty bonusu i wygranych.
+                </p>
+
                 <div className="bg-primary/10 border-l-4 border-primary rounded-lg p-6 my-8">
                   <p className="text-lg font-semibold text-primary mb-2 flex items-center gap-2">
                     <Icon name="Info" size={20} />
