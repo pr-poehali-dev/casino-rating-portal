@@ -177,9 +177,11 @@ export default function Blog() {
                 >
                   <div className="relative overflow-hidden h-48">
                     {post.image === 'wagering' && (
-                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-secondary/10 to-primary/20 flex items-center justify-center">
-                        <Icon name="Calculator" className="text-primary opacity-30" size={80} />
-                      </div>
+                      <img 
+                        src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/b9bf7684-0c17-4bc2-949a-c531dfe9e221.jpg"
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                      />
                     )}
                     {post.image === 'slots' && (
                       <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center">
