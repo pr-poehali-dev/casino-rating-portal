@@ -226,15 +226,102 @@ export default function BlogWagering() {
                   Niektóre tytuły lub kategorie gier mogą być całkowicie wyłączone z realizacji wageringu. Często dotyczy to wybranych automatów o wysokim RTP, gier z jackpotem progresywnym lub określonych wariantów ruletki. Gra w wykluczone tytuły nie tylko nie zalicza obrotu, ale w wielu przypadkach może prowadzić do utraty bonusu i wygranych.
                 </p>
 
-                <div className="bg-primary/10 border-l-4 border-primary rounded-lg p-6 my-8">
-                  <p className="text-lg font-semibold text-primary mb-2 flex items-center gap-2">
-                    <Icon name="Info" size={20} />
-                    Więcej treści w drodze
-                  </p>
-                  <p className="text-foreground/80">
-                    Pracujemy nad kolejnymi sekcjami tego artykułu. Wkrótce dodamy więcej porad i przykładów dotyczących wageringu.
-                  </p>
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Najczęstsze błędy graczy</h2>
+                
+                <p className="text-lg">
+                  Nawet doświadczeni gracze popełniają błędy związane z wageringiem. Poniżej najczęstsze z nich — i każdego da się uniknąć, jeśli poświęci się kilka minut na przeczytanie zasad.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Pominięcie regulaminu bonusu</h3>
+                
+                <p className="text-lg">
+                  To błąd numer jeden. Warunki obrotu, lista wykluczonych gier, limit czasowy — wszystko zapisane jest w regulaminie promocji. Ignorowanie go prowadzi do frustracji w momencie, gdy kasyno odmawia wypłaty. Każdy bonus ma swoje zasady i warto je znać przed aktywacją, nie po.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Zbyt wysokie stawki</h3>
+                
+                <p className="text-lg">
+                  Wiele bonusów zawiera maksymalny limit stawki — np. 20 zł lub 25 zł na spin. Przekroczenie tego limitu, nawet jednorazowo, może skutkować anulowaniem bonusu i wszystkich wygranych. Gracz może nawet nie zdawać sobie sprawy, że postawił za dużo, dlatego warto to sprawdzić na samym początku.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Przekroczenie limitu wygranej</h3>
+                
+                <p className="text-lg">
+                  Niektóre promocje mają określony maksymalny limit wypłaty z bonusu. Nawet jeśli uda się wygrać 5000 zł, a limit wynosi 1000 zł — reszta zostanie anulowana. To nie oszustwo ze strony kasyna, a warunek zapisany w regulaminie.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Próba wypłaty przed spełnieniem warunków</h3>
+                
+                <p className="text-lg">
+                  Złożenie wniosku o wypłatę przed pełnym zrealizowaniem obrotu może w niektórych kasynach spowodować utratę bonusu i powiązanych wygranych. Zanim klikniesz „wypłać", upewnij się, że wagering został w pełni rozliczony — większość kasyn pokazuje postęp realizacji w panelu gracza.
+                </p>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Czy wysoki wagering się opłaca?</h2>
+                
+                <p className="text-lg">
+                  To pytanie, które warto sobie zadać przed każdą aktywacją bonusu. Odpowiedź nie jest jednoznaczna i zależy od kilku czynników.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Kiedy bonus ma sens?</h3>
+                
+                <p className="text-lg">
+                  Bonus z wageringiem x20 lub x25 jest statystycznie łatwiejszy do zrealizowania. Przy niskim mnożniku gracz ma realną szansę spełnić warunki obrotu, zanim środki bonusowe się wyczerpią. Jeśli dodatkowo nie ma restrykcyjnych limitów stawki ani wygranej, taki bonus może faktycznie przedłużyć czas gry i dać dodatkowe szanse.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Kiedy lepiej grać bez bonusu?</h3>
+                
+                <p className="text-lg">
+                  Przy wageringu x40 i wyżej matematyka staje się mniej korzystna. Wysoki mnożnik oznacza, że trzeba postawić bardzo dużą sumę, a przy standardowej przewadze kasyna znaczna część środków bonusowych zostanie „zjedzona" zanim obrót się zakończy. W takich przypadkach gra bez bonusu — z pełną swobodą wypłaty wygranych w dowolnym momencie — bywa rozsądniejszym wyborem.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Rozsądne podejście do promocji</h3>
+                
+                <p className="text-lg">
+                  Bonus to narzędzie marketingowe kasyna, nie gwarancja zysku. Traktowanie go jako dodatkowej rozrywki, a nie źródła dochodu, to jedyne zdrowe podejście. Warto porównać warunki, policzyć wymagany obrót i świadomie zdecydować, czy aktywacja się opłaca. Czasem najlepsza promocja to ta, z której się rezygnuje.
+                </p>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Na co zwrócić uwagę przed przyjęciem bonusu?</h2>
+                
+                <p className="text-lg">
+                  Zanim aktywujesz jakąkolwiek promocję, przejdź przez poniższą listę. Kilka minut poświęconych na analizę warunków może zaoszczędzić rozczarowania.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Praktyczny checklist gracza</h3>
+                
+                <div className="bg-card border border-primary/20 rounded-lg p-6 my-4 space-y-4">
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg"><strong className="text-primary">Wysokość mnożnika</strong> — im niższy, tym lepiej. Wagering x20–x25 to dobry standard. Powyżej x40 warto się zastanowić.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg"><strong className="text-primary">Podstawa naliczania obrotu</strong> — czy wagering dotyczy samego bonusu, czy bonusu i depozytu? To podwaja lub zmniejsza wymagany obrót.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg"><strong className="text-primary">Maksymalna stawka na zakład</strong> — przekroczenie limitu oznacza utratę bonusu. Sprawdź, ile możesz postawić na jeden spin lub rundę.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg"><strong className="text-primary">Limit czasowy</strong> — wiele bonusów trzeba obrócić w ciągu 7, 14 lub 30 dni. Po tym czasie bonus i wygrane przepadają.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg"><strong className="text-primary">Maksymalna wygrana z bonusu</strong> — nawet przy szczęśliwej sesji wypłata może być ograniczona do określonej kwoty.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg"><strong className="text-primary">Procentowy wkład gier</strong> — upewnij się, że gry, w które zamierzasz grać, w pełni liczą się do obrotu.</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-lg"><strong className="text-primary">Lista gier wykluczonych</strong> — jeden spin w wykluczonej grze może kosztować cały bonus.</p>
+                  </div>
                 </div>
+
+                <p className="text-lg mt-6">
+                  Świadomy gracz to taki, który podejmuje decyzje na podstawie informacji, a nie emocji. Wagering nie jest pułapką — pod warunkiem, że wiesz, jak go czytać i liczyć.
+                </p>
               </div>
             </div>
 
