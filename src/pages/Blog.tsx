@@ -19,6 +19,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 4,
+    title: 'Czym jest wagering i jak go obliczyć?',
+    excerpt: 'Bonusy w kasynach online wyglądają kusząco, ale niemal każda promocja wiąże się z wageringiem. Dowiedz się, czym jest wymagany obrót bonusem i jak go prawidłowo obliczyć.',
+    category: 'Bonusy',
+    date: '11 lutego 2026',
+    readTime: '7 min',
+    image: 'wagering',
+    author: 'Redakcja bkreiting.com',
+    slug: 'czym-jest-wagering'
+  },
+  {
     id: 2,
     title: 'Jak wybrać najlepszy slot online w 2026? Poradnik dla początkujących',
     excerpt: 'Automaty do gier to najpopularniejsza forma rozrywki w kasynach online. Dowiedz się, na co zwracać uwagę przy wyborze slotu, czym jest RTP i jak działają darmowe spiny.',
@@ -165,6 +176,11 @@ export default function Blog() {
                   className="bg-card border-border hover:border-primary/50 transition-all hover:scale-105 cursor-pointer overflow-hidden group"
                 >
                   <div className="relative overflow-hidden h-48">
+                    {post.image === 'wagering' && (
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-secondary/10 to-primary/20 flex items-center justify-center">
+                        <Icon name="Calculator" className="text-primary opacity-30" size={80} />
+                      </div>
+                    )}
                     {post.image === 'slots' && (
                       <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center">
                         <Icon name="Dices" className="text-primary opacity-30" size={80} />

@@ -17,6 +17,7 @@ import Privacy from "./pages/Privacy";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import BlogBonusPowitalny from "./pages/BlogBonusPowitalny";
+import BlogWagering from "./pages/BlogWagering";
 import NotFound from "./pages/NotFound";
 import AgeConfirmationModal from "./components/AgeConfirmationModal";
 
@@ -42,6 +43,7 @@ const App = () => (
         <Route path="/o-nas" element={<About />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/jak-dziala-bonus-powitalny" element={<BlogBonusPowitalny />} />
+        <Route path="/blog/czym-jest-wagering" element={<BlogWagering />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
