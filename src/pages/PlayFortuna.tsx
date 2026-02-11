@@ -153,43 +153,91 @@ export default function PlayFortuna() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    <div className="prose prose-lg max-w-none text-foreground/90">
-                      <p className="leading-relaxed">
-                        PlayFortuna to platforma hazardowa działająca na rynku od 2012 roku, która przez ostatnią dekadę zdążyła zbudować rozpoznawalną markę wśród graczy z Europy Wschodniej i Centralnej. Jako PlayFortuna online kasyno operuje na licencji Curaçao, co w praktyce oznacza, że polscy gracze mogą z niego korzystać, choć nie posiada ono lokalnej koncesji wydanej przez Ministerstwo Finansów. PlayFortuna casino Polska kieruje swoją ofertę przede wszystkim do osób szukających szerokiego katalogu automatów, regularnych promocji i stosunkowo prostego interfejsu bez zbędnych komplikacji.
+                    <div className="space-y-4">
+                      <p className="text-foreground/80 leading-relaxed">
+                        PlayFortuna to platforma hazardowa działająca na rynku od 2012 roku, która przez ostatnią dekadę zdążyła zbudować rozpoznawalną markę wśród graczy z Europy Wschodniej i Centralnej. Jako <strong className="text-primary">PlayFortuna online</strong> jest dostępne bez konieczności instalowania dodatkowego oprogramowania – wystarczy przeglądarka i połączenie z internetem.
                       </p>
-                      <p className="leading-relaxed">
-                        Warto od razu zaznaczyć – ten tekst powstał na podstawie analizy samej platformy, opinii z forów graczy i porównania z konkurencyjnymi serwisami. Nie jest to materiał sponsorowany.
+                      <p className="text-foreground/80 leading-relaxed">
+                        <strong className="text-primary">PlayFortuna casino Polska</strong> kieruje swoją ofertę przede wszystkim do osób szukających szerokiego katalogu automatów, regularnych promocji i stosunkowo prostego interfejsu bez zbędnych komplikacji. Platforma sprawdzi się zarówno dla początkujących, jak i dla bardziej doświadczonych graczy, którzy cenią sobie przejrzystość zasad.
                       </p>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="UserPlus" className="text-primary" size={28} />
+                        Rejestracja i logowanie w PlayFortuna
+                      </h2>
                       
-                      <h2 className="text-2xl font-bold mt-8 mb-4">Rejestracja i logowanie w PlayFortuna</h2>
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Edit" className="text-primary" size={22} />
+                            Jak założyć konto
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Proces zakładania konta w tym kasynie nie odbiega od standardów branżowych. PlayFortuna rejestracja wymaga podania adresu e-mail, hasła, waluty konta i kraju zamieszkania. Całość zajmuje dosłownie dwie-trzy minuty. Nie trzeba od razu przechodzić pełnej weryfikacji – ta wymagana jest dopiero przy pierwszej wypłacie, co jest normalną praktyką.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Lock" className="text-primary" size={22} />
+                            Logowanie i bezpieczeństwo
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            PlayFortuna logowanie odbywa się przez standardowy formularz na stronie głównej. Kasyno oferuje również opcję zapamiętania sesji na zaufanym urządzeniu. Pod względem bezpieczeństwa strona korzysta z szyfrowania SSL, a samo konto można dodatkowo zabezpieczyć silnym hasłem. Brakuje natomiast uwierzytelniania dwuskładnikowego (2FA), co w 2026 roku jest już pewnym minusem – wiele konkurencyjnych platform oferuje tę funkcję standardowo.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Gift" className="text-primary" size={28} />
+                        Bonusy w PlayFortuna – kod promocyjny i darmowe spiny
+                      </h2>
                       
-                      <p className="leading-relaxed">
-                        Proces zakładania konta w tym kasynie nie odbiega od standardów branżowych. PlayFortuna rejestracja wymaga podania adresu e-mail, hasła, waluty konta i kraju zamieszkania. Całość zajmuje dosłownie dwie-trzy minuty. Nie trzeba od razu przechodzić pełnej weryfikacji – ta wymagana jest dopiero przy pierwszej wypłacie, co jest normalną praktyką.
-                      </p>
-                      
-                      <p className="leading-relaxed">
-                        PlayFortuna logowanie odbywa się przez standardowy formularz na stronie głównej. Kasyno oferuje również opcję zapamiętania sesji na zaufanym urządzeniu. Pod względem bezpieczeństwa strona korzysta z szyfrowania SSL, a samo konto można dodatkowo zabezpieczyć silnym hasłem. Brakuje natomiast uwierzytelniania dwuskładnikowego (2FA), co w 2026 roku jest już pewnym minusem – wiele konkurencyjnych platform oferuje tę funkcję standardowo.
-                      </p>
-                      
-                      <h2 className="text-2xl font-bold mt-8 mb-4">Bonusy w PlayFortuna – kod promocyjny i darmowe spiny</h2>
-                      
-                      <h3 className="text-xl font-semibold mt-6 mb-3">Bonus powitalny i warunki obrotu</h3>
-                      
-                      <p className="leading-relaxed">
-                        PlayFortuna bonus na start w standardowej wersji daje dodatkowe środki oraz pulę darmowych spinów rozłożonych na kolejne wpłaty. Szczegóły zmieniają się w zależności od aktualnej kampanii, dlatego warto sprawdzić warunki bezpośrednio na stronie w momencie rejestracji. Warunki obrotu (wager) kształtują się zwykle na poziomie x30–x40, co plasuje kasyno w średniej półce branżowej. Nie jest to ani wyjątkowo korzystne, ani wygórowane.
-                      </p>
-                      
-                      <h3 className="text-xl font-semibold mt-6 mb-3">Bonus bez depozytu i darmowe spiny</h3>
-                      
-                      <p className="leading-relaxed">
-                        Gracze często pytają o PlayFortuna bonus bez depozytu. Takie oferty pojawiają się sporadycznie, najczęściej w ramach akcji sezonowych lub dla graczy powracających. Nie jest to stały element oferty, więc nie warto na nim polegać jako na gwarantowanym beneficie.
-                      </p>
-                      
-                      <h3 className="text-xl font-semibold mt-6 mb-3">Kody promocyjne</h3>
-                      
-                      <p className="leading-relaxed">
-                        Jeśli chodzi o PlayFortuna kod promocyjny i kody bonusowe – kasyno udostępnia je przez newsletter, kanały społecznościowe oraz strony partnerskie. Wpisanie kodu podczas rejestracji lub wpłaty może odblokować dodatkowe PlayFortuna darmowe spiny lub podwyższony bonus. Rada: przed aktywacją zawsze sprawdzajcie regulamin danej promocji, szczególnie listę gier, w których bonus można wykorzystać.
-                      </p>
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Sparkles" className="text-primary" size={22} />
+                            Bonus powitalny i warunki obrotu
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            PlayFortuna bonus na start w standardowej wersji daje dodatkowe środki oraz pulę darmowych spinów rozłożonych na kolejne wpłaty. Szczegóły zmieniają się w zależności od aktualnej kampanii, dlatego warto sprawdzić warunki bezpośrednio na stronie w momencie rejestracji. Warunki obrotu (wager) kształtują się zwykle na poziomie x30–x40, co plasuje kasyno w średniej półce branżowej. Nie jest to ani wyjątkowo korzystne, ani wygórowane.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Ticket" className="text-primary" size={22} />
+                            Bonus bez depozytu i darmowe spiny
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Gracze często pytają o PlayFortuna bonus bez depozytu. Takie oferty pojawiają się sporadycznie, najczęściej w ramach akcji sezonowych lub dla graczy powracających. Nie jest to stały element oferty, więc nie warto na nim polegać jako na gwarantowanym beneficie.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Tag" className="text-primary" size={22} />
+                            Kody promocyjne
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Jeśli chodzi o PlayFortuna kod promocyjny i kody bonusowe – kasyno udostępnia je przez newsletter, kanały społecznościowe oraz strony partnerskie. Wpisanie kodu podczas rejestracji lub wpłaty może odblokować dodatkowe PlayFortuna darmowe spiny lub podwyższony bonus.
+                            </p>
+                            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="Lightbulb" className="text-primary flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-primary">Praktyczna rada:</strong> przed aktywacją zawsze sprawdzajcie regulamin danej promocji, szczególnie listę gier, w których bonus można wykorzystać.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
