@@ -346,6 +346,84 @@ export default function Booi() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Globe" className="text-primary" size={28} />
+                        Oficjalna strona Booi i działający link
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Search" className="text-primary" size={22} />
+                            Jak znaleźć aktualny adres?
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Znalezienie właściwego adresu kasyna nie zawsze jest oczywiste. <strong className="text-primary">Booi oficjalna strona</strong> zmienia domenę – to praktyka stosowana przez kasyna działające na rynkach z ograniczeniami regulacyjnymi. Dlatego warto korzystać wyłącznie z zaufanych źródeł, żeby trafić na <strong className="text-primary">booi działający link</strong>.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Link" className="text-primary" size={22} />
+                            Mirror – co to jest i czy jest bezpieczny?
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Czym jest <strong className="text-primary">booi mirror polska</strong>? To po prostu alternatywny adres prowadzący do tej samej platformy, z tym samym kontem, saldem i ofertą. Mirrory są tworzone, by zapewnić ciągłość dostępu, gdy główna domena jest chwilowo niedostępna. Z perspektywy bezpieczeństwa – mirror prowadzony przez operatora jest tak samo bezpieczny jak strona główna. Problem pojawia się, gdy ktoś tworzy fałszywe kopie witryny. Dlatego nigdy nie loguj się przez linki z nieznanych źródeł i zawsze sprawdzaj certyfikat SSL w przeglądarce.
+                            </p>
+                            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="ShieldCheck" className="text-primary flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-primary">Bezpieczeństwo przede wszystkim:</strong> zawsze sprawdzaj, czy strona ma aktywne szyfrowanie HTTPS (zielona kłódka w pasku adresu). Unikaj linków z niezaufanych źródeł – lepiej poczekać na oficjalny newsletter niż ryzykować.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Headphones" className="text-primary" size={28} />
+                        Kontakt z Booi
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="MessageCircle" className="text-primary" size={22} />
+                            Czat na żywo i e-mail
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            <strong className="text-primary">Booi kontakt</strong> z obsługą klienta jest możliwy przede wszystkim przez czat na żywo dostępny 24/7. To najszybsza droga – odpowiedzi przychodzą zazwyczaj w ciągu kilku minut. Jakość wsparcia zależy od konsultanta, ale większość prostych spraw – pytania o bonusy, status wypłaty, weryfikacja – jest rozwiązywana od ręki.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Mail" className="text-primary" size={22} />
+                            Inne kanały wsparcia
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Alternatywnie można napisać na adres e-mail podany w zakładce „Kontakt". Czas odpowiedzi mailowej to od kilku godzin do jednego dnia roboczego. Brakuje wsparcia telefonicznego i dedykowanej sekcji FAQ w języku polskim, co jest pewnym minusem. Czat obsługuje jednak język polski, co dla wielu graczy jest wystarczające.
+                            </p>
+                            <div className="bg-muted/50 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="Info" className="text-primary flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/70">
+                                  Jeśli nie mówisz biegle po angielsku, możesz skorzystać z narzędzi do tłumaczenia online – konsultanci są cierpliwi i pomagają rozwiązać problemy nawet w przypadku barier językowych.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
