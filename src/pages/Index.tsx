@@ -532,11 +532,9 @@ export default function Index() {
               </div>
             </div>
             <nav className="hidden md:flex items-center gap-6">
-              <button className="text-foreground/80 hover:text-primary transition-colors">{t.navRanking}</button>
-              <button className="text-foreground/80 hover:text-primary transition-colors">{t.navBonuses}</button>
-              <button className="text-foreground/80 hover:text-primary transition-colors">{t.navGames}</button>
-              <button className="text-foreground/80 hover:text-primary transition-colors">{t.navNews}</button>
-              <button className="text-foreground/80 hover:text-primary transition-colors">{t.navContact}</button>
+              <button onClick={() => setActiveTab('ranking')} className="text-foreground/80 hover:text-primary transition-colors">{t.navRanking}</button>
+              <button onClick={() => setActiveTab('bonusy')} className="text-foreground/80 hover:text-primary transition-colors">{t.navBonuses}</button>
+              <button onClick={() => setActiveTab('gry')} className="text-foreground/80 hover:text-primary transition-colors">{t.navGames}</button>
             </nav>
             <div className="flex items-center gap-3">
               <Button 
