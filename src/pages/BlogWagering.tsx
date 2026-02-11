@@ -2,6 +2,9 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import BlogShareButtons from '@/components/BlogShareButtons';
+import BlogRelatedPosts from '@/components/BlogRelatedPosts';
+import BlogCasinoRecommendations from '@/components/BlogCasinoRecommendations';
 
 export default function BlogWagering() {
   const navigate = useNavigate();
@@ -326,6 +329,15 @@ export default function BlogWagering() {
                 </p>
               </div>
             </div>
+
+            <BlogShareButtons 
+              title="Czym jest wagering i jak go obliczyć?"
+              url={typeof window !== 'undefined' ? window.location.href : ''}
+            />
+
+            <BlogCasinoRecommendations />
+
+            <BlogRelatedPosts currentPostId={4} category="Bonusy" />
 
             <div className="mt-12 flex gap-4">
               <Button 

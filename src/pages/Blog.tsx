@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface BlogPost {
   id: number;
@@ -55,6 +55,11 @@ const blogPosts: BlogPost[] = [
 
 export default function Blog() {
   const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string>('Wszystkie');
+
+  const filteredPosts = selectedCategory === 'Wszystkie' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
 
   useEffect(() => {
     document.title = 'Blog - bkreiting.com';
@@ -136,30 +141,50 @@ export default function Blog() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-wrap gap-3 mb-12 justify-center">
-              <Badge variant="outline" className="border-primary/30 hover:bg-primary/10 cursor-pointer px-4 py-2">
+              <Badge 
+                variant="outline" 
+                onClick={() => setSelectedCategory('Wszystkie')}
+                className={`border-primary/30 hover:bg-primary/10 cursor-pointer px-4 py-2 transition-all ${selectedCategory === 'Wszystkie' ? 'bg-primary text-primary-foreground border-primary' : ''}`}
+              >
                 <Icon name="Sparkles" className="mr-2" size={14} />
                 Wszystkie
               </Badge>
-              <Badge variant="outline" className="border-primary/30 hover:bg-primary/10 cursor-pointer px-4 py-2">
+              <Badge 
+                variant="outline" 
+                onClick={() => setSelectedCategory('Poradniki')}
+                className={`border-primary/30 hover:bg-primary/10 cursor-pointer px-4 py-2 transition-all ${selectedCategory === 'Poradniki' ? 'bg-primary text-primary-foreground border-primary' : ''}`}
+              >
                 <Icon name="BookOpen" className="mr-2" size={14} />
                 Poradniki
               </Badge>
-              <Badge variant="outline" className="border-primary/30 hover:bg-primary/10 cursor-pointer px-4 py-2">
+              <Badge 
+                variant="outline" 
+                onClick={() => setSelectedCategory('Strategie')}
+                className={`border-primary/30 hover:bg-primary/10 cursor-pointer px-4 py-2 transition-all ${selectedCategory === 'Strategie' ? 'bg-primary text-primary-foreground border-primary' : ''}`}
+              >
                 <Icon name="Target" className="mr-2" size={14} />
                 Strategie
               </Badge>
-              <Badge variant="outline" className="border-primary/30 hover:bg-primary/10 cursor-pointer px-4 py-2">
+              <Badge 
+                variant="outline" 
+                onClick={() => setSelectedCategory('Bonusy')}
+                className={`border-primary/30 hover:bg-primary/10 cursor-pointer px-4 py-2 transition-all ${selectedCategory === 'Bonusy' ? 'bg-primary text-primary-foreground border-primary' : ''}`}
+              >
                 <Icon name="Gift" className="mr-2" size={14} />
                 Bonusy
               </Badge>
-              <Badge variant="outline" className="border-primary/30 hover:bg-primary/10 cursor-pointer px-4 py-2">
+              <Badge 
+                variant="outline" 
+                onClick={() => setSelectedCategory('Nowości')}
+                className={`border-primary/30 hover:bg-primary/10 cursor-pointer px-4 py-2 transition-all ${selectedCategory === 'Nowości' ? 'bg-primary text-primary-foreground border-primary' : ''}`}
+              >
                 <Icon name="TrendingUp" className="mr-2" size={14} />
                 Nowości
               </Badge>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
+              {filteredPosts.map((post) => (
                 <Card 
                   key={post.id} 
                   className="bg-card border-border hover:border-primary/50 transition-all hover:scale-105 cursor-pointer overflow-hidden group"

@@ -2,6 +2,9 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import BlogShareButtons from '@/components/BlogShareButtons';
+import BlogRelatedPosts from '@/components/BlogRelatedPosts';
+import BlogCasinoRecommendations from '@/components/BlogCasinoRecommendations';
 
 export default function BlogBonusPowitalny() {
   const navigate = useNavigate();
@@ -381,6 +384,15 @@ export default function BlogBonusPowitalny() {
                 </p>
               </div>
             </div>
+
+            <BlogShareButtons 
+              title="Jak działa bonus powitalny w kasynie online?"
+              url={typeof window !== 'undefined' ? window.location.href : ''}
+            />
+
+            <BlogCasinoRecommendations />
+
+            <BlogRelatedPosts currentPostId={1} category="Bonusy" />
 
             <div className="mt-12 flex gap-4">
               <Button 
