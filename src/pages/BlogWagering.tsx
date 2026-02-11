@@ -103,13 +103,92 @@ export default function BlogWagering() {
                   W praktyce oznacza to, że otrzymanych środków bonusowych nie można od razu wypłacić. Trzeba je najpierw „obrócić" — postawić określoną liczbę razy w grach kasynowych. Dopiero po spełnieniu tego warunku ewentualna wygrana staje się dostępna do wypłaty. Brzmi prosto, ale diabeł tkwi w szczegółach. Ten artykuł wyjaśnia krok po kroku, czym dokładnie jest wagering, jak go obliczyć i dlaczego warto znać te zasady, zanim aktywujesz jakikolwiek bonus.
                 </p>
 
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Co to jest wagering w kasynie?</h2>
+                
+                <p className="text-lg">
+                  Wagering to wymóg obrotu, jaki kasyno nakłada na środki bonusowe. Określa, ile razy gracz musi postawić kwotę bonusu (lub bonusu i depozytu łącznie), zanim będzie mógł wypłacić wygrane. Warunek ten wyrażany jest jako mnożnik — np. x20, x30 czy x40.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Dlaczego kasyna stosują wagering?</h3>
+                
+                <p className="text-lg">
+                  Mechanizm ten pełni prostą funkcję — chroni kasyno przed natychmiastową wypłatą środków bonusowych. Gdyby takiego warunku nie było, każdy gracz mógłby odebrać bonus i od razu przelać go na konto bankowe. Wagering wymusza faktyczną grę, co jest warunkiem korzystania z promocji.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Obrót bonusem a obrót depozytem — różnica</h3>
+                
+                <p className="text-lg">
+                  To kluczowe rozróżnienie, które wpływa na całkowitą kwotę, jaką trzeba postawić. W niektórych przypadkach wagering dotyczy wyłącznie kwoty bonusu. W innych obejmuje zarówno bonus, jak i wpłacony depozyt. Różnica bywa ogromna — przy depozycie 200 zł i bonusie 200 zł wagering x30 tylko od bonusu to 6000 zł obrotu, ale jeśli dotyczy bonusu i depozytu, kwota rośnie do 12 000 zł. Dlatego zawsze warto sprawdzić, od jakiej podstawy liczony jest mnożnik.
+                </p>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6">Jak obliczyć wagering krok po kroku?</h2>
+                
+                <p className="text-lg">
+                  Obliczenie wymaganego obrotu nie wymaga zaawansowanej matematyki. Wystarczy prosta formuła:
+                </p>
+
+                <div className="bg-card border-2 border-primary/30 rounded-xl p-6 my-6">
+                  <p className="text-xl font-bold text-primary text-center">
+                    Wymagany obrót = kwota objęta wageringiem × mnożnik
+                  </p>
+                </div>
+
+                <p className="text-lg">
+                  Poniżej kilka przykładów, które pokazują, jak to działa w praktyce.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Przykład 1 — wagering tylko od bonusu</h3>
+                
+                <p className="text-lg mb-3">
+                  Gracz wpłaca 200 zł i otrzymuje bonus 200 zł. Wagering wynosi x30 i dotyczy wyłącznie bonusu.
+                </p>
+                
+                <div className="bg-primary/5 border border-primary/20 rounded-lg p-5 my-4">
+                  <p className="text-lg font-semibold text-primary mb-2">Obliczenie:</p>
+                  <p className="text-lg">200 zł × 30 = <strong className="text-primary">6000 zł obrotu</strong></p>
+                </div>
+
+                <p className="text-lg">
+                  To oznacza, że gracz musi łącznie postawić 6000 zł w kwalifikujących się grach, zanim będzie mógł wypłacić wygrane z bonusu.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Przykład 2 — wagering od bonusu i depozytu</h3>
+                
+                <p className="text-lg mb-3">
+                  Gracz wpłaca 300 zł i otrzymuje bonus 300 zł. Wagering x25 dotyczy sumy depozytu i bonusu.
+                </p>
+                
+                <div className="bg-primary/5 border border-primary/20 rounded-lg p-5 my-4">
+                  <p className="text-lg font-semibold text-primary mb-2">Obliczenie:</p>
+                  <p className="text-lg">(300 zł + 300 zł) × 25 = <strong className="text-primary">15 000 zł obrotu</strong></p>
+                </div>
+
+                <p className="text-lg">
+                  Jak widać, ta sama wartość mnożnika generuje znacznie wyższą kwotę, gdy obrót liczony jest od obu składników.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4">Przykład 3 — darmowe spiny z wageringiem</h3>
+                
+                <p className="text-lg mb-3">
+                  Gracz otrzymuje 50 darmowych spinów, z których wygrywa 80 zł. Wygrana objęta jest wageringiem x40.
+                </p>
+                
+                <div className="bg-primary/5 border border-primary/20 rounded-lg p-5 my-4">
+                  <p className="text-lg font-semibold text-primary mb-2">Obliczenie:</p>
+                  <p className="text-lg">80 zł × 40 = <strong className="text-primary">3200 zł obrotu</strong></p>
+                </div>
+
+                <p className="text-lg">
+                  W przypadku free spinów wagering odnosi się zazwyczaj do kwoty wygranej, a nie do liczby spinów. To częsty punkt nieporozumień.
+                </p>
+
                 <div className="bg-primary/10 border-l-4 border-primary rounded-lg p-6 my-8">
                   <p className="text-lg font-semibold text-primary mb-2 flex items-center gap-2">
                     <Icon name="Info" size={20} />
                     Więcej treści w drodze
                   </p>
                   <p className="text-foreground/80">
-                    Pracujemy nad kolejnymi sekcjami tego artykułu. Wkrótce dodamy szczegółowe obliczenia, przykłady i porady dotyczące wageringu.
+                    Pracujemy nad kolejnymi sekcjami tego artykułu. Wkrótce dodamy więcej porad i przykładów dotyczących wageringu.
                   </p>
                 </div>
               </div>
