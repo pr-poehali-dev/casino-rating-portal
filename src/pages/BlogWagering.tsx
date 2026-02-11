@@ -7,15 +7,15 @@ export default function BlogWagering() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'Czym jest wagering i jak go obliczyć?';
+    document.title = 'Czym jest wagering i jak go obliczyć w kasynie online?';
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Bonusy w kasynach online wiążą się z wageringiem. Dowiedz się, czym jest wymagany obrót bonusem, jak go obliczyć i na co uważać przy bonusach.');
+      metaDescription.setAttribute('content', 'Dowiedz się, czym jest wagering w kasynie, jak obliczyć wymagany obrót bonusem i na co uważać przy wypłacie środków. Praktyczne przykłady i wskazówki.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Bonusy w kasynach online wiążą się z wageringiem. Dowiedz się, czym jest wymagany obrót bonusem, jak go obliczyć i na co uważać przy bonusach.';
+      meta.content = 'Dowiedz się, czym jest wagering w kasynie, jak obliczyć wymagany obrót bonusem i na co uważać przy wypłacie środków. Praktyczne przykłady i wskazówki.';
       document.head.appendChild(meta);
     }
 
