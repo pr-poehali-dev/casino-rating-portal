@@ -1649,26 +1649,19 @@ export default function Index() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Newsletter</h4>
+              <h4 className="font-semibold mb-4">Kanał Telegram</h4>
               <p className="text-sm text-foreground/60 mb-3">
-                Zapisz się i otrzymuj najlepsze oferty bonusowe
+                Dołącz do naszego kanału i bądź na bieżąco
               </p>
-              <div className="flex flex-col gap-3">
-                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                  <Icon name="Mail" className="mr-2" size={18} />
-                  Zapisz się
-                </Button>
-                <Button 
-                  asChild
-                  variant="outline"
-                  className="w-full border-primary/30 hover:bg-primary/10"
-                >
-                  <a href="https://t.me/bkreitingcom" target="_blank" rel="noopener noreferrer">
-                    <Icon name="Send" className="mr-2" size={18} />
-                    Telegram Канал
-                  </a>
-                </Button>
-              </div>
+              <Button 
+                asChild
+                className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                <a href="https://t.me/bkreitingcom" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Send" className="mr-2" size={18} />
+                  Kanał Telegram
+                </a>
+              </Button>
             </div>
           </div>
 
