@@ -1653,10 +1653,22 @@ export default function Index() {
               <p className="text-sm text-foreground/60 mb-3">
                 Zapisz się i otrzymuj najlepsze oferty bonusowe
               </p>
-              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                <Icon name="Mail" className="mr-2" size={18} />
-                Zapisz się
-              </Button>
+              <div className="flex flex-col gap-3">
+                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                  <Icon name="Mail" className="mr-2" size={18} />
+                  Zapisz się
+                </Button>
+                <Button 
+                  asChild
+                  variant="outline"
+                  className="w-full border-primary/30 hover:bg-primary/10"
+                >
+                  <a href="https://t.me/bkreitingcom" target="_blank" rel="noopener noreferrer">
+                    <Icon name="Send" className="mr-2" size={18} />
+                    Telegram Канал
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
 
