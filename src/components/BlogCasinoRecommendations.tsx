@@ -21,7 +21,7 @@ const topCasinos: Casino[] = [
     rating: 4.8,
     bonus: '100% do 5000 PLN + 100 FS',
     features: ['Szybkie wypłaty', 'Ogromny wybór gier', 'Live casino'],
-    image: 'https://www.vavada.com/casino/_ipx/f_webp,w_1920/img/logo/logo-ru.png',
+    image: 'https://vavada.com/img/logo.svg',
     link: '/vavada'
   },
   {
@@ -30,7 +30,7 @@ const topCasinos: Casino[] = [
     rating: 4.7,
     bonus: '125% do 4000 PLN + 200 FS',
     features: ['Legalnie w Polsce', 'Bonus bez depozytu', 'Program VIP'],
-    image: 'https://playfortunacasino.pl/themes/core/site/assets/img/logo_ru.svg',
+    image: 'https://playfortuna.com/logo.svg',
     link: '/play-fortuna'
   },
   {
@@ -39,7 +39,7 @@ const topCasinos: Casino[] = [
     rating: 4.6,
     bonus: '100% do 3000 PLN + 250 FS',
     features: ['Cashback do 25%', 'Turnament co tydzień', 'Crypto płatności'],
-    image: 'https://booi777.com/themes/booi/site/img/logo.svg',
+    image: 'https://booi.com/logo.svg',
     link: '/booi'
   }
 ];
@@ -74,12 +74,10 @@ export default function BlogCasinoRecommendations() {
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
                     <span className="text-2xl font-bold text-primary">#{index + 1}</span>
                   </div>
-                  <div className="w-32 h-16 bg-white rounded-lg flex items-center justify-center p-3">
-                    <img 
-                      src={casino.image} 
-                      alt={casino.name}
-                      className="max-w-full max-h-full object-contain"
-                    />
+                  <div className="w-32 h-16 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg flex items-center justify-center p-3 border border-primary/20">
+                    <span className="text-sm font-bold text-primary text-center leading-tight">
+                      {casino.name.replace(' Casino', '')}
+                    </span>
                   </div>
                 </div>
 
