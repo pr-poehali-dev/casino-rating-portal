@@ -14,38 +14,42 @@ interface BlogPost {
   readTime: string;
   image: string;
   author: string;
+  slug: string;
 }
 
 const blogPosts: BlogPost[] = [
   {
-    id: 1,
+    id: 2,
     title: 'Jak wybrać najlepszy slot online w 2026? Poradnik dla początkujących',
     excerpt: 'Automaty do gier to najpopularniejsza forma rozrywki w kasynach online. Dowiedz się, na co zwracać uwagę przy wyborze slotu, czym jest RTP i jak działają darmowe spiny.',
     category: 'Poradniki',
     date: '8 lutego 2026',
     readTime: '5 min',
     image: 'slots',
-    author: 'Redakcja bkreiting.com'
+    author: 'Redakcja bkreiting.com',
+    slug: 'jak-wybrac-najlepszy-slot'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Top 5 strategii gry w blackjack - zwiększ swoje szanse na wygraną',
     excerpt: 'Blackjack to jedna z niewielu gier kasynowych, gdzie strategia naprawdę ma znaczenie. Poznaj podstawowe zasady zarządzania bankrollem i taktyki używane przez profesjonalistów.',
     category: 'Strategie',
     date: '5 lutego 2026',
     readTime: '7 min',
     image: 'blackjack',
-    author: 'Redakcja bkreiting.com'
+    author: 'Redakcja bkreiting.com',
+    slug: 'top-5-strategii-blackjack'
   },
   {
-    id: 3,
-    title: 'Bonusy kasynowe 2026 - jak czytać warunki obrotu i nie stracić wygranej?',
-    excerpt: 'Bonusy powitalne wyglądają kusząco, ale diabeł tkwi w szczegółach. Wyjaśniamy, czym są warunki obrotu (wagering), jak je obliczyć i na co zwracać uwagę w regulaminach.',
+    id: 1,
+    title: 'Jak działa bonus powitalny w kasynie online?',
+    excerpt: 'Rejestrując się w kasynie internetowym, niemal zawsze natkniesz się na ofertę skierowaną do nowych użytkowników. Właśnie tak wygląda pierwszy kontakt z bonusem powitalnym.',
     category: 'Bonusy',
-    date: '1 lutego 2026',
-    readTime: '6 min',
+    date: '11 lutego 2026',
+    readTime: '8 min',
     image: 'bonus',
-    author: 'Redakcja bkreiting.com'
+    author: 'Redakcja bkreiting.com',
+    slug: 'jak-dziala-bonus-powitalny'
   }
 ];
 
@@ -211,6 +215,7 @@ export default function Blog() {
 
                   <div className="px-6 pb-6">
                     <Button 
+                      onClick={() => navigate(`/blog/${post.slug}`)}
                       variant="outline" 
                       className="w-full border-primary/30 hover:bg-primary/10 group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all"
                     >
