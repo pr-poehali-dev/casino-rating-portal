@@ -409,6 +409,8 @@ export default function Index() {
     const savedLang = localStorage.getItem('language') as Language;
     if (savedLang && (savedLang === 'pl' || savedLang === 'ru' || savedLang === 'en')) {
       setLanguage(savedLang);
+    } else {
+      localStorage.setItem('language', 'pl');
     }
 
     const lastConfirmed = localStorage.getItem('ageConfirmed');
