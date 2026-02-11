@@ -148,14 +148,18 @@ export default function PlayFortuna() {
 
                 <Card className="border-primary/20">
                   <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <Icon name="Info" className="text-primary" size={24} />
-                      Informacje o Play Fortuna
+                    <CardTitle className="text-3xl font-bold">
+                      PlayFortuna kasyno online – opinie, bonusy i rejestracja w Polsce
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="prose prose-sm max-w-none">
-                      <p>TEKST BĘDZIE TUTAJ</p>
+                  <CardContent className="space-y-6">
+                    <div className="prose prose-lg max-w-none text-foreground/90">
+                      <p className="leading-relaxed">
+                        PlayFortuna to platforma hazardowa działająca na rynku od 2012 roku, która przez ostatnią dekadę zdążyła zbudować rozpoznawalną markę wśród graczy z Europy Wschodniej i Centralnej. Jako PlayFortuna online kasyno operuje na licencji Curaçao, co w praktyce oznacza, że polscy gracze mogą z niego korzystać, choć nie posiada ono lokalnej koncesji wydanej przez Ministerstwo Finansów. PlayFortuna casino Polska kieruje swoją ofertę przede wszystkim do osób szukających szerokiego katalogu automatów, regularnych promocji i stosunkowo prostego interfejsu bez zbędnych komplikacji.
+                      </p>
+                      <p className="leading-relaxed">
+                        Warto od razu zaznaczyć – ten tekst powstał na podstawie analizy samej platformy, opinii z forów graczy i porównania z konkurencyjnymi serwisami. Nie jest to materiał sponsorowany.
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
