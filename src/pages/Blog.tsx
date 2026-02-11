@@ -24,7 +24,7 @@ const blogPosts: BlogPost[] = [
     category: 'Poradniki',
     date: '8 lutego 2026',
     readTime: '5 min',
-    image: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=400&fit=crop',
+    image: 'slots',
     author: 'Redakcja bkreiting.com'
   },
   {
@@ -34,7 +34,7 @@ const blogPosts: BlogPost[] = [
     category: 'Strategie',
     date: '5 lutego 2026',
     readTime: '7 min',
-    image: 'https://images.unsplash.com/photo-1541278107931-e006523892df?w=800&h=400&fit=crop',
+    image: 'blackjack',
     author: 'Redakcja bkreiting.com'
   },
   {
@@ -44,7 +44,7 @@ const blogPosts: BlogPost[] = [
     category: 'Bonusy',
     date: '1 lutego 2026',
     readTime: '6 min',
-    image: 'https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=800&h=400&fit=crop',
+    image: 'bonus',
     author: 'Redakcja bkreiting.com'
   }
 ];
@@ -160,12 +160,22 @@ export default function Blog() {
                   key={post.id} 
                   className="bg-card border-border hover:border-primary/50 transition-all hover:scale-105 cursor-pointer overflow-hidden group"
                 >
-                  <div className="relative overflow-hidden">
-                    <img 
-                      src={post.image} 
-                      alt={post.title}
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
+                  <div className="relative overflow-hidden h-48">
+                    {post.image === 'slots' && (
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center">
+                        <Icon name="Dices" className="text-primary opacity-30" size={80} />
+                      </div>
+                    )}
+                    {post.image === 'blackjack' && (
+                      <div className="w-full h-full bg-gradient-to-br from-secondary/20 via-primary/10 to-primary/20 flex items-center justify-center">
+                        <Icon name="Spade" className="text-primary opacity-30" size={80} />
+                      </div>
+                    )}
+                    {post.image === 'bonus' && (
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-secondary/10 to-primary/20 flex items-center justify-center">
+                        <Icon name="Gift" className="text-primary opacity-30" size={80} />
+                      </div>
+                    )}
                     <div className="absolute top-3 left-3">
                       <Badge className="bg-primary/90 text-primary-foreground border-0">
                         {post.category}
