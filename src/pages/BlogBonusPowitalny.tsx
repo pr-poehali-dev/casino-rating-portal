@@ -7,15 +7,15 @@ export default function BlogBonusPowitalny() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'Jak działa bonus powitalny w kasynie online? - bkreiting.com';
+    document.title = 'Jak działa bonus powitalny w kasynie online 2026?';
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Rejestrując się w kasynie internetowym, niemal zawsze natkniesz się na ofertę skierowaną do nowych użytkowników. Właśnie tak wygląda pierwszy kontakt z bonusem powitalnym.');
+      metaDescription.setAttribute('content', 'Sprawdź, co to jest bonus powitalny, jakie są warunki obrotu, jak odebrać bonus na start i czy bonus powitalny się opłaca w 2026 roku.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Rejestrując się w kasynie internetowym, niemal zawsze natkniesz się na ofertę skierowaną do nowych użytkowników. Właśnie tak wygląda pierwszy kontakt z bonusem powitalnym.';
+      meta.content = 'Sprawdź, co to jest bonus powitalny, jakie są warunki obrotu, jak odebrać bonus na start i czy bonus powitalny się opłaca w 2026 roku.';
       document.head.appendChild(meta);
     }
 
