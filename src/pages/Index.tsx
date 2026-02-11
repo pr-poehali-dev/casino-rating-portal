@@ -532,9 +532,9 @@ export default function Index() {
               </div>
             </div>
             <nav className="hidden md:flex items-center gap-6">
-              <button onClick={() => setActiveTab('ranking')} className="text-foreground/80 hover:text-primary transition-colors">{t.navRanking}</button>
-              <button onClick={() => setActiveTab('bonusy')} className="text-foreground/80 hover:text-primary transition-colors">{t.navBonuses}</button>
-              <button onClick={() => setActiveTab('gry')} className="text-foreground/80 hover:text-primary transition-colors">{t.navGames}</button>
+              <button onClick={() => setActiveTab('ranking')} className="text-foreground/80 hover:text-primary transition-colors">Ranking</button>
+              <button onClick={() => setActiveTab('bonusy')} className="text-foreground/80 hover:text-primary transition-colors">Bonusy</button>
+              <button onClick={() => setActiveTab('gry')} className="text-foreground/80 hover:text-primary transition-colors">Gry</button>
             </nav>
             <div className="flex items-center gap-3">
               <Button 
@@ -573,22 +573,22 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Badge className="bg-primary/20 text-primary border-primary/30 px-4 py-2 text-sm">
               <Icon name="TrendingUp" className="mr-2" size={16} />
-              {t.bestCasinos}
+              Najlepsze Kasyna w Polsce 2026
             </Badge>
             <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-              {language === 'pl' ? 'Ekskluzywne' : language === 'ru' ? 'Эксклюзивные' : 'Exclusive'} <span className="text-primary gold-glow">{language === 'pl' ? 'Kasyna Online' : language === 'ru' ? 'Онлайн Казино' : 'Online Casinos'}</span>
+              Ekskluzywne <span className="text-primary gold-glow">Kasyna Online</span>
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
-              {t.heroDesc}
+              Profesjonalne rankingi, szczegółowe recenzje i najlepsze bonusy powitalne. Wybierz swoje idealne kasyno z naszego premium rankingu.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8" onClick={() => setActiveTab('ranking')}>
                 <Icon name="Trophy" className="mr-2" size={20} />
-                {t.viewTop10}
+                Zobacz Top 10 Kasyn
               </Button>
-              <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10">
+              <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10" onClick={() => setActiveTab('bonusy')}>
                 <Icon name="Gift" className="mr-2" size={20} />
-                {t.currentBonuses}
+                Aktualne Bonusy
               </Button>
             </div>
           </div>
@@ -709,19 +709,19 @@ export default function Index() {
             <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-4 bg-card border border-border">
               <TabsTrigger value="ranking" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 <Icon name="Award" className="mr-2" size={18} />
-                <span className="hidden sm:inline">{t.tabRanking}</span>
+                <span className="hidden sm:inline">Ranking</span>
               </TabsTrigger>
               <TabsTrigger value="bonusy" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 <Icon name="Gift" className="mr-2" size={18} />
-                <span className="hidden sm:inline">{t.tabBonuses}</span>
+                <span className="hidden sm:inline">Bonusy</span>
               </TabsTrigger>
               <TabsTrigger value="gry" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 <Icon name="Gamepad2" className="mr-2" size={18} />
-                <span className="hidden sm:inline">{t.tabGames}</span>
+                <span className="hidden sm:inline">Gry</span>
               </TabsTrigger>
               <TabsTrigger value="faq" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 <Icon name="HelpCircle" className="mr-2" size={18} />
-                <span className="hidden sm:inline">{t.tabFaq}</span>
+                <span className="hidden sm:inline">FAQ</span>
               </TabsTrigger>
             </TabsList>
 
