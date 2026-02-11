@@ -560,13 +560,13 @@ export default function Index() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent"></div>
         
         {/* Decorative casino elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-10">
-          <Icon name="Dices" className="absolute top-20 left-10 text-primary animate-pulse" size={80} style={{ animationDuration: '3s' }} />
-          <Icon name="Spade" className="absolute top-40 right-20 text-primary/80 animate-pulse" size={60} style={{ animationDuration: '4s', animationDelay: '1s' }} />
-          <Icon name="Heart" className="absolute bottom-32 left-1/4 text-primary/70 animate-pulse" size={70} style={{ animationDuration: '3.5s', animationDelay: '0.5s' }} />
-          <Icon name="Diamond" className="absolute top-1/3 right-1/4 text-primary/60 animate-pulse" size={50} style={{ animationDuration: '4.5s', animationDelay: '2s' }} />
-          <Icon name="Club" className="absolute bottom-20 right-10 text-primary/80 animate-pulse" size={65} style={{ animationDuration: '3.8s', animationDelay: '1.5s' }} />
-          <Icon name="Dices" className="absolute top-1/2 left-16 text-primary/50 animate-pulse" size={55} style={{ animationDuration: '4.2s', animationDelay: '0.8s' }} />
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
+          <Icon name="Dices" className="absolute top-10 left-5 text-primary animate-pulse" size={120} style={{ animationDuration: '3s' }} />
+          <Icon name="Spade" className="absolute top-32 right-10 text-primary/80 animate-pulse" size={100} style={{ animationDuration: '4s', animationDelay: '1s' }} />
+          <Icon name="Heart" className="absolute bottom-10 left-20 text-primary/70 animate-pulse" size={110} style={{ animationDuration: '3.5s', animationDelay: '0.5s' }} />
+          <Icon name="Diamond" className="absolute top-1/2 right-32 text-primary/60 animate-pulse" size={90} style={{ animationDuration: '4.5s', animationDelay: '2s' }} />
+          <Icon name="Club" className="absolute bottom-32 right-5 text-primary/80 animate-pulse" size={105} style={{ animationDuration: '3.8s', animationDelay: '1.5s' }} />
+          <Icon name="Dices" className="absolute top-1/3 left-32 text-primary/50 animate-pulse" size={95} style={{ animationDuration: '4.2s', animationDelay: '0.8s' }} />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
