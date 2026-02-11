@@ -11,6 +11,7 @@ import AdminSetup from "./pages/AdminSetup";
 import Vavada from "./pages/Vavada";
 import PlayFortuna from "./pages/PlayFortuna";
 import Booi from "./pages/Booi";
+import Jozz from "./pages/Jozz";
 import NotFound from "./pages/NotFound";
 import AgeConfirmationModal from "./components/AgeConfirmationModal";
 
@@ -30,6 +31,7 @@ const App = () => (
         <Route path="/vavada" element={<Vavada />} />
         <Route path="/play-fortuna" element={<PlayFortuna />} />
         <Route path="/booi" element={<Booi />} />
+        <Route path="/jozz" element={<Jozz />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
