@@ -206,17 +206,125 @@ export default function BlogBonusPowitalny() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-6 my-8">
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                  <Icon name="FileText" className="text-primary" size={32} />
+                  Bonus powitalny – zasady i warunki obrotu
+                </h2>
+
+                <p className="text-lg">
+                  To kluczowa sekcja, którą większość graczy pomija — i potem się dziwi, że nie może wypłacić wygranej. Zrozumienie zasad bonusu powitalnego to absolutna podstawa przed skorzystaniem z jakiejkolwiek oferty.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="Repeat" className="text-primary" size={24} />
+                  Co to jest wager w kasynie?
+                </h3>
+
+                <p className="text-lg">
+                  Wager (wymóg obrotu) to liczba, która określa, ile razy musisz postawić kwotę bonusu, zanim będziesz mógł wypłacić wygrane. Jeśli otrzymałeś 200 zł bonusu z wagerem x35, musisz postawić łącznie 200 × 35 = 7000 zł, zanim środki staną się dostępne do wypłaty. To nie znaczy, że musisz przegrać 7000 zł — to suma postawionych zakładów, nie strat. Niemniej wymagany obrót bonusem potrafi być bardzo wysoki.
+                </p>
+
+                <p className="text-lg">
+                  Warunki obrotu bonusem w kasynie różnią się diametralnie między platformami. W 2026 roku rozsądny wager to x25–x35. Wszystko powyżej x40 powinno wzbudzić ostrożność — szanse na realne zyskanie maleją.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="TrendingUp" className="text-primary" size={24} />
+                  Maksymalna wygrana z bonusu
+                </h3>
+
+                <p className="text-lg">
+                  Wiele kasyn ustala górny limit wypłaty z bonusu. Nawet jeśli uda Ci się wygrać 5000 zł grając środkami bonusowymi, kasyno może ograniczyć wypłatę do np. 1000 czy 2000 zł. Maksymalna wygrana z bonusu to parametr, który koniecznie sprawdź w regulaminie — pozwoli Ci ocenić, czy gra jest warta świeczki.
+                </p>
+
+                <div className="bg-card/50 border border-primary/20 rounded-xl p-6 my-6">
+                  <p className="text-lg font-semibold mb-3 flex items-center gap-2">
+                    <Icon name="Calculator" className="text-primary" size={20} />
+                    Prosty przykład:
+                  </p>
+                  <p className="text-foreground/80">
+                    Otrzymujesz bonus 100 zł z wagerem x30 i maksymalną wygraną 500 zł. Musisz postawić 3000 zł. Jeśli po spełnieniu obrotu masz na koncie 800 zł, wypłacisz maksymalnie 500 zł. Reszta przepada.
+                  </p>
+                </div>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="ListChecks" className="text-primary" size={24} />
+                  Inne warunki, o których warto wiedzieć
+                </h3>
+
+                <p className="text-lg">
+                  Oprócz wagera, zwróć uwagę na: czas na spełnienie obrotu (np. 7–30 dni), maksymalny zakład z aktywnym bonusem (np. 20 zł na spin), gry wliczające się do wagera w różnym stopniu (sloty 100%, ruletka 10–20%, blackjack czasem 0%) oraz ograniczenia dotyczące metod wpłaty — nie każdy portfel elektroniczny kwalifikuje do aktywacji bonusu.
+                </p>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                  <Icon name="Wallet" className="text-primary" size={32} />
+                  Jak wypłacić bonus z kasyna online?
+                </h2>
+
+                <p className="text-lg">
+                  Samo otrzymanie bonusu to dopiero początek. Wypłata wymaga spełnienia wszystkich warunków obrotu, a następnie przejścia procedury weryfikacji tożsamości. Jak wypłacić bonus z kasyna online? Przede wszystkim — cierpliwie i zgodnie z regulaminem.
+                </p>
+
+                <p className="text-lg">
+                  Po spełnieniu wagera środki bonusowe przekształcają się w realne pieniądze, które możesz przelać na swoje konto bankowe, kartę lub portfel elektroniczny. Zanim to nastąpi, kasyno zwykle poprosi o przesłanie dokumentów (dowód osobisty, potwierdzenie adresu, ewentualnie zdjęcie metody płatności). Pierwsza wypłata trwa dłużej — od kilku godzin do kilku dni roboczych.
+                </p>
+
+                <div className="bg-gradient-to-r from-red-500/10 via-red-500/5 to-red-500/10 border-l-4 border-red-500 rounded-lg p-6 my-8">
                   <div className="flex items-start gap-3">
-                    <Icon name="AlertCircle" className="text-primary flex-shrink-0 mt-1" size={24} />
+                    <Icon name="AlertTriangle" className="text-red-500 flex-shrink-0 mt-1" size={24} />
                     <div>
-                      <p className="font-semibold text-primary mb-2">Ważna informacja</p>
+                      <p className="font-semibold text-red-500 mb-2">Dlaczego czasem bonus jest anulowany?</p>
                       <p className="text-foreground/80">
-                        Artykuł w trakcie tworzenia. Wkrótce pojawi się więcej treści z dodatkowymi sekcjami o warunkach obrotu i praktycznymi przykładami.
+                        Najczęstsze powody to: przekroczenie czasu na obrót, postawienie zbyt dużego zakładu jednorazowo (powyżej limitu regulaminowego), próba gry na wykluczonych grach lub podejrzenie posiadania wielu kont. W takich sytuacjach kasyno ma prawo usunąć bonus i powiązane wygrane — i robi to bez wahania.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                  <Icon name="HelpCircle" className="text-primary" size={32} />
+                  Dlaczego nie dostałem bonusu powitalnego?
+                </h2>
+
+                <p className="text-lg">
+                  To jedno z najczęstszych pytań na forach graczy. Rejestrujesz się, wpłacasz pieniądze — a bonus nie pojawia się na koncie. Dlaczego nie dostałem bonusu powitalnego? Oto typowe przyczyny.
+                </p>
+
+                <div className="space-y-4 my-8">
+                  <div className="bg-card/50 border border-border rounded-xl p-6">
+                    <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                      <Icon name="XCircle" className="text-primary" size={20} />
+                      Brak spełnienia warunków wejściowych
+                    </h4>
+                    <p className="text-foreground/80">
+                      Wpłata poniżej wymaganego minimum, wybór niewłaściwej metody płatności lub pominięcie obowiązkowego kodu promocyjnego to najprostsze powody utraty oferty.
+                    </p>
+                  </div>
+
+                  <div className="bg-card/50 border border-border rounded-xl p-6">
+                    <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                      <Icon name="MapPin" className="text-primary" size={20} />
+                      Wykluczone kraje i regiony
+                    </h4>
+                    <p className="text-foreground/80">
+                      Mimo że kasyno działa w danym języku, bonus może nie być dostępny dla graczy z określonych lokalizacji. Regulamin precyzuje listę wykluczeń, ale rzadko kto go czyta przed rejestracją.
+                    </p>
+                  </div>
+
+                  <div className="bg-card/50 border border-border rounded-xl p-6">
+                    <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                      <Icon name="Users" className="text-primary" size={20} />
+                      Posiadanie wcześniejszego konta
+                    </h4>
+                    <p className="text-foreground/80">
+                      Bonus powitalny przysługuje raz — jednemu graczowi, na jeden adres, jedno urządzenie i jedno konto. Kasyna stosują zaawansowane systemy wykrywania duplikatów (fingerprinting przeglądarki, analiza IP), więc próba ponownej rejestracji zazwyczaj kończy się odmową bonusu lub blokadą obu kont.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="text-lg">
+                  Jeśli uważasz, że bonus powinien zostać przyznany, skontaktuj się z obsługą klienta — czasem wystarczy szybka rozmowa na czacie, żeby rozwiązać problem.
+                </p>
               </div>
             </div>
 
