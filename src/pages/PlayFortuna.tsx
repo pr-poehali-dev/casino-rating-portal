@@ -278,6 +278,45 @@ export default function PlayFortuna() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Wallet" className="text-primary" size={28} />
+                        Wypłaty w PlayFortuna – opinie użytkowników
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="CreditCard" className="text-primary" size={22} />
+                            Metody płatności i czas realizacji
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Dostępne metody obejmują karty Visa i Mastercard, portfele elektroniczne (Skrill, Neteller, ecoPayz) oraz w niektórych przypadkach przelewy bankowe i kryptowaluty. Minimalna kwota wypłaty zależy od wybranej metody – najczęściej to równowartość 10–20 EUR. Standardowe wypłaty realizowane są w ciągu 24–72 godzin, choć pierwsze zlecenie może potrwać dłużej ze względu na procedurę weryfikacji tożsamości (KYC).
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="MessageSquare" className="text-primary" size={22} />
+                            Co mówią gracze?
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              PlayFortuna wypłaty opinie, które można znaleźć na forach takich jak AskGamblers czy LCB, wskazują na dość zróżnicowane doświadczenia. PlayFortuna opinie na temat wypłat są generalnie pozytywne w przypadku zweryfikowanych kont i standardowych kwot. Problemy pojawiają się głównie przy dużych wygranych lub gdy gracz nie dostarczył wymaganych dokumentów na czas. To schemat typowy dla większości kasyn z licencją Curaçao i nie jest specyficzny wyłącznie dla tej platformy.
+                            </p>
+                            <div className="bg-muted/50 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="AlertCircle" className="text-primary flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/70">
+                                  Warto pamiętać, że negatywne opinie często dotyczą przypadków, w których gracz nie przeczytał regulaminu lub próbował obejść warunki bonusowe. Kluczem do sprawnej wypłaty jest przestrzeganie zasad i terminowe dostarczenie dokumentów weryfikacyjnych.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
