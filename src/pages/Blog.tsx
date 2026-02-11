@@ -41,28 +41,6 @@ const blogPosts: BlogPost[] = [
     slug: 'czym-jest-wagering'
   },
   {
-    id: 2,
-    title: 'Jak wybrać najlepszy slot online w 2026? Poradnik dla początkujących',
-    excerpt: 'Automaty do gier to najpopularniejsza forma rozrywki w kasynach online. Dowiedz się, na co zwracać uwagę przy wyborze slotu, czym jest RTP i jak działają darmowe spiny.',
-    category: 'Poradniki',
-    date: '8 lutego 2026',
-    readTime: '5 min',
-    image: 'slots',
-    author: 'Redakcja bkreiting.com',
-    slug: 'jak-wybrac-najlepszy-slot'
-  },
-  {
-    id: 3,
-    title: 'Top 5 strategii gry w blackjack - zwiększ swoje szanse na wygraną',
-    excerpt: 'Blackjack to jedna z niewielu gier kasynowych, gdzie strategia naprawdę ma znaczenie. Poznaj podstawowe zasady zarządzania bankrollem i taktyki używane przez profesjonalistów.',
-    category: 'Strategie',
-    date: '5 lutego 2026',
-    readTime: '7 min',
-    image: 'blackjack',
-    author: 'Redakcja bkreiting.com',
-    slug: 'top-5-strategii-blackjack'
-  },
-  {
     id: 1,
     title: 'Jak działa bonus powitalny w kasynie online?',
     excerpt: 'Rejestrując się w kasynie internetowym, niemal zawsze natkniesz się na ofertę skierowaną do nowych użytkowników. Właśnie tak wygląda pierwszy kontakt z bonusem powitalnym.',
@@ -200,16 +178,6 @@ export default function Blog() {
                         alt={post.title}
                         className="w-full h-full object-cover"
                       />
-                    )}
-                    {post.image === 'slots' && (
-                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center">
-                        <Icon name="Dices" className="text-primary opacity-30" size={80} />
-                      </div>
-                    )}
-                    {post.image === 'blackjack' && (
-                      <div className="w-full h-full bg-gradient-to-br from-secondary/20 via-primary/10 to-primary/20 flex items-center justify-center">
-                        <Icon name="Spade" className="text-primary opacity-30" size={80} />
-                      </div>
                     )}
                     {post.image === 'bonus' && (
                       <img 
