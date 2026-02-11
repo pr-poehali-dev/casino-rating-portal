@@ -31,15 +31,15 @@ export default function Winity() {
   const casinoUrl = 'https://winity.one/alt/win_girl_ru/?be6866f5f4da4c4e8f73ba3f9d913383';
 
   useEffect(() => {
-    document.title = 'Winity kasyno online – opinie i bonus na start 2026';
+    document.title = 'Winity kasyno online – opinie, bonusy i rejestracja 2026';
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Winity kasyno online w Polsce – sprawdź opinie graczy, bonus bez depozytu, darmowe spiny i szybkie wypłaty w 2026 roku.');
+      metaDescription.setAttribute('content', 'Winity kasyno online w Polsce – sprawdź opinie graczy, bonus bez depozytu, darmowe spiny, wypłaty i aktualną ofertę powitalną na 2026 rok.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Winity kasyno online w Polsce – sprawdź opinie graczy, bonus bez depozytu, darmowe spiny i szybkie wypłaty w 2026 roku.';
+      meta.content = 'Winity kasyno online w Polsce – sprawdź opinie graczy, bonus bez depozytu, darmowe spiny, wypłaty i aktualną ofertę powitalną na 2026 rok.';
       document.head.appendChild(meta);
     }
   }, []);
