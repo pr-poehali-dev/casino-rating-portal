@@ -31,15 +31,15 @@ export default function Booi() {
   const casinoUrl = 'https://booipromo1.com/alt/booi_7sinsnew_ru/?2cd1c9052f79f17d0fd62080016b1093';
 
   useEffect(() => {
-    document.title = 'Booi kasyno online – opinie i bonus na start';
+    document.title = 'Booi kasyno online – opinie, bonusy i rejestracja 2026';
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Booi kasyno online w Polsce – sprawdź opinie, bonus bez depozytu, darmowe spiny, rejestrację i szybkie wypłaty.');
+      metaDescription.setAttribute('content', 'Booi kasyno online w Polsce – sprawdź opinie graczy, bonus bez depozytu, darmowe spiny i szybkie wypłaty. Rejestracja, kody bonusowe i aplikacja mobilna.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Booi kasyno online w Polsce – sprawdź opinie, bonus bez depozytu, darmowe spiny, rejestrację i szybkie wypłaty.';
+      meta.content = 'Booi kasyno online w Polsce – sprawdź opinie graczy, bonus bez depozytu, darmowe spiny i szybkie wypłaty. Rejestracja, kody bonusowe i aplikacja mobilna.';
       document.head.appendChild(meta);
     }
   }, []);
