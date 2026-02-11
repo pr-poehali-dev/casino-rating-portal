@@ -239,6 +239,45 @@ export default function PlayFortuna() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Gamepad2" className="text-primary" size={28} />
+                        Gry hazardowe i darmowe gry w PlayFortuna
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Dices" className="text-primary" size={22} />
+                            Automaty i dostawcy gier
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Biblioteka gier to zdecydowanie mocna strona platformy. PlayFortuna gry hazardowe obejmują kilka tysięcy tytułów od dostawców takich jak NetEnt, Pragmatic Play, Microgaming, Play'n GO czy Yggdrasil. Automaty stanowią trzon oferty – od klasycznych slotów po rozbudowane gry z mechanikami megaways i bonus buy.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Video" className="text-primary" size={22} />
+                            Live casino
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Sekcja live casino opiera się głównie na stołach Evolution Gaming, co gwarantuje przyzwoitą jakość streamingu i szeroką gamę wariantów ruletki, blackjacka oraz baccarata. Dostępne są również gry show w stylu Crazy Time czy Monopoly Live.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Play" className="text-primary" size={22} />
+                            Tryb demo – graj za darmo
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            PlayFortuna darmowe gry są dostępne w trybie demo dla większości automatów. Wystarczy najechać na tytuł i wybrać opcję gry za darmo – nie wymaga to nawet logowania. To dobra opcja dla osób, które chcą przetestować mechanikę slotu przed grą za realne pieniądze. Tryb demo nie obejmuje oczywiście live casino, gdzie gra toczy się wyłącznie za prawdziwe stawki.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
