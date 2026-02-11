@@ -511,8 +511,8 @@ export default function Index() {
           </div>
         </div>
       )}
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-orange-50/30">
-      <header className="border-b-2 border-amber-200/50 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <div className="min-h-screen bg-gradient-to-b from-background via-card to-background">
+      <header className="border-b border-border bg-card/80 backdrop-blur-md sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3 group cursor-pointer">
@@ -596,20 +596,8 @@ export default function Index() {
         </div>
       </header>
 
-      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-amber-50 via-white to-orange-50">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmQwMDAiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJjMC0xLjEtLjktMi0yLTJ6bTAgNGgtMnYyYzEuMSAwIDItLjkgMi0yem0tMiAwdi0yYy0xLjEgMC0yIC45LTIgMmgyem0wLTRjMC0xLjEuOS0yIDItMnYyem0tNCAydjJoMnYtMmgtMnptNCAwaC0ydjJoMnYtMnptLTQtMnYyaDJ2LTJoLTJ6bTQgMGgtMnYyaDJ2LTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"></div>
-        
-        {/* Decorative casino elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <Icon name="Sparkles" className="absolute top-10 left-5 text-amber-400 floating" size={80} />
-          <Icon name="Star" className="absolute top-20 right-20 text-yellow-400 animate-pulse" size={60} style={{ animationDelay: '0.5s' }} />
-          <Icon name="Crown" className="absolute top-40 left-1/4 text-amber-500 floating" size={70} style={{ animationDelay: '1s' }} />
-          <Icon name="Trophy" className="absolute bottom-20 right-10 text-orange-400 floating" size={90} style={{ animationDelay: '1.5s' }} />
-          <Icon name="Gift" className="absolute bottom-40 left-10 text-amber-400 animate-pulse" size={65} style={{ animationDelay: '2s' }} />
-          <Icon name="Zap" className="absolute top-1/2 right-1/4 text-yellow-500 floating" size={55} style={{ animationDelay: '0.8s' }} />
-          <div className="absolute top-1/4 right-10 w-32 h-32 bg-gradient-to-br from-amber-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 left-20 w-40 h-40 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
+      <section className="relative py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -802,21 +790,21 @@ export default function Index() {
               </div>
 
               {casinos.map((casino, index) => (
-                <Card key={casino.id} className="card-glow bg-white border-2 border-amber-200/50 overflow-hidden relative group">
+                <Card key={casino.id} className="card-glow overflow-hidden relative group">
                   {index === 0 && (
                     <div className="absolute top-4 right-4 z-10">
-                      <Badge className="bg-gradient-to-r from-amber-400 to-orange-500 text-white border-0 px-3 py-1 shimmer">
+                      <Badge className="bg-primary/20 text-primary border-primary/30 px-3 py-1">
                         <Icon name="Crown" className="mr-1" size={14} />
                         #1 TOP
                       </Badge>
                     </div>
                   )}
-                  <CardHeader className="relative bg-gradient-to-br from-amber-50 to-orange-50/30">
+                  <CardHeader className="relative">
                     <div className="flex flex-col md:flex-row md:items-start gap-4">
                       <div className="flex items-center gap-4">
                         <div className="relative">
-                          <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-400 rounded-lg blur opacity-50"></div>
-                          <div className="relative flex items-center justify-center w-20 h-20 bg-white border-2 border-amber-300 rounded-lg overflow-hidden shadow-lg">
+                          <div className="absolute inset-0 bg-primary/20 rounded-lg blur"></div>
+                          <div className="relative flex items-center justify-center w-20 h-20 bg-card border border-border rounded-lg overflow-hidden">
                             <img 
                               src={casino.logo} 
                               alt={`${casino.name} logo`}
@@ -826,7 +814,7 @@ export default function Index() {
                         </div>
                         <div>
                           <div className="flex items-center gap-2 mb-1">
-                            <Badge variant="outline" className="bg-gradient-to-r from-amber-100 to-orange-100 text-amber-700 border-amber-300 font-bold">
+                            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/30 font-bold">
                               #{index + 1}
                             </Badge>
                             <CardTitle className="text-2xl font-bold">{casino.name}</CardTitle>
@@ -838,7 +826,7 @@ export default function Index() {
                         </div>
                       </div>
                       <div className="md:ml-auto flex flex-col items-start md:items-end gap-2">
-                        <div className="flex items-center gap-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white px-4 py-2 rounded-lg shadow-lg pulse-gold">
+                        <div className="flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-lg border border-primary/30">
                           <Icon name="Award" size={20} />
                           <span className="text-2xl font-bold">{casino.rating}</span>
                           <span className="text-sm opacity-90">/10</span>
@@ -851,14 +839,13 @@ export default function Index() {
                     </div>
                   </CardHeader>
 
-                  <CardContent className="space-y-4 bg-gradient-to-br from-white to-amber-50/30">
-                    <div className="relative bg-gradient-to-r from-amber-100 via-yellow-100 to-orange-100 border-2 border-amber-300 rounded-lg p-4 overflow-hidden">
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-400/20 to-transparent rounded-full blur-2xl"></div>
-                      <div className="relative flex items-center gap-2 mb-2">
-                        <Icon name="Gift" className="text-amber-600" size={22} />
-                        <span className="font-bold text-amber-900">{t.welcomeBonus}</span>
+                  <CardContent className="space-y-4">
+                    <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10 border-l-4 border-primary rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Icon name="Gift" className="text-primary" size={22} />
+                        <span className="font-bold text-foreground">{t.welcomeBonus}</span>
                       </div>
-                      <p className="relative text-xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">{casino.bonus}</p>
+                      <p className="text-xl font-bold text-primary">{casino.bonus}</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -879,10 +866,10 @@ export default function Index() {
                     </div>
                   </CardContent>
 
-                  <CardFooter className="flex flex-col sm:flex-row gap-3 bg-gradient-to-br from-amber-50/50 to-orange-50/30 border-t-2 border-amber-200/50">
+                  <CardFooter className="flex flex-col sm:flex-row gap-3">
                     <Button 
                       asChild
-                      className="flex-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-lg hover:shadow-xl transition-all font-bold text-base shimmer"
+                      className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
                     >
                       <a href={casino.url} target="_blank" rel="nofollow noopener noreferrer">
                         <Icon name="Rocket" className="mr-2" size={20} />
@@ -892,7 +879,7 @@ export default function Index() {
                     {(casino.id === 1 || casino.id === 2 || casino.id === 3 || casino.id === 4 || casino.id === 5) ? (
                       <Button 
                         variant="outline" 
-                        className="flex-1 border-2 border-amber-300 hover:bg-amber-100 text-amber-900 font-semibold"
+                        className="flex-1 border-primary/30 hover:bg-primary/10"
                         onClick={() => {
                           if (casino.id === 1) {
                             navigate('/vavada');
