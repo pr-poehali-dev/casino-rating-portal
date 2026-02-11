@@ -10,6 +10,7 @@ import AdminPanel from "./pages/AdminPanel";
 import AdminSetup from "./pages/AdminSetup";
 import Vavada from "./pages/Vavada";
 import NotFound from "./pages/NotFound";
+import AgeConfirmationModal from "./components/AgeConfirmationModal";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <AgeConfirmationModal />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/dashboard" element={<Dashboard />} />
