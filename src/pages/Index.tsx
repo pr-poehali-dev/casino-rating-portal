@@ -1566,40 +1566,62 @@ export default function Index() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">{t.usefulLinks}</h4>
+              <h4 className="font-semibold mb-4">Przydatne Linki</h4>
               <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#" className="hover:text-primary transition-colors">{t.aboutUs}</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">{t.contact}</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">{t.privacyPolicy}</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">{t.terms}</a></li>
+                <li>
+                  <button onClick={() => navigate('/o-nas')} className="hover:text-primary transition-colors">
+                    O nas
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => navigate('/polityka-prywatnosci')} className="hover:text-primary transition-colors">
+                    Polityka prywatności
+                  </button>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">{t.categories}</h4>
+              <h4 className="font-semibold mb-4">Kategorie</h4>
               <ul className="space-y-2 text-sm text-foreground/60">
-                <li><a href="#" className="hover:text-primary transition-colors">{t.topCasinosLink}</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">{t.bestBonuses}</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">{t.newCasinos}</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">{t.liveCasino}</a></li>
+                <li>
+                  <button onClick={() => setActiveTab('ranking')} className="hover:text-primary transition-colors">
+                    Top Kasyna
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => setActiveTab('bonusy')} className="hover:text-primary transition-colors">
+                    Najlepsze Bonusy
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => setActiveTab('gry')} className="hover:text-primary transition-colors">
+                    Gry Kasynowe
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => setActiveTab('faq')} className="hover:text-primary transition-colors">
+                    FAQ
+                  </button>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">{t.newsletter}</h4>
+              <h4 className="font-semibold mb-4">Newsletter</h4>
               <p className="text-sm text-foreground/60 mb-3">
-                {t.newsletterDesc}
+                Zapisz się i otrzymuj najlepsze oferty bonusowe
               </p>
               <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                 <Icon name="Mail" className="mr-2" size={18} />
-                {t.subscribe}
+                Zapisz się
               </Button>
             </div>
           </div>
 
           <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-foreground/60">
-              {t.copyright}
+              © 2026 bkreiting.com. Wszystkie prawa zastrzeżone.
             </p>
             <div className="flex items-center gap-4">
               <Badge variant="outline" className="border-primary/30">
@@ -1607,7 +1629,7 @@ export default function Index() {
                 18+
               </Badge>
               <Badge variant="outline" className="border-primary/30">
-                {t.responsibleGaming}
+                Odpowiedzialna Gra
               </Badge>
             </div>
           </div>

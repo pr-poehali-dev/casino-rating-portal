@@ -13,6 +13,8 @@ import PlayFortuna from "./pages/PlayFortuna";
 import Booi from "./pages/Booi";
 import Jozz from "./pages/Jozz";
 import Winity from "./pages/Winity";
+import Privacy from "./pages/Privacy";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import AgeConfirmationModal from "./components/AgeConfirmationModal";
 
@@ -34,6 +36,8 @@ const App = () => (
         <Route path="/booi" element={<Booi />} />
         <Route path="/jozz" element={<Jozz />} />
         <Route path="/winity" element={<Winity />} />
+        <Route path="/polityka-prywatnosci" element={<Privacy />} />
+        <Route path="/o-nas" element={<About />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>
