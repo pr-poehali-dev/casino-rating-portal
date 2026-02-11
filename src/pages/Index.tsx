@@ -511,8 +511,8 @@ export default function Index() {
           </div>
         </div>
       )}
-    <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-orange-50/30">
+      <header className="border-b-2 border-amber-200/50 bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3 group cursor-pointer">
@@ -596,17 +596,19 @@ export default function Index() {
         </div>
       </header>
 
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent"></div>
+      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-amber-50 via-white to-orange-50">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmQwMDAiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJjMC0xLjEtLjktMi0yLTJ6bTAgNGgtMnYyYzEuMSAwIDItLjkgMi0yem0tMiAwdi0yYy0xLjEgMC0yIC45LTIgMmgyem0wLTRjMC0xLjEuOS0yIDItMnYyem0tNCAydjJoMnYtMmgtMnptNCAwaC0ydjJoMnYtMnptLTQtMnYyaDJ2LTJoLTJ6bTQgMGgtMnYyaDJ2LTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"></div>
         
         {/* Decorative casino elements */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
-          <Icon name="Dices" className="absolute top-10 left-5 text-primary animate-pulse" size={120} style={{ animationDuration: '3s' }} />
-          <Icon name="Spade" className="absolute top-32 right-10 text-primary/80 animate-pulse" size={100} style={{ animationDuration: '4s', animationDelay: '1s' }} />
-          <Icon name="Heart" className="absolute bottom-10 left-20 text-primary/70 animate-pulse" size={110} style={{ animationDuration: '3.5s', animationDelay: '0.5s' }} />
-          <Icon name="Diamond" className="absolute top-1/2 right-32 text-primary/60 animate-pulse" size={90} style={{ animationDuration: '4.5s', animationDelay: '2s' }} />
-          <Icon name="Club" className="absolute bottom-32 right-5 text-primary/80 animate-pulse" size={105} style={{ animationDuration: '3.8s', animationDelay: '1.5s' }} />
-          <Icon name="Dices" className="absolute top-1/3 left-32 text-primary/50 animate-pulse" size={95} style={{ animationDuration: '4.2s', animationDelay: '0.8s' }} />
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <Icon name="Sparkles" className="absolute top-10 left-5 text-amber-400 floating" size={80} />
+          <Icon name="Star" className="absolute top-20 right-20 text-yellow-400 animate-pulse" size={60} style={{ animationDelay: '0.5s' }} />
+          <Icon name="Crown" className="absolute top-40 left-1/4 text-amber-500 floating" size={70} style={{ animationDelay: '1s' }} />
+          <Icon name="Trophy" className="absolute bottom-20 right-10 text-orange-400 floating" size={90} style={{ animationDelay: '1.5s' }} />
+          <Icon name="Gift" className="absolute bottom-40 left-10 text-amber-400 animate-pulse" size={65} style={{ animationDelay: '2s' }} />
+          <Icon name="Zap" className="absolute top-1/2 right-1/4 text-yellow-500 floating" size={55} style={{ animationDelay: '0.8s' }} />
+          <div className="absolute top-1/4 right-10 w-32 h-32 bg-gradient-to-br from-amber-400/20 to-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 left-20 w-40 h-40 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -800,51 +802,63 @@ export default function Index() {
               </div>
 
               {casinos.map((casino, index) => (
-                <Card key={casino.id} className="card-glow bg-card border-border overflow-hidden">
-                  <CardHeader className="relative">
+                <Card key={casino.id} className="card-glow bg-white border-2 border-amber-200/50 overflow-hidden relative group">
+                  {index === 0 && (
+                    <div className="absolute top-4 right-4 z-10">
+                      <Badge className="bg-gradient-to-r from-amber-400 to-orange-500 text-white border-0 px-3 py-1 shimmer">
+                        <Icon name="Crown" className="mr-1" size={14} />
+                        #1 TOP
+                      </Badge>
+                    </div>
+                  )}
+                  <CardHeader className="relative bg-gradient-to-br from-amber-50 to-orange-50/30">
                     <div className="flex flex-col md:flex-row md:items-start gap-4">
                       <div className="flex items-center gap-4">
-                        <div className="flex items-center justify-center w-16 h-16 bg-card/80 border border-border rounded-lg overflow-hidden">
-                          <img 
-                            src={casino.logo} 
-                            alt={`${casino.name} logo`}
-                            className="w-full h-full object-cover"
-                          />
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-400 rounded-lg blur opacity-50"></div>
+                          <div className="relative flex items-center justify-center w-20 h-20 bg-white border-2 border-amber-300 rounded-lg overflow-hidden shadow-lg">
+                            <img 
+                              src={casino.logo} 
+                              alt={`${casino.name} logo`}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
                         </div>
                         <div>
                           <div className="flex items-center gap-2 mb-1">
-                            <Badge variant="outline" className="bg-primary/10 text-primary border-primary/30">
+                            <Badge variant="outline" className="bg-gradient-to-r from-amber-100 to-orange-100 text-amber-700 border-amber-300 font-bold">
                               #{index + 1}
                             </Badge>
-                            <CardTitle className="text-2xl">{casino.name}</CardTitle>
+                            <CardTitle className="text-2xl font-bold">{casino.name}</CardTitle>
                           </div>
-                          <CardDescription className="flex items-center gap-2 text-foreground/60">
-                            <Icon name="ShieldCheck" size={16} className="text-primary" />
-                            {casino.license}
+                          <CardDescription className="flex items-center gap-2 text-foreground/70">
+                            <Icon name="ShieldCheck" size={16} className="text-green-600" />
+                            <span className="font-medium">{casino.license}</span>
                           </CardDescription>
                         </div>
                       </div>
                       <div className="md:ml-auto flex flex-col items-start md:items-end gap-2">
-                        <div className="flex items-center gap-2 bg-primary/10 px-3 py-2 rounded-lg">
-                          <Icon name="Award" className="text-primary" size={20} />
-                          <span className="text-2xl font-bold text-primary">{casino.rating}</span>
-                          <span className="text-sm text-foreground/60">/10</span>
+                        <div className="flex items-center gap-2 bg-gradient-to-r from-amber-400 to-orange-400 text-white px-4 py-2 rounded-lg shadow-lg pulse-gold">
+                          <Icon name="Award" size={20} />
+                          <span className="text-2xl font-bold">{casino.rating}</span>
+                          <span className="text-sm opacity-90">/10</span>
                         </div>
                         <div className="flex items-center gap-1">
                           <StarRating rating={casino.userRating} size={16} />
-                          <span className="text-sm text-foreground/60 ml-1">({casino.userRating})</span>
+                          <span className="text-sm text-foreground/70 ml-1 font-medium">({casino.userRating})</span>
                         </div>
                       </div>
                     </div>
                   </CardHeader>
 
-                  <CardContent className="space-y-4">
-                    <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-lg p-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Icon name="Gift" className="text-primary" size={20} />
-                        <span className="font-semibold text-foreground">{t.welcomeBonus}</span>
+                  <CardContent className="space-y-4 bg-gradient-to-br from-white to-amber-50/30">
+                    <div className="relative bg-gradient-to-r from-amber-100 via-yellow-100 to-orange-100 border-2 border-amber-300 rounded-lg p-4 overflow-hidden">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-amber-400/20 to-transparent rounded-full blur-2xl"></div>
+                      <div className="relative flex items-center gap-2 mb-2">
+                        <Icon name="Gift" className="text-amber-600" size={22} />
+                        <span className="font-bold text-amber-900">{t.welcomeBonus}</span>
                       </div>
-                      <p className="text-xl font-bold text-primary">{casino.bonus}</p>
+                      <p className="relative text-xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">{casino.bonus}</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -865,20 +879,20 @@ export default function Index() {
                     </div>
                   </CardContent>
 
-                  <CardFooter className="flex flex-col sm:flex-row gap-3 bg-card/50">
+                  <CardFooter className="flex flex-col sm:flex-row gap-3 bg-gradient-to-br from-amber-50/50 to-orange-50/30 border-t-2 border-amber-200/50">
                     <Button 
                       asChild
-                      className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90"
+                      className="flex-1 bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-lg hover:shadow-xl transition-all font-bold text-base shimmer"
                     >
                       <a href={casino.url} target="_blank" rel="nofollow noopener noreferrer">
-                        <Icon name="ExternalLink" className="mr-2" size={18} />
+                        <Icon name="Rocket" className="mr-2" size={20} />
                         {t.playNow}
                       </a>
                     </Button>
                     {(casino.id === 1 || casino.id === 2 || casino.id === 3 || casino.id === 4 || casino.id === 5) ? (
                       <Button 
                         variant="outline" 
-                        className="flex-1 border-primary/30 hover:bg-primary/10"
+                        className="flex-1 border-2 border-amber-300 hover:bg-amber-100 text-amber-900 font-semibold"
                         onClick={() => {
                           if (casino.id === 1) {
                             navigate('/vavada');
@@ -899,7 +913,7 @@ export default function Index() {
                     ) : (
                       <Button 
                         variant="outline" 
-                        className="flex-1 border-primary/30 hover:bg-primary/10"
+                        className="flex-1 border-2 border-amber-200 text-amber-700"
                         disabled
                       >
                         <Icon name="FileText" className="mr-2" size={18} />

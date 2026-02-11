@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    --background: 240 10% 5%;
-    --foreground: 45 100% 95%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 10%;
 
-    --card: 240 8% 10%;
-    --card-foreground: 45 100% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
 
-    --popover: 240 8% 12%;
-    --popover-foreground: 45 100% 95%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 240 10% 10%;
 
     --primary: 45 100% 51%;
-    --primary-foreground: 240 10% 5%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 50% 35%;
-    --secondary-foreground: 45 100% 95%;
+    --secondary: 30 100% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 5% 20%;
-    --muted-foreground: 45 20% 60%;
+    --muted: 45 20% 95%;
+    --muted-foreground: 240 10% 40%;
 
     --accent: 45 85% 60%;
-    --accent-foreground: 240 10% 5%;
+    --accent-foreground: 240 10% 10%;
 
     --destructive: 0 72% 51%;
-    --destructive-foreground: 45 100% 95%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 240 10% 18%;
-    --input: 240 10% 18%;
+    --border: 45 30% 88%;
+    --input: 45 30% 88%;
     --ring: 45 100% 51%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 240 10% 8%;
-    --sidebar-foreground: 45 100% 95%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 10% 10%;
     --sidebar-primary: 45 100% 51%;
-    --sidebar-primary-foreground: 240 10% 5%;
-    --sidebar-accent: 240 8% 15%;
-    --sidebar-accent-foreground: 45 100% 95%;
-    --sidebar-border: 240 10% 18%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 20% 95%;
+    --sidebar-accent-foreground: 240 10% 10%;
+    --sidebar-border: 45 30% 88%;
     --sidebar-ring: 45 100% 51%;
   }
 }
@@ -69,16 +69,92 @@
 
 @layer utilities {
   .gold-glow {
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    text-shadow:
+      0 0 30px rgba(212, 175, 55, 0.8),
+      0 0 60px rgba(212, 175, 55, 0.4);
   }
 
   .card-glow {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+    box-shadow:
+      0 4px 20px rgba(212, 175, 55, 0.15),
+      0 1px 3px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 251, 235, 1) 100%
+    );
   }
 
   .card-glow:hover {
-    box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
-    transform: translateY(-4px);
+    box-shadow:
+      0 12px 40px rgba(212, 175, 55, 0.3),
+      0 4px 10px rgba(212, 175, 55, 0.2);
+    transform: translateY(-6px) scale(1.02);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ff9800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 215, 0, 0.3),
+      transparent
+    );
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .pulse-gold {
+    animation: pulse-gold 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-gold {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+    }
   }
 }
