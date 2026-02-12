@@ -28,7 +28,7 @@ const StarRating = ({ rating, size = 20 }: { rating: number; size?: number }) =>
 
 export default function Booi() {
   const navigate = useNavigate();
-  const casinoUrl = 'https://booipromo1.com/alt/booi_7sinsnew_ru/?2cd1c9052f79f17d0fd62080016b1093';
+  const casinoUrl = 'https://booi-promo.com/alt/booipl/pl/sign-up?089c7e6f2881071efd3f2ff31a34293d';
 
   useEffect(() => {
     document.title = 'Booi kasyno online – opinie, bonusy i rejestracja 2026';
@@ -113,7 +113,7 @@ export default function Booi() {
                         <Icon name="Gift" className="text-primary mt-1" size={24} />
                         <div>
                           <p className="text-sm text-muted-foreground mb-1">Bonus Powitalny</p>
-                          <p className="text-xl font-bold text-primary">Do 4000 PLN + 100 Darmowych Spinów</p>
+                          <p className="text-xl font-bold text-primary">225% do 1500$ + 100 FS</p>
                         </div>
                       </div>
                     </div>
@@ -209,7 +209,7 @@ export default function Booi() {
                             Bonus powitalny i darmowe spiny
                           </h3>
                           <p className="text-foreground/80 leading-relaxed">
-                            System promocji w Booi jest rozbudowany, choć wymaga uważnego czytania regulaminu. <strong className="text-primary">Booi bonus na start</strong> obejmuje zazwyczaj dopasowanie pierwszego depozytu – w 2026 roku jest to 100% do określonej kwoty plus paczka darmowych spinów przypisanych do wybranych slotów.
+                            System promocji w Booi jest rozbudowany, choć wymaga uważnego czytania regulaminu. <strong className="text-primary">Booi bonus na start</strong> to imponujące <strong className="text-primary">225% do 1500$ + 100 darmowych spinów</strong> – to jedna z najlepszych ofert powitalnych na rynku w 2026 roku.
                           </p>
                           <p className="text-foreground/80 leading-relaxed mt-4">
                             Czy istnieje <strong className="text-primary">booi bonus bez depozytu</strong>? Na ten moment kasyno nie oferuje klasycznego no deposit bonus w formie gotówki. Pojawiają się natomiast okresowe promocje z <strong className="text-primary">booi darmowe spiny</strong> za samą rejestrację – warto śledzić aktualne oferty na stronie, bo zmieniają się co kilka tygodni.

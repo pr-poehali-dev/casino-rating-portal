@@ -50,12 +50,12 @@ const casinos: Casino[] = [
     name: 'Booi',
     rating: 9.0,
     userRating: 4.6,
-    bonus: 'Do 4000 PLN + 100 Darmowych Spinów',
+    bonus: '225% do 1500$ + 100 FS',
     games: 3200,
     license: 'Curacao eGaming',
     features: ['Bez depozytu bonus', 'Szybka weryfikacja', 'Polski support', 'Jackpoty'],
     logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/24ca2f82-0a85-4ae2-a2ef-623a8a58d022.png',
-    url: 'https://booipromo1.com/alt/booi_7sinsnew_ru/?2cd1c9052f79f17d0fd62080016b1093'
+    url: 'https://booi-promo.com/alt/booipl/pl/sign-up?089c7e6f2881071efd3f2ff31a34293d'
   },
   {
     id: 4,
