@@ -24,7 +24,7 @@ const blogPosts: BlogPost[] = [
     excerpt: 'RTP to wskaźnik teoretycznego zwrotu w slotach. Dowiedz się, jak działa, co oznacza dla gracza i czy warto wybierać automaty z wysokim RTP.',
     category: 'Poradniki',
     date: '12 lutego 2026',
-    readTime: '5 min',
+    readTime: '10 min',
     image: 'rtp',
     author: 'Redakcja bkreiting.com',
     slug: 'sloty-z-wysokim-rtp'

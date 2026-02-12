@@ -56,7 +56,7 @@ export default function BlogRTP() {
               <span>•</span>
               <div className="flex items-center gap-1">
                 <Icon name="Clock" size={16} />
-                <span>5 min czytania</span>
+                <span>10 min czytania</span>
               </div>
             </div>
 
@@ -391,6 +391,283 @@ export default function BlogRTP() {
                     </CardContent>
                   </Card>
                 </div>
+              </div>
+            </div>
+
+            <div className="border-t border-primary/20 pt-8 mt-8">
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="Search" className="text-primary" size={28} />
+                Jak sprawdzić RTP slotu?
+              </h2>
+              
+              <div className="space-y-4">
+                <p className="text-foreground/80 leading-relaxed">
+                  Informacja o RTP nie jest tajemnicą – producenci gier są zobowiązani ją udostępniać. Oto kilka miejsc, gdzie ją znajdziesz:
+                </p>
+
+                <div className="space-y-3">
+                  <Card className="border-primary/20">
+                    <CardContent className="pt-4">
+                      <div className="flex items-start gap-3">
+                        <div className="bg-primary/10 p-2 rounded-lg">
+                          <Icon name="FileText" className="text-primary" size={20} />
+                        </div>
+                        <div>
+                          <p className="font-semibold mb-2">1. Ekran informacyjny gry</p>
+                          <p className="text-sm text-foreground/80">
+                            Większość automatów ma sekcję „Info", „Zasady" lub ikonę znaku zapytania. Tam, obok tabeli wypłat i opisu funkcji bonusowych, zazwyczaj podany jest wskaźnik RTP.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-primary/20">
+                    <CardContent className="pt-4">
+                      <div className="flex items-start gap-3">
+                        <div className="bg-primary/10 p-2 rounded-lg">
+                          <Icon name="BookOpen" className="text-primary" size={20} />
+                        </div>
+                        <div>
+                          <p className="font-semibold mb-2">2. Regulamin lub warunki gry</p>
+                          <p className="text-sm text-foreground/80">
+                            Operatorzy publikują szczegółowe informacje o parametrach gier w swoich regulaminach. Warto tam zajrzeć, szczególnie że – jak wspomnieliśmy – RTP tego samego tytułu może się różnić w zależności od platformy.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-primary/20">
+                    <CardContent className="pt-4">
+                      <div className="flex items-start gap-3">
+                        <div className="bg-primary/10 p-2 rounded-lg">
+                          <Icon name="Globe" className="text-primary" size={20} />
+                        </div>
+                        <div>
+                          <p className="font-semibold mb-2">3. Strona producenta</p>
+                          <p className="text-sm text-foreground/80">
+                            Dostawcy oprogramowania – tacy jak znani twórcy gier slotowych – często zamieszczają specyfikacje techniczne swoich tytułów na oficjalnych stronach. To najbardziej wiarygodne źródło.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-primary/20">
+                    <CardContent className="pt-4">
+                      <div className="flex items-start gap-3">
+                        <div className="bg-primary/10 p-2 rounded-lg">
+                          <Icon name="Database" className="text-primary" size={20} />
+                        </div>
+                        <div>
+                          <p className="font-semibold mb-2">4. Niezależne bazy danych i rankingi</p>
+                          <p className="text-sm text-foreground/80">
+                            W internecie funkcjonują serwisy katalogujące automaty wraz z ich parametrami. Pomagają szybko porównać RTP wielu tytułów, choć zawsze warto zweryfikować dane z oficjalnym źródłem.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="AlertTriangle" className="text-primary" size={24} />
+                  Na co uważać przy sprawdzaniu RTP?
+                </h3>
+                
+                <div className="space-y-4">
+                  <p className="text-foreground/80 leading-relaxed">
+                    Zwróć uwagę, czy podana wartość dotyczy gry podstawowej, czy uwzględnia funkcję <strong className="text-primary">„kup bonus"</strong> (buy feature). Niektóre automaty mają różne RTP w zależności od trybu gry.
+                  </p>
+
+                  <p className="text-foreground/80 leading-relaxed">
+                    Ponadto – jak już wspomniano – operatorzy mogą stosować niższe warianty RTP niż domyślne ustawienia producenta. Jeśli zależy Ci na najwyższym możliwym zwrocie, porównaj wartości w kilku źródłach.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-primary/20 pt-8 mt-8">
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="Target" className="text-primary" size={28} />
+                Czy warto wybierać sloty z wysokim RTP?
+              </h2>
+              
+              <div className="space-y-4">
+                <p className="text-foreground/80 leading-relaxed">
+                  Odpowiedź zależy od Twojego podejścia do gry i oczekiwań.
+                </p>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="CheckCircle2" className="text-primary" size={24} />
+                  Kiedy wysoki RTP ma największe znaczenie?
+                </h3>
+                
+                <div className="space-y-3">
+                  <Card className="border-green-500/30 bg-green-500/5">
+                    <CardContent className="pt-4">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Clock" className="text-green-500 mt-1" size={20} />
+                        <div>
+                          <p className="font-semibold mb-2">Przy dłuższych sesjach</p>
+                          <p className="text-sm text-foreground/80">
+                            Im więcej spinów wykonujesz, tym bardziej Twoje wyniki zbliżają się do wartości statystycznych. Przy długiej grze różnica między RTP 94% a 97% staje się bardziej odczuwalna dla portfela.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-green-500/30 bg-green-500/5">
+                    <CardContent className="pt-4">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Gift" className="text-green-500 mt-1" size={20} />
+                        <div>
+                          <p className="font-semibold mb-2">Przy realizacji warunków bonusowych</p>
+                          <p className="text-sm text-foreground/80">
+                            Jeśli korzystasz z bonusu, który wymaga obrotu określoną kwotą, grasz na dużej liczbie spinów. W takiej sytuacji wyższy RTP oznacza teoretycznie wolniejsze „spalanie" środków bonusowych, co zwiększa szansę na spełnienie wymagań.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-green-500/30 bg-green-500/5">
+                    <CardContent className="pt-4">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Wallet" className="text-green-500 mt-1" size={20} />
+                        <div>
+                          <p className="font-semibold mb-2">Przy ograniczonym budżecie</p>
+                          <p className="text-sm text-foreground/80">
+                            Gracze z mniejszym saldem mogą preferować automaty z wyższym RTP i niższą zmiennością, ponieważ taka kombinacja pozwala na dłuższą grę bez gwałtownej utraty środków.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="XCircle" className="text-primary" size={24} />
+                  Kiedy RTP schodzi na dalszy plan?
+                </h3>
+                
+                <div className="space-y-4">
+                  <p className="text-foreground/80 leading-relaxed">
+                    Jeśli grasz okazjonalnie, wykonując kilkadziesiąt spinów dla rozrywki, różnica między 95% a 97% RTP jest praktycznie nieodczuwalna. Losowość w krótkim okresie ma znacznie większy wpływ na wynik niż ten parametr.
+                  </p>
+
+                  <p className="text-foreground/80 leading-relaxed">
+                    W takiej sytuacji ważniejsze mogą być: tematyka gry, oprawa graficzna, mechaniki bonusowe czy poziom zmienności odpowiadający Twoim preferencjom.
+                  </p>
+
+                  <Card className="border-primary/20 bg-primary/5">
+                    <CardContent className="pt-6">
+                      <p className="text-foreground/80 leading-relaxed">
+                        <strong className="text-primary">Wybór slotu to zawsze kompromis.</strong> RTP to istotny element układanki, ale nie jedyny.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-primary/20 pt-8 mt-8">
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="AlertCircle" className="text-primary" size={28} />
+                Najczęstsze mity o RTP
+              </h2>
+              
+              <div className="space-y-4">
+                <p className="text-foreground/80 leading-relaxed">
+                  Wokół wskaźnika RTP narosło wiele nieporozumień. Oto trzy najczęstsze mity, które warto obalić.
+                </p>
+              </div>
+
+              <div className="mt-6 space-y-6">
+                <Card className="border-red-500/30">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-3">
+                      <Icon name="X" className="text-red-500 mt-1" size={24} />
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold mb-3">
+                          Mit 1 – „Slot z wysokim RTP zawsze wypłaca"
+                        </h3>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Nie. Wysoki RTP oznacza korzystniejszą statystykę w długim okresie, ale nie gwarantuje wypłat w konkretnej sesji. Automat z RTP 98% może przez setki spinów nie wygenerować żadnej istotnej wygranej. „Zawsze wypłaca" to sformułowanie, które nie ma zastosowania w kontekście gier losowych.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-red-500/30">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-3">
+                      <Icon name="X" className="text-red-500 mt-1" size={24} />
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold mb-3">
+                          Mit 2 – „Po serii przegranych automat musi w końcu wygrać"
+                        </h3>
+                        <p className="text-foreground/80 leading-relaxed">
+                          To klasyczny <strong className="text-primary">błąd hazardzisty</strong> (gambler's fallacy). Każdy spin jest niezależnym zdarzeniem losowym. Automat nie bilansuje wyników – nie „wie", że przegrywasz od dwudziestu rund, i nie planuje to rekompensować. Seria przegranych nie zwiększa prawdopodobieństwa wygranej w następnym obrocie.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-red-500/30">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-3">
+                      <Icon name="X" className="text-red-500 mt-1" size={24} />
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold mb-3">
+                          Mit 3 – „RTP działa w krótkim czasie"
+                        </h3>
+                        <p className="text-foreground/80 leading-relaxed">
+                          RTP to wartość obliczona dla ekstremalnie dużych prób – milionów spinów. W skali jednej sesji, jednego dnia czy nawet tygodnia Twoje wyniki mogą drastycznie odbiegać od deklarowanego procenta. Gracz, który postawił 200 zł i wygrał 500 zł na automacie z RTP 95%, nie doświadczył „błędu w RTP" – po prostu trafił na korzystny fragment losowej dystrybucji wyników.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            <div className="border-t border-primary/20 pt-8 mt-8">
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="CheckSquare" className="text-primary" size={28} />
+                Podsumowanie
+              </h2>
+              
+              <div className="space-y-4 bg-gradient-to-r from-primary/5 to-secondary/5 p-6 rounded-lg border border-primary/20">
+                <p className="text-foreground/80 leading-relaxed">
+                  RTP to jeden z podstawowych parametrów każdego automatu online. Wyrażony w procentach wskaźnik mówi, jaką część postawionych środków slot zwraca graczom w bardzo długim okresie. Im wyższy RTP, tym mniejsza matematyczna przewaga operatora – ale to nie to samo co gwarancja wygranej.
+                </p>
+
+                <p className="text-foreground/80 leading-relaxed">
+                  Wysoki RTP – powyżej 96% – oznacza, że automat jest statystycznie korzystniejszy niż przeciętny slot. Ma to znaczenie przede wszystkim przy dłuższej grze i dużej liczbie spinów. W krótkim okresie dominuje losowość, a indywidualne wyniki mogą znacząco odbiegać od wartości teoretycznych.
+                </p>
+
+                <p className="text-foreground/80 leading-relaxed">
+                  Równie ważna jest <strong className="text-primary">zmienność</strong>, która określa charakter wypłat – ich częstotliwość i wielkość. Dopiero połączenie obu parametrów pozwala świadomie ocenić, czego spodziewać się po danym tytule.
+                </p>
+
+                <Card className="border-primary/30 bg-background/50">
+                  <CardContent className="pt-4">
+                    <p className="text-foreground/80 leading-relaxed">
+                      <strong className="text-primary">Rozsądne podejście do RTP</strong> polega na traktowaniu go jako jednego z elementów decyzji, a nie jako wyroczni. Warto znać ten wskaźnik, rozumieć jego ograniczenia i nie budować na nim nierealistycznych oczekiwań. Świadomy gracz to taki, który podejmuje decyzje w oparciu o wiedzę – a nie o mity.
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
