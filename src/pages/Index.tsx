@@ -599,8 +599,8 @@ export default function Index() {
       <section className="relative py-20 md:py-32 overflow-hidden min-h-[600px] flex items-center">
         <div className="absolute inset-0">
           <img 
-            src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/526faf51-1720-49a6-8219-2042e6da94fd.jpg"
-            alt="Nowy Złoty Wiek Gier"
+            src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/243c8c17-53ff-402d-9b30-aeaa32b95e25.jpg"
+            alt="Kasyna Online w Polsce"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/95"></div>

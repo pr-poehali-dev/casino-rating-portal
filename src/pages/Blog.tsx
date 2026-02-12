@@ -118,11 +118,14 @@ export default function Blog() {
         </div>
       </header>
 
-      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-b from-primary/5 via-transparent to-transparent">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
-          <Icon name="BookOpen" className="absolute top-10 left-5 text-primary animate-pulse" size={120} style={{ animationDuration: '3s' }} />
-          <Icon name="Lightbulb" className="absolute top-32 right-10 text-primary/80 animate-pulse" size={100} style={{ animationDuration: '4s', animationDelay: '1s' }} />
-          <Icon name="TrendingUp" className="absolute bottom-10 left-20 text-primary/70 animate-pulse" size={110} style={{ animationDuration: '3.5s', animationDelay: '0.5s' }} />
+      <section className="relative py-20 md:py-32 overflow-hidden min-h-[500px] flex items-center">
+        <div className="absolute inset-0">
+          <img 
+            src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/243c8c17-53ff-402d-9b30-aeaa32b95e25.jpg"
+            alt="Blog o Kasynach Online"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background/95"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
