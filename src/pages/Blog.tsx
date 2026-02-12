@@ -19,6 +19,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 6,
+    title: 'Sloty z wysokim RTP – co to znaczy?',
+    excerpt: 'RTP to wskaźnik teoretycznego zwrotu w slotach. Dowiedz się, jak działa, co oznacza dla gracza i czy warto wybierać automaty z wysokim RTP.',
+    category: 'Poradniki',
+    date: '12 lutego 2026',
+    readTime: '5 min',
+    image: 'rtp',
+    author: 'Redakcja bkreiting.com',
+    slug: 'sloty-z-wysokim-rtp'
+  },
+  {
     id: 5,
     title: 'Czy bonus bez depozytu się opłaca?',
     excerpt: 'Bonus bez depozytu to promocja, która pozwala grać bez wpłaty. Sprawdź, czy rzeczywiście jest tak korzystny, jak obiecują kasyna i kiedy warto z niego skorzystać.',
