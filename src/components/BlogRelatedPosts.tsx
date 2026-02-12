@@ -28,7 +28,7 @@ const allPosts: RelatedPost[] = [
     category: 'Poradniki',
     date: '12 lutego 2026',
     readTime: '10 min',
-    image: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/placeholder-rtp.jpg',
+    image: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/b4e83b02-1d89-404e-abf2-a33af0aad675.jpg',
     slug: 'sloty-z-wysokim-rtp'
   },
   {

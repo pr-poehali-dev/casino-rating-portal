@@ -93,12 +93,13 @@ export default function BlogRTP() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl mb-12 h-64 md:h-96 bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center">
-              <div className="text-center p-8">
-                <Icon name="Percent" className="mx-auto mb-4 text-primary" size={80} />
-                <p className="text-2xl font-bold text-foreground">RTP w slotach</p>
-                <p className="text-foreground/70 mt-2">Przewodnik po wskaźniku zwrotu</p>
-              </div>
+            <div className="relative overflow-hidden rounded-2xl mb-12 h-64 md:h-96">
+              <img 
+                src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/b4e83b02-1d89-404e-abf2-a33af0aad675.jpg"
+                alt="Sloty z wysokim RTP"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent"></div>
             </div>
 
             <div className="prose prose-lg max-w-none space-y-6">

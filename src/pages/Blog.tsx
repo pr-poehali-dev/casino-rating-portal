@@ -201,6 +201,14 @@ export default function Blog() {
                   className="bg-card border-border hover:border-primary/50 transition-all hover:scale-105 cursor-pointer overflow-hidden group"
                 >
                   <div className="relative overflow-hidden h-48">
+                    {post.image === 'rtp' && (
+                      <img 
+                        src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/b4e83b02-1d89-404e-abf2-a33af0aad675.jpg"
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    )}
                     {post.image === 'nodeposit' && (
                       <img 
                         src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/dd60a2d0-1760-4c47-9950-f0c271536e91.jpg"
