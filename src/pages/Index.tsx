@@ -596,27 +596,34 @@ export default function Index() {
         </div>
       </header>
 
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
+      <section className="relative py-20 md:py-32 overflow-hidden min-h-[600px] flex items-center">
+        <div className="absolute inset-0">
+          <img 
+            src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/526faf51-1720-49a6-8219-2042e6da94fd.jpg"
+            alt="Nowy Złoty Wiek Gier"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/95"></div>
+        </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Badge className="bg-primary/20 text-primary border-primary/30 px-4 py-2 text-sm">
+            <Badge className="bg-primary/20 text-primary border-primary/30 px-4 py-2 text-sm backdrop-blur-sm">
               <Icon name="TrendingUp" className="mr-2" size={16} />
               Najlepsze Kasyna w Polsce 2026
             </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+            <h2 className="text-4xl md:text-6xl font-bold text-foreground leading-tight drop-shadow-lg">
               Ekskluzywne <span className="text-primary gold-glow">Kasyna Online</span>
             </h2>
-            <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow-md">
               Profesjonalne rankingi, szczegółowe recenzje i najlepsze bonusy powitalne. Wybierz swoje idealne kasyno z naszego premium rankingu.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8" onClick={() => setActiveTab('ranking')}>
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 shadow-xl" onClick={() => setActiveTab('ranking')}>
                 <Icon name="Trophy" className="mr-2" size={20} />
                 Zobacz Top 10 Kasyn
               </Button>
-              <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10" onClick={() => setActiveTab('bonusy')}>
+              <Button size="lg" variant="outline" className="border-primary/30 text-foreground hover:bg-primary/10 backdrop-blur-sm bg-background/50 shadow-xl" onClick={() => setActiveTab('bonusy')}>
                 <Icon name="Gift" className="mr-2" size={20} />
                 Aktualne Bonusy
               </Button>
