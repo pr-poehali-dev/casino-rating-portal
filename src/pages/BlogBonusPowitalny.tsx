@@ -36,17 +36,17 @@ export default function BlogBonusPowitalny() {
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full group-hover:bg-primary/30 transition-all duration-300"></div>
-                <div className="relative bg-gradient-to-br from-primary via-primary/90 to-secondary p-2.5 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                  <Icon name="Crown" className="text-primary-foreground" size={28} />
-                </div>
+                <img 
+                  src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/a7cfc0ea-3593-4a47-a978-d8ffc6530c98.png"
+                  alt="BKR Logo"
+                  className="relative w-20 h-20 md:w-24 md:h-24 object-contain group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
               <div className="flex flex-col">
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-primary/90 to-foreground bg-clip-text text-transparent leading-tight">
-                  bkreiting.com
-                </div>
-                <div className="flex items-center gap-1.5 text-xs md:text-sm text-primary/70 font-semibold tracking-wider">
+                <span className="text-lg font-bold bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent">bkreiting.com</span>
+                <div className="flex items-center gap-1 text-xs text-primary/60">
                   <span>POLSKA 2026</span>
-                  <Icon name="Dices" className="text-primary/80" size={14} />
+                  <Icon name="Dices" className="text-primary/70" size={12} />
                 </div>
               </div>
             </button>
