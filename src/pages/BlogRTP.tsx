@@ -90,74 +90,307 @@ export default function BlogRTP() {
               W tym artykule wyjaśniamy wszystko, co powinieneś wiedzieć o RTP: od definicji, przez praktyczne różnice między automatami, aż po najczęstsze mity, które mogą prowadzić do błędnych decyzji.
             </p>
 
-            <Card className="border-primary/20 my-8">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Icon name="Info" className="text-primary" size={24} />
-                  Czekaj na więcej treści
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
+            <div className="border-t border-primary/20 pt-8 mt-8">
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="Info" className="text-primary" size={28} />
+                Co to jest RTP w slotach?
+              </h2>
+              
+              <div className="space-y-4">
                 <p className="text-foreground/80 leading-relaxed">
-                  Artykuł jest w trakcie tworzenia. Wkrótce dodamy szczegółowe informacje o tym, jak działa RTP, jakie są różnice między slotami o różnym RTP oraz jak praktycznie wykorzystać tę wiedzę podczas gry.
+                  RTP to skrót od angielskiego <strong className="text-primary">Return to Player</strong>, czyli „zwrot dla gracza". Jest to wartość wyrażona w procentach, która określa, jaką część wszystkich postawionych środków dany automat teoretycznie zwraca graczom.
                 </p>
-              </CardContent>
-            </Card>
 
-            <div className="border-t border-border pt-8 mt-8">
+                <p className="text-foreground/80 leading-relaxed">
+                  Kluczowe słowo to <strong className="text-primary">„teoretycznie"</strong>. RTP nie jest obliczane na podstawie jednej sesji ani nawet tysiąca spinów. To wartość statystyczna wynikająca z milionów, a nawet miliardów obrotów. Producent gry przeprowadza symulacje lub stosuje modele matematyczne, aby wyznaczyć ten wskaźnik jeszcze przed premierą slotu.
+                </p>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="Activity" className="text-primary" size={24} />
+                  Jak działa RTP w praktyce?
+                </h3>
+                
+                <div className="space-y-4">
+                  <p className="text-foreground/80 leading-relaxed">
+                    Załóżmy, że slot ma RTP na poziomie 96%. Oznacza to, że statystycznie – w bardzo długim okresie – na każde 100 zł postawionych przez wszystkich graczy łącznie, automat zwraca średnio 96 zł. Pozostałe 4 zł stanowią przewagę operatora, nazywaną <strong className="text-primary">„house edge"</strong>.
+                  </p>
+
+                  <Card className="border-primary/20 bg-primary/5">
+                    <CardContent className="pt-6">
+                      <div className="flex items-start gap-3">
+                        <Icon name="AlertTriangle" className="text-primary mt-1" size={20} />
+                        <p className="text-foreground/80 leading-relaxed">
+                          Ważne jest zrozumienie, że te 96 zł nie wraca równomiernie do każdego gracza. Jeden może wygrać 500 zł po kilku spinach, a dziesięciu kolejnych nie wygra nic. RTP to uśredniony wynik rozłożony na ogromną liczbę rund – nie obietnica konkretnego zwrotu w Twojej sesji.
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <p className="text-foreground/80 leading-relaxed">
+                    Warto też wiedzieć, że RTP ustala producent oprogramowania. Niektórzy dostawcy pozwalają operatorom wybierać spośród kilku wariantów RTP dla tego samego tytułu, dlatego ten sam slot może mieć różny procent zwrotu w różnych miejscach.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-primary/20 pt-8 mt-8">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
                 <Icon name="TrendingUp" className="text-primary" size={28} />
-                Co dalej w artykule?
+                Co oznacza wysoki RTP?
               </h2>
+              
+              <div className="space-y-4">
+                <p className="text-foreground/80 leading-relaxed">
+                  Nie ma jednej oficjalnej granicy, od której RTP uznaje się za „wysokie". W branży przyjęło się jednak pewne orientacyjne przedziały:
+                </p>
 
-              <div className="grid gap-4">
-                <Card className="border-muted">
+                <div className="grid gap-3">
+                  <Card className="border-red-500/30 bg-red-500/5">
+                    <CardContent className="pt-4">
+                      <div className="flex items-center gap-3">
+                        <Icon name="TrendingDown" className="text-red-500" size={24} />
+                        <div>
+                          <p className="font-semibold">Poniżej 94%</p>
+                          <p className="text-sm text-muted-foreground">Niski RTP, stosunkowo duża przewaga operatora</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-yellow-500/30 bg-yellow-500/5">
+                    <CardContent className="pt-4">
+                      <div className="flex items-center gap-3">
+                        <Icon name="Minus" className="text-yellow-500" size={24} />
+                        <div>
+                          <p className="font-semibold">94%–95,99%</p>
+                          <p className="text-sm text-muted-foreground">Przeciętny poziom, spotykany w wielu popularnych tytułach</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-green-500/30 bg-green-500/5">
+                    <CardContent className="pt-4">
+                      <div className="flex items-center gap-3">
+                        <Icon name="CheckCircle" className="text-green-500" size={24} />
+                        <div>
+                          <p className="font-semibold">96%–97%</p>
+                          <p className="text-sm text-muted-foreground">Dobry, ponadprzeciętny zwrot</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-primary/30 bg-primary/5">
+                    <CardContent className="pt-4">
+                      <div className="flex items-center gap-3">
+                        <Icon name="Award" className="text-primary" size={24} />
+                        <div>
+                          <p className="font-semibold">Powyżej 97%</p>
+                          <p className="text-sm text-muted-foreground">Wysoki RTP, relatywnie korzystny dla gracza</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <p className="text-foreground/80 leading-relaxed mt-6">
+                  Różnica między 94% a 97% może wydawać się niewielka – to zaledwie 3 punkty procentowe. W praktyce jednak oznacza to zupełnie inną przewagę operatora. Przy RTP 94% house edge wynosi 6%, a przy 97% – tylko 3%. To <strong className="text-primary">dwukrotna różnica</strong> w „koszcie gry" dla gracza.
+                </p>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="HelpCircle" className="text-primary" size={24} />
+                  Czy 1–2% robi różnicę?
+                </h3>
+                
+                <div className="space-y-4">
+                  <p className="text-foreground/80 leading-relaxed">
+                    Przy pojedynczej sesji – raczej nie. Losowość dominuje nad statystyką w krótkim okresie. Natomiast przy regularnej, długotrwałej grze te kilka procent przekłada się na realne kwoty.
+                  </p>
+
+                  <Card className="border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">
+                    <CardContent className="pt-6">
+                      <div className="space-y-3">
+                        <p className="text-foreground/80 leading-relaxed">
+                          Gracz, który postawi łącznie <strong className="text-primary">10 000 zł</strong> na automacie z RTP 94%, statystycznie „zapłaci" <strong className="text-red-600">600 zł</strong> przewagi operatora.
+                        </p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Na slocie z RTP 97% ta kwota spada do <strong className="text-green-600">300 zł</strong>.
+                        </p>
+                        <p className="text-sm text-muted-foreground italic">
+                          W dłuższej perspektywie różnica jest odczuwalna.
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-primary/20 pt-8 mt-8">
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="Shield" className="text-primary" size={28} />
+                Czy wysoki RTP gwarantuje wygraną?
+              </h2>
+              
+              <div className="space-y-4">
+                <Card className="border-red-500/30 bg-red-500/5">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-3">
-                      <div className="bg-primary/10 p-2 rounded-lg">
-                        <Icon name="BookOpen" className="text-primary" size={20} />
-                      </div>
+                      <Icon name="X" className="text-red-500 mt-1" size={24} />
                       <div>
-                        <h3 className="font-semibold text-lg mb-2">Definicja RTP i jak to działa</h3>
-                        <p className="text-sm text-muted-foreground">
-                          Dokładne wyjaśnienie wskaźnika RTP, jak się go oblicza i co faktycznie oznacza dla gracza
+                        <p className="font-semibold text-lg mb-2">Odpowiedź jest jednoznaczna: NIE</p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Wysoki RTP nie gwarantuje wygranej – ani w pojedynczej sesji, ani w żadnym konkretnym przedziale czasowym. To jeden z najczęściej źle rozumianych aspektów gier losowych.
                         </p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-muted">
-                  <CardContent className="pt-6">
-                    <div className="flex items-start gap-3">
-                      <div className="bg-primary/10 p-2 rounded-lg">
-                        <Icon name="BarChart" className="text-primary" size={20} />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-lg mb-2">Różnice między slotami</h3>
-                        <p className="text-sm text-muted-foreground">
-                          Praktyczne porównanie automatów z RTP 94%, 96% i 98% – jak wpływa to na Twoje szanse
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <p className="text-foreground/80 leading-relaxed">
+                  Każdy spin na automacie jest niezależny od poprzedniego. Za generowanie wyników odpowiada algorytm <strong className="text-primary">RNG (Random Number Generator)</strong>, czyli generator liczb losowych. Oznacza to, że automat nie „pamięta" wcześniejszych wyników i nie kompensuje serii przegranych serią wygranych.
+                </p>
+              </div>
 
-                <Card className="border-muted">
-                  <CardContent className="pt-6">
-                    <div className="flex items-start gap-3">
-                      <div className="bg-primary/10 p-2 rounded-lg">
-                        <Icon name="AlertCircle" className="text-primary" size={20} />
+              <div className="mt-6">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="BarChart2" className="text-primary" size={24} />
+                  RTP to statystyka, nie harmonogram wypłat
+                </h3>
+                
+                <div className="space-y-4">
+                  <p className="text-foreground/80 leading-relaxed">
+                    RTP mówi o zachowaniu automatu w skali milionów spinów wykonywanych przez tysiące graczy. Twoja indywidualna sesja – obejmująca zazwyczaj kilkadziesiąt do kilkuset obrotów – to znikomy ułamek tej próby statystycznej.
+                  </p>
+
+                  <p className="text-foreground/80 leading-relaxed">
+                    W tak małej skali wyniki mogą drastycznie odbiegać od deklarowanego RTP. Możesz podwoić saldo na automacie z RTP 91%, a stracić wszystko na slocie z RTP 98%. W krótkim okresie rządzi przypadek.
+                  </p>
+
+                  <Card className="border-primary/20 bg-primary/5">
+                    <CardContent className="pt-6">
+                      <p className="text-foreground/80 leading-relaxed">
+                        <strong className="text-primary">Wysoki RTP oznacza jedynie</strong>, że matematyczny model gry jest nieco korzystniejszy dla gracza niż w przypadku automatów z niższym wskaźnikiem. To przewaga statystyczna, nie przepustka do wygranej.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            </div>
+
+            <div className="border-t border-primary/20 pt-8 mt-8">
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
+                <Icon name="Zap" className="text-primary" size={28} />
+                RTP a zmienność – jaka jest różnica?
+              </h2>
+              
+              <div className="space-y-4">
+                <p className="text-foreground/80 leading-relaxed">
+                  RTP i zmienność (volatility) to dwa odrębne parametry, które razem opisują charakter automatu. Niestety, wielu graczy myli te pojęcia lub traktuje je zamiennie.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <Card className="border-primary/20">
+                    <CardContent className="pt-6">
+                      <div className="flex items-start gap-3 mb-3">
+                        <Icon name="Percent" className="text-primary" size={24} />
+                        <h4 className="font-semibold text-lg">RTP</h4>
                       </div>
-                      <div>
-                        <h3 className="font-semibold text-lg mb-2">Najczęstsze mity o RTP</h3>
-                        <p className="text-sm text-muted-foreground">
-                          Co NIE jest prawdą o RTP i jakie błędy popełniają gracze przy interpretacji tego wskaźnika
-                        </p>
+                      <p className="text-sm text-foreground/80">
+                        <strong>Ile procent</strong> postawionych pieniędzy wraca do graczy w długim okresie?
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-primary/20">
+                    <CardContent className="pt-6">
+                      <div className="flex items-start gap-3 mb-3">
+                        <Icon name="Activity" className="text-primary" size={24} />
+                        <h4 className="font-semibold text-lg">Zmienność</h4>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                      <p className="text-sm text-foreground/80">
+                        <strong>Jak</strong> te pieniądze wracają – często i małymi kwotami, czy rzadko, ale dużymi wygranymi?
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="Layers" className="text-primary" size={24} />
+                  Trzy poziomy zmienności
+                </h3>
+                
+                <div className="space-y-3">
+                  <Card className="border-green-500/30">
+                    <CardContent className="pt-4">
+                      <div className="flex items-start gap-3">
+                        <Icon name="TrendingDown" className="text-green-500 mt-1" size={20} />
+                        <div>
+                          <p className="font-semibold mb-2">Niska zmienność</p>
+                          <p className="text-sm text-foreground/80">
+                            Automat wypłaca stosunkowo często, ale wygrane są niewielkie. Saldo zmienia się powoli, sesje są bardziej przewidywalne. Dobre rozwiązanie dla osób, które cenią dłuższą grę bez gwałtownych skoków.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-yellow-500/30">
+                    <CardContent className="pt-4">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Minus" className="text-yellow-500 mt-1" size={20} />
+                        <div>
+                          <p className="font-semibold mb-2">Średnia zmienność</p>
+                          <p className="text-sm text-foreground/80">
+                            Kompromis między częstotliwością a wielkością wygranych. Większość popularnych slotów mieści się w tej kategorii.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-red-500/30">
+                    <CardContent className="pt-4">
+                      <div className="flex items-start gap-3">
+                        <Icon name="TrendingUp" className="text-red-500 mt-1" size={20} />
+                        <div>
+                          <p className="font-semibold mb-2">Wysoka zmienność</p>
+                          <p className="text-sm text-foreground/80">
+                            Wygrane pojawiają się rzadziej, ale mogą być znacznie większe. Sesje bywają dynamiczne: długie serie pustych spinów przeplatane trafieniami o wyższej wartości. Wymaga większej cierpliwości i odpowiedniego zarządzania budżetem.
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2">
+                  <Icon name="Shuffle" className="text-primary" size={24} />
+                  Wysoki RTP + różna zmienność = różne doświadczenia
+                </h3>
+                
+                <div className="space-y-4">
+                  <p className="text-foreground/80 leading-relaxed">
+                    Dwa sloty mogą mieć identyczny RTP na poziomie 96,5%, a oferować zupełnie inne wrażenia z gry. Pierwszy – z niską zmiennością – będzie regularnie zwracał małe kwoty. Drugi – z wysoką zmiennością – może przez długi czas nie wypłacać nic, a potem zaskoczyć sporą wygraną w rundzie bonusowej.
+                  </p>
+
+                  <Card className="border-primary/20 bg-gradient-to-r from-primary/5 to-secondary/5">
+                    <CardContent className="pt-6">
+                      <p className="text-foreground/80 leading-relaxed">
+                        <strong className="text-primary">Dlatego samo RTP nie wystarcza do oceny automatu.</strong> Dopiero połączenie informacji o RTP i zmienności daje pełniejszy obraz tego, czego możesz się spodziewać.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
               </div>
             </div>
           </div>
