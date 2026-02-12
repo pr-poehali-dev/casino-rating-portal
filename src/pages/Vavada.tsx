@@ -163,7 +163,7 @@ export default function Vavada() {
                         <Icon name="Gift" className="text-primary mt-1" size={24} />
                         <div>
                           <p className="text-sm text-muted-foreground mb-1">Bonus Powitalny</p>
-                          <p className="text-xl font-bold text-primary">Do 5000 PLN + 200 Darmowych Spinów</p>
+                          <p className="text-xl font-bold text-primary">100% na pierwszy depozyt + 100 darmowych spinów w The Dog House</p>
                         </div>
                       </div>
                     </div>
@@ -291,7 +291,7 @@ export default function Vavada() {
                           </h3>
                           <p className="text-foreground/80 leading-relaxed">
                             System bonusowy w Vavada jest dość rozbudowany i regularnie aktualizowany. Nowi gracze mogą liczyć na 
-                            <strong className="text-primary"> bonus na start</strong>, który obejmuje dodatkowe środki na grę oraz pakiet darmowych spinów. Warunki obrotu są 
+                            <strong className="text-primary"> 100% na pierwszy depozyt + 100 darmowych spinów w popularnym slocie The Dog House</strong>. Warunki obrotu są 
                             jasno opisane w regulaminie – najczęściej wynoszą x30 lub x35, co w tej branży mieści się w normie.
                           </p>
                         </div>

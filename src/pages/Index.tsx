@@ -26,7 +26,7 @@ const casinos: Casino[] = [
     name: 'Vavada',
     rating: 9.5,
     userRating: 4.8,
-    bonus: 'Do 5000 PLN + 200 Darmowych Spinów',
+    bonus: '100% na pierwszy depozyt + 100 darmowych spinów w The Dog House',
     games: 3500,
     license: 'Curacao eGaming',
     features: ['Szybkie wypłaty', 'Obsługa 24/7', 'Aplikacja mobilna', 'Live Casino'],
