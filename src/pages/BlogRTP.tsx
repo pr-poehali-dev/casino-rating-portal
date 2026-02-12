@@ -11,15 +11,15 @@ export default function BlogRTP() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'Sloty z wysokim RTP – co to znaczy? | Poradnik 2026';
+    document.title = 'Sloty z wysokim RTP – co to znaczy i czy warto?';
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'RTP w slotach – jak działa, co oznacza i czy warto wybierać automaty z wysokim RTP? Praktyczny przewodnik po wskaźniku zwrotu w kasynach online.');
+      metaDescription.setAttribute('content', 'Dowiedz się, czym jest RTP w slotach, co oznacza wysoki RTP i czy automaty z wyższym zwrotem zwiększają szanse na wygraną.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'RTP w slotach – jak działa, co oznacza i czy warto wybierać automaty z wysokim RTP? Praktyczny przewodnik po wskaźniku zwrotu w kasynach online.';
+      meta.content = 'Dowiedz się, czym jest RTP w slotach, co oznacza wysoki RTP i czy automaty z wyższym zwrotem zwiększają szanse na wygraną.';
       document.head.appendChild(meta);
     }
 
