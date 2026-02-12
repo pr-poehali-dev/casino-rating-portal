@@ -31,7 +31,7 @@ const casinos: Casino[] = [
     license: 'Curacao eGaming',
     features: ['Szybkie wypłaty', 'Obsługa 24/7', 'Aplikacja mobilna', 'Live Casino'],
     logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/239958bf-e24d-4c54-9062-b0ce46b32b07.png',
-    url: 'https://gate707.com/?promo=0e4cb864-e734-44ef-9820-29068cfbffac&target=register'
+    url: 'https://gate707.com/?promo=fea49d76-145e-4e1d-8bb0-85a2bfbd8ca4&target=register'
   },
   {
     id: 2,

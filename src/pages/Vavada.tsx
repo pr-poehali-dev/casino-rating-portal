@@ -28,7 +28,7 @@ const StarRating = ({ rating, size = 20 }: { rating: number; size?: number }) =>
 
 export default function Vavada() {
   const navigate = useNavigate();
-  const casinoUrl = 'https://gate707.com/?promo=0e4cb864-e734-44ef-9820-29068cfbffac&target=register';
+  const casinoUrl = 'https://gate707.com/?promo=fea49d76-145e-4e1d-8bb0-85a2bfbd8ca4&target=register';
 
   useEffect(() => {
     document.title = 'Vavada kasyno online – opinie, bonusy i rejestracja';
