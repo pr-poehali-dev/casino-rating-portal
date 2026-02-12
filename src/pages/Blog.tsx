@@ -102,17 +102,8 @@ export default function Blog() {
                 <img 
                   src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/a7cfc0ea-3593-4a47-a978-d8ffc6530c98.png"
                   alt="BKR Logo"
-                  className="relative w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300"
+                  className="relative w-20 h-20 md:w-24 md:h-24 object-contain group-hover:scale-110 transition-transform duration-300"
                 />
-              </div>
-              <div className="flex flex-col">
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-primary/90 to-foreground bg-clip-text text-transparent leading-tight">
-                  bkreiting.com
-                </div>
-                <div className="flex items-center gap-1.5 text-xs md:text-sm text-primary/70 font-semibold tracking-wider">
-                  <span>POLSKA 2026</span>
-                  <Icon name="Dices" className="text-primary/80" size={14} />
-                </div>
               </div>
             </button>
             <Button 
