@@ -66,9 +66,18 @@ const allPosts: RelatedPost[] = [
 export default function BlogRelatedPosts({ currentPostId, category }: BlogRelatedPostsProps) {
   const navigate = useNavigate();
 
-  const relatedPosts = allPosts
+  // Сначала пытаемся найти статьи из той же категории
+  let relatedPosts = allPosts
     .filter(post => post.id !== currentPostId && post.category === category)
     .slice(0, 2);
+
+  // Если не нашли статьи из той же категории, берем любые другие
+  if (relatedPosts.length < 2) {
+    const otherPosts = allPosts
+      .filter(post => post.id !== currentPostId)
+      .slice(0, 2);
+    relatedPosts = otherPosts;
+  }
 
   if (relatedPosts.length === 0) {
     return null;
