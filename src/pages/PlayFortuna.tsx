@@ -28,7 +28,7 @@ const StarRating = ({ rating, size = 20 }: { rating: number; size?: number }) =>
 
 export default function PlayFortuna() {
   const navigate = useNavigate();
-  const casinoUrl = 'https://fortuna-promo1.net/alt/pf_new_year_new_ru/?ab4caec10f6f2577c5ad134c05b3b019';
+  const casinoUrl = 'https://fortuna-promo.com/alt/playfortunapl/pl/registration?d67ce72a2b19146bdcd9a63e5f1978b3';
 
   useEffect(() => {
     document.title = 'PlayFortuna kasyno online – opinie i bonus na start';
@@ -113,7 +113,7 @@ export default function PlayFortuna() {
                         <Icon name="Gift" className="text-primary mt-1" size={24} />
                         <div>
                           <p className="text-sm text-muted-foreground mb-1">Bonus Powitalny</p>
-                          <p className="text-xl font-bold text-primary">Bonus powitalny dla nowych graczy</p>
+                          <p className="text-xl font-bold text-primary">Do 1000$ + 200 FS + 25% ubezpieczenie depozytu</p>
                         </div>
                       </div>
                     </div>
@@ -206,7 +206,7 @@ export default function PlayFortuna() {
                             Bonus powitalny i warunki obrotu
                           </h3>
                           <p className="text-foreground/80 leading-relaxed">
-                            PlayFortuna bonus na start w standardowej wersji daje dodatkowe środki oraz pulę darmowych spinów rozłożonych na kolejne wpłaty. Szczegóły zmieniają się w zależności od aktualnej kampanii, dlatego warto sprawdzić warunki bezpośrednio na stronie w momencie rejestracji. Warunki obrotu (wager) kształtują się zwykle na poziomie x30–x40, co plasuje kasyno w średniej półce branżowej. Nie jest to ani wyjątkowo korzystne, ani wygórowane.
+                            PlayFortuna bonus na start obejmuje <strong className="text-primary">do 1000$ + 200 darmowych spinów + 25% ubezpieczenie depozytu</strong>. To atrakcyjna oferta, która łączy dodatkowe środki, pakiet free spins oraz zabezpieczenie na wypadek pecha. Warunki obrotu (wager) kształtują się zwykle na poziomie x30–x40, co plasuje kasyno w średniej półce branżowej. Nie jest to ani wyjątkowo korzystne, ani wygórowane.
                           </p>
                         </div>
 

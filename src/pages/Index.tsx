@@ -38,12 +38,12 @@ const casinos: Casino[] = [
     name: 'PlayFortuna',
     rating: 9.3,
     userRating: 4.7,
-    bonus: 'Do 3000 PLN + 150 Darmowych Spinów',
+    bonus: 'Do 1000$ + 200 FS + 25% ubezpieczenie depozytu',
     games: 2800,
     license: 'Curacao eGaming',
     features: ['Kryptowaluty', 'VIP Program', 'Turnieje', 'Cashback'],
     logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/528dcd24-53e0-4e1d-92f5-6276cda9a5b2.png',
-    url: 'https://fortuna-promo1.net/alt/pf_new_year_new_ru/?ab4caec10f6f2577c5ad134c05b3b019'
+    url: 'https://fortuna-promo.com/alt/playfortunapl/pl/registration?d67ce72a2b19146bdcd9a63e5f1978b3'
   },
   {
     id: 3,
