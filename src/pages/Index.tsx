@@ -1591,9 +1591,11 @@ export default function Index() {
               <div className="flex items-center gap-2 mb-4">
                 <div className="relative">
                   <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full"></div>
-                  <div className="relative bg-gradient-to-br from-primary via-primary/90 to-secondary p-2 rounded-lg">
-                    <Icon name="Crown" className="text-primary-foreground" size={24} />
-                  </div>
+                  <img 
+                    src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/a7cfc0ea-3593-4a47-a978-d8ffc6530c98.png"
+                    alt="BKR Logo"
+                    className="relative w-12 h-12 object-contain"
+                  />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-lg font-bold bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent">bkreiting.com</span>
