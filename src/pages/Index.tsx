@@ -524,6 +524,13 @@ export default function Index() {
                   className="relative w-20 h-20 md:w-24 md:h-24 object-contain group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
+              <div className="flex flex-col">
+                <span className="text-lg font-bold bg-gradient-to-r from-primary to-foreground bg-clip-text text-transparent">bkreiting.com</span>
+                <div className="flex items-center gap-1 text-xs text-primary/60">
+                  <span>POLSKA 2026</span>
+                  <Icon name="Dices" className="text-primary/70" size={12} />
+                </div>
+              </div>
             </div>
             <nav className="hidden md:flex items-center gap-6">
               <button onClick={() => setActiveTab('ranking')} className="text-foreground/80 hover:text-primary transition-colors">Ranking</button>
