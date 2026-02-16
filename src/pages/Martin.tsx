@@ -494,49 +494,76 @@ export default function Martin() {
                       </div>
                     </div>
 
-                    {/* Section 4: Wyplaty i metody platnosci */}
+                    {/* Section 4: Wypłaty i metody płatności */}
                     <div className="border-t border-primary/20 pt-6 mt-6">
                       <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <Icon name="DollarSign" className="text-primary" size={28} />
-                        Wyplaty i metody platnosci
+                        Martin wypłaty i metody płatności
                       </h2>
+                      <p className="text-foreground/80 leading-relaxed text-lg mb-6">
+                        Kwestia wypłat to jeden z najczęściej poruszanych tematów w dyskusjach o kasynach internetowych.
+                      </p>
                       
                       <div className="space-y-6">
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                             <Icon name="Zap" className="text-primary" size={22} />
-                            Szybkosc wyplat
+                            Dostępne metody wpłat i wypłat
                           </h3>
                           <div className="space-y-4">
-                            <p className="text-foreground/80 leading-relaxed">
-                              Szybkosc wyplat to jeden z najwazniejszych kryteriow oceny kasyna. W <strong className="text-primary">Martin Casino</strong> wyplaty 
-                              na portfele elektroniczne realizowane sa zazwyczaj w ciagu kilku godzin. Przelewy na karty bankowe moga 
-                              zajac do trzech dni roboczych, co jest standardowym czasem w branzy.
+                            <p className="text-foreground/80 leading-relaxed mb-3">
+                              Dostępne metody płatności obejmują zazwyczaj:
                             </p>
-                            <p className="text-foreground/80 leading-relaxed">
-                              Dostepne <strong className="text-primary">metody platnosci</strong> obejmuja karty Visa i Mastercard, przelewy bankowe oraz popularne 
-                              portfele elektroniczne. Minimalna kwota wyplaty jest przystepna, co doceniaja gracze stawiajacy mniejsze stawki.
-                            </p>
+                            <div className="bg-muted/50 rounded-lg p-5 space-y-3">
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Karty płatnicze</strong> – Visa, Mastercard
+                                </p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Portfele elektroniczne</strong> – Skrill, Neteller, ecoPayz
+                                </p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Kryptowaluty</strong> – Bitcoin, Ethereum, Litecoin (w zależności od regionu)
+                                </p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Przelewy bankowe</strong> – standardowe transfery, dłuższy czas oczekiwania
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
 
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                            <Icon name="ShieldCheck" className="text-primary" size={22} />
-                            Weryfikacja KYC
+                            <Icon name="Clock" className="text-primary" size={22} />
+                            Czas realizacji i limity
                           </h3>
                           <div className="space-y-4">
                             <p className="text-foreground/80 leading-relaxed">
-                              Pierwsza wyplata wymaga przejscia procedury KYC (Know Your Customer). Obejmuje ona przeslanie skanu dokumentu 
-                              tozsamosci oraz potwierdzenie metody platnosci. Po pomyslnej weryfikacji kolejne wyplaty przebiegaja znacznie 
-                              szybciej, bez koniecznosci ponownego potwierdzania danych.
+                              <strong className="text-primary">Martin wypłaty opinie</strong> są zróżnicowane – wielu graczy chwali szybkość realizacji, 
+                              podczas gdy inni wskazują na konieczność wcześniejszego przejścia pełnej weryfikacji konta.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Czas realizacji wypłaty zależy od wybranej metody. Portfele elektroniczne i kryptowaluty pozwalają na otrzymanie 
+                              środków w ciągu 24–48 godzin, natomiast przelewy bankowe mogą trwać od 3 do 5 dni roboczych. Minimalna kwota 
+                              wypłaty oraz ewentualne limity dzienne i miesięczne są określone w regulaminie platformy.
                             </p>
                             <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
                               <div className="flex items-start gap-3">
                                 <Icon name="Lightbulb" className="text-primary flex-shrink-0 mt-1" size={20} />
                                 <p className="text-sm text-foreground/80">
-                                  <strong className="text-primary">Praktyczna wskazowka:</strong> Aby przyspieszyc pierwsza wyplate, warto 
-                                  przeslac dokumenty weryfikacyjne zaraz po rejestracji – jeszcze przed zlozeniem pierwszego depozytu.
+                                  <strong className="text-primary">Wskazówka:</strong> Warto pamiętać, że pierwsza wypłata prawie zawsze wiąże się 
+                                  z koniecznością dokończenia weryfikacji tożsamości, co może wydłużyć cały proces o dodatkowy dzień lub dwa.
                                 </p>
                               </div>
                             </div>
@@ -601,78 +628,208 @@ export default function Martin() {
                       </div>
                     </div>
 
-                    {/* Section 6: Obsluga klienta */}
+                    {/* Section 6: Mirror i dostęp */}
                     <div className="border-t border-primary/20 pt-6 mt-6">
                       <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                        <Icon name="MessageCircle" className="text-primary" size={28} />
-                        Obsluga klienta
+                        <Icon name="Link" className="text-primary" size={28} />
+                        Martin mirror, działający link i dostęp w Polsce
                       </h2>
+                      <p className="text-foreground/80 leading-relaxed text-lg mb-6">
+                        Dostępność kasyn online w Polsce jest tematem złożonym pod względem prawnym.
+                      </p>
                       
                       <div className="space-y-6">
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                            <Icon name="MessagesSquare" className="text-primary" size={22} />
-                            Czat na zywo
+                            <Icon name="Eye" className="text-primary" size={22} />
+                            Linki lustrzane i aktualny dostęp
                           </h3>
-                          <p className="text-foreground/80 leading-relaxed">
-                            Podstawowym kanalem kontaktu z <strong className="text-primary">Martin Casino</strong> jest czat na zywo, dostepny calodobowo. 
-                            To najszybsza metoda uzyskania pomocy – odpowiedz pojawia sie zazwyczaj w ciagu kilku minut. Konsultanci 
-                            pomagaja w sprawach zwiazanych z kontem, bonusami, wyplatami i kwestiami technicznymi.
-                          </p>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              <strong className="text-primary">Martin mirror polska</strong> to alternatywny adres strony, z którego korzystają użytkownicy 
+                              w sytuacji, gdy główna domena jest niedostępna. Linki lustrzane (mirror) oferują identyczną funkcjonalność co strona 
+                              główna – różnica polega wyłącznie na adresie URL.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Aby znaleźć <strong className="text-primary">Martin działający link</strong>, gracze najczęściej korzystają z forów tematycznych, 
+                              grup w mediach społecznościowych lub serwisów recenzenckich. Należy jednak zachować czujność i unikać podejrzanych 
+                              stron, które mogą podszywać się pod oficjalny serwis.
+                            </p>
+                          </div>
                         </div>
 
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                            <Icon name="Mail" className="text-primary" size={22} />
-                            Kontakt e-mail
+                            <Icon name="Shield" className="text-primary" size={22} />
+                            Kwestie prawne w Polsce
                           </h3>
                           <div className="space-y-4">
                             <p className="text-foreground/80 leading-relaxed">
-                              Dla bardziej zlozonych spraw dostepna jest rowniez obsluga przez e-mail. Sprawdza sie ona szczegolnie 
-                              w przypadku reklamacji, problemow z weryfikacja lub pytan dotyczacych regulaminu. Czas odpowiedzi 
-                              wynosi zazwyczaj do 24 godzin.
+                              Jeśli chodzi o kwestię, czy <strong className="text-primary">Martin legalne w Polsce</strong> – platforma nie posiada licencji wydanej 
+                              przez polskiego regulatora. Oznacza to, że formalnie działa poza krajowym systemem regulacji hazardu online. 
+                              Każdy użytkownik powinien samodzielnie zapoznać się z obowiązującymi przepisami prawa i podjąć decyzję na 
+                              podstawie własnej oceny sytuacji.
                             </p>
-                            <p className="text-foreground/80 leading-relaxed">
-                              Ogolna jakosc obslugi klienta oceniana jest przez graczy jako solidna. Wiekszosc standardowych kwestii – 
-                              zmiana danych, pytania o bonusy, status wyplaty – rozwiazywana jest podczas jednej rozmowy na czacie.
-                            </p>
+                            <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-amber-600">Ważne:</strong> Przed zalogowaniem warto sprawdzić, czy adres w pasku przeglądarki 
+                                  zawiera certyfikat SSL (kłódka obok adresu). To najprostszy sposób weryfikacji, czy strona jest autentyczna.
+                                </p>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Section 7: Key info box */}
-                    <div className="bg-muted/50 rounded-lg p-4 mt-6">
-                      <h4 className="font-semibold mb-2 flex items-center gap-2">
-                        <Icon name="Info" className="text-primary" size={18} />
-                        Kluczowe informacje
-                      </h4>
-                      <ul className="space-y-2 text-sm text-foreground/70">
-                        <li className="flex items-start gap-2">
-                          <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
-                          <span>Minimalny depozyt: 50 PLN</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
-                          <span>Bonus powitalny: welcome package do 50%</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
-                          <span>Warunek obrotu: szczegoly w regulaminie bonusu</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
-                          <span>Czas wyplaty portfele: kilka godzin</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
-                          <span>Czas wyplaty karty: do 3 dni roboczych</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
-                          <span>Obsluga klienta: 24/7 czat na zywo + e-mail</span>
-                        </li>
-                      </ul>
+                    {/* Section 7: Kontakt i obsługa klienta */}
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="MessageCircle" className="text-primary" size={28} />
+                        Martin kontakt i obsługa klienta
+                      </h2>
+                      <p className="text-foreground/80 leading-relaxed text-lg mb-6">
+                        Jakość obsługi klienta często decyduje o ogólnym wrażeniu z korzystania z kasyna.
+                      </p>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="MessagesSquare" className="text-primary" size={22} />
+                            Kanały komunikacji
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed mb-3">
+                              <strong className="text-primary">Martin kontakt</strong> z pomocą techniczną jest możliwy za pośrednictwem kilku kanałów:
+                            </p>
+                            <div className="bg-muted/50 rounded-lg p-5 space-y-3">
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Live chat</strong> – dostępny bezpośrednio na stronie, zazwyczaj z czasem odpowiedzi nieprzekraczającym kilku minut
+                                </p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">E-mail</strong> – odpowiedzi drogą mailową mogą trwać od kilku do kilkunastu godzin, w zależności od obciążenia zespołu wsparcia
+                                </p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Sekcja FAQ</strong> – baza najczęściej zadawanych pytań, która pozwala rozwiązać wiele problemów bez konieczności kontaktu z konsultantem
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Star" className="text-primary" size={22} />
+                            Jakość wsparcia w praktyce
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Na podstawie dostępnych opinii, live chat jest najczęściej rekomendowanym kanałem komunikacji – szczególnie 
+                            w przypadku pilnych spraw związanych z transakcjami lub weryfikacją konta. Obsługa prowadzona jest w języku 
+                            angielskim, choć niektórzy użytkownicy raportują dostępność wsparcia w języku polskim w wybranych godzinach.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Section 8: Opinie */}
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Users" className="text-primary" size={28} />
+                        Martin opinie – co mówią gracze?
+                      </h2>
+                      <p className="text-foreground/80 leading-relaxed text-lg mb-6">
+                        <strong className="text-primary">Martin opinie</strong> w sieci są zróżnicowane, co jest naturalne w przypadku stosunkowo młodej platformy.
+                      </p>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="ThumbsUp" className="text-primary" size={22} />
+                            Zalety wskazywane przez graczy
+                          </h3>
+                          <div className="bg-gradient-to-r from-green-500/10 to-green-500/5 border-l-4 border-green-500 rounded-lg p-4">
+                            <div className="flex items-start gap-3">
+                              <Icon name="CheckCircle2" className="text-green-500 flex-shrink-0 mt-1" size={20} />
+                              <ul className="text-sm text-foreground/80 space-y-2">
+                                <li>• Bogaty katalog gier od renomowanych dostawców</li>
+                                <li>• Atrakcyjny bonus powitalny z darmowymi spinami</li>
+                                <li>• Przejrzysty interfejs i dobra optymalizacja mobilna</li>
+                                <li>• Sprawna obsługa klienta przez live chat</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="ThumbsDown" className="text-primary" size={22} />
+                            Wady wymieniane w opiniach
+                          </h3>
+                          <div className="bg-gradient-to-r from-red-500/10 to-red-500/5 border-l-4 border-red-500 rounded-lg p-4">
+                            <div className="flex items-start gap-3">
+                              <Icon name="AlertCircle" className="text-red-500 flex-shrink-0 mt-1" size={20} />
+                              <ul className="text-sm text-foreground/80 space-y-2">
+                                <li>• Brak licencji polskiego regulatora</li>
+                                <li>• Wymóg weryfikacji wydłużający pierwszą wypłatę</li>
+                                <li>• Ograniczona dostępność wsparcia w języku polskim</li>
+                                <li>• Zmieniające się adresy stron, co utrudnia stały dostęp</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="BarChart3" className="text-primary" size={22} />
+                            Ogólna ocena użytkowników
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            <strong className="text-primary">Martin opinie graczy</strong> pokazują, że platforma ma solidne fundamenty technologiczne i atrakcyjną 
+                            ofertę rozrywkową, jednak kwestie związane z dostępnością i regulacjami prawnymi budzą uzasadnione pytania. 
+                            Przeważająca część pozytywnych komentarzy dotyczy jakości gier oraz szybkości działania strony, natomiast negatywne 
+                            recenzje koncentrują się wokół formalnych aspektów funkcjonowania kasyna.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Section 9: Podsumowanie */}
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="FileText" className="text-primary" size={28} />
+                        Podsumowanie
+                      </h2>
+                      <div className="space-y-4">
+                        <p className="text-foreground/80 leading-relaxed">
+                          <strong className="text-primary">Martin Casino</strong> to platforma hazardowa online, która oferuje rozbudowany katalog gier, system 
+                          bonusowy oraz wersję mobilną dostosowaną do współczesnych standardów. Proces rejestracji i logowania przebiega sprawnie, 
+                          a dostępne metody płatności obejmują zarówno tradycyjne rozwiązania, jak i kryptowaluty. Platforma nie posiada polskiej 
+                          licencji, co jest istotnym czynnikiem dla użytkowników rozważających założenie konta.
+                        </p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Opinie graczy są mieszane – pozytywne komentarze dotyczą głównie jakości gier i bonusów, natomiast zastrzeżenia odnoszą 
+                          się do kwestii prawnych i zmienności adresów stron. Każdy potencjalny użytkownik powinien samodzielnie ocenić ryzyko 
+                          i zapoznać się z obowiązującymi przepisami przed podjęciem decyzji.
+                        </p>
+                        <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                          <div className="flex items-start gap-3">
+                            <Icon name="Info" className="text-primary flex-shrink-0 mt-1" size={20} />
+                            <p className="text-sm text-foreground/80">
+                              Niniejsza recenzja ma charakter wyłącznie informacyjny i nie stanowi zachęty do udziału w grach hazardowych.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
