@@ -26,6 +26,7 @@ const BlogBonusPowitalny = lazy(() => import("./pages/BlogBonusPowitalny"));
 const BlogWagering = lazy(() => import("./pages/BlogWagering"));
 const BlogNoDeposit = lazy(() => import("./pages/BlogNoDeposit"));
 const BlogRTP = lazy(() => import("./pages/BlogRTP"));
+const BlogBonusBezDepozytu2026 = lazy(() => import("./pages/BlogBonusBezDepozytu2026"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -65,6 +66,7 @@ const App = () => {
             <Route path="/blog/czym-jest-wagering" element={<BlogWagering />} />
             <Route path="/blog/czy-bonus-bez-depozytu-sie-oplaca" element={<BlogNoDeposit />} />
             <Route path="/blog/sloty-z-wysokim-rtp" element={<BlogRTP />} />
+            <Route path="/blog/najlepsze-bonusy-bez-depozytu-2026" element={<BlogBonusBezDepozytu2026 />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

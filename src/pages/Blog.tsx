@@ -19,6 +19,17 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: 7,
+    title: 'Najlepsze bonusy bez depozytu 2026 – ranking kasyn online w Polsce',
+    excerpt: 'Sprawdź aktualne oferty bonusów bez depozytu w polskich kasynach online. Ranking, darmowe spiny za rejestrację i gotówka bez wpłaty – kompleksowy przewodnik.',
+    category: 'Bonusy',
+    date: '16 lutego 2026',
+    readTime: '12 min',
+    image: 'nodeposit2026',
+    author: 'Redakcja bkreiting.com',
+    slug: 'najlepsze-bonusy-bez-depozytu-2026'
+  },
+  {
     id: 6,
     title: 'Sloty z wysokim RTP – co to znaczy?',
     excerpt: 'RTP to wskaźnik teoretycznego zwrotu w slotach. Dowiedz się, jak działa, co oznacza dla gracza i czy warto wybierać automaty z wysokim RTP.',
