@@ -378,6 +378,317 @@ export default function BlogBonusBezDepozytu2026() {
                     </p>
                   </div>
                 </div>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                  <Icon name="RotateCw" className="text-primary" size={32} />
+                  Darmowe spiny bez depozytu za rejestrację
+                </h2>
+
+                <p className="text-lg">
+                  <strong className="text-primary">Darmowe spiny bez depozytu za rejestrację</strong> to jeden z najpopularniejszych typów bonusów w polskich kasynach online. Ich popularność wynika z prostoty – zakładasz konto, spiny pojawiają się na Twoim saldzie bonusowym i możesz od razu zacząć grać na wybranym automacie. Nie musisz wpłacać ani złotówki, a jednocześnie masz szansę na realne wygrane.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="ListOrdered" className="text-primary" size={24} />
+                  Jak otrzymać darmowe spiny?
+                </h3>
+
+                <p className="text-lg mb-4">
+                  Proces ich otrzymania wygląda zazwyczaj następująco:
+                </p>
+
+                <div className="bg-card/50 border border-primary/20 rounded-xl p-6 my-6 space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">1</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">Rejestracja</h4>
+                      <p className="text-foreground/80">Wypełniasz formularz na stronie kasyna, podając prawdziwe dane osobowe.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">2</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">Weryfikacja konta</h4>
+                      <p className="text-foreground/80">W niektórych kasynach wystarczy potwierdzenie adresu e-mail, inne wymagają pełnej weryfikacji tożsamości (przesłanie dokumentu).</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">3</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">Aktywacja bonusu</h4>
+                      <p className="text-foreground/80">Spiny mogą zostać przyznane automatycznie lub wymagać wpisania kodu promocyjnego albo kontaktu z obsługą klienta.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">4</span>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-1">Gra</h4>
+                      <p className="text-foreground/80">Wykorzystujesz darmowe obroty na wskazanym automacie lub grupie slotów.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="FileText" className="text-primary" size={24} />
+                  Najczęstsze warunki darmowych spinów
+                </h3>
+
+                <p className="text-lg mb-4">
+                  Kasyno oferujące <strong className="text-primary">darmowe spiny na start bez depozytu</strong> zazwyczaj określa bardzo precyzyjne warunki ich wykorzystania. Oto najczęstsze zasady, które warto znać przed aktywacją:
+                </p>
+
+                <div className="bg-muted/50 rounded-lg p-5 space-y-4 my-4">
+                  <div className="flex items-start gap-3">
+                    <Icon name="RotateCw" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm"><strong className="text-primary">Wager (wymóg obrotu)</strong> – wygrane z darmowych spinów trzeba obrócić określoną liczbę razy, zanim będzie można je wypłacić. Standardowy wager dla free spinów waha się od x20 do x50.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="Clock" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm"><strong className="text-primary">Czas ważności</strong> – bonus zazwyczaj trzeba wykorzystać w ciągu 3 do 7 dni od momentu aktywacji. Niektóre kasyna dają nawet 30 dni, ale to raczej wyjątek.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="DollarSign" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm"><strong className="text-primary">Maksymalna stawka podczas obrotu</strong> – nawet jeśli wygrasz sporą kwotę z darmowych spinów, zazwyczaj obowiązuje limit maksymalnego zakładu podczas realizacji wagera.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="Gamepad2" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm"><strong className="text-primary">Ograniczenia gier</strong> – nie wszystkie automaty i gry stołowe w równym stopniu przyczyniają się do realizacji wymogu obrotu. Sloty zazwyczaj liczą się w 100%, natomiast ruletka czy blackjack mogą mieć znacznie niższy współczynnik.</p>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="AlertCircle" className="text-primary" size={24} />
+                  Ograniczenia wypłat z darmowych spinów
+                </h3>
+
+                <p className="text-lg">
+                  Jednym z kluczowych ograniczeń, o którym wielu graczy zapomina, jest maksymalna kwota wypłaty. Nawet jeśli z <strong className="text-primary">darmowych spinów bez depozytu dla Polaków</strong> uda Ci się wygrać znaczną sumę, kasyno może ograniczyć wypłatę do ustalonego limitu – na przykład czterokrotności lub dziesięciokrotności wartości bonusu. To standardowa praktyka w branży i nie powinna dziwić, choć warto o niej pamiętać.
+                </p>
+
+                <p className="text-lg">
+                  <strong className="text-primary">Darmowe spiny dla nowych graczy w Polsce</strong> są oferowane na różnych automatach, ale najczęściej dotyczą popularnych tytułów od takich dostawców jak NetEnt, Play'n GO, Pragmatic Play czy Microgaming. Kasyna celowo wybierają znane sloty, ponieważ mają one udowodnioną popularność i pozwalają nowemu graczowi od razu poczuć klimat platformy.
+                </p>
+
+                <div className="bg-card/50 border border-primary/20 rounded-xl p-6 my-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <img src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/239958bf-e24d-4c54-9062-b0ce46b32b07.png" alt="Vavada" className="w-12 h-12 rounded-lg object-cover" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm text-foreground/60 mb-1">Przykład kasyna z darmowymi spinami</p>
+                      <p className="font-bold text-lg"><a href="/vavada" className="text-primary hover:underline">Vavada Casino</a> – 100 darmowych spinów w The Dog House przy rejestracji</p>
+                      <p className="text-sm text-foreground/70 mt-1">Popularna platforma oferująca free spiny na znanym slocie od Pragmatic Play jako część pakietu powitalnego.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4 my-6">
+                  <div className="flex items-start gap-3">
+                    <Icon name="Lightbulb" className="text-primary flex-shrink-0 mt-1" size={20} />
+                    <p className="text-sm text-foreground/80">
+                      <strong className="text-primary">Podsumowanie:</strong> Darmowe spiny bez depozytu za rejestrację to doskonały sposób na rozpoczęcie przygody z kasynem internetowym. Trzeba jednak podchodzić do nich realistycznie. To nie jest droga do szybkiego wzbogacenia się, lecz raczej bezkosztowa możliwość przetestowania gier i platformy, z ewentualną szansą na niewielką wygraną.
+                    </p>
+                  </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                  <Icon name="Banknote" className="text-primary" size={32} />
+                  Darmowa kasa za rejestrację 2026 – czy to się opłaca?
+                </h2>
+
+                <p className="text-lg">
+                  Obok darmowych spinów drugą popularną formą bonusu bez depozytu jest <strong className="text-primary">darmowa kasa za rejestrację</strong>. W 2026 roku ten typ promocji nadal przyciąga wielu graczy, choć jego dostępność bywa bardziej ograniczona niż w przypadku free spinów. Powód jest prosty – bonus gotówkowy daje graczowi większą swobodę, a tym samym generuje wyższe ryzyko po stronie kasyna.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="CircleDollarSign" className="text-primary" size={24} />
+                  Jak działa bonus gotówkowy bez depozytu?
+                </h3>
+
+                <p className="text-lg">
+                  Jak to działa w praktyce? Po rejestracji i ewentualnej weryfikacji konta na saldzie bonusowym pojawia się określona kwota – zazwyczaj od kilkunastu do kilkudziesięciu złotych. Gracz może ją wykorzystać w grach zgodnych z regulaminem promocji. W przeciwieństwie do darmowych spinów, które ograniczają do konkretnych automatów, bonus gotówkowy często pozwala na grę w szerszej gamie tytułów – od slotów, przez gry stołowe, aż po niekiedy kasyno na żywo.
+                </p>
+
+                <p className="text-lg">
+                  Brzmi korzystnie, ale jest pewien haczyk. <strong className="text-primary">Darmowa kasa za rejestrację w 2026 roku</strong> wiąże się zazwyczaj z wyższym wagerem niż porównywalny bonus w formie spinów. Kasyna kompensują sobie większą elastyczność bonusu gotówkowego surowszymi wymaganiami obrotu – nierzadko na poziomie x40 lub nawet x60. To oznacza, że aby wypłacić wygrane, trzeba postawić łączną kwotę stanowiącą wielokrotność otrzymanego bonusu.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="CheckCircle2" className="text-primary" size={24} />
+                  Kiedy bonus gotówkowy jest korzystny?
+                </h3>
+
+                <p className="text-lg mb-4">
+                  Kiedy zatem bonus gotówkowy jest naprawdę korzystny?
+                </p>
+
+                <div className="bg-muted/50 rounded-lg p-5 space-y-4 my-4">
+                  <div className="flex items-start gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm"><strong className="text-primary">Gdy lubisz różnorodność</strong> – jeśli nie chcesz ograniczać się do jednego automatu i wolisz sam decydować, w co grać, bonus gotówkowy daje Ci taką możliwość.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm"><strong className="text-primary">Gdy wager jest rozsądny</strong> – kwota bonusu x30 to jeszcze realistyczny cel. Przy x60 szanse na spełnienie warunków i wypłatę stają się dość niskie.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm"><strong className="text-primary">Gdy chcesz poznać całą ofertę kasyna</strong> – bonus gotówkowy pozwala przetestować nie tylko sloty, ale także inne sekcje platformy.</p>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="Scale" className="text-primary" size={24} />
+                  Nowe kasyna kontra znane marki
+                </h3>
+
+                <p className="text-lg">
+                  Warto też zwrócić uwagę na różnice między ofertami nowych i znanych marek. <strong className="text-primary">Nowe kasyna bez depozytu w 2026 roku</strong> często oferują wyższe kwoty bonusów gotówkowych, aby szybko zbudować bazę graczy. To kuszące, ale warto zachować czujność – nowa platforma nie zawsze oznacza sprawdzoną platformę. Przed rejestracją warto sprawdzić, czy kasyno posiada ważną licencję, jakie ma opinie wśród graczy i jak wygląda polityka wypłat.
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-4 my-6">
+                  <div className="bg-card/50 border border-primary/20 rounded-xl p-5">
+                    <div className="flex items-start gap-3">
+                      <img src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/83e0e007-0964-4062-be9c-39454e6e838c.png" alt="Martin" className="w-10 h-10 rounded-lg object-cover flex-shrink-0" />
+                      <div>
+                        <p className="font-bold"><a href="/martin" className="text-primary hover:underline">Martin Casino</a></p>
+                        <p className="text-sm text-foreground/70">Nowa platforma z pakietem powitalnym do 50%</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-card/50 border border-primary/20 rounded-xl p-5">
+                    <div className="flex items-start gap-3">
+                      <img src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/b256d5ca-0875-4899-9906-f72271d5ca39.png" alt="Starda" className="w-10 h-10 rounded-lg object-cover flex-shrink-0" />
+                      <div>
+                        <p className="font-bold"><a href="/starda" className="text-primary hover:underline">Starda Casino</a></p>
+                        <p className="text-sm text-foreground/70">Welcome Bonus 50% z programem VIP</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <p className="text-lg">
+                  Z drugiej strony, znane i ugruntowane marki mogą oferować mniejsze kwoty, ale za to z lepszymi warunkami – niższym wagerem, dłuższym czasem na realizację obrotu lub wyższym limitem wypłat. Dla wielu graczy taki układ jest ostatecznie korzystniejszy niż duża kwota z nierealistycznymi warunkami.
+                </p>
+
+                <div className="bg-card/50 border border-primary/20 rounded-xl p-6 my-6">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 mt-1">
+                      <img src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/528dcd24-53e0-4e1d-92f5-6276cda9a5b2.png" alt="PlayFortuna" className="w-12 h-12 rounded-lg object-cover" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm text-foreground/60 mb-1">Znana marka z korzystnymi warunkami</p>
+                      <p className="font-bold text-lg"><a href="/play-fortuna" className="text-primary hover:underline">PlayFortuna</a> – do 1000$ + 200 FS + 25% ubezpieczenie depozytu</p>
+                      <p className="text-sm text-foreground/70 mt-1">Ugruntowana platforma z przejrzystymi warunkami i cashback dla aktywnych graczy.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4 my-6">
+                  <div className="flex items-start gap-3">
+                    <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
+                    <p className="text-sm text-foreground/80">
+                      <strong className="text-amber-600">Czy darmowa kasa za rejestrację się opłaca?</strong> Odpowiedź zależy od Twojego podejścia. Jeśli traktujesz to jako sposób na bezpłatne przetestowanie kasyna internetowego – zdecydowanie tak. Jeśli liczysz na pewny zarobek – lepiej zweryfikować swoje oczekiwania. Bonus gotówkowy to szansa, nie gwarancja.
+                    </p>
+                  </div>
+                </div>
+
+                <h2 className="text-3xl font-bold text-foreground mt-12 mb-6 flex items-center gap-3">
+                  <Icon name="Lock" className="text-primary" size={32} />
+                  Ekskluzywne bonusy bez depozytu 2026 i kody promocyjne
+                </h2>
+
+                <p className="text-lg">
+                  W gąszczu standardowych promocji coraz większą rolę odgrywają <strong className="text-primary">ekskluzywne bonusy bez depozytu 2026</strong> – oferty, które nie są dostępne dla każdego odwiedzającego stronę kasyna. Aby z nich skorzystać, trzeba zazwyczaj trafić na odpowiedni link partnerski lub dysponować specjalnym kodem promocyjnym. Czy warto się o nie starać?
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="Gift" className="text-primary" size={24} />
+                  Czym są oferty ekskluzywne?
+                </h3>
+
+                <p className="text-lg">
+                  Zacznijmy od wyjaśnienia, czym dokładnie są oferty ekskluzywne. To promocje negocjowane między kasynami a ich partnerami – portalami recenzyjnymi, stronami tematycznymi, blogerami branżowymi czy influencerami. Kasyno tworzy specjalną ofertę (np. wyższy bonus, dodatkowe spiny, niższy wager) dostępną wyłącznie dla użytkowników, którzy rejestrują się przez konkretny link lub wprowadzą określony kod przy rejestracji.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="Ticket" className="text-primary" size={24} />
+                  Czy potrzebny jest kod promocyjny?
+                </h3>
+
+                <p className="text-lg mb-4">
+                  <strong className="text-primary">Kody promocyjne do kasyn bez depozytu</strong> działają na prostej zasadzie:
+                </p>
+
+                <div className="bg-card/50 border border-primary/20 rounded-xl p-6 my-6 space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">1</span>
+                    </div>
+                    <p className="text-foreground/80">Znajdujesz kod na zaufanej stronie partnerskiej.</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">2</span>
+                    </div>
+                    <p className="text-foreground/80">Podczas rejestracji w kasynie wpisujesz go w odpowiednie pole (najczęściej oznaczone jako „kod promocyjny", „kod bonusowy" lub „promo code").</p>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-bold text-lg">3</span>
+                    </div>
+                    <p className="text-foreground/80">Po założeniu konta bonus jest aktywowany automatycznie lub wymaga dodatkowego potwierdzenia.</p>
+                  </div>
+                </div>
+
+                <p className="text-lg">
+                  Nie każda oferta wymaga kodu – niektóre ekskluzywne bonusy aktywują się samoczynnie po kliknięciu w specjalny link partnerski. W takim wypadku kasyno rozpoznaje, skąd pochodzi gracz, i automatycznie przypisuje mu odpowiednią promocję.
+                </p>
+
+                <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 flex items-center gap-2">
+                  <Icon name="Search" className="text-primary" size={24} />
+                  Gdzie szukać ekskluzywnych promocji?
+                </h3>
+
+                <p className="text-lg mb-4">
+                  Najlepszym źródłem są sprawdzone portale branżowe specjalizujące się w recenzjach kasyn online. Warto korzystać z witryn, które:
+                </p>
+
+                <div className="bg-muted/50 rounded-lg p-5 space-y-3 my-4">
+                  <div className="flex items-start gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm">Regularnie aktualizują swoje zestawienia bonusów.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm">Podają pełne warunki promocji (wager, czas ważności, limity wypłat).</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm">Mają pozytywne opinie w społeczności graczy.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={18} />
+                    <p className="text-foreground/80 text-sm">Nie obiecują nierealistycznych korzyści.</p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4 my-6">
+                  <div className="flex items-start gap-3">
+                    <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
+                    <p className="text-sm text-foreground/80">
+                      <strong className="text-amber-600">Uwaga:</strong> Unikaj stron, które prezentują wyłącznie „genialne okazje" bez podawania szczegółowych warunków. Transparentność to podstawa – jeśli portal nie informuje o wagerze czy ograniczeniach, prawdopodobnie nie jest godny zaufania.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
