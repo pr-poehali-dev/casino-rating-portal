@@ -10,15 +10,15 @@ export default function BlogBonusBezDepozytu2026() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'Najlepsze bonusy bez depozytu 2026 – ranking kasyn online w Polsce';
+    document.title = 'Najlepsze bonusy bez depozytu 2026 – ranking kasyn online PL';
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Najlepsze bonusy bez depozytu 2026 – ranking kasyn online w Polsce. Sprawdź aktualne oferty darmowych spinów i gotówki za rejestrację bez wpłaty.');
+      metaDescription.setAttribute('content', 'Najlepsze bonusy bez depozytu 2026 w Polsce. Sprawdź ranking kasyn, darmowe spiny za rejestrację i darmową kasę na start. Wybierz mądrze!');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Najlepsze bonusy bez depozytu 2026 – ranking kasyn online w Polsce. Sprawdź aktualne oferty darmowych spinów i gotówki za rejestrację bez wpłaty.';
+      meta.content = 'Najlepsze bonusy bez depozytu 2026 w Polsce. Sprawdź ranking kasyn, darmowe spiny za rejestrację i darmową kasę na start. Wybierz mądrze!';
       document.head.appendChild(meta);
     }
 
