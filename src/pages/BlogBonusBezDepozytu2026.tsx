@@ -90,11 +90,11 @@ export default function BlogBonusBezDepozytu2026() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl mb-12 h-64 md:h-96">
+            <div className="relative overflow-hidden rounded-2xl mb-12">
               <img
                 src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/81225203-0792-4597-9b71-655557a5bac3.jpg"
                 alt="Najlepsze bonusy bez depozytu 2026 – ranking kasyn online w Polsce"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain rounded-2xl"
               />
             </div>
 
