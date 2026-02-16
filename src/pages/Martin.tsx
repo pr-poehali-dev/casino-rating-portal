@@ -339,29 +339,28 @@ export default function Martin() {
                       </div>
                     </div>
 
-                    {/* Section 2: Bonusy */}
+                    {/* Section 2: Bonusy i kody promocyjne */}
                     <div className="border-t border-primary/20 pt-6 mt-6">
                       <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <Icon name="Gift" className="text-primary" size={28} />
-                        Bonusy w Martin Casino
+                        Martin bonus i kody promocyjne
                       </h2>
+                      <p className="text-foreground/80 leading-relaxed text-lg mb-6">
+                        System promocyjny to jeden z elementów, na które gracze zwracają uwagę w pierwszej kolejności.
+                      </p>
                       
                       <div className="space-y-6">
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                             <Icon name="Sparkles" className="text-primary" size={22} />
-                            Bonus powitalny i warunki obrotu
+                            Bonus powitalny i bonus bez depozytu
                           </h3>
                           <div className="space-y-4">
                             <p className="text-foreground/80 leading-relaxed">
-                              Nowi gracze w Martin Casino moga liczyc na <strong className="text-primary">welcome package do 50%</strong> wartosci pierwszego depozytu. 
-                              To oferta skierowana przede wszystkim do osob, ktore dopiero zaczynaja przygode z platforma i chca rozpoczac 
-                              gre z dodatkowym kapitalem.
-                            </p>
-                            <p className="text-foreground/80 leading-relaxed">
-                              Warunki obrotu (wagering) sa opisane w regulaminie bonusu. Przed aktywacja warto dokladnie zapoznac sie z 
-                              wymaganiami dotyczacymi wielokrotnosci obrotu oraz z lista gier, ktore licza sie do spelnienia warunkow. 
-                              Nie wszystkie automaty i gry stolowe wliczaja sie w identycznym stopniu.
+                              <strong className="text-primary">Martin bonus</strong> na start obejmuje zazwyczaj dopasowanie do pierwszego depozytu – szczegółowe 
+                              warunki mogą się zmieniać w zależności od aktualnej oferty. Niektórzy użytkownicy poszukują także informacji o tym, 
+                              czy Martin oferuje <strong className="text-primary">bonus bez depozytu</strong>, czyli środki przyznawane bez konieczności wpłaty własnych 
+                              pieniędzy. Tego typu promocje pojawiają się okresowo, dlatego warto śledzić aktualizacje na stronie kasyna.
                             </p>
                           </div>
                         </div>
@@ -369,20 +368,59 @@ export default function Martin() {
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                             <Icon name="Ticket" className="text-primary" size={22} />
-                            Praktyczne wskazowki dotyczace bonusow
+                            Kody promocyjne i darmowe spiny
                           </h3>
                           <div className="space-y-4">
                             <p className="text-foreground/80 leading-relaxed">
-                              Przy korzystaniu z bonusow w <strong className="text-primary">Martin Casino</strong> warto pamietac o kilku rzeczach. Po pierwsze, 
-                              sprawdz maksymalna stawke dozwolona podczas gry z aktywnym bonusem. Po drugie, zwroc uwage na termin 
-                              waznosci – bonusy maja okreslony czas, w ktorym nalezy spelnic warunki obrotu.
+                              Dodatkowe korzyści można uzyskać, korzystając z kodów promocyjnych. <strong className="text-primary">Martin kod promocyjny</strong> wprowadza 
+                              się zazwyczaj podczas rejestracji lub wpłaty – w zamian użytkownik może otrzymać dodatkowe środki bonusowe lub 
+                              darmowe spiny. <strong className="text-primary">Kody bonusowe Martin</strong> publikowane są zarówno na oficjalnej stronie, jak i w serwisach 
+                              partnerskich.
                             </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              <strong className="text-primary">Martin darmowe spiny</strong> przyznawane są najczęściej na wybrane automaty i stanowią atrakcyjny 
+                              element oferty powitalnej.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="AlertCircle" className="text-primary" size={22} />
+                            Warunki obrotu – na co zwrócić uwagę
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed mb-3">
+                              Najważniejsze aspekty, o których należy pamiętać przy bonusach:
+                            </p>
+                            <div className="bg-muted/50 rounded-lg p-5 space-y-3">
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Wymóg obrotu (wager)</strong> – każdy bonus podlega warunkom obrotu, które trzeba spełnić 
+                                  przed wypłatą wygranych. Standardowy wager wynosi od x30 do x45.
+                                </p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Czas na realizację</strong> – bonusy mają określony termin ważności, po którym 
+                                  niewykorzystane środki przepadają.
+                                </p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Ograniczenia gier</strong> – nie wszystkie gry hazardowe w jednakowym stopniu 
+                                  zaliczają się do obrotu bonusem.
+                                </p>
+                              </div>
+                            </div>
                             <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4">
                               <div className="flex items-start gap-3">
                                 <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
                                 <p className="text-sm text-foreground/80">
-                                  <strong className="text-amber-600">Wazne:</strong> Zawsze czytaj regulamin bonusu przed jego aktywacja. 
-                                  Warto upewnic sie, ze warunki obrotu sa realne do spelnienia w wyznaczonym czasie.
+                                  <strong className="text-amber-600">Ważne:</strong> Warto zawsze przeczytać regulamin promocji przed jej aktywacją.
                                 </p>
                               </div>
                             </div>
