@@ -400,6 +400,222 @@ export default function Starda() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Smartphone" className="text-primary" size={28} />
+                        Starda aplikacja i wersja mobilna
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Download" className="text-primary" size={22} />
+                            Czy istnieje dedykowana aplikacja?
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Wielu użytkowników poszukuje informacji o tym, czy <strong className="text-primary">starda aplikacja</strong> jest dostępna do pobrania. 
+                              Platforma nie zawsze oferuje natywną aplikację w oficjalnych sklepach Google Play czy App Store, co wynika z polityki 
+                              tych platform wobec aplikacji hazardowych. Niemniej istnieje możliwość pobrania pliku APK bezpośrednio ze strony kasyna — 
+                              <strong className="text-primary"> starda app download</strong> jest w takim przypadku dostępny dla urządzeń z systemem Android.
+                            </p>
+                            <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-amber-600">Uwaga:</strong> Przy pobieraniu plików APK spoza oficjalnych sklepów zawsze 
+                                  weryfikuj źródło — korzystaj wyłącznie z oficjalnej strony kasyna.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Globe" className="text-primary" size={22} />
+                            Wersja mobilna w przeglądarce
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Niezależnie od dostępności aplikacji, strona kasyna jest w pełni responsywna. Wersja mobilna działa płynnie 
+                            w przeglądarkach Chrome, Safari i Firefox, oferując dostęp do pełnej biblioteki gier, systemu bonusowego oraz 
+                            panelu konta. Dla większości użytkowników wersja przeglądarkowa stanowi wygodną alternatywę dla aplikacji natywnej.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="DollarSign" className="text-primary" size={28} />
+                        Starda wypłaty i metody płatności
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Zap" className="text-primary" size={22} />
+                            Dostępne metody wpłat i wypłat
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Platforma obsługuje różnorodne metody płatności, w tym karty bankowe (Visa, Mastercard), portfele elektroniczne 
+                            (Skrill, Neteller, ecoPayz) oraz kryptowaluty (Bitcoin, Ethereum, Litecoin i inne). Wpłaty są zazwyczaj realizowane 
+                            natychmiastowo, natomiast czas przetwarzania wypłat zależy od wybranej metody.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Clock" className="text-primary" size={22} />
+                            Czas realizacji i limity
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Standardowy czas realizacji wypłat wynosi od kilku godzin do kilku dni roboczych. Portfele elektroniczne i kryptowaluty 
+                              zapewniają najszybszy dostęp do środków, podczas gdy przelewy bankowe mogą wymagać dłuższego oczekiwania. Platforma 
+                              stosuje limity wypłat — zarówno dzienne, jak i miesięczne — których wysokość zależy od statusu konta i poziomu 
+                              w programie lojalnościowym.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Jeśli chodzi o <strong className="text-primary">starda wypłaty opinie</strong>, zdania graczy są podzielone. Część użytkowników chwali 
+                              szybkość realizacji, inni wskazują na konieczność wcześniejszej weryfikacji jako element wydłużający proces. Weryfikacja 
+                              konta przed pierwszą wypłatą to jednak standardowa procedura w branży kasyn online, mająca na celu zapewnienie 
+                              bezpieczeństwa transakcji.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Link" className="text-primary" size={28} />
+                        Starda mirror i działający link
+                      </h2>
+                      <div className="space-y-4">
+                        <p className="text-foreground/80 leading-relaxed">
+                          W kontekście kasyn internetowych pojęcie „mirror" oznacza alternatywny adres strony, który prowadzi do tego samego serwisu. 
+                          <strong className="text-primary"> Starda mirror polska</strong> to temat, który pojawia się w dyskusjach wśród graczy — alternatywne adresy 
+                          mogą być tworzone w przypadku ograniczeń dostępu w danym regionie lub problemów technicznych z główną domeną.
+                        </p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Szukając aktualnego dostępu, użytkownicy powinni korzystać wyłącznie z oficjalnych kanałów komunikacji platformy. 
+                          <strong className="text-primary"> Starda działający link</strong> najlepiej pozyskać bezpośrednio z oficjalnego newslettera, kanału 
+                          w mediach społecznościowych lub poprzez kontakt z obsługą klienta.
+                        </p>
+                        <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4">
+                          <div className="flex items-start gap-3">
+                            <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
+                            <p className="text-sm text-foreground/80">
+                              <strong className="text-amber-600">Ważne:</strong> Korzystanie z niezweryfikowanych źródeł wiąże się z ryzykiem 
+                              trafienia na strony phishingowe. Zawsze weryfikuj autentyczność adresu przed zalogowaniem.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="MessageCircle" className="text-primary" size={28} />
+                        Starda kontakt i obsługa klienta
+                      </h2>
+                      <div className="space-y-4">
+                        <p className="text-foreground/80 leading-relaxed">
+                          Platforma zapewnia kilka kanałów komunikacji z zespołem wsparcia. <strong className="text-primary">Starda kontakt</strong> jest możliwy 
+                          przede wszystkim przez czat na żywo (live chat), dostępny bezpośrednio na stronie kasyna. To najszybsza forma uzyskania 
+                          pomocy — czas oczekiwania na odpowiedź wynosi zazwyczaj kilka minut.
+                        </p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Alternatywną opcją jest kontakt mailowy, który sprawdza się w przypadku bardziej złożonych zapytań wymagających przesłania 
+                          dokumentów lub szczegółowego opisu problemu. Czas odpowiedzi na wiadomości e-mail może wynosić od kilku godzin do jednego 
+                          dnia roboczego.
+                        </p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Obsługa klienta deklaruje dostępność przez całą dobę, co jest istotne dla graczy aktywnych w różnych godzinach. Jakość 
+                          wsparcia — na podstawie opinii użytkowników — oceniana jest jako zadowalająca, choć zdarzają się uwagi dotyczące 
+                          szablonowych odpowiedzi w przypadku bardziej szczegółowych pytań.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Users" className="text-primary" size={28} />
+                        Starda opinie – zalety i wady
+                      </h2>
+                      <p className="text-foreground/80 leading-relaxed text-lg mb-6">
+                        Podsumowując informacje zebrane z różnych źródeł, można wskazać główne mocne i słabe strony platformy. 
+                        <strong className="text-primary"> Starda opinie</strong> graczy pozwalają wyodrębnić następujące elementy:
+                      </p>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="ThumbsUp" className="text-primary" size={22} />
+                            Zalety
+                          </h3>
+                          <div className="bg-gradient-to-r from-green-500/10 to-green-500/5 border-l-4 border-green-500 rounded-lg p-4">
+                            <div className="flex items-start gap-3">
+                              <Icon name="CheckCircle2" className="text-green-500 flex-shrink-0 mt-1" size={20} />
+                              <ul className="text-sm text-foreground/80 space-y-2">
+                                <li>• Szeroka biblioteka gier od uznanych dostawców</li>
+                                <li>• Rozbudowany system bonusowy z regularnymi promocjami</li>
+                                <li>• Obsługa kryptowalut jako metody płatności</li>
+                                <li>• Responsywna wersja mobilna strony</li>
+                                <li>• Dostępność live chatu jako szybkiego kanału wsparcia</li>
+                                <li>• Interfejs dostępny w języku polskim</li>
+                                <li>• Turnieje i program lojalnościowy dla aktywnych graczy</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="ThumbsDown" className="text-primary" size={22} />
+                            Wady
+                          </h3>
+                          <div className="bg-gradient-to-r from-red-500/10 to-red-500/5 border-l-4 border-red-500 rounded-lg p-4">
+                            <div className="flex items-start gap-3">
+                              <Icon name="AlertCircle" className="text-red-500 flex-shrink-0 mt-1" size={20} />
+                              <ul className="text-sm text-foreground/80 space-y-2">
+                                <li>• Wymóg weryfikacji przed pierwszą wypłatą może wydłużyć czas oczekiwania</li>
+                                <li>• Brak natywnej aplikacji w oficjalnych sklepach (Google Play, App Store)</li>
+                                <li>• Limity wypłat mogą być ograniczające dla niektórych użytkowników</li>
+                                <li>• Licencja Curaçao nie zapewnia takiego samego poziomu ochrony jak regulatorzy europejscy (np. MGA)</li>
+                                <li>• Sporadyczne opóźnienia w odpowiedziach mailowych obsługi klienta</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="FileText" className="text-primary" size={28} />
+                        Podsumowanie
+                      </h2>
+                      <div className="space-y-4">
+                        <p className="text-foreground/80 leading-relaxed">
+                          <strong className="text-primary">Starda Casino</strong> to platforma hazardowa skierowana do szerokiego grona odbiorców, oferująca 
+                          rozbudowany katalog gier, system bonusowy oraz kilka metod płatności, w tym kryptowaluty. Proces rejestracji jest prosty, 
+                          a strona działa sprawnie zarówno na komputerze, jak i na urządzeniach mobilnych. Jak każde kasyno online, platforma ma 
+                          swoje mocne i słabsze strony, które warto rozważyć przed założeniem konta.
+                        </p>
+                        <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                          <div className="flex items-start gap-3">
+                            <Icon name="Info" className="text-primary flex-shrink-0 mt-1" size={20} />
+                            <p className="text-sm text-foreground/80">
+                              Przed rozpoczęciem gry zaleca się dokładne zapoznanie z regulaminem serwisu, warunkami promocji oraz polityką 
+                              odpowiedzialnej gry. Hazard internetowy wiąże się z ryzykiem finansowym — warto podchodzić do niego świadomie i z umiarem.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
