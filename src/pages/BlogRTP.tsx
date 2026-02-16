@@ -94,12 +94,13 @@ export default function BlogRTP() {
               />
             </div>
 
-            <div className="prose prose-lg max-w-none space-y-6">
-            <p className="text-foreground/80 leading-relaxed">
+            <div className="prose prose-lg max-w-none">
+              <div className="bg-card border border-border rounded-xl p-8 space-y-6 text-foreground/90 leading-relaxed">
+            <p className="text-lg">
               RTP to procentowy wskaźnik teoretycznego zwrotu, który mówi, ile z postawionych pieniędzy slot oddaje graczom w długim okresie. Brzmi prosto, ale interpretacja tego parametru potrafi być zaskakująco myląca. Czy automat z RTP 97% rzeczywiście daje lepsze szanse niż ten z 94%? Czy wysoki procent zwrotu oznacza, że wygrasz częściej? I wreszcie – czy warto w ogóle kierować się tym wskaźnikiem?
             </p>
 
-            <p className="text-foreground/80 leading-relaxed">
+            <p className="text-lg">
               W tym artykule wyjaśniamy wszystko, co powinieneś wiedzieć o RTP: od definicji, przez praktyczne różnice między automatami, aż po najczęstsze mity, które mogą prowadzić do błędnych decyzji.
             </p>
 
@@ -682,6 +683,7 @@ export default function BlogRTP() {
                   </CardContent>
                 </Card>
               </div>
+            </div>
             </div>
             </div>
 
