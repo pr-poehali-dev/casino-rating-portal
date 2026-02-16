@@ -429,60 +429,66 @@ export default function Martin() {
                       </div>
                     </div>
 
-                    {/* Section 3: Katalog gier */}
+                    {/* Section 3: Gry hazardowe */}
                     <div className="border-t border-primary/20 pt-6 mt-6">
                       <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <Icon name="Gamepad2" className="text-primary" size={28} />
-                        Katalog gier i dostawcy
+                        Martin gry hazardowe
                       </h2>
+                      <p className="text-foreground/80 leading-relaxed text-lg mb-6">
+                        Katalog gier to fundament każdego kasyna online, a Martin nie odstaje w tej kwestii od oczekiwań.
+                      </p>
                       
                       <div className="space-y-6">
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                             <Icon name="Joystick" className="text-primary" size={22} />
-                            Automaty i live casino
+                            Automaty i sloty wideo
                           </h3>
-                          <div className="space-y-4">
-                            <p className="text-foreground/80 leading-relaxed">
-                              <strong className="text-primary">Martin Casino</strong> oferuje katalog liczacy ponad <strong className="text-primary">2600 gier</strong>, 
-                              co plasuje platforme w sredniej-wyzszej polce pod wzgledem roznorodnosci. Dominuja automaty online – od 
-                              klasycznych slotow z trzema bebnami po nowoczesne produkcje z mechanikami megaways, bonus buy i kaskadowymi 
-                              symbolami.
-                            </p>
-                            <p className="text-foreground/80 leading-relaxed">
-                              Sekcja <strong className="text-primary">live casino</strong> obejmuje ruletke, blackjacka, baccarata oraz popularne gry typu game show. 
-                              Transmisje prowadzone sa w czasie rzeczywistym przez profesjonalnych krupierow, a jakosc obrazu jest stabilna 
-                              nawet na przecietnym laczu internetowym.
-                            </p>
-                          </div>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Biblioteka <strong className="text-primary">Martin gry hazardowe</strong> obejmuje kilka tysięcy tytułów, podzielonych na przejrzyste 
+                            kategorie. Gracze znajdą tu zarówno klasyczne automaty, jak i nowoczesne sloty wideo z rozbudowaną mechaniką 
+                            bonusową. W ofercie <strong className="text-primary">Martin online</strong> dostępne są gry od znanych dostawców oprogramowania, takich jak 
+                            <strong className="text-primary"> Pragmatic Play</strong>, <strong className="text-primary">NetEnt</strong>, <strong className="text-primary">Play'n GO</strong>, 
+                            <strong className="text-primary"> Evolution Gaming</strong> czy <strong className="text-primary">Microgaming</strong>. Obecność tych marek świadczy 
+                            o określonym standardzie jakości – gry są testowane pod kątem uczciwości, a ich współczynnik zwrotu (RTP) jest 
+                            publicznie dostępny.
+                          </p>
                         </div>
 
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                            <Icon name="Building2" className="text-primary" size={22} />
-                            Dostawcy oprogramowania
+                            <Icon name="Dices" className="text-primary" size={22} />
+                            Gry stołowe i kasyno na żywo
                           </h3>
                           <div className="space-y-4">
-                            <p className="text-foreground/80 leading-relaxed">
-                              W katalogu Martin Casino znajdziemy tytuly od renomowanych dostawcow, takich jak <strong className="text-primary">Pragmatic Play</strong>, 
-                              <strong className="text-primary"> Evolution</strong>, <strong className="text-primary">Play'n GO</strong>, <strong className="text-primary">NetEnt</strong>, 
-                              <strong className="text-primary"> Yggdrasil</strong> czy <strong className="text-primary">Push Gaming</strong>. Obecnosc tych marek swiadczy o 
-                              wiarygodnosci platformy – uznani producenci nie wspolpracuja z kasynami o watpliwej reputacji.
+                            <p className="text-foreground/80 leading-relaxed mb-3">
+                              Oprócz automatów platforma oferuje:
                             </p>
-                            <div className="bg-gradient-to-r from-green-500/10 to-green-500/5 border-l-4 border-green-500 rounded-lg p-4">
+                            <div className="bg-muted/50 rounded-lg p-5 space-y-3">
                               <div className="flex items-start gap-3">
-                                <Icon name="CheckCircle2" className="text-green-500 flex-shrink-0 mt-1" size={20} />
-                                <div>
-                                  <p className="text-sm font-semibold text-foreground mb-1">Zalety katalogu gier:</p>
-                                  <ul className="text-sm text-foreground/70 space-y-1">
-                                    <li>• Ponad 2600 tytulow od sprawdzonych dostawcow</li>
-                                    <li>• Rozbudowana sekcja live casino z Evolution</li>
-                                    <li>• Regularne dodawanie nowych premier</li>
-                                    <li>• Mozliwosc filtrowania po dostawcy i typie gry</li>
-                                  </ul>
-                                </div>
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Gry stołowe</strong> – ruletka, blackjack, bakarat, poker w różnych wariantach
+                                </p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Kasyno na żywo</strong> – transmisje z profesjonalnymi krupierami w czasie rzeczywistym, dostępne całą dobę
+                                </p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm">
+                                  <strong className="text-primary">Gry typu crash i instant</strong> – szybkie rozgrywki dla tych, którzy preferują dynamiczne sesje
+                                </p>
                               </div>
                             </div>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Sekcja gier na żywo zasługuje na osobne wyróżnienie – to właśnie <strong className="text-primary">live casino</strong> coraz częściej 
+                              przyciąga polskich graczy, którzy szukają wrażeń zbliżonych do tych z kasyna stacjonarnego.
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -539,40 +545,57 @@ export default function Martin() {
                       </div>
                     </div>
 
-                    {/* Section 5: Wersja mobilna */}
+                    {/* Section 5: Aplikacja i wersja mobilna */}
                     <div className="border-t border-primary/20 pt-6 mt-6">
                       <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <Icon name="Smartphone" className="text-primary" size={28} />
-                        Wersja mobilna
+                        Martin aplikacja i wersja mobilna
                       </h2>
+                      <p className="text-foreground/80 leading-relaxed text-lg mb-6">
+                        Wielu użytkowników zastanawia się, czy Martin posiada dedykowaną aplikację mobilną.
+                      </p>
                       
                       <div className="space-y-6">
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
-                            <Icon name="Globe" className="text-primary" size={22} />
-                            Gra w przegladarce mobilnej
+                            <Icon name="Download" className="text-primary" size={22} />
+                            Czy istnieje aplikacja do pobrania?
                           </h3>
                           <div className="space-y-4">
                             <p className="text-foreground/80 leading-relaxed">
-                              <strong className="text-primary">Martin Casino</strong> nie wymaga pobierania dedykowanej aplikacji. Platforma dziala w pelni 
-                              responsywnie w przegladarce smartfona lub tabletu – niezaleznie od systemu operacyjnego (iOS, Android). 
-                              Interfejs automatycznie dostosowuje sie do rozmiaru ekranu, zachowujac pelna funkcjonalnosc.
+                              Na chwilę obecną <strong className="text-primary">Martin aplikacja</strong> nie jest dostępna w oficjalnych sklepach Google Play 
+                              ani App Store, co jest typowe dla kasyn online działających poza regulowanymi rynkami. Niektóre źródła sugerują 
+                              możliwość pobrania pliku APK (<strong className="text-primary">Martin app download</strong>) bezpośrednio ze strony kasyna, jednak przy 
+                              instalacji tego typu plików zawsze należy zachować ostrożność i weryfikować źródło.
                             </p>
-                            <p className="text-foreground/80 leading-relaxed">
-                              Wszystkie kluczowe funkcje – od rejestracji i logowania, przez wplaty i wyplaty, az po gre na automatach 
-                              i w live casino – sa dostepne w wersji mobilnej dokladnie tak samo jak na komputerze. Gry laduja sie 
-                              plynnie, a nawigacja jest intuicyjna.
-                            </p>
-                            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                            <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4">
                               <div className="flex items-start gap-3">
-                                <Icon name="Lightbulb" className="text-primary flex-shrink-0 mt-1" size={20} />
+                                <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
                                 <p className="text-sm text-foreground/80">
-                                  <strong className="text-primary">Praktyczna wskazowka:</strong> Mozesz dodac Martin Casino jako skrot na 
-                                  ekranie glownym telefonu – daje to efekt zblizony do natywnej aplikacji, bez koniecznosci pobierania 
-                                  dodatkowego oprogramowania.
+                                  <strong className="text-amber-600">Uwaga:</strong> Przy pobieraniu plików APK spoza oficjalnych sklepów zawsze 
+                                  weryfikuj źródło – korzystaj wyłącznie z oficjalnej strony kasyna.
                                 </p>
                               </div>
                             </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Globe" className="text-primary" size={22} />
+                            Wersja mobilna w przeglądarce
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Alternatywą – i w praktyce najczęściej stosowanym rozwiązaniem – jest korzystanie z <strong className="text-primary">Martin Casino</strong> za 
+                              pośrednictwem przeglądarki mobilnej. Strona została zoptymalizowana pod urządzenia z systemem Android oraz iOS 
+                              i automatycznie dostosowuje się do rozmiaru ekranu. Funkcjonalność mobilna obejmuje pełen zakres gier, zarządzanie 
+                              kontem, wpłaty i wypłaty oraz kontakt z obsługą klienta.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Gracze, którzy regularnie korzystają z wersji mobilnej, mogą dodać stronę do ekranu głównego smartfona – działa 
+                              to analogicznie do aplikacji, bez konieczności instalacji dodatkowego oprogramowania.
+                            </p>
                           </div>
                         </div>
                       </div>
