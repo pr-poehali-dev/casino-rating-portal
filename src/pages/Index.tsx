@@ -59,7 +59,20 @@ const casinos: Casino[] = [
   },
   {
     id: 4,
+    name: 'Starda',
+    rating: 9.0,
+    userRating: 4.6,
+    bonus: 'Welcome Bonus 50%',
+    games: 3000,
+    license: 'Curacao eGaming',
+    features: ['Welcome Bonus', 'Live Casino', 'Szybkie wypłaty', 'VIP Program'],
+    logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/b256d5ca-0875-4899-9906-f72271d5ca39.png',
+    url: 'https://strd-blit10.com/ca32b5f7f'
+  },
+  {
+    id: 5,
     name: 'Martin',
+
     rating: 8.9,
     userRating: 4.5,
     bonus: 'Welcome package do 50%',
@@ -70,7 +83,7 @@ const casinos: Casino[] = [
     url: 'https://martin-way-six.com/c1b69e954'
   },
   {
-    id: 5,
+    id: 6,
     name: 'Irwin',
     rating: 8.8,
     userRating: 4.5,
@@ -908,7 +921,7 @@ export default function Index() {
                         {t.playNow}
                       </a>
                     </Button>
-                    {(casino.id === 1 || casino.id === 2 || casino.id === 3 || casino.id === 4 || casino.id === 5 || casino.id === 7 || casino.id === 8) ? (
+                    {(casino.id === 1 || casino.id === 2 || casino.id === 3 || casino.id === 5 || casino.id === 6 || casino.id === 7 || casino.id === 8) ? (
                       <Button 
                         variant="outline" 
                         className="flex-1 border-primary/30 hover:bg-primary/10"
@@ -919,9 +932,9 @@ export default function Index() {
                             navigate('/play-fortuna');
                           } else if (casino.id === 3) {
                             navigate('/booi');
-                          } else if (casino.id === 4) {
-                            navigate('/martin');
                           } else if (casino.id === 5) {
+                            navigate('/martin');
+                          } else if (casino.id === 6) {
                             navigate('/irwin');
                           } else if (casino.id === 7) {
                             navigate('/jozz');
