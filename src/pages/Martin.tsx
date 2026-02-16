@@ -31,15 +31,15 @@ export default function Martin() {
   const casinoUrl = 'https://martin-way-six.com/c1b69e954';
 
   useEffect(() => {
-    document.title = 'Martin Casino Polska – pełna recenzja i opinie graczy 2026';
+    document.title = 'Martin Casino Polska – opinie, bonus, rejestracja';
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Martin Casino Polska – pełna recenzja, opinie graczy, bonus powitalny do 50%, katalog 2600+ gier i szybkie wypłaty. Sprawdź szczegóły.');
+      metaDescription.setAttribute('content', 'Martin Casino Polska – sprawdź opinie graczy, bonus na start, darmowe spiny i metody wypłat. Dowiedz się, jak wygląda rejestracja i logowanie w Martin kasyno online.');
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = 'Martin Casino Polska – pełna recenzja, opinie graczy, bonus powitalny do 50%, katalog 2600+ gier i szybkie wypłaty. Sprawdź szczegóły.';
+      meta.content = 'Martin Casino Polska – sprawdź opinie graczy, bonus na start, darmowe spiny i metody wypłat. Dowiedz się, jak wygląda rejestracja i logowanie w Martin kasyno online.';
       document.head.appendChild(meta);
     }
 
