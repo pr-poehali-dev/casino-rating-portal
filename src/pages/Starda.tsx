@@ -30,6 +30,7 @@ export default function Starda() {
   const navigate = useNavigate();
   const casinoUrl = 'https://strd-blit10.com/ca32b5f7f';
 
+
   useEffect(() => {
     document.title = 'Starda Casino Polska – opinie, bonus, rejestracja';
 
