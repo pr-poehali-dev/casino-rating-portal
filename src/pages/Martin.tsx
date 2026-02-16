@@ -285,43 +285,52 @@ export default function Martin() {
                       </div>
                     </div>
 
-                    {/* Section 1: Rejestracja */}
+                    {/* Section 1: Rejestracja i logowanie */}
                     <div className="border-t border-primary/20 pt-6 mt-6">
                       <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
                         <Icon name="UserPlus" className="text-primary" size={28} />
-                        Rejestracja w Martin Casino
+                        Martin rejestracja i logowanie
                       </h2>
+                      <p className="text-foreground/80 leading-relaxed text-lg mb-6">
+                        Proces zakładania konta w Martin Casino jest stosunkowo prosty i nie zajmuje więcej niż kilka minut.
+                      </p>
                       
                       <div className="space-y-6">
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                             <Icon name="Edit" className="text-primary" size={22} />
-                            Jak zalozyc konto
+                            Jak wygląda rejestracja w Martin?
                           </h3>
                           <p className="text-foreground/80 leading-relaxed">
-                            Proces rejestracji w <strong className="text-primary">Martin Casino</strong> jest prosty i szybki. Wystarczy podac adres e-mail, 
-                            utworzyc haslo i zaakceptowac regulamin. Caly formularz zajmuje nie wiecej niz minute – nie ma potrzeby 
-                            podawania rozbudowanych danych osobowych na etapie zakladania konta.
+                            <strong className="text-primary">Martin rejestracja</strong> wymaga podania podstawowych danych osobowych: imienia, nazwiska, 
+                            adresu e-mail, numeru telefonu oraz ustalenia hasła. Po wypełnieniu formularza użytkownik otrzymuje wiadomość 
+                            z linkiem aktywacyjnym. Cała procedura przebiega na <strong className="text-primary">Martin oficjalna strona</strong> i jest zgodna 
+                            ze standardami branżowymi.
                           </p>
                         </div>
 
                         <div>
                           <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
                             <Icon name="Lock" className="text-primary" size={22} />
-                            Weryfikacja tozsamosci
+                            Logowanie i weryfikacja konta
                           </h3>
                           <div className="space-y-4">
                             <p className="text-foreground/80 leading-relaxed">
-                              Weryfikacja dokumentow nastepuje dopiero przy pierwszej wyplacie, co jest standardowa praktyka w brazy. 
-                              Martin Casino wymaga przeslania skanu dokumentu tozsamosci oraz potwierdzenia metody platnosci. Wedlug 
-                              opinii uzytkownikow, proces weryfikacji trwa od kilku godzin do jednego dnia roboczego.
+                              <strong className="text-primary">Martin logowanie</strong> odbywa się za pośrednictwem oficjalnej strony – wystarczy wpisać 
+                              adres e-mail i hasło. Warto pamiętać, że domena może ulegać zmianom, dlatego zaleca się korzystanie wyłącznie 
+                              z zaufanych źródeł przy wyszukiwaniu aktualnego adresu.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Po pierwszym logowaniu platforma zazwyczaj wymaga przejścia weryfikacji tożsamości (KYC). Polega ona na przesłaniu 
+                              skanu dokumentu potwierdzającego tożsamość oraz – w niektórych przypadkach – potwierdzenia adresu zamieszkania. 
+                              Weryfikacja jest standardową procedurą w branży i służy bezpieczeństwu zarówno operatora, jak i samego gracza.
                             </p>
                             <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
                               <div className="flex items-start gap-3">
                                 <Icon name="Lightbulb" className="text-primary flex-shrink-0 mt-1" size={20} />
                                 <p className="text-sm text-foreground/80">
-                                  <strong className="text-primary">Wskazowka:</strong> Warto przygotowac dokumenty zawczasu – wyslanie ich 
-                                  zaraz po rejestracji pozwoli uniknac opoznien przy pierwszej wyplacie.
+                                  <strong className="text-primary">Wskazówka:</strong> Warto przygotować dokumenty zawczasu – wysłanie ich 
+                                  zaraz po rejestracji pozwoli uniknąć opóźnień przy pierwszej wypłacie.
                                 </p>
                               </div>
                             </div>
