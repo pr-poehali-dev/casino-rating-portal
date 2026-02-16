@@ -232,6 +232,190 @@ export default function Irwin() {
                         obiektywnych informacji, które pomogą podjąć świadomą decyzję.
                       </p>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Info" className="text-primary" size={28} />
+                        Czym jest Irwin Casino?
+                      </h2>
+                      <div className="space-y-4">
+                        <p className="text-foreground/80 leading-relaxed text-lg">
+                          <strong className="text-primary">Irwin kasyno</strong> to platforma hazardowa działająca w modelu online, skierowana do graczy 
+                          z różnych krajów, w tym z Polski. Serwis oferuje dostęp do szerokiego katalogu gier – od automatów, przez gry stołowe, 
+                          po transmisje na żywo z krupierami. <strong className="text-primary">Irwin online</strong> wyróżnia się nowoczesnym interfejsem, przejrzystą 
+                          nawigacją i stosunkowo szybkim procesem zakładania konta.
+                        </p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Platforma działa na licencji wydanej przez zagranicznego regulatora, co jest standardem wśród międzynarodowych kasyn 
+                          internetowych. Strona dostępna jest w kilku wersjach językowych, a polski użytkownik znajdzie na niej treści dostosowane 
+                          do swojego rynku. Warto podkreślić, że <strong className="text-primary">Irwin Casino</strong> współpracuje z renomowanymi dostawcami 
+                          oprogramowania, co wpływa na jakość i różnorodność dostępnych tytułów.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="UserPlus" className="text-primary" size={28} />
+                        Irwin rejestracja i logowanie
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Edit" className="text-primary" size={22} />
+                            Jak założyć konto w Irwin Casino?
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Proces rejestracji w serwisie Irwin jest stosunkowo prosty i nie odbiega od standardów branżowych. 
+                            <strong className="text-primary"> Irwin rejestracja</strong> wymaga podania podstawowych danych osobowych: adresu e-mail, hasła, 
+                            waluty konta oraz daty urodzenia. Formularz rejestracyjny znajduje się na <strong className="text-primary">irwin oficjalnej stronie</strong> i 
+                            jego wypełnienie zajmuje kilka minut.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="ShieldCheck" className="text-primary" size={22} />
+                            Weryfikacja tożsamości
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Po utworzeniu konta platforma może poprosić o przesłanie dokumentów potwierdzających tożsamość. Jest to standardowa 
+                            procedura KYC (Know Your Customer), wymagana przez większość licencjonowanych kasyn online. Weryfikacja obejmuje 
+                            zazwyczaj skan dowodu osobistego lub paszportu oraz potwierdzenie adresu zamieszkania.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Lock" className="text-primary" size={22} />
+                            Logowanie do profilu
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              <strong className="text-primary">Irwin logowanie</strong> odbywa się za pomocą adresu e-mail i hasła podanego przy rejestracji. 
+                              Platforma oferuje również opcję zapamiętania urządzenia, co przyspiesza kolejne wizyty. W razie utraty hasła 
+                              dostępna jest procedura jego odzyskania przez adres e-mail powiązany z kontem.
+                            </p>
+                            <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="Lightbulb" className="text-primary flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-primary">Wskazówka:</strong> Warto przygotować dokumenty weryfikacyjne zawczasu – 
+                                  wysłanie ich zaraz po rejestracji pozwoli uniknąć opóźnień przy pierwszej wypłacie.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Gift" className="text-primary" size={28} />
+                        Irwin bonusy i kody promocyjne
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Sparkles" className="text-primary" size={22} />
+                            Rodzaje dostępnych bonusów
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Oferta promocyjna to jeden z elementów, na które gracze zwracają szczególną uwagę. <strong className="text-primary">Irwin bonus</strong> na 
+                              start obejmuje zazwyczaj dopłatę procentową do pierwszego depozytu – jest to klasyczny bonus powitalny spotykany 
+                              w większości kasyn internetowych. W ofercie mogą pojawiać się również <strong className="text-primary">irwin darmowe spiny</strong> przyznawane 
+                              na wybrane automaty do gry.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Część graczy poszukuje informacji o <strong className="text-primary">irwin bonus bez depozytu</strong>, czyli promocji niewymagającej 
+                              wpłaty własnych środków. Dostępność tego typu ofert zmienia się w czasie i zależy od aktualnej polityki promocyjnej 
+                              kasyna. Warto sprawdzać bieżące warunki bezpośrednio na stronie platformy.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Ticket" className="text-primary" size={22} />
+                            Kody promocyjne i warunki obrotu
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              <strong className="text-primary">Irwin kod promocyjny</strong> może być wymagany przy aktywacji wybranych bonusów. 
+                              <strong className="text-primary"> Irwin kody bonusowe</strong> pojawiają się niekiedy w materiałach partnerskich lub w wiadomościach 
+                              e-mail kierowanych do zarejestrowanych użytkowników. Każdy bonus objęty jest warunkami obrotu, czyli tzw. wagerem. 
+                              Oznacza to, że przed wypłatą środków bonusowych konieczne jest obrócenie ich określoną liczbę razy.
+                            </p>
+                            <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-amber-600">Ważne:</strong> Przed aktywacją jakiejkolwiek promocji warto dokładnie 
+                                  zapoznać się z regulaminem.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Gamepad2" className="text-primary" size={28} />
+                        Irwin gry hazardowe
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Joystick" className="text-primary" size={22} />
+                            Automaty do gry
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              <strong className="text-primary">Irwin gry hazardowe</strong> obejmują przede wszystkim szeroką kolekcję automatów online. 
+                              W katalogu znajdują się klasyczne sloty trójbębnowe, nowoczesne video sloty z rozbudowaną mechaniką oraz automaty 
+                              z jackpotami. Gry pochodzą od uznanych dostawców oprogramowania, takich jak <strong className="text-primary">Pragmatic Play</strong>, 
+                              <strong className="text-primary"> NetEnt</strong>, <strong className="text-primary">Play'n GO</strong> czy <strong className="text-primary">Microgaming</strong>, 
+                              co przekłada się na wysoką jakość grafiki i mechaniki rozgrywki.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Każdy automat charakteryzuje się określonym współczynnikiem RTP, który informuje o teoretycznym zwrocie dla gracza 
+                              w długim okresie. Przed rozpoczęciem gry warto sprawdzić ten parametr w opisie danego tytułu.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Dices" className="text-primary" size={22} />
+                            Gry stołowe i karciane
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Oprócz automatów, <strong className="text-primary">Irwin online</strong> oferuje klasyczne gry stołowe: różne odmiany ruletki, 
+                            blackjacka, bakarata i pokera. Są to zarówno wersje komputerowe z generatorem liczb losowych, jak i tytuły 
+                            dostępne w formacie live.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Video" className="text-primary" size={22} />
+                            Live casino
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Sekcja gier na żywo pozwala na rozgrywkę z prawdziwymi krupierami w czasie rzeczywistym. Transmisje realizowane 
+                            są przez profesjonalne studia, a gracze mogą komunikować się z prowadzącymi za pośrednictwem czatu. Gry na żywo 
+                            obejmują ruletkę, blackjacka, bakarata oraz popularne gry typu game show.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
