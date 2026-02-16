@@ -90,11 +90,11 @@ export default function BlogBonusPowitalny() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl mb-12 h-64 md:h-96">
+            <div className="relative overflow-hidden rounded-2xl mb-12">
               <img 
                 src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/26909adb-1e22-47a8-ab0e-7cfc23d1a006.jpg"
                 alt="Jak działa bonus powitalny w kasynie online?"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain rounded-2xl"
               />
             </div>
 

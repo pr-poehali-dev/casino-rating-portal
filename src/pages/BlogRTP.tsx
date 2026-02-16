@@ -86,13 +86,12 @@ export default function BlogRTP() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl mb-12 h-64 md:h-96">
+            <div className="relative overflow-hidden rounded-2xl mb-12">
               <img 
                 src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/b4e83b02-1d89-404e-abf2-a33af0aad675.jpg"
                 alt="Sloty z wysokim RTP"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain rounded-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent"></div>
             </div>
 
             <div className="prose prose-lg max-w-none space-y-6">
