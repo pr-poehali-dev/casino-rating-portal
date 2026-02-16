@@ -17,6 +17,7 @@ const Booi = lazy(() => import("./pages/Booi"));
 const Jozz = lazy(() => import("./pages/Jozz"));
 const Winity = lazy(() => import("./pages/Winity"));
 const Martin = lazy(() => import("./pages/Martin"));
+const Irwin = lazy(() => import("./pages/Irwin"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const About = lazy(() => import("./pages/About"));
 const Blog = lazy(() => import("./pages/Blog"));
@@ -54,6 +55,7 @@ const App = () => {
             <Route path="/jozz" element={<Jozz />} />
             <Route path="/winity" element={<Winity />} />
             <Route path="/martin" element={<Martin />} />
+            <Route path="/irwin" element={<Irwin />} />
             <Route path="/polityka-prywatnosci" element={<Privacy />} />
             <Route path="/o-nas" element={<About />} />
             <Route path="/blog" element={<Blog />} />
