@@ -222,15 +222,67 @@ export default function Martin() {
                   <CardContent className="space-y-6">
                     <div className="space-y-4 text-foreground/80 leading-relaxed">
                       <p className="text-lg">
-                        Rynek kasyn internetowych rozwija sie dynamicznie, a nowe platformy regularnie przyciagaja uwage polskich uzytkownikow. 
-                        Jedna z nich jest <strong className="text-primary">Martin Casino</strong> – serwis, ktory pojawil sie w swiadomosci graczy stosunkowo niedawno, 
-                        ale zdazyl juz wzbudzic spore zainteresowanie.
+                        Rynek kasyn internetowych rozwija się dynamicznie, a nowe platformy regularnie przyciągają uwagę polskich użytkowników. 
+                        Jedną z nich jest <strong className="text-primary">Martin Casino</strong> – serwis, który pojawił się w świadomości graczy stosunkowo niedawno, 
+                        ale zdążył już wzbudzić spore zainteresowanie.
                       </p>
                       <p className="text-lg">
-                        W niniejszej recenzji przyjrzymy sie temu, co <strong className="text-primary">Martin kasyno</strong> oferuje w praktyce: od procesu rejestracji, 
-                        przez bonusy i katalog gier, az po wyplaty i obsluge klienta. Celem tego tekstu jest dostarczenie rzetelnych, 
-                        neutralnych informacji, ktore pomoga podjac swiadoma decyzje.
+                        W niniejszej recenzji przyjrzymy się temu, co <strong className="text-primary">Martin kasyno</strong> oferuje w praktyce: od procesu rejestracji, 
+                        przez bonusy i katalog gier, aż po wypłaty i obsługę klienta. Celem tego tekstu jest dostarczenie rzetelnych, 
+                        neutralnych informacji, które pomogą podjąć świadomą decyzję.
                       </p>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Info" className="text-primary" size={28} />
+                        Czym jest Martin Casino?
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <p className="text-foreground/80 leading-relaxed text-lg">
+                          Martin Casino to platforma hazardowa online, która kieruje swoją ofertę do graczy z różnych krajów, w tym z Polski. 
+                          Serwis pozycjonuje się jako nowoczesne kasyno internetowe z szerokim wyborem automatów, gier stołowych oraz sekcji 
+                          z krupierami na żywo. Strona dostępna jest w kilku wersjach językowych, a interfejs został zaprojektowany w sposób 
+                          przejrzysty i intuicyjny.
+                        </p>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Star" className="text-primary" size={22} />
+                            Główne cechy platformy
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Wśród głównych cech wyróżniających <strong className="text-primary">Martin Casino</strong> wymienia się rozbudowany system bonusowy, 
+                            współpracę z uznanymi dostawcami oprogramowania oraz stosunkowo szybki proces obsługi transakcji. Platforma działa 
+                            w oparciu o licencję wydaną przez międzynarodowy organ regulacyjny, co dla wielu użytkowników stanowi istotny element 
+                            budujący zaufanie.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="TrendingUp" className="text-primary" size={22} />
+                            Pozycjonowanie na rynku
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              <strong className="text-primary">Martin kasyno online</strong> celuje w segment graczy poszukujących nowoczesnego interfejsu połączonego 
+                              z bogatą ofertą rozrywkową. Na tle innych platform wyróżnia się przede wszystkim różnorodnością promocji oraz szerokim 
+                              katalogiem automatów.
+                            </p>
+                            <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-amber-600">Ważne:</strong> Warto jednak samodzielnie zweryfikować aktualność licencji 
+                                  przed założeniem konta.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     {/* Section 1: Rejestracja */}
