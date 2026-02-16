@@ -71,6 +71,18 @@ const casinos: Casino[] = [
   },
   {
     id: 5,
+    name: 'Irwin',
+    rating: 8.8,
+    userRating: 4.5,
+    bonus: 'Welcome Package 50%',
+    games: 2500,
+    license: 'Curacao eGaming',
+    features: ['Welcome Package', 'Live Casino', 'Szybkie wypłaty', 'Kryptowaluty'],
+    logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/e3d1a556-d018-4b5e-acc1-d5c3c3f2cb65.png',
+    url: 'https://irwin-way-one.com/c9959c858'
+  },
+  {
+    id: 7,
     name: 'Jozz',
     rating: 8.8,
     userRating: 4.5,
@@ -82,7 +94,7 @@ const casinos: Casino[] = [
     url: 'https://jozz-promo1.com/alt/jozz11_ru/?6ccd9bf32f7680ee0e290d1be59a4de5'
   },
   {
-    id: 6,
+    id: 8,
     name: 'Winity',
     rating: 8.6,
     userRating: 4.4,
@@ -896,7 +908,7 @@ export default function Index() {
                         {t.playNow}
                       </a>
                     </Button>
-                    {(casino.id === 1 || casino.id === 2 || casino.id === 3 || casino.id === 4 || casino.id === 5 || casino.id === 6) ? (
+                    {(casino.id === 1 || casino.id === 2 || casino.id === 3 || casino.id === 4 || casino.id === 7 || casino.id === 8) ? (
                       <Button 
                         variant="outline" 
                         className="flex-1 border-primary/30 hover:bg-primary/10"
@@ -909,9 +921,9 @@ export default function Index() {
                             navigate('/booi');
                           } else if (casino.id === 4) {
                             navigate('/martin');
-                          } else if (casino.id === 5) {
+                          } else if (casino.id === 7) {
                             navigate('/jozz');
-                          } else if (casino.id === 6) {
+                          } else if (casino.id === 8) {
                             navigate('/winity');
                           }
                         }}
