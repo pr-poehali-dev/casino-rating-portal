@@ -59,6 +59,18 @@ const casinos: Casino[] = [
   },
   {
     id: 4,
+    name: 'Martin',
+    rating: 8.9,
+    userRating: 4.5,
+    bonus: 'Welcome package do 50%',
+    games: 2600,
+    license: 'Curacao eGaming',
+    features: ['Welcome Package', 'Szybkie wypłaty', 'Live Casino', 'Turnieje'],
+    logo: 'https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/83e0e007-0964-4062-be9c-39454e6e838c.png',
+    url: 'https://martin-way-six.com/c1b69e954'
+  },
+  {
+    id: 5,
     name: 'Jozz',
     rating: 8.8,
     userRating: 4.5,
@@ -70,7 +82,7 @@ const casinos: Casino[] = [
     url: 'https://jozz-promo1.com/alt/jozz11_ru/?6ccd9bf32f7680ee0e290d1be59a4de5'
   },
   {
-    id: 5,
+    id: 6,
     name: 'Winity',
     rating: 8.6,
     userRating: 4.4,
