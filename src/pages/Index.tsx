@@ -921,7 +921,7 @@ export default function Index() {
                         {t.playNow}
                       </a>
                     </Button>
-                    {(casino.id === 1 || casino.id === 2 || casino.id === 3 || casino.id === 5 || casino.id === 6 || casino.id === 7 || casino.id === 8) ? (
+                    {(casino.id === 1 || casino.id === 2 || casino.id === 3 || casino.id === 4 || casino.id === 5 || casino.id === 6 || casino.id === 7 || casino.id === 8) ? (
                       <Button 
                         variant="outline" 
                         className="flex-1 border-primary/30 hover:bg-primary/10"
@@ -932,6 +932,8 @@ export default function Index() {
                             navigate('/play-fortuna');
                           } else if (casino.id === 3) {
                             navigate('/booi');
+                          } else if (casino.id === 4) {
+                            navigate('/starda');
                           } else if (casino.id === 5) {
                             navigate('/martin');
                           } else if (casino.id === 6) {
