@@ -416,6 +416,294 @@ export default function Irwin() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Smartphone" className="text-primary" size={28} />
+                        Irwin aplikacja i wersja mobilna
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Download" className="text-primary" size={22} />
+                            Aplikacja na Android i iOS
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              Wielu graczy poszukuje informacji o tym, czy <strong className="text-primary">irwin aplikacja</strong> jest dostępna do pobrania. 
+                              Na chwilę obecną platforma może oferować plik APK do pobrania na urządzenia z systemem Android. 
+                              <strong className="text-primary"> Irwin app download</strong> odbywa się zazwyczaj bezpośrednio ze strony kasyna, ponieważ aplikacje 
+                              hazardowe nie zawsze są dostępne w oficjalnych sklepach Google Play czy App Store ze względu na politykę tych platform.
+                            </p>
+                            <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-amber-600">Uwaga:</strong> Przy pobieraniu plików APK spoza oficjalnych sklepów zawsze 
+                                  weryfikuj źródło – korzystaj wyłącznie z oficjalnej strony kasyna.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Globe" className="text-primary" size={22} />
+                            Wersja przeglądarkowa na telefon
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            Niezależnie od dostępności dedykowanej aplikacji, strona <strong className="text-primary">Irwin Casino</strong> jest w pełni responsywna. 
+                            Oznacza to, że dostosowuje się do rozmiaru ekranu smartfona lub tabletu i pozwala na komfortową grę bezpośrednio 
+                            z poziomu przeglądarki mobilnej. Funkcjonalność wersji mobilnej obejmuje pełen zakres opcji: od rejestracji i logowania, 
+                            przez zarządzanie kontem, po dostęp do katalogu gier i obsługi płatności.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="DollarSign" className="text-primary" size={28} />
+                        Irwin wypłaty i metody płatności
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Zap" className="text-primary" size={22} />
+                            Dostępne metody wpłat i wypłat
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed mb-3">
+                              Platforma udostępnia kilka metod realizacji transakcji finansowych. Wśród najpopularniejszych opcji znajdują się:
+                            </p>
+                            <div className="bg-muted/50 rounded-lg p-5 space-y-3">
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm"><strong className="text-primary">Przelewy bankowe</strong></p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm"><strong className="text-primary">Karty płatnicze</strong> – Visa, Mastercard</p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm"><strong className="text-primary">Portfele elektroniczne</strong> – np. Skrill, Neteller</p>
+                              </div>
+                              <div className="flex items-start gap-3">
+                                <Icon name="Dot" className="text-primary flex-shrink-0 mt-1" size={16} />
+                                <p className="text-foreground/80 text-sm"><strong className="text-primary">Kryptowaluty</strong> – w wybranych przypadkach</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Clock" className="text-primary" size={22} />
+                            Czas realizacji i limity
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              <strong className="text-primary">Irwin wypłaty opinie</strong> wskazują, że czas przetwarzania wniosków o wypłatę wynosi zazwyczaj 
+                              od kilku godzin do kilku dni roboczych – w zależności od wybranej metody. Portfele elektroniczne są z reguły najszybszą 
+                              opcją, natomiast przelewy bankowe mogą wymagać dłuższego czasu realizacji.
+                            </p>
+                            <p className="text-foreground/80 leading-relaxed">
+                              Platforma określa minimalne i maksymalne limity transakcji, które warto sprawdzić przed dokonaniem wpłaty. 
+                              Pierwszy wniosek o wypłatę może wymagać przejścia weryfikacji tożsamości.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Link" className="text-primary" size={28} />
+                        Irwin mirror i działający link
+                      </h2>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Eye" className="text-primary" size={22} />
+                            Czym jest mirror i dlaczego jest używany?
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            <strong className="text-primary">Irwin mirror polska</strong> to alternatywny adres strony internetowej kasyna, który zawiera 
+                            identyczną zawartość jak strona główna. Serwisy lustrzane stosowane są w branży hazardowej w sytuacjach, gdy dostęp 
+                            do głównej domeny jest ograniczony z przyczyn technicznych lub regulacyjnych.
+                          </p>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="Search" className="text-primary" size={22} />
+                            Jak znaleźć aktualny adres?
+                          </h3>
+                          <div className="space-y-4">
+                            <p className="text-foreground/80 leading-relaxed">
+                              <strong className="text-primary">Irwin działający link</strong> można odnaleźć poprzez oficjalne kanały komunikacji kasyna: 
+                              newslettery e-mailowe, profile w mediach społecznościowych lub kontakt z obsługą klienta. Należy zachować ostrożność 
+                              i unikać klikania w linki pochodzące z nieznanych źródeł, ponieważ mogą prowadzić do fałszywych stron stworzonych 
+                              w celu wyłudzenia danych.
+                            </p>
+                            <div className="bg-gradient-to-r from-amber-500/10 to-amber-500/5 border-l-4 border-amber-500 rounded-lg p-4">
+                              <div className="flex items-start gap-3">
+                                <Icon name="AlertTriangle" className="text-amber-500 flex-shrink-0 mt-1" size={20} />
+                                <p className="text-sm text-foreground/80">
+                                  <strong className="text-amber-600">Ważne:</strong> Zawsze warto weryfikować autentyczność adresu przed zalogowaniem 
+                                  się do konta. Sprawdź certyfikat SSL (kłódka obok adresu w przeglądarce).
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Shield" className="text-primary" size={28} />
+                        Irwin czy legalne w Polsce?
+                      </h2>
+                      <div className="space-y-4">
+                        <p className="text-foreground/80 leading-relaxed">
+                          Kwestia legalności to jedno z najczęściej pojawiających się pytań wśród polskich użytkowników. 
+                          <strong className="text-primary"> Irwin czy legalne</strong> – odpowiedź na to pytanie wymaga zrozumienia aktualnych regulacji 
+                          dotyczących hazardu internetowego w Polsce.
+                        </p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Zgodnie z polskim prawem, legalną działalność w zakresie gier hazardowych online mogą prowadzić wyłącznie podmioty 
+                          posiadające zezwolenie wydane przez Ministra Finansów. Platformy zagraniczne, nawet posiadające licencje od międzynarodowych 
+                          regulatorów, nie są formalnie dopuszczone do działania na polskim rynku w świetle ustawy o grach hazardowych.
+                        </p>
+                        <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                          <div className="flex items-start gap-3">
+                            <Icon name="Info" className="text-primary flex-shrink-0 mt-1" size={20} />
+                            <p className="text-sm text-foreground/80">
+                              Każdy użytkownik powinien samodzielnie zapoznać się z obowiązującymi przepisami i ocenić konsekwencje prawne 
+                              korzystania z takich serwisów. Niniejszy tekst ma charakter wyłącznie informacyjny i nie stanowi porady prawnej.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="MessageCircle" className="text-primary" size={28} />
+                        Irwin kontakt i obsługa klienta
+                      </h2>
+                      <div className="space-y-4">
+                        <p className="text-foreground/80 leading-relaxed">
+                          Sprawna obsługa klienta to istotny element oceny każdego kasyna online. <strong className="text-primary">Irwin kontakt</strong> z pomocą 
+                          techniczną możliwy jest przede wszystkim za pośrednictwem czatu na żywo, który dostępny jest bezpośrednio na stronie 
+                          platformy. Jest to najszybszy sposób uzyskania odpowiedzi – czas oczekiwania na połączenie z konsultantem wynosi 
+                          zazwyczaj od kilku sekund do kilku minut.
+                        </p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Alternatywną formą kontaktu jest poczta elektroniczna. Wiadomości e-mail są przetwarzane wolniej – odpowiedź może 
+                          nadejść w ciągu kilku godzin lub w następnym dniu roboczym. Dla graczy z Polski istotne jest, czy wsparcie dostępne 
+                          jest w języku polskim. Warto to zweryfikować przy pierwszym kontakcie z obsługą.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="Users" className="text-primary" size={28} />
+                        Irwin opinie – zalety i wady
+                      </h2>
+                      <p className="text-foreground/80 leading-relaxed text-lg mb-6">
+                        Na podstawie dostępnych informacji i <strong className="text-primary">irwin opinie</strong> użytkowników można wskazać zarówno mocne, 
+                        jak i słabsze strony platformy.
+                      </p>
+                      
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="ThumbsUp" className="text-primary" size={22} />
+                            Zalety
+                          </h3>
+                          <div className="bg-gradient-to-r from-green-500/10 to-green-500/5 border-l-4 border-green-500 rounded-lg p-4">
+                            <div className="flex items-start gap-3">
+                              <Icon name="CheckCircle2" className="text-green-500 flex-shrink-0 mt-1" size={20} />
+                              <ul className="text-sm text-foreground/80 space-y-2">
+                                <li>• Rozbudowany katalog gier od renomowanych dostawców</li>
+                                <li>• Przejrzysty interfejs i intuicyjna nawigacja</li>
+                                <li>• Responsywna wersja mobilna umożliwiająca grę z telefonu</li>
+                                <li>• Dostępność czatu na żywo dla szybkiego kontaktu z obsługą</li>
+                                <li>• Kilka metod płatności do wyboru, w tym portfele elektroniczne</li>
+                                <li>• Oferta bonusowa obejmująca bonus powitalny i darmowe spiny</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="ThumbsDown" className="text-primary" size={22} />
+                            Wady
+                          </h3>
+                          <div className="bg-gradient-to-r from-red-500/10 to-red-500/5 border-l-4 border-red-500 rounded-lg p-4">
+                            <div className="flex items-start gap-3">
+                              <Icon name="AlertCircle" className="text-red-500 flex-shrink-0 mt-1" size={20} />
+                              <ul className="text-sm text-foreground/80 space-y-2">
+                                <li>• Brak licencji wydanej przez polskiego regulatora</li>
+                                <li>• Możliwe ograniczenia w dostępie do strony głównej</li>
+                                <li>• Czas weryfikacji tożsamości może wydłużyć pierwszą wypłatę</li>
+                                <li>• Warunki obrotu bonusów mogą być wymagające</li>
+                                <li>• Obsługa klienta nie zawsze dostępna w języku polskim</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-semibold mb-3 flex items-center gap-2">
+                            <Icon name="BarChart3" className="text-primary" size={22} />
+                            Krótkie podsumowanie opinii
+                          </h3>
+                          <p className="text-foreground/80 leading-relaxed">
+                            <strong className="text-primary">Irwin Casino</strong> zbiera mieszane opinie. Gracze chwalą przede wszystkim ofertę gier 
+                            i bezpieczeństwo transakcji, natomiast zgłaszają uwagi dotyczące warunków bonusowych i czasu weryfikacji. Jak w przypadku 
+                            każdej platformy hazardowej, doświadczenia mogą się różnić w zależności od indywidualnych oczekiwań.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-t border-primary/20 pt-6 mt-6">
+                      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+                        <Icon name="FileText" className="text-primary" size={28} />
+                        Podsumowanie
+                      </h2>
+                      <div className="space-y-4">
+                        <p className="text-foreground/80 leading-relaxed">
+                          <strong className="text-primary">Irwin Casino</strong> to platforma hazardowa online, która oferuje rozbudowany katalog gier, system 
+                          bonusowy i kilka kanałów kontaktu z obsługą klienta. Serwis posiada wersję mobilną umożliwiającą komfortową rozgrywkę 
+                          na urządzeniach przenośnych. Proces rejestracji i logowania przebiega sprawnie, a dostępne metody płatności obejmują 
+                          popularne opcje stosowane na rynku europejskim.
+                        </p>
+                        <p className="text-foreground/80 leading-relaxed">
+                          Przed założeniem konta warto zapoznać się z regulaminem platformy oraz obowiązującymi przepisami dotyczącymi hazardu 
+                          internetowego w Polsce.
+                        </p>
+                        <div className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border-l-4 border-primary rounded-lg p-4">
+                          <div className="flex items-start gap-3">
+                            <Icon name="Info" className="text-primary flex-shrink-0 mt-1" size={20} />
+                            <p className="text-sm text-foreground/80">
+                              Niniejsza recenzja ma charakter wyłącznie informacyjny i służy przedstawieniu obiektywnego obrazu opisywanej usługi. 
+                              Każda decyzja dotycząca udziału w grach hazardowych powinna być podejmowana świadomie i odpowiedzialnie.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
 
