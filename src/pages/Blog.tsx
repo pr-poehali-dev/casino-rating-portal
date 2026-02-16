@@ -240,6 +240,14 @@ export default function Blog() {
                         loading="lazy"
                       />
                     )}
+                    {post.image === 'nodeposit2026' && (
+                      <img 
+                        src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/81225203-0792-4597-9b71-655557a5bac3.jpg"
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    )}
                     <div className="absolute top-3 left-3">
                       <Badge className="bg-primary/90 text-primary-foreground border-0">
                         {post.category}

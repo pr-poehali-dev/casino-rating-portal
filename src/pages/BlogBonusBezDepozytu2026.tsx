@@ -90,15 +90,12 @@ export default function BlogBonusBezDepozytu2026() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl mb-12 h-64 md:h-96 bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="flex items-center justify-center gap-3">
-                  <Icon name="Gift" className="text-primary" size={64} />
-                  <Icon name="Sparkles" className="text-primary/60" size={32} />
-                </div>
-                <p className="text-2xl font-bold text-primary">Bonusy bez depozytu 2026</p>
-                <p className="text-foreground/60">Ranking najlepszych ofert w Polsce</p>
-              </div>
+            <div className="relative overflow-hidden rounded-2xl mb-12 h-64 md:h-96">
+              <img
+                src="https://cdn.poehali.dev/projects/c2933cfb-9ddd-413a-a6ef-7b99d3f5e883/bucket/81225203-0792-4597-9b71-655557a5bac3.jpg"
+                alt="Najlepsze bonusy bez depozytu 2026 – ranking kasyn online w Polsce"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div className="prose prose-lg max-w-none">
